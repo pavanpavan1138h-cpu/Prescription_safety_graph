@@ -1,0 +1,27 @@
+{
+    "total_no_match_entities": 208,
+    "breakdown_by_entity_status": {
+        "CONFIRMED_INTEGRATED_ENTITY": 201,
+        "AMBIGUOUS_MAPPING_COMPONENT": 7
+    },
+    "breakdown_by_source_membership": {
+        "drugbank_only": 109,
+        "twosides_only": 99
+    },
+    "breakdown_by_name_status": {
+        "PUBCHEM_TITLE_CANDIDATE": 182,
+        "NO_NAME_CANDIDATE": 26
+    },
+    "population_characteristics": {
+        "drugbank_only_unmatched": 109,
+        "twosides_only_unmatched": 99,
+        "unmatched_with_pubchem_title": 182,
+        "unmatched_without_name": 26
+    },
+    "root_cause_assessment": {
+        "investigational_or_withdrawn_drugs": "Many DrugBank compounds (DB02xxx, DB03xxx, DB06xxx+) are experimental/preclinical ligands or veterinary agents not present in RxNorm (which is strictly US clinical drugs).",
+        "pubchem_complex_chemical_names": "TWOSIDES-only compounds often have complex IUPAC strings or specialized research chemical titles in PubChem that do not have direct clinical drug concept equivalents in RxNorm.",
+        "missing_clinical_market_presence": "Entities represent legitimate chemical structures that lack standard clinical formulation in RxNorm."
+    },
+    "coverage_interpretation": "The 86.98% RxNorm coverage represents an authentic, scientifically sound boundary of clinical drug presence. No systematic pipeline bug was detected."
+}

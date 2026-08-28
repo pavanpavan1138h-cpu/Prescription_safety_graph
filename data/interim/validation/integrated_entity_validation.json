@@ -1,0 +1,18 @@
+{
+    "files_exist": true,
+    "deterministic_ids_format_valid": true,
+    "duplicate_internal_ids_count": 0,
+    "inconsistent_source_identifier_mappings_count": 0,
+    "inconsistent_source_identifier_mappings": [],
+    "mapping_confidence_retained_distribution": {
+        "unmapped": 1263,
+        "HIGH_EXACT": 546,
+        "MEDIUM_CANONICAL": 472,
+        "ambiguous": 58,
+        "HIGH_INCHIKEY": 12
+    },
+    "entity_type_distribution": {
+        "CONFIRMED_INTEGRATED_ENTITY": 1778,
+        "AMBIGUOUS_MAPPING_COMPONENT": 58
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "unique_mapping_pairs": 554,
+    "unique_drugbank_mapped": 554,
+    "unique_twosides_mapped": 534,
+    "confidence_counts": {
+        "HIGH_EXACT": 287,
+        "MEDIUM_CANONICAL": 261,
+        "HIGH_INCHIKEY": 6
+    },
+    "match_breakdown": {
+        "both_canonical_and_inchikey": 287,
+        "canonical_smiles_only": 261,
+        "inchikey_only": 6
+    },
+    "mapping_relationships": {
+        "one_to_many_distinct_db_count": 0,
+        "many_to_one_distinct_ts_count": 19,
+        "ambiguous_edges_count": 39
+    },
+    "coverage": {
+        "drugbank_total": 1706,
+        "drugbank_mapped": 554,
+        "drugbank_unmapped": 1152,
+        "drugbank_coverage_pct": 32.4736225087925,
+        "twosides_total": 645,
+        "twosides_mapped": 534,
+        "twosides_unmapped": 111,
+        "twosides_coverage_pct": 82.7906976744186
+    }
+}

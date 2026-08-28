@@ -1,0 +1,10 @@
+{
+    "files_exist": true,
+    "schema_valid": true,
+    "integrity_passed": true,
+    "coverage": {
+        "overall": 0.8698257080610022,
+        "CONFIRMED_INTEGRATED_ENTITY": 0.8779527559055118,
+        "AMBIGUOUS_MAPPING_COMPONENT": 0.6206896551724138
+    }
+}

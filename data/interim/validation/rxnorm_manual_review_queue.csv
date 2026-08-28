@@ -1,0 +1,46 @@
+internal_drug_id,entity_status,name_candidate,issue_type,candidate_rxcui,candidate_name,match_score,recommended_action
+DRUG_001740,CONFIRMED_INTEGRATED_ENTITY,"2-[[1-(2-Amino-1,3-thiazol-4-yl)-2-[(2-methyl-4-oxo-1-sulfoazetidin-3-yl)amino]-2-oxoethylidene]amino]oxy-2-methylpropanoic acid",low_confidence_approximate_match,1272.0,aztreonam,75.0,Verify if the approximate match represents the correct clinical entity.
+DRUG_000045,CONFIRMED_INTEGRATED_ENTITY,Phentermine,conflicting_rxnorms_across_source_identifiers,,,0.0,Manually resolve source mapping identifier differences.
+DRUG_000048,CONFIRMED_INTEGRATED_ENTITY,Fluconazole,conflicting_rxnorms_across_source_identifiers,,,0.0,Manually resolve source mapping identifier differences.
+DRUG_000129,CONFIRMED_INTEGRATED_ENTITY,Pamidronic Acid,conflicting_rxnorms_across_source_identifiers,,,0.0,Manually resolve source mapping identifier differences.
+DRUG_000239,CONFIRMED_INTEGRATED_ENTITY,Zoledronic Acid,conflicting_rxnorms_across_source_identifiers,,,0.0,Manually resolve source mapping identifier differences.
+DRUG_000366,CONFIRMED_INTEGRATED_ENTITY,Cyclophosphamide,conflicting_rxnorms_across_source_identifiers,,,0.0,Manually resolve source mapping identifier differences.
+DRUG_000388,CONFIRMED_INTEGRATED_ENTITY,Bosentan,conflicting_rxnorms_across_source_identifiers,,,0.0,Manually resolve source mapping identifier differences.
+DRUG_000678,CONFIRMED_INTEGRATED_ENTITY,Risedronate,conflicting_rxnorms_across_source_identifiers,,,0.0,Manually resolve source mapping identifier differences.
+DRUG_000784,CONFIRMED_INTEGRATED_ENTITY,Hydroxyurea,conflicting_rxnorms_across_source_identifiers,,,0.0,Manually resolve source mapping identifier differences.
+DRUG_000820,CONFIRMED_INTEGRATED_ENTITY,Gatifloxacin,conflicting_rxnorms_across_source_identifiers,,,0.0,Manually resolve source mapping identifier differences.
+DRUG_000912,CONFIRMED_INTEGRATED_ENTITY,Amifostine,conflicting_rxnorms_across_source_identifiers,,,0.0,Manually resolve source mapping identifier differences.
+DRUG_001009,CONFIRMED_INTEGRATED_ENTITY,Dasatinib,conflicting_rxnorms_across_source_identifiers,,,0.0,Manually resolve source mapping identifier differences.
+DRUG_001053,CONFIRMED_INTEGRATED_ENTITY,Vecuronium,conflicting_rxnorms_across_source_identifiers,,,0.0,Manually resolve source mapping identifier differences.
+DRUG_000104,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_000196,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_000281,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_000295,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_000418,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_000578,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_000637,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001297,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001592,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001640,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001660,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001709,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001752,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001758,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001766,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001767,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001770,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001773,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001778,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001781,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001784,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001785,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001803,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001807,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001811,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001823,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001824,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001829,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001830,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001831,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001833,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.
+DRUG_001834,CONFIRMED_INTEGRATED_ENTITY,NO_NAME_CANDIDATE,missing_name_candidate,,,0.0,Find chemical registry mapping/clinical name source.

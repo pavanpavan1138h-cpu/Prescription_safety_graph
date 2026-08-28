@@ -1,0 +1,14 @@
+{
+    "total_entities": 1836,
+    "entities_with_name": 1804,
+    "entities_without_name": 32,
+    "exact_identifier_matches": 1615,
+    "exact_name_matches": 0,
+    "normalized_name_matches": 0,
+    "approximate_matches": 1,
+    "ambiguous_matches": 12,
+    "no_matches": 208,
+    "api_errors": 0,
+    "cache_hits": 0,
+    "cache_misses": 0
+}

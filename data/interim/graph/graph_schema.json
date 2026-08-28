@@ -1,0 +1,34 @@
+{
+    "node_schema": [
+        "node_id",
+        "node_type",
+        "display_name",
+        "source_identifier",
+        "entity_status",
+        "confidence",
+        "properties_json"
+    ],
+    "edge_schema": [
+        "edge_id",
+        "source_node_id",
+        "target_node_id",
+        "relationship_type",
+        "source_dataset",
+        "source_record_id",
+        "mapping_confidence",
+        "evidence_confidence",
+        "properties_json"
+    ],
+    "node_types": [
+        "DRUG",
+        "RXNORM_CONCEPT",
+        "DRUG_PAIR",
+        "SIDE_EFFECT"
+    ],
+    "relationship_types": [
+        "HAS_RXNORM_CONCEPT",
+        "INTERACTS_WITH",
+        "MEMBER_OF_PAIR",
+        "ASSOCIATED_WITH"
+    ]
+}

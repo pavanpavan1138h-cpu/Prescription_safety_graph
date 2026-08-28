@@ -1,0 +1,221 @@
+internal_drug_id,name_candidate,failure_type,failure_stage,error_message
+DRUG_000045,Phentermine,AMBIGUOUS_CLINICAL_MAPPING,conflict_resolution,"Conflict: mapped to multiple different RxCUIs: ['221138', '8152']"
+DRUG_000048,Fluconazole,AMBIGUOUS_CLINICAL_MAPPING,conflict_resolution,"Conflict: mapped to multiple different RxCUIs: ['4450', '202813']"
+DRUG_000062,Remikiren,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000116,Cefmenoxime,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000129,Pamidronic Acid,AMBIGUOUS_CLINICAL_MAPPING,conflict_resolution,"Conflict: mapped to multiple different RxCUIs: ['11473', '1546406']"
+DRUG_000145,Bupivacaine (USAN:INN:BAN),NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000239,Zoledronic Acid,AMBIGUOUS_CLINICAL_MAPPING,conflict_resolution,"Conflict: mapped to multiple different RxCUIs: ['1546014', '77655']"
+DRUG_000265,(8-Methyl-8-Azabicyclo(3.2.1)Octan-3-Yl) 3-Hydroxy-2-Phenylpropanoate,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000271,Cefpiramide,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000284,Celestone,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000295,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000309,"Cinchonan-9-ol, 6'-methoxy-, (8alpha,9R)-",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000358,"3,7-Dimethyl-9-(2,6,6-trimethylcyclohex-1-en-1-yl)nona-2,4,6,8-tetraenoic acid",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000366,Cyclophosphamide,AMBIGUOUS_CLINICAL_MAPPING,conflict_resolution,"Conflict: mapped to multiple different RxCUIs: ['3002', '1545988']"
+DRUG_000376,Adinazolam,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000388,Bosentan,AMBIGUOUS_CLINICAL_MAPPING,conflict_resolution,"Conflict: mapped to multiple different RxCUIs: ['75207', '1468845']"
+DRUG_000503,Cephaloglycin,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000541,Cisatracurium Besylate,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000576,Hydrocortamate,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000637,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000678,Risedronate,AMBIGUOUS_CLINICAL_MAPPING,conflict_resolution,"Conflict: mapped to multiple different RxCUIs: ['55685', '73056']"
+DRUG_000784,Hydroxyurea,AMBIGUOUS_CLINICAL_MAPPING,conflict_resolution,"Conflict: mapped to multiple different RxCUIs: ['151871', '5552']"
+DRUG_000812,Cerulenin,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000820,Gatifloxacin,AMBIGUOUS_CLINICAL_MAPPING,conflict_resolution,"Conflict: mapped to multiple different RxCUIs: ['228476', '1546025']"
+DRUG_000861,Pentolinium,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_000912,Amifostine,AMBIGUOUS_CLINICAL_MAPPING,conflict_resolution,"Conflict: mapped to multiple different RxCUIs: ['1545987', '4126']"
+DRUG_000967,Ridogrel,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001000,Decamethonium,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001007,Mitiglinide,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001009,Dasatinib,AMBIGUOUS_CLINICAL_MAPPING,conflict_resolution,"Conflict: mapped to multiple different RxCUIs: ['475342', '1546019']"
+DRUG_001023,Carbetocin,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001024,Lumiracoxib,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001027,Glisoxepide,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001030,Bevantolol,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001053,Vecuronium,AMBIGUOUS_CLINICAL_MAPPING,conflict_resolution,"Conflict: mapped to multiple different RxCUIs: ['71535', '1546399']"
+DRUG_001057,Tasosartan,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001060,Hexobarbital,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001074,Paramethasone,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001091,Pranlukast,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001094,Cefacetrile,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001100,Nitroxoline,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001101,Stepronin,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001105,Aprindine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001114,Fencamfamine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001116,Camazepam,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001118,Delorazepam,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001122,Cloxazolam,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001126,Fludiazepam,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001129,"3-Acetamido-2,4,6-triiodo-5-(N-methylacetamido)-N-((2R,3R,4S,5R)-3,4,5,6-tetrahydroxy-1-oxohexan-2-YL)benzamide",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001134,Liotrix,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001137,"4-{4,7-dihydroxy-9a,11a-dimethyl-hexadecahydro-1H-cyclopenta[a]phenanthren-1-yl}pentanoic acid",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001163,Aceprometazine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001175,Topiroxostat,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001179,Equilin,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001191,Ribostamycin,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001205,Estrone Sulfate,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001207,Fleroxacin,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001227,Voglibose,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001228,Vapreotide,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001230,Ximelagatran [MI],NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001241,Lucanthone,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001250,Ecabet,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001251,Ibudilast,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001272,Rimonabant,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001274,Pixantrone,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001277,Lasofoxifene,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001288,Vernakalant,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001295,Amrubicin,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001297,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001298,Sitaxentan,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001314,Agomelatine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001352,Sulfaphenazole,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001355,Zaltoprofen,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001356,Ketobemidone,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001357,Seratrodast,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001390,"(S)-3,6-Diamino-N-((3S,9S,12S,15S,Z)-3-((4R,6S)-2-amino-6-hydroxy-3,4,5,6-tetrahydropyrimidin-4-yl)-9,12-bis(hydroxymethyl)-2,5,8,11,14-pentaoxo-6-(ureidomethylene)-1,4,7,10,13-pentaazacyclohexadecan-15-yl)hexanamide",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001393,Azidocillin,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001396,Sulfamoxole,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001403,Bopindolol,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001404,Bupranolol,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001453,Perospirone,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001469,Fluprednidene,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001474,Etofibrate,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001477,Epirizole,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001478,Eperisone,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001479,"(3R,4R)-3,6-diamino-N-[(3S,6Z,9S,12S,15S)-3-[(6R)-2-amino-1,4,5,6-tetrahydropyrimidin-6-yl]-6-[(carbamoylamino)methylidene]-9,12-bis(hydroxymethyl)-2,5,8,11,14-pentaoxo-1,4,7,10,13-pentazacyclohexadec-15-yl]-4-hydroxyhexanamide",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001480,Ditazole,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001481,Dimetacrine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001482,Cyamemazine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001485,Captodiame,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001490,Benzoctamine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001540,Nitrous Acid,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001544,Zucapsaicin,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001552,Choletec,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001561,Ferric citrate,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001562,Etizolam,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001566,Lobeglitazone,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001567,Arotinolol,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001570,Limaprost,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001577,Blonanserin,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001581,Azelnidipine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001582,Benidipine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001583,Cilnidipine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001584,Efonidipine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001589,Pirlindole,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001590,Toloxatone,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001592,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001593,Imidafenacin,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001595,Strontium Ranelate,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001600,Doxofylline,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001606,Fimasartan,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001610,Trapidil,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001613,Propacetamol,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001615,Ramosetron,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001626,Penicillin G benzathine (USP),NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001629,Mersalyl Acid,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001630,Propoxycaine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001634,Darvon-N,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001640,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001649,Pamabrom,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001676,Rupatadine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001681,"Aspidospermidine-3-carboxylic acid, 4-(acetyloxy)-6,7-didehydro-15-((2R,4R,6S,8S)-4-(1,1-difluoroethyl)-1,3,4,5,6,7,8,9-octahydro-8-(methoxycarbonyl)-2,6-methano-2H-azecino(4,3-b)indol-8-yl)-3-hydroxy-16-methoxy-1-methyl-, methyl ester, (2beta,3beta,4beta,5alpha,12R,19alpha)-",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001686,Icotinib,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001704,Oxethazaine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001705,Nafamostat,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001709,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001713,Alclofenac,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001726,"1-propanaminium, 3-carboxy-2-hydroxy-n,n,n-trimethyl-, inner salt",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001728,Hexose,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001730,N-Acetyl-DL-cysteine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001731,Mercaptoethanesulfonic acid,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001732,2-O-Sulfohexopyranuronosyl-(1->4)-2-deoxy-3-O-sulfo-2-(sulfoamino)hexopyranosyl-(1->4)-2-O-sulfohexopyranuronosyl-(1->4)-2-acetamido-2-deoxy-6-O-sulfohexopyranose,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001733,Nicotinate,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001735,1-(2-Deoxypentofuranosyl)-4-hydroxy-5-methylpyrimidin-2(1H)-one,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001736,Doxorubicin (Adriamycin) HCl,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001737,"[2-[4-[(2-Butylbenzofuran-3-yl)carbonyl]-2,6-diiodophenoxy]ethyl]diethylaminium",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001738,"6-{[Amino(phenyl)acetyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001739,"1-[5-Carbamimidamido-2-(3-methyl-1,2,3,4-tetrahydroquinoline-8-sulfonamido)pentanoyl]-4-methylpiperidine-2-carboxylic acid",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001741,"4-[[2-[[2-(1-amino-2-methylbutyl)-4,5-dihydro-1,3-thiazole-4-carbonyl]amino]-4-methylpentanoyl]amino]-5-[[1-[4-[20-(2-amino-2-oxoethyl)-5-(3-aminopropyl)-11-benzyl-8-butan-2-yl-17-(carboxymethyl)-14-(1H-imidazol-5-ylmethyl)-3,6,9,12,15,18,21-heptaoxo-1,4,7,10,13,16,19-heptazacyclohenicos-2-yl]butylamino]-3-methyl-1-oxopentan-2-yl]amino]-5-oxopentanoic acid",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001742,"9-Chloro-11,17,21-trihydroxy-16-methylpregna-1,4-diene-3,20-dione",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001744,"3-{[(5-methyl-1,3,4-thiadiazol-2-yl)sulfanyl]methyl}-8-oxo-7-[(1H-tetrazol-1-ylacetyl)amino]-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001745,"3-(Acetyloxymethyl)-7-[[2-(2-amino-1,3-thiazol-4-yl)-2-methoxyiminoacetyl]amino]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001746,3-[(Carbamoyloxy)methyl]-7-methoxy-8-oxo-7-[(thiophen-2-ylacetyl)amino]-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001747,"7-[[2-(2-Amino-1,3-thiazol-4-yl)-2-methoxyiminoacetyl]amino]-3-[(2-methyl-6-oxido-5-oxo-1,2,4-triazin-3-yl)sulfanylmethyl]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001748,3-(Carbamoyloxymethyl)-7-[[2-(furan-2-yl)-2-methoxyiminoacetyl]amino]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001749,"7-[4-(4-Fluorophenyl)-5-(methoxymethyl)-2,6-di(propan-2-yl)pyridin-3-yl]-3,5-dihydroxyhept-6-enoic acid",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001750,"7-Chloro-2-(methylimino)-5-phenyl-2,3-dihydro-4H-1,4-benzodiazepin-4-ol",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001751,Chlorohexidine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001752,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001753,"cobalt(2+);[5-(5,6-dimethylbenzimidazol-1-yl)-4-hydroxy-2-(hydroxymethyl)oxolan-3-yl] 1-[3-[2,13,18-tris(2-amino-2-oxoethyl)-7,12,17-tris(3-amino-3-oxopropyl)-3,5,8,8,13,15,18,19-octamethyl-2,7,12,17-tetrahydro-1H-corrin-21-id-3-yl]propanoylamino]propan-2-yl hydrogen phosphate;cyanide",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001754,Dantrolene(1-),NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001756,"6-({[3-(2,6-Dichlorophenyl)-5-methyl-1,2-oxazol-4-yl]carbonyl}amino)-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001757,"2-[3-Acetyloxy-2-(4-methoxyphenyl)-4-oxo-2,3-dihydro-1,5-benzothiazepin-5-yl]ethyl-dimethylazanium",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001758,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001759,"[2,5-Bis(2,2,2-trifluoroethoxy)benzoyl]-(piperidin-2-ylmethyl)azanium",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001760,Phosphonatoformate,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001761,4-Cyclohexyl-1-[2-[(2-methyl-1-propanoyloxypropoxy)-(4-phenylbutyl)phosphoryl]acetyl]pyrrolidine-2-carboxylate,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001763,"[11-hydroxy-17-(2-hydroxyacetyl)-10,13-dimethyl-3-oxo-2,6,7,8,9,11,12,14,15,16-decahydro-1H-cyclopenta[a]phenanthren-17-yl] butanoate",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001764,Leuprelin Acetate,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001765,Loperamide(1+),NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001766,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001767,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001769,"Benzyl-[2-[5-methoxycarbonyl-2,6-dimethyl-4-(3-nitrophenyl)-1,4-dihydropyridine-3-carbonyl]oxyethyl]-methylazanium",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001770,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001771,"3,3-Dimethyl-6-{[(5-methyl-3-phenyl-1,2-oxazol-4-yl)carbonyl]amino}-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001772,Oxaliplatin (Eloxatin),NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001773,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001775,"3,3-Dimethyl-7-oxo-6-[(2-phenoxyacetyl)amino]-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001776,2'-Deoxycoformycin,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001777,"6-{[{[(4-Ethyl-2,3-dioxopiperazin-1-yl)carbonyl]amino}(phenyl)acetyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001778,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001780,Strept-omycin,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001781,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001782,"3-acetamido-4-guanidino-2-(1,2,3-trihydroxypropyl)-3,4-dihydro-2H-pyran-6-carboxylic acid",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001783,"1-(19-Amino-7-(2-Amino-2-Oxoethyl)-10-(3-Amino-3-Oxopropyl)-13-Butan-2-Yl-16-((4-Hydroxyphenyl)Methyl)-6,9,12,15,18-Pentaoxo-1,2-Dithia-5,8,11,14,17-Pentazacycloicosane-4-Carbonyl)-N-(1-((2-Amino-2-Oxoethyl)Amino)-4-Methyl-1-Oxopentan-2-Yl)Pyrrolidine-2-Carboxamide",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001784,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001785,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001790,Selenium sulfide (SeS),NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001791,Calcium chloride 6-hydrate,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001792,5-[(2R)-3-(2-carboxy-4-oxochromen-6-yl)oxy-2-hydroxypropoxy]-4-oxochromene-2-carboxylic acid,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001793,dAVP,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001794,Lithium aluminum hydride,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001795,"(9R,17R)-17-(2-chloroacetyl)-9-fluoro-11,17-dihydroxy-10,13,16-trimethyl-6,7,8,11,12,14,15,16-octahydrocyclopenta[a]phenanthren-3-one",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001796,"Azane;cyclobutane-1,1-dicarboxylic acid;platinum",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001797,"(3R,4R,5S,6R)-5-(((2R,3R,4R,5S,6R)-5-(((2R,3R,4S,5S,6R)-3,4-dihydroxy-6-methyl-5-(((1S,4R,5S,6S)-4,5,6-trihydroxy-3-(hydroxymethyl)cyclohex-2-en-1-yl)amino)oxan-2-yl)oxy)-3,4-dihydroxy-6-(hydroxymethyl)oxan-2-yl)oxy)-6-(hydroxymethyl)oxane-2,3,4-triol",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001798,"[(6S,9R,16S,17R)-17-(2-chloroacetyl)-6,9-difluoro-11-hydroxy-10,13,16-trimethyl-3-oxo-6,7,8,11,12,14,15,16-octahydrocyclopenta[a]phenanthren-17-yl] propanoate",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001799,"chloromethyl (10R,11S,13S,17R)-17-ethoxycarbonyloxy-11-hydroxy-10,13-dimethyl-3-oxo-7,8,9,11,12,14,15,16-octahydro-6H-cyclopenta[a]phenanthrene-17-carboxylate",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001800,Levomedetomidine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001801,Omniscan,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001802,Milveterol+Fluticasone,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001803,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001805,"3-[[2-[2-[2-[[2-[[4-[[2-[[6-amino-2-[3-amino-1-[(2,3-diamino-3-oxopropyl)amino]-3-oxopropyl]-5-methylpyrimidine-4-carbonyl]amino]-3-[(2R,3S,4S,5S,6S)-3-[(2R,3S,4S,5R,6R)-4-carbamoyloxy-3,5-dihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-4,5-dihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-3-(1H-imidazol-5-yl)propanoyl]amino]-3-hydroxy-2-methylpentanoyl]amino]-3-hydroxybutanoyl]amino]ethyl]-1,3-thiazol-4-yl]-1,3-thiazole-4-carbonyl]amino]propyl-dimethylsulfanium",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001806,"3-(4-(4-Chlorophenyl)cyclohexyl)-4-hydroxynaphthalene-1,2-dione",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001807,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001808,Maltulose,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001811,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001812,2-(chloromethyl)oxirane;prop-2-en-1-amine;N-prop-2-enyldecan-1-amine;trimethyl-[6-(prop-2-enylamino)hexyl]azanium;chloride;hydrochloride,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001813,Lanthanum carbonate--water (2/3/1),NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001814,"(2R)-3-phenyl-2-[[(1S,3S)-3-propan-2-ylcyclohexanecarbonyl]amino]propanoic acid",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001816,"(2S,3S,4R,5R,6R)-5-amino-6-[(2R,3S,4R,5S)-5-[(1R,2S,3R,6R)-3-amino-6-[(1S,2R,3R,4R,5R)-2-amino-5-(aminomethyl)-3,4-dihydroxycyclohexyl]oxy-2-hydroxycyclohexyl]oxy-4-hydroxy-2-(hydroxymethyl)oxolan-3-yl]oxy-2-(aminomethyl)oxane-3,4-diol",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001817,2-(4-hydroxy-6-methoxy-7-methyl-3-oxo-1H-isobenzofuran-5-yl)acetic acid,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001818,Glatiramer (acetate),NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001819,"3-[18-(2-Carboxyethyl)-8-ethyl-13-(1-hydroxyethyl)-3,7,12,17-tetramethyl-22,23-dihydroporphyrin-2-yl]propanoic acid",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001820,"20-[(3-Amino-3,6-dideoxyhexopyranosyl)oxy]-4,6,8,11,12,16,18,36-octahydroxy-35,37,38-trimethyl-2,14-dioxo-1-oxacyclooctatriaconta-21,23,25,27,31,33-hexaene-17-carboxylic acid",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001821,Rosuvastatin EP Impurity L,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001822,"cobalt;[5-(5,6-dimethylbenzimidazol-1-yl)-4-hydroxy-2-(hydroxymethyl)oxolan-3-yl] 1-[3-[2,13,18-tris(2-amino-2-oxoethyl)-7,12,17-tris(3-amino-3-oxopropyl)-3,5,8,8,13,15,18,19-octamethyl-2,7,12,17-tetrahydro-1H-corrin-21-id-3-yl]propanoylamino]propan-2-yl phosphate;hydrate",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001823,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001824,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001825,Gaspofungin Impurity F,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001826,Dichloromethanediamine,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001827,deamino-Cys(1)-N(2)hArg-Gly-Asp-Trp-Pro-Cys(1)-(2),NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001828,2-[2-[(3R)-3-[3-[(E)-2-(7-chloroquinolin-2-yl)ethenyl]phenyl]-3-sulfanylpropyl]phenyl]propan-2-ol,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001829,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001830,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001831,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001832,"2-Amino-3,5-dihydropurine-6-thione",NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001833,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001834,NO_NAME_CANDIDATE,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001835,CID 6398525,NO_MATCH,matching,No matching concept found in RxNorm API.
+DRUG_001836,Ridauran,NO_MATCH,matching,No matching concept found in RxNorm API.

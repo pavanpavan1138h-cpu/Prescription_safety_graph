@@ -1,0 +1,22 @@
+{
+    "drugbank": {
+        "input_raw_interactions": 191808,
+        "mapped_graph_edges": 191808,
+        "unmapped_records": 0,
+        "reconciliation_passed": true
+    },
+    "twosides": {
+        "input_raw_relationships": 4649441,
+        "unique_tested_drug_pairs": 63473,
+        "mapped_pair_membership_edges": 126946,
+        "mapped_side_effect_edges": 4649441,
+        "unmapped_records": 0,
+        "reconciliation_passed": true
+    },
+    "rxnorm": {
+        "input_resolved_concepts": 1616,
+        "mapped_concept_nodes": 1597,
+        "mapped_graph_edges": 1616,
+        "reconciliation_passed": true
+    }
+}

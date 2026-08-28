@@ -1,0 +1,9 @@
+{
+    "total_raw_ddi_records": 191808,
+    "unique_directed_pairs": 191519,
+    "repeated_directed_pairs": 289,
+    "reverse_pairs_count": 234,
+    "self_interactions": 0,
+    "map_descriptions_variance_count": 289,
+    "duplicate_rows": 0
+}

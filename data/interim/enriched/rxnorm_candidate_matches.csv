@@ -1,0 +1,546 @@
+internal_drug_id,query_name,candidate_rxcui,candidate_name,candidate_tty,match_method,match_score,selected_as_final,selection_reason
+DRUG_000002,goserelin,50610,goserelin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000006,cyclosporine,3008,cyclosporine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000007,octreotide,7617,octreotide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000014,calcitriol,1894,calcitriol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000020,ergocalciferol,4018,ergocalciferol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000028,pravastatin,42463,pravastatin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000029,fluvoxamine,42355,fluvoxamine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000030,valsartan,69749,valsartan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000031,ramipril,35296,ramipril,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000033,"12-Fluoro-5-hydroxy-6b-(hydroxyacetyl)-4a,6a,8,8-tetramethyl-4a,4b,5,6,6a,6b,9a,10,10a,10b,11,12-dodecahydro-2H,8H-naphtho(2',1':4,5)indeno(1,2-d)(1,3)dioxol-2-one",5084,halcinonide,IN,approximate_lookup,58.29359679429799,0,Alternative candidate
+DRUG_000034,baclofen,1292,baclofen,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000037,Amphetamine,725,amphetamine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000040,lorazepam,6470,lorazepam,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000042,bortezomib,358258,bortezomib,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000045,Phentermine,8152,phentermine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000046,tramadol,10689,tramadol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000047,betaxolol,1520,betaxolol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000048,Fluconazole,4450,fluconazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000049,oseltamivir,260101,oseltamivir,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000050,erythromycin,4053,erythromycin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000051,caffeine,1886,caffeine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000053,sildenafil,136411,sildenafil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000054,dofetilide,49247,dofetilide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000055,pyrimethamine,9010,pyrimethamine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000056,reserpine,9260,reserpine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000057,azithromycin,18631,azithromycin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000058,ticlopidine,10594,ticlopidine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000059,trospium,236778,trospium,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000060,adapalene,60223,adapalene,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000061,midodrine,6963,midodrine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000063,pantoprazole,40790,pantoprazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000064,torsemide,38413,torsemide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000067,Citalopram,2556,citalopram,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000068,eletriptan,231049,eletriptan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000070,moxifloxacin,139462,moxifloxacin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000072,nelfinavir,134527,nelfinavir,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000074,glimepiride,25789,glimepiride,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000078,lovastatin,6472,lovastatin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000081,pregabalin,187832,pregabalin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000082,temazepam,10355,temazepam,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000089,nevirapine,53654,nevirapine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000093,cladribine,44157,cladribine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000094,ranolazine,35829,ranolazine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000095,mesalamine,52582,mesalamine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000097,ziprasidone,115698,ziprasidone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000099,cabergoline,47579,cabergoline,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000100,dapsone,3108,dapsone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000102,phenytoin,8183,phenytoin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000107,clotrimazole,2623,clotrimazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000111,anagrelide,596724,anagrelide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000112,carmustine,2105,carmustine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000114,metoprolol,6918,metoprolol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000117,ropinirole,72302,ropinirole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000118,isradipine,33910,isradipine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000120,topiramate,38404,topiramate,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000124,Theophylline,10438,theophylline,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000126,liothyronine,10814,liothyronine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000127,disopyramide,3541,disopyramide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000128,lidocaine,6387,lidocaine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000129,Pamidronic Acid,1546406,pamidronic acid,PIN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000132,venlafaxine,39786,venlafaxine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000133,travoprost,283809,travoprost,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000135,atomoxetine,38400,atomoxetine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000137,chlorambucil,2346,chlorambucil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000138,etomidate,4177,etomidate,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000140,etonogestrel,14584,etonogestrel,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000142,ropivacaine,35780,ropivacaine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000147,tenofovir disoproxil,300195,tenofovir disoproxil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000150,ertapenem,325642,ertapenem,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000152,mitomycin,632,mitomycin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000153,bexarotene,233272,bexarotene,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000156,chlorthalidone,2409,chlorthalidone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000158,Valproic Acid,11118,valproic acid,PIN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000160,zolmitriptan,135775,zolmitriptan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000161,acetaminophen,161,acetaminophen,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000162,gefitinib,328134,gefitinib,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000165,dihydroergotamine,3418,dihydroergotamine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000166,amitriptyline,704,amitriptyline,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000168,tolcapone,72937,tolcapone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000169,fluorometholone,4491,fluorometholone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000172,hydromorphone,3423,hydromorphone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000173,indomethacin,5781,indomethacin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000174,ethambutol,4110,ethambutol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000175,metformin,6809,metformin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000177,methadone,6813,methadone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000179,atenolol,1202,atenolol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000181,pimecrolimus,321952,pimecrolimus,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000182,omeprazole,7646,omeprazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000183,pyrazinamide,8987,pyrazinamide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000187,Cetirizine,20610,cetirizine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000191,alfuzosin,17300,alfuzosin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000197,methylergonovine,6883,methylergonovine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000200,chlorzoxazone,2410,chlorzoxazone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000202,mefloquine,6694,mefloquine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000203,sulfadiazine,10171,sulfadiazine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000205,vinorelbine,39541,vinorelbine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000212,Methylnorethindrone,7518,norgestrel,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000215,mirtazapine,15996,mirtazapine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000216,meprobamate,6760,meprobamate,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000218,treprostinil,343048,treprostinil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000219,trihexyphenidyl,10811,trihexyphenidyl,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000220,palonosetron,70561,palonosetron,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000222,mexiletine,6926,mexiletine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000224,amlodipine,17767,amlodipine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000230,digoxin,3407,digoxin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000233,nimodipine,7426,nimodipine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000235,carisoprodol,2101,carisoprodol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000236,progesterone,8727,progesterone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000238,sorafenib,495881,sorafenib,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000239,Zoledronic Acid,77655,zoledronic acid,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000241,nisoldipine,7435,nisoldipine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000244,Zopiclone,40001,zopiclone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000245,alprazolam,596,alprazolam,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000247,loxapine,6475,loxapine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000249,mupirocin,42372,mupirocin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000250,Carbamylcholine,1546387,carbamoylcholine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000251,rosiglitazone,84108,rosiglitazone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000252,pramipexole,746741,pramipexole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000256,miglustat,402316,miglustat,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000258,spironolactone,9997,spironolactone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000261,Methylphenidate,6901,methylphenidate,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000262,methocarbamol,6845,methocarbamol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000266,zolpidem,39993,zolpidem,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000267,famciclovir,68099,famciclovir,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000273,prochlorperazine,8704,prochlorperazine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000275,nitric oxide,7442,nitric oxide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000279,trimethoprim,10829,trimethoprim,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000280,gemcitabine,12574,gemcitabine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000287,chloramphenicol,2348,chloramphenicol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000290,Lansoprazole,17128,lansoprazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000292,droperidol,3648,droperidol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000293,levothyroxine,10582,levothyroxine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000296,meperidine,6754,meperidine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000297,loratadine,28889,loratadine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000299,prazosin,8629,prazosin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000300,imipramine,5691,imipramine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000301,acitretin,16818,acitretin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000302,verteporfin,118886,verteporfin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000303,nabumetone,31448,nabumetone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000305,ketorolac,35827,ketorolac,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000311,dronabinol,10402,dronabinol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000313,fluoxetine,4493,fluoxetine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000316,duloxetine,72625,duloxetine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000317,chlorpromazine,2403,chlorpromazine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000318,amikacin,641,amikacin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000319,lenalidomide,342369,lenalidomide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000320,raloxifene,72143,raloxifene,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000321,celecoxib,140587,celecoxib,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000323,brimonidine,134615,brimonidine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000325,nabilone,31447,nabilone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000328,sotalol,9947,sotalol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000329,buspirone,1827,buspirone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000333,entacapone,60307,entacapone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000334,zidovudine,11413,zidovudine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000335,darifenacin,136198,darifenacin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000336,oxycodone,7804,oxycodone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000338,flutamide,4508,flutamide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000340,cimetidine,2541,cimetidine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000341,haloperidol,5093,haloperidol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000342,ritonavir,85762,ritonavir,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000346,vancomycin,11124,vancomycin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000347,6-aminocaproic acid,99,6-aminocaproic acid,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000352,trandolapril,38454,trandolapril,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000359,metolazone,6916,metolazone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000365,erlotinib,337525,erlotinib,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000366,Cyclophosphamide,3002,cyclophosphamide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000367,cefdinir,25037,cefdinir,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000368,ciprofloxacin,2551,ciprofloxacin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000370,nortriptyline,7531,nortriptyline,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000371,vincristine,11202,vincristine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000372,benazepril,18867,benazepril,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000373,amoxapine,722,amoxapine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000374,fluorouracil,4492,fluorouracil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000375,pyridostigmine,9000,pyridostigmine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000378,azelaic acid,18602,azelaic acid,PIN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000379,zafirlukast,114970,zafirlukast,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000380,propylthiouracil,8794,propylthiouracil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000385,lamotrigine,28439,lamotrigine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000387,hydroxyzine,5553,hydroxyzine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000388,Bosentan,75207,bosentan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000392,methotrexate,6851,methotrexate,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000393,carbamazepine,2002,carbamazepine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000397,fondaparinux,321208,fondaparinux,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000398,vinblastine,11198,vinblastine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000399,propranolol,8787,propranolol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000401,clonidine,2599,clonidine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000403,valacyclovir,73645,valacyclovir,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000406,voriconazole,121243,voriconazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000408,enalapril,3827,enalapril,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000409,nizatidine,42319,nizatidine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000413,doxazosin,49276,doxazosin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000414,fluocinolone acetonide,4461,fluocinolone acetonide,PIN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000416,ethosuximide,4135,ethosuximide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000417,amiloride,644,amiloride,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000420,labetalol,6185,labetalol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000422,linezolid,190376,linezolid,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000423,ivermectin,6069,ivermectin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000426,sulindac,10237,sulindac,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000429,chloroquine,2393,chloroquine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000432,butorphanol,1841,butorphanol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000433,bisoprolol,19484,bisoprolol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000439,imatinib,282388,imatinib,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000440,triamcinolone,10759,triamcinolone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000441,oxandrolone,7779,oxandrolone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000443,fluphenazine,4496,fluphenazine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000444,testosterone,10379,testosterone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000445,efavirenz,195085,efavirenz,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000450,Alendronic Acid,236083,alendronic acid,PIN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000451,clofarabine,44151,clofarabine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000454,prednisone,8640,prednisone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000458,adenosine,296,adenosine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000459,simvastatin,36567,simvastatin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000460,pemetrexed,68446,pemetrexed,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000465,mitotane,7004,mitotane,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000466,stavudine,59763,stavudine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000469,pentazocine,8001,pentazocine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000471,latanoprost,43611,latanoprost,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000473,trazodone,10737,trazodone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000475,sevelamer,214824,sevelamer,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000477,verapamil,11170,verapamil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000483,epinephrine,3992,epinephrine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000484,sumatriptan,37418,sumatriptan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000487,chlorpropamide,2404,chlorpropamide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000489,galantamine,4637,galantamine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000490,tamoxifen,10324,tamoxifen,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000492,losartan,52175,losartan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000497,midazolam,6960,midazolam,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000498,tobramycin,10627,tobramycin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000504,flurazepam,4501,flurazepam,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000505,moexipril,30131,moexipril,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000508,furosemide,4603,furosemide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000510,tizanidine,57258,tizanidine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000513,eplerenone,298869,eplerenone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000514,amprenavir,228656,amprenavir,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000516,naltrexone,7243,naltrexone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000518,tamsulosin,77492,tamsulosin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000519,sufentanil,56795,sufentanil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000520,lamivudine,68244,lamivudine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000521,Ibandronate,115264,ibandronate,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000523,flurbiprofen,4502,flurbiprofen,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000525,apomorphine,1043,apomorphine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000526,paroxetine,32937,paroxetine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000527,norethindrone,7514,norethindrone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000528,adefovir dipivoxil,141400,adefovir dipivoxil,PIN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000534,imiquimod,59943,imiquimod,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000535,trimipramine,10834,trimipramine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000536,nitroglycerin,4917,nitroglycerin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000537,rocuronium,68139,rocuronium,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000542,Atracurium Besylate,1219,atracurium besylate,PIN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000543,risperidone,35636,risperidone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000546,meclizine,6676,meclizine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000548,riluzole,35623,riluzole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000549,hydrocortisone,5492,hydrocortisone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000550,mannitol,6628,mannitol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000555,Modafinil,30125,modafinil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000556,deferoxamine,3131,deferoxamine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000559,etodolac,24605,etodolac,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000562,tranylcypromine,10734,tranylcypromine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000563,isoflurane,6026,isoflurane,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000565,dolasetron,68091,dolasetron,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000566,clopidogrel,32968,clopidogrel,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000569,potassium chloride,8591,potassium chloride,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000570,irinotecan,51499,irinotecan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000571,methimazole,6835,methimazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000572,mometasone,108118,mometasone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000575,olopatadine,135391,olopatadine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000577,alprostadil,598,alprostadil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000580,etoposide,4179,etoposide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000582,tirofiban,73137,tirofiban,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000583,oxcarbazepine,32624,oxcarbazepine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000586,phenelzine,8123,phenelzine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000589,estradiol,4083,estradiol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000590,mefenamic acid,6693,mefenamic acid,PIN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000591,acyclovir,281,acyclovir,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000592,naproxen,7258,naproxen,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000593,perindopril,54552,perindopril,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000597,primidone,8691,primidone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000601,gentamicin,1596450,gentamicin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000602,tazarotene,83947,tazarotene,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000605,alfentanil,480,alfentanil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000607,dicyclomine,3361,dicyclomine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000609,pentoxifylline,8013,pentoxifylline,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000611,indapamide,5764,indapamide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000612,tropicamide,10869,tropicamide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000614,ribavirin,9344,ribavirin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000616,fentanyl,4337,fentanyl,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000620,propofol,8782,propofol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000621,acetazolamide,167,acetazolamide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000622,tadalafil,358263,tadalafil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000624,disulfiram,3554,disulfiram,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000629,diazepam,3322,diazepam,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000640,dobutamine,3616,dobutamine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000641,oxazepam,7781,oxazepam,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000642,donepezil,135447,donepezil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000643,nalbuphine,7238,nalbuphine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000648,perphenazine,8076,perphenazine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000651,temozolomide,37776,temozolomide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000655,terbinafine,37801,terbinafine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000656,penicillamine,7975,penicillamine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000657,prednisolone,8638,prednisolone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000658,diflunisal,3393,diflunisal,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000659,vardenafil,306674,vardenafil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000660,ranitidine,9143,ranitidine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000665,dorzolamide,60207,dorzolamide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000672,sirolimus,35302,sirolimus,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000673,emtricitabine,276237,emtricitabine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000674,chlorothiazide,2396,chlorothiazide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000675,quinapril,35208,quinapril,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000676,clomiphene,2596,clomiphene,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000677,isosorbide dinitrate,6058,isosorbide dinitrate,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000678,Risedronate,73056,risedronate,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000680,bumetanide,1808,bumetanide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000682,granisetron,26237,granisetron,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000688,triazolam,10767,triazolam,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000690,remifentanil,73032,remifentanil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000691,didanosine,3364,didanosine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000692,Ethacrynic Acid,4109,ethacrynic acid,PIN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000693,ondansetron,26225,ondansetron,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000694,bimatoprost,283810,bimatoprost,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000695,tiagabine,31914,tiagabine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000697,zonisamide,39998,zonisamide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000698,paricalcitol,73710,paricalcitol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000700,repaglinide,73044,repaglinide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000702,amantadine,620,amantadine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000703,metronidazole,6922,metronidazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000704,dinoprostone,3478,dinoprostone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000705,almotriptan,279645,almotriptan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000707,ketotifen,6146,ketotifen,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000708,buprenorphine,1819,buprenorphine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000711,cyclobenzaprine,21949,cyclobenzaprine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000713,famotidine,4278,famotidine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000715,misoprostol,42331,misoprostol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000719,maprotiline,6646,maprotiline,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000723,salmeterol,36117,salmeterol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000728,Aspirin,1191,aspirin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000730,fulvestrant,282357,fulvestrant,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000733,fexofenadine,87636,fexofenadine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000734,isoniazid,6038,isoniazid,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000735,naratriptan,141366,naratriptan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000736,rizatriptan,88014,rizatriptan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000742,methylprednisolone,6902,methylprednisolone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000743,pindolol,8332,pindolol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000745,zaleplon,74667,zaleplon,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000748,telmisartan,73494,telmisartan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000749,desloratadine,275635,desloratadine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000751,alosetron,85248,alosetron,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000752,dactinomycin,3100,dactinomycin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000753,azelastine,18603,azelastine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000754,ezetimibe,341248,ezetimibe,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000756,dipyridamole,3521,dipyridamole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000757,telithromycin,274786,telithromycin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000765,Formoterol,25255,formoterol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000767,Glycopyrronium,1546438,glycopyrronium,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000770,rivastigmine,183379,rivastigmine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000771,exemestane,258494,exemestane,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000772,oxaprozin,32613,oxaprozin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000774,azathioprine,1256,azathioprine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000775,gabapentin,25480,gabapentin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000777,frovatriptan,228783,frovatriptan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000778,hydrochlorothiazide,5487,hydrochlorothiazide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000782,Salbutamol,435,albuterol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000783,ganciclovir,4678,ganciclovir,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000784,Hydroxyurea,5552,hydroxyurea,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000785,letrozole,72965,letrozole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000786,tioconazole,38298,tioconazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000787,busulfan,1828,busulfan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000790,Ketoprofen,6142,ketoprofen,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000793,cinacalcet,407990,cinacalcet,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000797,glyburide,4815,glyburide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000800,bethanechol,19257,bethanechol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000801,isosorbide mononitrate,28004,isosorbide mononitrate,PIN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000804,felodipine,4316,felodipine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000806,ketoconazole,6135,ketoconazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000808,irbesartan,83818,irbesartan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000809,topotecan,57308,topotecan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000810,probenecid,8698,probenecid,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000811,6-Mercaptopurine,103,mercaptopurine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000813,procainamide,8700,procainamide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000814,tolterodine,119565,tolterodine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000815,selegiline,9639,selegiline,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000816,fenofibrate,8703,fenofibrate,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000817,thalidomide,10432,thalidomide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000818,melphalan,6718,melphalan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000819,memantine,6719,memantine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000820,Gatifloxacin,228476,gatifloxacin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000823,fluocinonide,4462,fluocinonide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000824,abacavir,190521,abacavir,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000825,ibuprofen,5640,ibuprofen,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000827,penicillin G,7980,penicillin G,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000831,norfloxacin,7517,norfloxacin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000832,"6-(2-Amino(4-hydroxyphenyl)acetamido)-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo(3.2.0)heptane-2-carboxylic acid",1297882,amoxicillin anhydrous,PIN,approximate_lookup,53.36818341963796,0,Alternative candidate
+DRUG_000834,oxybutynin,32675,oxybutynin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000838,cefditoren,83682,cefditoren,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000839,glipizide,4821,glipizide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000840,clonazepam,2598,clonazepam,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000841,promethazine,8745,promethazine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000844,atazanavir,343047,atazanavir,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000845,fludarabine,24698,fludarabine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000848,atorvastatin,83367,atorvastatin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000849,Etidronic Acid,1356715,etidronic acid,PIN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000854,orlistat,37925,orlistat,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000856,pilocarpine,8328,pilocarpine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000859,iloprost,40138,iloprost,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000866,fluvastatin,41127,fluvastatin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000868,leflunomide,27169,leflunomide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000872,capecitabine,194000,capecitabine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000875,sertraline,36437,sertraline,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000876,sibutramine,36514,sibutramine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000880,miconazole,6932,miconazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000885,nifedipine,7417,nifedipine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000893,tolbutamide,10635,tolbutamide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000894,dutasteride,228790,dutasteride,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000895,econazole,3743,econazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000896,bicalutamide,83008,bicalutamide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000897,rabeprazole,114979,rabeprazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000900,pioglitazone,33738,pioglitazone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000903,carvedilol,20352,carvedilol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000906,Ofloxacin,7623,ofloxacin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000911,doxepin,3638,doxepin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000912,Amifostine,4126,amifostine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000915,nefazodone,31565,nefazodone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000917,desipramine,3247,desipramine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000920,gemifloxacin,138099,gemifloxacin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000921,bupropion,42347,bupropion,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000924,halothane,5095,halothane,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000927,terazosin,37798,terazosin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000930,itraconazole,28031,itraconazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000936,orphenadrine,7715,orphenadrine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000943,ifosfamide,5657,ifosfamide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000944,propafenone,8754,propafenone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000945,naloxone,7242,naloxone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000948,pergolide,8047,pergolide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000949,ciclopirox,21090,ciclopirox,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000950,desflurane,27340,desflurane,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000951,clindamycin,2582,clindamycin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000954,acebutolol,149,acebutolol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000955,brinzolamide,194881,brinzolamide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000958,captopril,1998,captopril,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000962,levetiracetam,114477,levetiracetam,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000963,nadolol,7226,nadolol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000964,mitoxantrone,7005,mitoxantrone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000965,flumazenil,4457,flumazenil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000970,levobunolol,1813,levobunolol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000971,clarithromycin,21212,clarithromycin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000975,estazolam,4077,estazolam,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000976,finasteride,25025,finasteride,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000977,anastrozole,84857,anastrozole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000980,rifaximin,35619,rifaximin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000981,ketamine,6130,ketamine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000982,budesonide,19831,budesonide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000983,aminophylline,689,aminophylline,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000984,quetiapine,51272,quetiapine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000989,saquinavir,83395,saquinavir,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000990,metoclopramide,6915,metoclopramide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000992,sevoflurane,36453,sevoflurane,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000993,aripiprazole,89013,aripiprazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000995,epoprostenol,8814,epoprostenol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000996,gemfibrozil,4719,gemfibrozil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_000997,clomipramine,2597,clomipramine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001004,iodixanol,27729,iodixanol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001009,Dasatinib,475342,dasatinib,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001013,desonide,3254,desonide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001016,posaconazole,282446,posaconazole,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001017,darunavir,460132,darunavir,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001018,paliperidone,679314,paliperidone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001019,sunitinib,357977,sunitinib,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001020,varenicline,591622,varenicline,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001021,hydralazine,5470,hydralazine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001028,pirbuterol,33767,pirbuterol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001037,fosamprenavir,358262,fosamprenavir,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001038,fosphenytoin,72236,fosphenytoin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001049,cephradine,2239,cephradine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001051,pancuronium,7883,pancuronium,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001053,Vecuronium,71535,vecuronium,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001064,iohexol,5956,iohexol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001068,rasagiline,134748,rasagiline,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001075,sodium bicarbonate,36676,sodium bicarbonate,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001086,danazol,3102,danazol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001089,tiotropium,69120,tiotropium,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001090,ciclesonide,274964,ciclesonide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001093,cefepime,20481,cefepime,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001096,cefpodoxime,20489,cefpodoxime,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001128,methamphetamine,6816,methamphetamine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001140,quazepam,35185,quazepam,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001142,solifenacin,322167,solifenacin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001144,nitrazepam,7440,nitrazepam,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001158,valganciclovir,275891,valganciclovir,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001159,hydroxychloroquine,5521,hydroxychloroquine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001169,thiothixene,10510,thiothixene,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001172,lincomycin,6398,lincomycin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001180,calcipotriene,29365,calcipotriene,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001203,thiotepa,10473,thiotepa,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001252,rotigotine,616739,rotigotine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001307,ambrisentan,358274,ambrisentan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001334,desvenlafaxine,734064,desvenlafaxine,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001462,iopamidol,5966,iopamidol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001491,aliskiren,325646,aliskiren,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001550,ioversol,27792,ioversol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001557,sodium chloride,9863,sodium chloride,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001559,iopromide,27781,iopromide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001672,levoleucovorin,877015,levoleucovorin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001726,"1-propanaminium, 3-carboxy-2-hydroxy-n,n,n-trimethyl-, inner salt",42955,levocarnitine,IN,approximate_lookup,57.63142889700646,0,Alternative candidate
+DRUG_001727,Gamma-Aminobutyric Acid,4617,gamma-aminobutyric acid,PIN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001729,Calcium Cation,1316581,calcium ion,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001734,Sulfate Ion,1426598,sulfate ion,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001738,"6-{[Amino(phenyl)acetyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",2015,carbenicillin,IN,approximate_lookup,51.0476395886712,0,Alternative candidate
+DRUG_001740,"2-[[1-(2-Amino-1,3-thiazol-4-yl)-2-[(2-methyl-4-oxo-1-sulfoazetidin-3-yl)amino]-2-oxoethylidene]amino]oxy-2-methylpropanoic acid",1272,aztreonam,IN,approximate_lookup,74.47877473152485,1,Top matching score candidate
+DRUG_001741,"4-[[2-[[2-(1-amino-2-methylbutyl)-4,5-dihydro-1,3-thiazole-4-carbonyl]amino]-4-methylpentanoyl]amino]-5-[[1-[4-[20-(2-amino-2-oxoethyl)-5-(3-aminopropyl)-11-benzyl-8-butan-2-yl-17-(carboxymethyl)-14-(1H-imidazol-5-ylmethyl)-3,6,9,12,15,18,21-heptaoxo-1,4,7,10,13,16,19-heptazacyclohenicos-2-yl]butylamino]-3-methyl-1-oxopentan-2-yl]amino]-5-oxopentanoic acid",8153,phentolamine,IN,approximate_lookup,51.62980923785279,0,Alternative candidate
+DRUG_001741,"4-[[2-[[2-(1-amino-2-methylbutyl)-4,5-dihydro-1,3-thiazole-4-carbonyl]amino]-4-methylpentanoyl]amino]-5-[[1-[4-[20-(2-amino-2-oxoethyl)-5-(3-aminopropyl)-11-benzyl-8-butan-2-yl-17-(carboxymethyl)-14-(1H-imidazol-5-ylmethyl)-3,6,9,12,15,18,21-heptaoxo-1,4,7,10,13,16,19-heptazacyclohenicos-2-yl]butylamino]-3-methyl-1-oxopentan-2-yl]amino]-5-oxopentanoic acid",83816,delavirdine,IN,approximate_lookup,50.888898809726506,0,Alternative candidate
+DRUG_001741,"4-[[2-[[2-(1-amino-2-methylbutyl)-4,5-dihydro-1,3-thiazole-4-carbonyl]amino]-4-methylpentanoyl]amino]-5-[[1-[4-[20-(2-amino-2-oxoethyl)-5-(3-aminopropyl)-11-benzyl-8-butan-2-yl-17-(carboxymethyl)-14-(1H-imidazol-5-ylmethyl)-3,6,9,12,15,18,21-heptaoxo-1,4,7,10,13,16,19-heptazacyclohenicos-2-yl]butylamino]-3-methyl-1-oxopentan-2-yl]amino]-5-oxopentanoic acid",5340,histidine,IN,approximate_lookup,50.062102473300435,0,Alternative candidate
+DRUG_001741,"4-[[2-[[2-(1-amino-2-methylbutyl)-4,5-dihydro-1,3-thiazole-4-carbonyl]amino]-4-methylpentanoyl]amino]-5-[[1-[4-[20-(2-amino-2-oxoethyl)-5-(3-aminopropyl)-11-benzyl-8-butan-2-yl-17-(carboxymethyl)-14-(1H-imidazol-5-ylmethyl)-3,6,9,12,15,18,21-heptaoxo-1,4,7,10,13,16,19-heptazacyclohenicos-2-yl]butylamino]-3-methyl-1-oxopentan-2-yl]amino]-5-oxopentanoic acid",10188,sulfapyridine,IN,approximate_lookup,50.061240580610836,0,Alternative candidate
+DRUG_001743,Candesartan,214354,candesartan,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001744,"3-{[(5-methyl-1,3,4-thiadiazol-2-yl)sulfanyl]methyl}-8-oxo-7-[(1H-tetrazol-1-ylacetyl)amino]-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate",2180,cefazolin,IN,approximate_lookup,66.82293716083873,0,Alternative candidate
+DRUG_001745,"3-(Acetyloxymethyl)-7-[[2-(2-amino-1,3-thiazol-4-yl)-2-methoxyiminoacetyl]amino]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate",2186,cefotaxime,IN,approximate_lookup,50.988152019873525,0,Alternative candidate
+DRUG_001747,"7-[[2-(2-Amino-1,3-thiazol-4-yl)-2-methoxyiminoacetyl]amino]-3-[(2-methyl-6-oxido-5-oxo-1,2,4-triazin-3-yl)sulfanylmethyl]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate",20481,cefepime,IN,approximate_lookup,56.85176439692606,0,Alternative candidate
+DRUG_001747,"7-[[2-(2-Amino-1,3-thiazol-4-yl)-2-methoxyiminoacetyl]amino]-3-[(2-methyl-6-oxido-5-oxo-1,2,4-triazin-3-yl)sulfanylmethyl]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate",2186,cefotaxime,IN,approximate_lookup,56.584423801506325,0,Alternative candidate
+DRUG_001747,"7-[[2-(2-Amino-1,3-thiazol-4-yl)-2-methoxyiminoacetyl]amino]-3-[(2-methyl-6-oxido-5-oxo-1,2,4-triazin-3-yl)sulfanylmethyl]-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylate",2178,cefamandole,IN,approximate_lookup,52.09630645170493,0,Alternative candidate
+DRUG_001755,Arthrotec,68373,Arthrotec,BN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001756,"6-({[3-(2,6-Dichlorophenyl)-5-methyl-1,2-oxazol-4-yl]carbonyl}amino)-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",3356,dicloxacillin,IN,approximate_lookup,64.99018418182759,0,Alternative candidate
+DRUG_001756,"6-({[3-(2,6-Dichlorophenyl)-5-methyl-1,2-oxazol-4-yl]carbonyl}amino)-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",4448,floxacillin,IN,approximate_lookup,56.01099395535781,0,Alternative candidate
+DRUG_001756,"6-({[3-(2,6-Dichlorophenyl)-5-methyl-1,2-oxazol-4-yl]carbonyl}amino)-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",2181306,methicillin,IN,approximate_lookup,51.8218944596131,0,Alternative candidate
+DRUG_001756,"6-({[3-(2,6-Dichlorophenyl)-5-methyl-1,2-oxazol-4-yl]carbonyl}amino)-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",2968,cyclacillin,IN,approximate_lookup,51.52952125369335,0,Alternative candidate
+DRUG_001762,Guaifenesin,5032,guaifenesin,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001768,Minoxidil,6984,minoxidil,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001774,Pemoline,7966,pemoline,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001775,"3,3-Dimethyl-7-oxo-6-[(2-phenoxyacetyl)amino]-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",7984,penicillin V,IN,approximate_lookup,53.88274068469479,0,Alternative candidate
+DRUG_001777,"6-{[{[(4-Ethyl-2,3-dioxopiperazin-1-yl)carbonyl]amino}(phenyl)acetyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",8339,piperacillin,IN,approximate_lookup,58.72310096935891,0,Alternative candidate
+DRUG_001777,"6-{[{[(4-Ethyl-2,3-dioxopiperazin-1-yl)carbonyl]amino}(phenyl)acetyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",2015,carbenicillin,IN,approximate_lookup,52.84262094966789,0,Alternative candidate
+DRUG_001777,"6-{[{[(4-Ethyl-2,3-dioxopiperazin-1-yl)carbonyl]amino}(phenyl)acetyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",2968,cyclacillin,IN,approximate_lookup,51.90492336151495,0,Alternative candidate
+DRUG_001777,"6-{[{[(4-Ethyl-2,3-dioxopiperazin-1-yl)carbonyl]amino}(phenyl)acetyl]amino}-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylate",2181306,methicillin,IN,approximate_lookup,50.53802051927745,0,Alternative candidate
+DRUG_001779,Rofecoxib,232158,rofecoxib,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001786,Medroxyprogesterone,6691,medroxyprogesterone,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001787,Behenyl Alcohol,594680,docosanol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001788,Arsenic Trioxide,18330,arsenic trioxide,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001789,Megestrol,6703,megestrol,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001797,"(3R,4R,5S,6R)-5-(((2R,3R,4R,5S,6R)-5-(((2R,3R,4S,5S,6R)-3,4-dihydroxy-6-methyl-5-(((1S,4R,5S,6S)-4,5,6-trihydroxy-3-(hydroxymethyl)cyclohex-2-en-1-yl)amino)oxan-2-yl)oxy)-3,4-dihydroxy-6-(hydroxymethyl)oxan-2-yl)oxy)-6-(hydroxymethyl)oxane-2,3,4-triol",10114,streptozocin,IN,approximate_lookup,67.75472006033249,0,Alternative candidate
+DRUG_001797,"(3R,4R,5S,6R)-5-(((2R,3R,4R,5S,6R)-5-(((2R,3R,4S,5S,6R)-3,4-dihydroxy-6-methyl-5-(((1S,4R,5S,6S)-4,5,6-trihydroxy-3-(hydroxymethyl)cyclohex-2-en-1-yl)amino)oxan-2-yl)oxy)-3,4-dihydroxy-6-(hydroxymethyl)oxan-2-yl)oxy)-6-(hydroxymethyl)oxane-2,3,4-triol",42372,mupirocin,IN,approximate_lookup,67.19368920056041,0,Alternative candidate
+DRUG_001797,"(3R,4R,5S,6R)-5-(((2R,3R,4R,5S,6R)-5-(((2R,3R,4S,5S,6R)-3,4-dihydroxy-6-methyl-5-(((1S,4R,5S,6S)-4,5,6-trihydroxy-3-(hydroxymethyl)cyclohex-2-en-1-yl)amino)oxan-2-yl)oxy)-3,4-dihydroxy-6-(hydroxymethyl)oxan-2-yl)oxy)-6-(hydroxymethyl)oxane-2,3,4-triol",2054252,migalastat,IN,approximate_lookup,66.2075428027781,0,Alternative candidate
+DRUG_001804,Acamprosate,82819,acamprosate,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001805,"3-[[2-[2-[2-[[2-[[4-[[2-[[6-amino-2-[3-amino-1-[(2,3-diamino-3-oxopropyl)amino]-3-oxopropyl]-5-methylpyrimidine-4-carbonyl]amino]-3-[(2R,3S,4S,5S,6S)-3-[(2R,3S,4S,5R,6R)-4-carbamoyloxy-3,5-dihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-4,5-dihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-3-(1H-imidazol-5-yl)propanoyl]amino]-3-hydroxy-2-methylpentanoyl]amino]-3-hydroxybutanoyl]amino]ethyl]-1,3-thiazol-4-yl]-1,3-thiazole-4-carbonyl]amino]propyl-dimethylsulfanium",44157,cladribine,IN,approximate_lookup,82.82045165955509,0,Alternative candidate
+DRUG_001805,"3-[[2-[2-[2-[[2-[[4-[[2-[[6-amino-2-[3-amino-1-[(2,3-diamino-3-oxopropyl)amino]-3-oxopropyl]-5-methylpyrimidine-4-carbonyl]amino]-3-[(2R,3S,4S,5S,6S)-3-[(2R,3S,4S,5R,6R)-4-carbamoyloxy-3,5-dihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-4,5-dihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-3-(1H-imidazol-5-yl)propanoyl]amino]-3-hydroxy-2-methylpentanoyl]amino]-3-hydroxybutanoyl]amino]ethyl]-1,3-thiazol-4-yl]-1,3-thiazole-4-carbonyl]amino]propyl-dimethylsulfanium",44151,clofarabine,IN,approximate_lookup,80.69419736490865,0,Alternative candidate
+DRUG_001805,"3-[[2-[2-[2-[[2-[[4-[[2-[[6-amino-2-[3-amino-1-[(2,3-diamino-3-oxopropyl)amino]-3-oxopropyl]-5-methylpyrimidine-4-carbonyl]amino]-3-[(2R,3S,4S,5S,6S)-3-[(2R,3S,4S,5R,6R)-4-carbamoyloxy-3,5-dihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-4,5-dihydroxy-6-(hydroxymethyl)oxan-2-yl]oxy-3-(1H-imidazol-5-yl)propanoyl]amino]-3-hydroxy-2-methylpentanoyl]amino]-3-hydroxybutanoyl]amino]ethyl]-1,3-thiazol-4-yl]-1,3-thiazole-4-carbonyl]amino]propyl-dimethylsulfanium",1272,aztreonam,IN,approximate_lookup,79.00050360877843,0,Alternative candidate
+DRUG_001809,Valdecoxib,278567,valdecoxib,IN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001810,Olmesartan Medoxomil,118463,olmesartan medoxomil,PIN,exact_name_lookup,100.0,1,Top matching score candidate
+DRUG_001815,Gadoversetamide,228833,gadoversetamide,IN,exact_name_lookup,100.0,1,Top matching score candidate

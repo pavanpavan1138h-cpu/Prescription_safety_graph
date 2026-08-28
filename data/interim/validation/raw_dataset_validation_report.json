@@ -1,0 +1,59 @@
+{
+    "drugbank": {
+        "exists": true,
+        "raw_header": "ID1\tID2\tY\tMap\tX1\tX2",
+        "columns": [
+            "ID1",
+            "ID2",
+            "Y",
+            "Map",
+            "X1",
+            "X2"
+        ],
+        "row_count": 191808,
+        "unique_drugs_count": 1706,
+        "invalid_id_format_count": 0,
+        "invalid_id_format_examples": [],
+        "missing_values": {
+            "ID1": 0,
+            "ID2": 0,
+            "Y": 0,
+            "Map": 0,
+            "X1": 0,
+            "X2": 0
+        },
+        "duplicate_rows": 0,
+        "molecular_structures": {
+            "unique_X1": 1638,
+            "unique_X2": 1611
+        }
+    },
+    "twosides": {
+        "exists": true,
+        "columns": [
+            "ID1",
+            "ID2",
+            "Y",
+            "Side Effect Name",
+            "X1",
+            "X2"
+        ],
+        "row_count": 4649441,
+        "unique_drugs_count": 645,
+        "invalid_id_format_count": 0,
+        "invalid_id_format_examples": [],
+        "missing_values": {
+            "ID1": 0,
+            "ID2": 0,
+            "Y": 0,
+            "Side Effect Name": 0,
+            "X1": 0,
+            "X2": 0
+        },
+        "duplicate_rows": 0,
+        "side_effects": {
+            "unique_Y_ids": 1317,
+            "unique_names": 1317
+        }
+    }
+}

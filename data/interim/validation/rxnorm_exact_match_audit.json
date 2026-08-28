@@ -1,0 +1,148 @@
+{
+    "total_exact_matches": 1615,
+    "unique_rxcuis": 1597,
+    "duplicate_rxcui_assignments_count": 17,
+    "multi_entity_same_rxcui_situations": {
+        "30125.0": {
+            "count": 3,
+            "entities": [
+                "DRUG_000693",
+                "DRUG_001391",
+                "DRUG_001602"
+            ],
+            "rxnorm_name": "isoflurophate"
+        },
+        "1815.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_000673",
+                "DRUG_001614"
+            ],
+            "rxnorm_name": "buprenorphine"
+        },
+        "7518.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_000789",
+                "DRUG_001476"
+            ],
+            "rxnorm_name": "nystatin"
+        },
+        "1767.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_000078",
+                "DRUG_001467"
+            ],
+            "rxnorm_name": "bumetanide"
+        },
+        "25255.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_000767",
+                "DRUG_001550"
+            ],
+            "rxnorm_name": "calcipotriene"
+        },
+        "2878.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_000282",
+                "DRUG_001569"
+            ],
+            "rxnorm_name": "cromolyn"
+        },
+        "2193.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_000219",
+                "DRUG_001524"
+            ],
+            "rxnorm_name": "cefotaxime"
+        },
+        "2180.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_000220",
+                "DRUG_001523"
+            ],
+            "rxnorm_name": "cefaclor"
+        },
+        "49276.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_001099",
+                "DRUG_001563"
+            ],
+            "rxnorm_name": "docetaxel"
+        },
+        "25338.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_000786",
+                "DRUG_001466"
+            ],
+            "rxnorm_name": "carteolol"
+        },
+        "25480.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_000705",
+                "DRUG_001469"
+            ],
+            "rxnorm_name": "carmustine"
+        },
+        "7052.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_000782",
+                "DRUG_001465"
+            ],
+            "rxnorm_name": "morphine"
+        },
+        "2551.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_000288",
+                "DRUG_001570"
+            ],
+            "rxnorm_name": "chlorpheniramine"
+        },
+        "73056.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_000679",
+                "DRUG_001444"
+            ],
+            "rxnorm_name": "risedronate"
+        },
+        "7242.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_000742",
+                "DRUG_001477"
+            ],
+            "rxnorm_name": "naloxone"
+        },
+        "7243.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_000743",
+                "DRUG_001478"
+            ],
+            "rxnorm_name": "naltrexone"
+        },
+        "6130.0": {
+            "count": 2,
+            "entities": [
+                "DRUG_000570",
+                "DRUG_001533"
+            ],
+            "rxnorm_name": "ketoprofen"
+        }
+    },
+    "endpoint_used": "https://rxnav.nlm.nih.gov/REST/rxcui.json?idtype=DRUGBANK&id={drugbank_id}",
+    "is_direct_authoritative_mapping": true,
+    "suspicious_exact_mappings": [],
+    "final_confidence_interpretation": "HIGH_EXACT represents confirmed direct mappings from DrugBank identifiers to RxCUIs via RxNav official identifier crosswalk, verified against RxNav concept properties."
+}

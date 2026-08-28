@@ -1,0 +1,44 @@
+{
+    "validation_status": "PASSED",
+    "checks": {
+        "node_uniqueness": true,
+        "node_types_valid": true,
+        "node_schema_valid": true,
+        "edge_uniqueness": true,
+        "edge_types_valid": true,
+        "edge_schema_valid": true,
+        "referential_integrity": true,
+        "edge_endpoint_type_compatibility": true,
+        "integrated_drug_count_exact_match": true,
+        "rxnorm_edge_count_match": true,
+        "ddi_edges_present": true,
+        "twosides_pair_semantics_preserved": true
+    },
+    "metrics": {
+        "expected_integrated_drugs": 1836,
+        "actual_integrated_drugs": 1836,
+        "expected_rxnorm_mappings": 1616,
+        "actual_rxnorm_edges": 1616,
+        "ddi_edge_count": 191808,
+        "drug_pair_observations_count": 63473,
+        "observed_in_combination_edges_count": 126946,
+        "associated_with_side_effect_edges_count": 4649441,
+        "total_nodes": 70574,
+        "total_edges": 4972162,
+        "node_type_distribution": {
+            "DRUG_PAIR_OBSERVATION": 63473,
+            "SOURCE_DRUG_IDENTIFIER": 2351,
+            "INTEGRATED_DRUG": 1836,
+            "RXNORM_CONCEPT": 1597,
+            "SIDE_EFFECT": 1317
+        },
+        "edge_type_distribution": {
+            "ASSOCIATED_WITH_SIDE_EFFECT": 4649441,
+            "DRUG_INTERACTS_WITH": 191808,
+            "OBSERVED_IN_COMBINATION": 126946,
+            "HAS_SOURCE_IDENTIFIER": 2351,
+            "CLINICALLY_MAPPED_TO": 1616
+        }
+    },
+    "issues": []
+}

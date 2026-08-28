@@ -1,6 +1,24 @@
-
 # Large raw datasets
 data/raw/twosides/
 
 # Large generated TWOSIDES relationship files
 data/interim/normalized/twosides_relationships_normalized.csv
+
+# Phase 2 RxNorm Cache
+data/interim/rxnorm_cache/
+
+# Large Phase 4 Graph multi-million edge CSV exports
+data/interim/graph/graph_edges.csv
+data/interim/graph/drug_pair_side_effect_edges.csv
+data/interim/graph/drug_pair_membership_edges.csv
+data/interim/graph/drug_interaction_edges.csv
+data/interim/graph/drug_pair_nodes.csv
+data/interim/graph/graph_nodes.csv
+data/interim/graph/twosides_pair_observations.csv
+
+# Python cache & logs
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+.DS_Store

@@ -1,0 +1,28 @@
+{
+    "validation_status": "PASSED",
+    "checks": {
+        "drug_id_referential_integrity": true,
+        "rule_classification_consistency": true,
+        "confidence_score_bounds": true,
+        "provenance_completeness": true
+    },
+    "metrics": {
+        "total_inferences_evaluated": 104,
+        "evidence_status_distribution": {
+            "DDI_EVIDENCE_ONLY": 47,
+            "COMBINATION_EVENT_EVIDENCE_ONLY": 44,
+            "CONVERGENT_SAFETY_EVIDENCE": 11,
+            "NO_DIRECT_GRAPH_EVIDENCE": 2
+        },
+        "confidence_level_distribution": {
+            "HIGH_EVIDENCE_CONFIDENCE": 62,
+            "MODERATE_EVIDENCE_CONFIDENCE": 33,
+            "AMBIGUOUS_EVIDENCE": 7,
+            "LIMITED_EVIDENCE_CONFIDENCE": 2
+        },
+        "total_evidence_records": 332,
+        "total_explanations_generated": 104
+    },
+    "issues": [],
+    "anomalies": []
+}

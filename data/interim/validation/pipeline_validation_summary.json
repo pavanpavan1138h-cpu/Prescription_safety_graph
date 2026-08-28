@@ -1,0 +1,252 @@
+{
+    "drugbank_drugs_normalized.csv": {
+        "exists": true,
+        "schema": [
+            "drugbank_id",
+            "source_dataset",
+            "raw_smiles",
+            "canonical_smiles",
+            "isomeric_smiles",
+            "inchikey",
+            "structure_valid"
+        ],
+        "row_count": 1706,
+        "column_count": 7,
+        "missing_values": {
+            "drugbank_id": 0,
+            "source_dataset": 0,
+            "raw_smiles": 0,
+            "canonical_smiles": 1,
+            "isomeric_smiles": 1,
+            "inchikey": 5,
+            "structure_valid": 0
+        },
+        "duplicate_count": 0,
+        "unique_primary_keys": 1706,
+        "sample": [
+            {
+                "drugbank_id": "DB04571",
+                "source_dataset": "drugbank",
+                "raw_smiles": "CC1=CC2=CC3=C(OC(=O)C=C3C)C(C)=C2O1",
+                "canonical_smiles": "Cc1cc2cc3c(C)cc(=O)oc3c(C)c2o1",
+                "isomeric_smiles": "Cc1cc2cc3c(C)cc(=O)oc3c(C)c2o1",
+                "inchikey": "FMHHVULEAZTJMA-UHFFFAOYSA-N",
+                "structure_valid": true
+            }
+        ]
+    },
+    "drugbank_interactions_normalized.csv": {
+        "exists": true,
+        "schema": [
+            "source_drugbank_id",
+            "target_drugbank_id",
+            "interaction_label",
+            "interaction_description",
+            "source_dataset"
+        ],
+        "row_count": 191808,
+        "column_count": 5,
+        "missing_values": {
+            "source_drugbank_id": 0,
+            "target_drugbank_id": 0,
+            "interaction_label": 0,
+            "interaction_description": 0,
+            "source_dataset": 0
+        },
+        "duplicate_count": 0,
+        "unique_primary_keys": 1638,
+        "sample": [
+            {
+                "source_drugbank_id": "DB04571",
+                "target_drugbank_id": "DB00460",
+                "interaction_label": 1,
+                "interaction_description": "#Drug1 may increase the photosensitizing activities of #Drug2.",
+                "source_dataset": "drugbank"
+            }
+        ]
+    },
+    "twosides_drugs_normalized.csv": {
+        "exists": true,
+        "schema": [
+            "twosides_id",
+            "source_dataset",
+            "raw_smiles",
+            "canonical_smiles",
+            "isomeric_smiles",
+            "inchikey",
+            "structure_valid"
+        ],
+        "row_count": 645,
+        "column_count": 7,
+        "missing_values": {
+            "twosides_id": 0,
+            "source_dataset": 0,
+            "raw_smiles": 0,
+            "canonical_smiles": 0,
+            "isomeric_smiles": 0,
+            "inchikey": 0,
+            "structure_valid": 0
+        },
+        "duplicate_count": 0,
+        "unique_primary_keys": 645,
+        "sample": [
+            {
+                "twosides_id": "CID000002173",
+                "source_dataset": "twosides",
+                "raw_smiles": "CC1(C(N2C(S1)C(C2=O)NC(=O)C(C3=CC=CC=C3)N)C(=O)[O-])C",
+                "canonical_smiles": "CC1(C)SC2C(NC(=O)C(N)c3ccccc3)C(=O)N2C1C(=O)[O-]",
+                "isomeric_smiles": "CC1(C)SC2C(NC(=O)C(N)c3ccccc3)C(=O)N2C1C(=O)[O-]",
+                "inchikey": "AVKUERGKIZMTKX-UHFFFAOYSA-M",
+                "structure_valid": true
+            }
+        ]
+    },
+    "twosides_side_effects_normalized.csv": {
+        "exists": true,
+        "schema": [
+            "side_effect_id",
+            "side_effect_name",
+            "source_dataset"
+        ],
+        "row_count": 1317,
+        "column_count": 3,
+        "missing_values": {
+            "side_effect_id": 0,
+            "side_effect_name": 0,
+            "source_dataset": 0
+        },
+        "duplicate_count": 0,
+        "unique_primary_keys": 1317,
+        "sample": [
+            {
+                "side_effect_id": 1024,
+                "side_effect_name": "hypermagnesemia",
+                "source_dataset": "twosides"
+            }
+        ]
+    },
+    "twosides_relationships_normalized.csv": {
+        "exists": true,
+        "schema": [
+            "drug1",
+            "drug2",
+            "side_effect_id",
+            "side_effect_name",
+            "source_dataset"
+        ],
+        "row_count": 4649441,
+        "column_count": 5,
+        "missing_values": {
+            "drug1": 0,
+            "drug2": 0,
+            "side_effect_id": 0,
+            "side_effect_name": 0,
+            "source_dataset": 0
+        },
+        "duplicate_count": 0,
+        "unique_primary_keys": 616,
+        "sample": [
+            {
+                "drug1": "CID000002173",
+                "drug2": "CID000003345",
+                "side_effect_id": 1024,
+                "side_effect_name": "hypermagnesemia",
+                "source_dataset": "twosides"
+            }
+        ]
+    },
+    "integrated_drug_nodes.csv": {
+        "exists": true,
+        "schema": [
+            "internal_drug_id",
+            "entity_type",
+            "source_membership",
+            "canonical_smiles",
+            "inchikey"
+        ],
+        "row_count": 1836,
+        "column_count": 5,
+        "missing_values": {
+            "internal_drug_id": 0,
+            "entity_type": 0,
+            "source_membership": 0,
+            "canonical_smiles": 1,
+            "inchikey": 5
+        },
+        "duplicate_count": 0,
+        "unique_primary_keys": 1836,
+        "sample": [
+            {
+                "internal_drug_id": "DRUG_000001",
+                "entity_type": "CONFIRMED_INTEGRATED_ENTITY",
+                "source_membership": "drugbank_only",
+                "canonical_smiles": "CCC(C)C(NC(=O)C(CCC(=O)O)NC(=O)C(CCC(=O)O)NC(=O)C(Cc1ccccc1)NC(=O)C(CC(=O)O)NC(=O)CNC(=O)C(CC(N)=O)NC(=O)CNC(=O)CNC(=O)CNC(=O)CNC(=O)C1CCCN1C(=O)C(CCCNC(=N)N)NC(=O)C1CCCN1C(=O)C(N)Cc1ccccc1)C(=O)N1CCCC1C(=O)NC(CCC(=O)O)C(=O)NC(CCC(=O)O)C(=O)NC(Cc1ccc(O)cc1)C(=O)NC(CC(C)C)C(=O)O",
+                "inchikey": "OIRCOABEOLEUMC-GEJPAHFPSA-N"
+            }
+        ]
+    },
+    "integrated_drug_source_mappings.csv": {
+        "exists": true,
+        "schema": [
+            "internal_drug_id",
+            "source_dataset",
+            "source_drug_id",
+            "mapping_confidence"
+        ],
+        "row_count": 2351,
+        "column_count": 4,
+        "missing_values": {
+            "internal_drug_id": 0,
+            "source_dataset": 0,
+            "source_drug_id": 0,
+            "mapping_confidence": 0
+        },
+        "duplicate_count": 0,
+        "unique_primary_keys": 1836,
+        "sample": [
+            {
+                "internal_drug_id": "DRUG_000001",
+                "source_dataset": "drugbank",
+                "source_drug_id": "DB00006",
+                "mapping_confidence": "unmapped"
+            }
+        ]
+    },
+    "integrated_drug_mapping_edges.csv": {
+        "exists": true,
+        "schema": [
+            "drugbank_id",
+            "twosides_id",
+            "mapping_confidence"
+        ],
+        "row_count": 554,
+        "column_count": 3,
+        "missing_values": {
+            "drugbank_id": 0,
+            "twosides_id": 0,
+            "mapping_confidence": 0
+        },
+        "duplicate_count": 0,
+        "unique_primary_keys": 554,
+        "sample": [
+            {
+                "drugbank_id": "DB00014",
+                "twosides_id": "CID000047725",
+                "mapping_confidence": "MEDIUM_CANONICAL"
+            }
+        ]
+    },
+    "referential_integrity": {
+        "drugbank_interactions_referential_errors": {
+            "source_missing_count": 0,
+            "target_missing_count": 0
+        },
+        "twosides_relationships_referential_errors": {
+            "drug1_missing_count": 0,
+            "drug2_missing_count": 0
+        },
+        "integrated_mappings_referential_errors": {
+            "node_missing_count": 0
+        }
+    }
+}

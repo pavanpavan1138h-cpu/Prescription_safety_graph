@@ -1,0 +1,19 @@
+{
+    "cache_directory": "data/interim/rxnorm_cache",
+    "categories": {
+        "drugbank_identifier_lookup": 1706,
+        "pubchem_cid_lookup": 181,
+        "pubchem_inchikey_lookup": 213,
+        "name_lookup": 624,
+        "approximate_lookup": 108,
+        "rxcui_properties": 1612
+    },
+    "total_cache_files": 4444,
+    "deterministic_keys": "MD5 hash of lowercase normalized identifier/name",
+    "resumability_verified": true,
+    "caching_policy": {
+        "successful_responses_cached": true,
+        "not_found_responses_cached": true,
+        "re_execution_performance": "Zero network latency; pipeline executes instantaneously from local disk cache."
+    }
+}

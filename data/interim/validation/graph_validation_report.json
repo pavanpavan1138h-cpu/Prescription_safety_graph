@@ -1,0 +1,38 @@
+{
+    "validation_status": "PASSED",
+    "checks": {
+        "node_uniqueness": true,
+        "node_types_valid": true,
+        "node_schema_valid": true,
+        "edge_uniqueness": true,
+        "relationship_types_valid": true,
+        "edge_schema_valid": true,
+        "referential_integrity": true,
+        "endpoint_type_compatibility": true,
+        "integrated_drug_exact_count": true,
+        "drug_pair_membership_integrity": true,
+        "source_accounting_reconciliation": true
+    },
+    "metrics": {
+        "expected_drug_nodes": 1836,
+        "actual_drug_nodes": 1836,
+        "drug_pairs_count": 63473,
+        "member_of_pair_edges_count": 126946,
+        "total_nodes": 68223,
+        "total_edges": 4969811,
+        "node_type_distribution": {
+            "DrugPair": 63473,
+            "Drug": 1836,
+            "RxNormConcept": 1597,
+            "SideEffect": 1317
+        },
+        "relationship_type_distribution": {
+            "ASSOCIATED_WITH": 4649441,
+            "INTERACTS_WITH": 191808,
+            "MEMBER_OF_PAIR": 126946,
+            "HAS_RXNORM_CONCEPT": 1616
+        }
+    },
+    "issues": [],
+    "warnings": []
+}

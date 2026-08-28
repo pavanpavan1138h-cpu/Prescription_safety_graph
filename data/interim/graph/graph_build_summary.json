@@ -1,0 +1,25 @@
+{
+    "total_nodes": 68223,
+    "total_edges": 4969811,
+    "node_type_counts": {
+        "DrugPair": 63473,
+        "Drug": 1836,
+        "RxNormConcept": 1597,
+        "SideEffect": 1317
+    },
+    "relationship_type_counts": {
+        "ASSOCIATED_WITH": 4649441,
+        "INTERACTS_WITH": 191808,
+        "MEMBER_OF_PAIR": 126946,
+        "HAS_RXNORM_CONCEPT": 1616
+    },
+    "drug_node_count": 1836,
+    "rxnorm_concept_count": 1597,
+    "drug_pair_count": 63473,
+    "side_effect_count": 1317,
+    "has_rxnorm_concept_edge_count": 1616,
+    "interacts_with_edge_count": 191808,
+    "member_of_pair_edge_count": 126946,
+    "associated_with_edge_count": 4649441,
+    "unmapped_relationship_count": 0
+}

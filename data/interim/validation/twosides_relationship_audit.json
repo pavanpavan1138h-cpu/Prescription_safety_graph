@@ -1,0 +1,15 @@
+{
+    "total_records": 4649441,
+    "unique_directed_drug_pairs": 63473,
+    "unique_side_effects": 1317,
+    "duplicate_rows": 0,
+    "repeated_combos": 0,
+    "self_pairs": 0,
+    "side_effects_per_pair_distribution": {
+        "min": 1,
+        "max": 540,
+        "mean": 73.25068926945315,
+        "median": 53.0,
+        "std": 66.05330227930999
+    }
+}

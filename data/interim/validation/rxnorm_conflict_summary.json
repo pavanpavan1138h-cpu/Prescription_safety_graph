@@ -1,0 +1,17 @@
+{
+    "total_conflicts": 12,
+    "conflict_types": {
+        "Anhydrous_vs_Base_Ingredient (PIN vs IN)": 6,
+        "Brand_Name_vs_Base_Ingredient (BN vs IN)": 2,
+        "Acid_vs_Salt_Form (PIN/IN vs IN)": 2,
+        "Resin_vs_Base_Ingredient (PIN vs IN)": 1,
+        "Cation_vs_Base_Ingredient (PIN vs IN)": 1
+    },
+    "disposition_breakdown": {
+        "CONFIRMED_SAME_CLINICAL_CONCEPT": 12,
+        "KEEP_AMBIGUOUS": 0,
+        "SOURCE_MAPPING_ARTIFACT": 0,
+        "NEEDS_MANUAL_REVIEW": 0
+    },
+    "conclusion": "All 12 conflicts are due to granular RxNorm term type (TTY) distinctions between base Active Ingredients (IN), Precise Ingredients (PIN: anhydrous, salt, resin, cation), and Brand Names (BN). They represent biologically and clinically confirmed identical active therapeutic agents."
+}
