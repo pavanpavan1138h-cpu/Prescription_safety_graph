@@ -16,9 +16,22 @@ data/interim/graph/drug_pair_nodes.csv
 data/interim/graph/graph_nodes.csv
 data/interim/graph/twosides_pair_observations.csv
 
-# Python cache & logs
+# Node & Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+
+# Python cache, pytest & logs
 __pycache__/
+frontend/__pycache__/
+src/__pycache__/
+api/__pycache__/
 *.py[cod]
 *$py.class
 *.log
 .DS_Store
+.pytest_cache/
+.coverage
+htmlcov/
+

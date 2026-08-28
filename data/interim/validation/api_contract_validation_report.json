@@ -1,0 +1,25 @@
+{
+    "validation_status": "PASSED",
+    "checks": {
+        "health_endpoint_200": true,
+        "system_info_node_count": true,
+        "system_info_edge_count": true,
+        "duplicate_collapsing_preservation": true,
+        "pairwise_convergent_inference": true,
+        "reasoning_status_preservation": true,
+        "pair_count_preservation": true,
+        "drug_count_preservation": true,
+        "findings_count_preservation": true,
+        "pair_drilldown_evidence_retrieval": true,
+        "empty_medication_rejection_400": true,
+        "drug_not_found_404": true,
+        "server_enforced_guardrails": true
+    },
+    "metrics": {
+        "total_endpoints_tested": 6,
+        "total_assertions_verified": 13,
+        "graph_nodes_verified": 68223,
+        "graph_edges_verified": 4969811
+    },
+    "issues": []
+}

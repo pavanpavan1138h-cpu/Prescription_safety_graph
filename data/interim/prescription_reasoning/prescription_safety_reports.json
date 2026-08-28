@@ -1,0 +1,1737 @@
+[
+    {
+        "prescription_id": "RX_001_SINGLE_DRUG",
+        "generated_at": "2026-08-28T23:55:55.842283",
+        "resolution_summary": {
+            "original_inputs": [
+                "fluconazole"
+            ],
+            "canonical_drug_ids": [
+                "DRUG_000048"
+            ],
+            "unresolved_inputs": [],
+            "ambiguous_inputs": [],
+            "duplicate_inputs": [],
+            "resolved_drugs": [
+                {
+                    "original_input": "fluconazole",
+                    "resolved_internal_drug_id": "DRUG_000048",
+                    "display_name": "Fluconazole",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "CANONICAL_NAME",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": null,
+                    "rxnorm_name": NaN
+                }
+            ]
+        },
+        "evidence_summary": {
+            "total_input_items": 1,
+            "unique_canonical_drugs": 1,
+            "unresolved_items_count": 0,
+            "ambiguous_items_count": 0,
+            "duplicates_collapsed_count": 0,
+            "total_expected_pairs": 0,
+            "total_analyzed_pairs": 0,
+            "pairs_with_evidence": 0,
+            "convergent_evidence_pairs": 0,
+            "ddi_only_pairs": 0,
+            "combination_event_only_pairs": 0,
+            "no_direct_evidence_pairs": 0,
+            "prescription_status": "NO_DIRECT_GRAPH_EVIDENCE"
+        },
+        "drug_participation": [
+            {
+                "internal_drug_id": "DRUG_000048",
+                "display_name": "Fluconazole",
+                "total_pairs_involved": 0,
+                "evidence_supported_pairs": 0,
+                "convergent_pairs": 0,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 0,
+                "no_evidence_pairs": 0
+            }
+        ],
+        "prioritized_findings": [],
+        "pair_results": [],
+        "clinical_narrative_report": "=====================================================================================\nPRESCRIPTION SAFETY EVIDENCE & REASONING REPORT [RX_001_SINGLE_DRUG]\nGenerated At: 2026-08-28T23:55:55.842283\n=====================================================================================\n\n[1] PRESCRIPTION IDENTITY RESOLUTION SUMMARY\n  * Total Input Items:            1\n  * Unique Canonical Drugs:       1\n  * Duplicate Inputs Collapsed:   0\n  * Ambiguous Mappings Detected:  0\n  * Unresolved Input Items:       0\n  * Resolved Medication List:\n    - 'fluconazole' -> Fluconazole (DRUG_000048) [RESOLVED]\n\n[2] PAIRWISE GRAPH SAFETY ANALYSIS SUMMARY\n  * Expected Unique Combinations: 0\n  * Evaluated Pairs:              0\n  * Pairs with Graph Evidence:    0\n  * Overall Prescription Status:  NO_DIRECT_GRAPH_EVIDENCE\n  * Evidence Distribution:\n    - Convergent Safety Evidence:        0\n    - DrugBank DDI Evidence Only:        0\n    - TWOSIDES Combination Events Only:  0\n    - No Direct Evidence in Graph:       0\n\n[3] PRIORITIZED SAFETY FINDINGS (Ranked by Graph Evidence Strength)\n  * No pairwise findings evaluated (fewer than 2 unique resolved drugs).\n\n[4] DRUG PARTICIPATION & EVIDENCE INVOLVEMENT\n  * Fluconazole (DRUG_000048): Involved in 0 pairs (0 with evidence -> 0 convergent, 0 DDI, 0 events)\n\n[5] SCIENTIFIC LIMITATIONS & ETHICAL NOTICE\n  * NOTICE 1: Graph evidence priority reflects evidence density, not calibrated patient-specific clinical severity.\n  * NOTICE 2: Absence of direct evidence in the current knowledge graph is NOT proof of clinical safety.\n  * NOTICE 3: Drug interaction assertions and observational adverse event associations do not independently establish causality.\n  * NOTICE 4: This automated report is generated strictly from integrated biomedical datasets and does not replace clinical consultation.\n=====================================================================================",
+        "scientific_limitations": [
+            "Graph evidence priority is not equivalent to patient-specific clinical risk.",
+            "Absence of evidence in the current graph is not evidence of medical safety.",
+            "Drug interaction assertions and observational adverse event associations do not independently establish causality.",
+            "This report is generated strictly from the ingested knowledge graph datasets and does not replace professional clinical judgment."
+        ]
+    },
+    {
+        "prescription_id": "RX_002_CONVERGENT_PAIR",
+        "generated_at": "2026-08-28T23:55:55.842384",
+        "resolution_summary": {
+            "original_inputs": [
+                "cyclosporine",
+                "fluconazole"
+            ],
+            "canonical_drug_ids": [
+                "DRUG_000006",
+                "DRUG_000048"
+            ],
+            "unresolved_inputs": [],
+            "ambiguous_inputs": [],
+            "duplicate_inputs": [],
+            "resolved_drugs": [
+                {
+                    "original_input": "cyclosporine",
+                    "resolved_internal_drug_id": "DRUG_000006",
+                    "display_name": "cyclosporine",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "CANONICAL_NAME",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": "3008",
+                    "rxnorm_name": "cyclosporine"
+                },
+                {
+                    "original_input": "fluconazole",
+                    "resolved_internal_drug_id": "DRUG_000048",
+                    "display_name": "Fluconazole",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "CANONICAL_NAME",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": null,
+                    "rxnorm_name": NaN
+                }
+            ]
+        },
+        "evidence_summary": {
+            "total_input_items": 2,
+            "unique_canonical_drugs": 2,
+            "unresolved_items_count": 0,
+            "ambiguous_items_count": 0,
+            "duplicates_collapsed_count": 0,
+            "total_expected_pairs": 1,
+            "total_analyzed_pairs": 1,
+            "pairs_with_evidence": 1,
+            "convergent_evidence_pairs": 1,
+            "ddi_only_pairs": 0,
+            "combination_event_only_pairs": 0,
+            "no_direct_evidence_pairs": 0,
+            "prescription_status": "CONVERGENT_EVIDENCE_PRESENT"
+        },
+        "drug_participation": [
+            {
+                "internal_drug_id": "DRUG_000006",
+                "display_name": "cyclosporine",
+                "total_pairs_involved": 1,
+                "evidence_supported_pairs": 1,
+                "convergent_pairs": 1,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 0,
+                "no_evidence_pairs": 0
+            },
+            {
+                "internal_drug_id": "DRUG_000048",
+                "display_name": "Fluconazole",
+                "total_pairs_involved": 1,
+                "evidence_supported_pairs": 1,
+                "convergent_pairs": 1,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 0,
+                "no_evidence_pairs": 0
+            }
+        ],
+        "prioritized_findings": [
+            {
+                "finding_id": "FIND_0001",
+                "pair_index": 1,
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_000048",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "Fluconazole",
+                "evidence_status": "CONVERGENT_SAFETY_EVIDENCE",
+                "evidence_priority": "CRITICAL_EVIDENCE_PRIORITY",
+                "confidence_level": "HIGH_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.93,
+                "ddi_present": true,
+                "ddi_count": 1,
+                "events_present": true,
+                "event_count": 202,
+                "inference_id": "INF_0000001",
+                "rule_fired": "RULE_CONVERGENT_SAFETY_EVIDENCE",
+                "summary_narrative": "cyclosporine (DRUG_000006) + Fluconazole (DRUG_000048): Classified as CONVERGENT_SAFETY_EVIDENCE with HIGH_EVIDENCE_CONFIDENCE (Score: 0.93). DDI evidence: True (fwd: 1, rev: 0), TWOSIDES combination events: True (202 events).",
+                "supporting_edge_ids": [
+                    "E_DDI_166133",
+                    "E_SE_02061836",
+                    "E_SE_02061837",
+                    "E_SE_02061838",
+                    "E_SE_02061839",
+                    "E_SE_02061840"
+                ],
+                "source_record_ids": [
+                    "DDI:DB00091:DB00196",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:342",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:584",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:1127",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:953",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:750"
+                ]
+            }
+        ],
+        "pair_results": [
+            {
+                "pair_index": 1,
+                "canonical_pair_key": "DRUG_000006__DRUG_000048",
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_000048",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "Fluconazole",
+                "evidence_status": "CONVERGENT_SAFETY_EVIDENCE",
+                "confidence_level": "HIGH_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.93,
+                "ddi_present": true,
+                "ddi_forward_count": 1,
+                "ddi_reverse_count": 0,
+                "events_present": true,
+                "event_count": 202,
+                "inference_id": "INF_0000001",
+                "rule_fired": "RULE_CONVERGENT_SAFETY_EVIDENCE"
+            }
+        ],
+        "clinical_narrative_report": "=====================================================================================\nPRESCRIPTION SAFETY EVIDENCE & REASONING REPORT [RX_002_CONVERGENT_PAIR]\nGenerated At: 2026-08-28T23:55:55.842384\n=====================================================================================\n\n[1] PRESCRIPTION IDENTITY RESOLUTION SUMMARY\n  * Total Input Items:            2\n  * Unique Canonical Drugs:       2\n  * Duplicate Inputs Collapsed:   0\n  * Ambiguous Mappings Detected:  0\n  * Unresolved Input Items:       0\n  * Resolved Medication List:\n    - 'cyclosporine' -> cyclosporine (DRUG_000006) [RESOLVED, RxCUI: 3008]\n    - 'fluconazole' -> Fluconazole (DRUG_000048) [RESOLVED]\n\n[2] PAIRWISE GRAPH SAFETY ANALYSIS SUMMARY\n  * Expected Unique Combinations: 1\n  * Evaluated Pairs:              1\n  * Pairs with Graph Evidence:    1\n  * Overall Prescription Status:  CONVERGENT_EVIDENCE_PRESENT\n  * Evidence Distribution:\n    - Convergent Safety Evidence:        1\n    - DrugBank DDI Evidence Only:        0\n    - TWOSIDES Combination Events Only:  0\n    - No Direct Evidence in Graph:       0\n\n[3] PRIORITIZED SAFETY FINDINGS (Ranked by Graph Evidence Strength)\n  (1) [CRITICAL_EVIDENCE_PRIORITY] cyclosporine + Fluconazole\n      - Evidence Status:  CONVERGENT_SAFETY_EVIDENCE\n      - Confidence Level: HIGH_EVIDENCE_CONFIDENCE (Score: 0.93)\n      - Evidence Counts:  DDI Assertions: 1, TWOSIDES Adverse Events: 202\n      - Inference ID:     INF_0000001 (RULE_CONVERGENT_SAFETY_EVIDENCE)\n      - Supporting Edges: E_DDI_166133, E_SE_02061836, E_SE_02061837 (+3 more)\n\n[4] DRUG PARTICIPATION & EVIDENCE INVOLVEMENT\n  * cyclosporine (DRUG_000006): Involved in 1 pairs (1 with evidence -> 1 convergent, 0 DDI, 0 events)\n  * Fluconazole (DRUG_000048): Involved in 1 pairs (1 with evidence -> 1 convergent, 0 DDI, 0 events)\n\n[5] SCIENTIFIC LIMITATIONS & ETHICAL NOTICE\n  * NOTICE 1: Graph evidence priority reflects evidence density, not calibrated patient-specific clinical severity.\n  * NOTICE 2: Absence of direct evidence in the current knowledge graph is NOT proof of clinical safety.\n  * NOTICE 3: Drug interaction assertions and observational adverse event associations do not independently establish causality.\n  * NOTICE 4: This automated report is generated strictly from integrated biomedical datasets and does not replace clinical consultation.\n=====================================================================================",
+        "scientific_limitations": [
+            "Graph evidence priority is not equivalent to patient-specific clinical risk.",
+            "Absence of evidence in the current graph is not evidence of medical safety.",
+            "Drug interaction assertions and observational adverse event associations do not independently establish causality.",
+            "This report is generated strictly from the ingested knowledge graph datasets and does not replace professional clinical judgment."
+        ]
+    },
+    {
+        "prescription_id": "RX_003_THREE_DRUGS",
+        "generated_at": "2026-08-28T23:55:55.842521",
+        "resolution_summary": {
+            "original_inputs": [
+                "cyclosporine",
+                "fluconazole",
+                "phentermine"
+            ],
+            "canonical_drug_ids": [
+                "DRUG_000006",
+                "DRUG_000048",
+                "DRUG_000045"
+            ],
+            "unresolved_inputs": [],
+            "ambiguous_inputs": [],
+            "duplicate_inputs": [],
+            "resolved_drugs": [
+                {
+                    "original_input": "cyclosporine",
+                    "resolved_internal_drug_id": "DRUG_000006",
+                    "display_name": "cyclosporine",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "CANONICAL_NAME",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": "3008",
+                    "rxnorm_name": "cyclosporine"
+                },
+                {
+                    "original_input": "fluconazole",
+                    "resolved_internal_drug_id": "DRUG_000048",
+                    "display_name": "Fluconazole",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "CANONICAL_NAME",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": null,
+                    "rxnorm_name": NaN
+                },
+                {
+                    "original_input": "phentermine",
+                    "resolved_internal_drug_id": "DRUG_000045",
+                    "display_name": "Phentermine",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "CANONICAL_NAME",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": null,
+                    "rxnorm_name": NaN
+                }
+            ]
+        },
+        "evidence_summary": {
+            "total_input_items": 3,
+            "unique_canonical_drugs": 3,
+            "unresolved_items_count": 0,
+            "ambiguous_items_count": 0,
+            "duplicates_collapsed_count": 0,
+            "total_expected_pairs": 3,
+            "total_analyzed_pairs": 3,
+            "pairs_with_evidence": 2,
+            "convergent_evidence_pairs": 1,
+            "ddi_only_pairs": 0,
+            "combination_event_only_pairs": 1,
+            "no_direct_evidence_pairs": 1,
+            "prescription_status": "MULTI_SIGNAL_EVIDENCE"
+        },
+        "drug_participation": [
+            {
+                "internal_drug_id": "DRUG_000048",
+                "display_name": "Fluconazole",
+                "total_pairs_involved": 2,
+                "evidence_supported_pairs": 2,
+                "convergent_pairs": 1,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 1,
+                "no_evidence_pairs": 0
+            },
+            {
+                "internal_drug_id": "DRUG_000006",
+                "display_name": "cyclosporine",
+                "total_pairs_involved": 2,
+                "evidence_supported_pairs": 1,
+                "convergent_pairs": 1,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 0,
+                "no_evidence_pairs": 1
+            },
+            {
+                "internal_drug_id": "DRUG_000045",
+                "display_name": "Phentermine",
+                "total_pairs_involved": 2,
+                "evidence_supported_pairs": 1,
+                "convergent_pairs": 0,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 1,
+                "no_evidence_pairs": 1
+            }
+        ],
+        "prioritized_findings": [
+            {
+                "finding_id": "FIND_0001",
+                "pair_index": 1,
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_000048",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "Fluconazole",
+                "evidence_status": "CONVERGENT_SAFETY_EVIDENCE",
+                "evidence_priority": "CRITICAL_EVIDENCE_PRIORITY",
+                "confidence_level": "HIGH_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.93,
+                "ddi_present": true,
+                "ddi_count": 1,
+                "events_present": true,
+                "event_count": 202,
+                "inference_id": "INF_0000002",
+                "rule_fired": "RULE_CONVERGENT_SAFETY_EVIDENCE",
+                "summary_narrative": "cyclosporine (DRUG_000006) + Fluconazole (DRUG_000048): Classified as CONVERGENT_SAFETY_EVIDENCE with HIGH_EVIDENCE_CONFIDENCE (Score: 0.93). DDI evidence: True (fwd: 1, rev: 0), TWOSIDES combination events: True (202 events).",
+                "supporting_edge_ids": [
+                    "E_DDI_166133",
+                    "E_SE_02061836",
+                    "E_SE_02061837",
+                    "E_SE_02061838",
+                    "E_SE_02061839",
+                    "E_SE_02061840"
+                ],
+                "source_record_ids": [
+                    "DDI:DB00091:DB00196",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:342",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:584",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:1127",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:953",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:750"
+                ]
+            },
+            {
+                "finding_id": "FIND_0003",
+                "pair_index": 3,
+                "drug_a_id": "DRUG_000048",
+                "drug_b_id": "DRUG_000045",
+                "drug_a_name": "Fluconazole",
+                "drug_b_name": "Phentermine",
+                "evidence_status": "COMBINATION_EVENT_EVIDENCE_ONLY",
+                "evidence_priority": "MODERATE_EVIDENCE_PRIORITY",
+                "confidence_level": "MODERATE_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.65,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": true,
+                "event_count": 75,
+                "inference_id": "INF_0000004",
+                "rule_fired": "RULE_COMBINATION_EVENT_EVIDENCE_ONLY",
+                "summary_narrative": "Fluconazole (DRUG_000048) + Phentermine (DRUG_000045): Classified as COMBINATION_EVENT_EVIDENCE_ONLY with MODERATE_EVIDENCE_CONFIDENCE (Score: 0.65). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: True (75 events).",
+                "supporting_edge_ids": [
+                    "E_SE_01192345",
+                    "E_SE_01192346",
+                    "E_SE_01192347",
+                    "E_SE_01192348",
+                    "E_SE_01192349"
+                ],
+                "source_record_ids": [
+                    "TWOSIDES_EVENT:CID000003365:CID000004771:1244",
+                    "TWOSIDES_EVENT:CID000003365:CID000004771:253",
+                    "TWOSIDES_EVENT:CID000003365:CID000004771:121",
+                    "TWOSIDES_EVENT:CID000003365:CID000004771:926",
+                    "TWOSIDES_EVENT:CID000003365:CID000004771:85"
+                ]
+            },
+            {
+                "finding_id": "FIND_0002",
+                "pair_index": 2,
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_000045",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "Phentermine",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "evidence_priority": "NO_EVIDENCE_PRIORITY",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000003",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE",
+                "summary_narrative": "cyclosporine (DRUG_000006) + Phentermine (DRUG_000045): Classified as NO_DIRECT_GRAPH_EVIDENCE with LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: False (0 events).",
+                "supporting_edge_ids": [],
+                "source_record_ids": []
+            }
+        ],
+        "pair_results": [
+            {
+                "pair_index": 1,
+                "canonical_pair_key": "DRUG_000006__DRUG_000048",
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_000048",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "Fluconazole",
+                "evidence_status": "CONVERGENT_SAFETY_EVIDENCE",
+                "confidence_level": "HIGH_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.93,
+                "ddi_present": true,
+                "ddi_forward_count": 1,
+                "ddi_reverse_count": 0,
+                "events_present": true,
+                "event_count": 202,
+                "inference_id": "INF_0000002",
+                "rule_fired": "RULE_CONVERGENT_SAFETY_EVIDENCE"
+            },
+            {
+                "pair_index": 2,
+                "canonical_pair_key": "DRUG_000006__DRUG_000045",
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_000045",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "Phentermine",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000003",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE"
+            },
+            {
+                "pair_index": 3,
+                "canonical_pair_key": "DRUG_000045__DRUG_000048",
+                "drug_a_id": "DRUG_000048",
+                "drug_b_id": "DRUG_000045",
+                "drug_a_name": "Fluconazole",
+                "drug_b_name": "Phentermine",
+                "evidence_status": "COMBINATION_EVENT_EVIDENCE_ONLY",
+                "confidence_level": "MODERATE_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.65,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": true,
+                "event_count": 75,
+                "inference_id": "INF_0000004",
+                "rule_fired": "RULE_COMBINATION_EVENT_EVIDENCE_ONLY"
+            }
+        ],
+        "clinical_narrative_report": "=====================================================================================\nPRESCRIPTION SAFETY EVIDENCE & REASONING REPORT [RX_003_THREE_DRUGS]\nGenerated At: 2026-08-28T23:55:55.842521\n=====================================================================================\n\n[1] PRESCRIPTION IDENTITY RESOLUTION SUMMARY\n  * Total Input Items:            3\n  * Unique Canonical Drugs:       3\n  * Duplicate Inputs Collapsed:   0\n  * Ambiguous Mappings Detected:  0\n  * Unresolved Input Items:       0\n  * Resolved Medication List:\n    - 'cyclosporine' -> cyclosporine (DRUG_000006) [RESOLVED, RxCUI: 3008]\n    - 'fluconazole' -> Fluconazole (DRUG_000048) [RESOLVED]\n    - 'phentermine' -> Phentermine (DRUG_000045) [RESOLVED]\n\n[2] PAIRWISE GRAPH SAFETY ANALYSIS SUMMARY\n  * Expected Unique Combinations: 3\n  * Evaluated Pairs:              3\n  * Pairs with Graph Evidence:    2\n  * Overall Prescription Status:  MULTI_SIGNAL_EVIDENCE\n  * Evidence Distribution:\n    - Convergent Safety Evidence:        1\n    - DrugBank DDI Evidence Only:        0\n    - TWOSIDES Combination Events Only:  1\n    - No Direct Evidence in Graph:       1\n\n[3] PRIORITIZED SAFETY FINDINGS (Ranked by Graph Evidence Strength)\n  (1) [CRITICAL_EVIDENCE_PRIORITY] cyclosporine + Fluconazole\n      - Evidence Status:  CONVERGENT_SAFETY_EVIDENCE\n      - Confidence Level: HIGH_EVIDENCE_CONFIDENCE (Score: 0.93)\n      - Evidence Counts:  DDI Assertions: 1, TWOSIDES Adverse Events: 202\n      - Inference ID:     INF_0000002 (RULE_CONVERGENT_SAFETY_EVIDENCE)\n      - Supporting Edges: E_DDI_166133, E_SE_02061836, E_SE_02061837 (+3 more)\n  (2) [MODERATE_EVIDENCE_PRIORITY] Fluconazole + Phentermine\n      - Evidence Status:  COMBINATION_EVENT_EVIDENCE_ONLY\n      - Confidence Level: MODERATE_EVIDENCE_CONFIDENCE (Score: 0.65)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 75\n      - Inference ID:     INF_0000004 (RULE_COMBINATION_EVENT_EVIDENCE_ONLY)\n      - Supporting Edges: E_SE_01192345, E_SE_01192346, E_SE_01192347 (+2 more)\n  (3) [NO_EVIDENCE_PRIORITY] cyclosporine + Phentermine\n      - Evidence Status:  NO_DIRECT_GRAPH_EVIDENCE\n      - Confidence Level: LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 0\n      - Inference ID:     INF_0000003 (RULE_NO_DIRECT_GRAPH_EVIDENCE)\n\n[4] DRUG PARTICIPATION & EVIDENCE INVOLVEMENT\n  * Fluconazole (DRUG_000048): Involved in 2 pairs (2 with evidence -> 1 convergent, 0 DDI, 1 events)\n  * cyclosporine (DRUG_000006): Involved in 2 pairs (1 with evidence -> 1 convergent, 0 DDI, 0 events)\n  * Phentermine (DRUG_000045): Involved in 2 pairs (1 with evidence -> 0 convergent, 0 DDI, 1 events)\n\n[5] SCIENTIFIC LIMITATIONS & ETHICAL NOTICE\n  * NOTICE 1: Graph evidence priority reflects evidence density, not calibrated patient-specific clinical severity.\n  * NOTICE 2: Absence of direct evidence in the current knowledge graph is NOT proof of clinical safety.\n  * NOTICE 3: Drug interaction assertions and observational adverse event associations do not independently establish causality.\n  * NOTICE 4: This automated report is generated strictly from integrated biomedical datasets and does not replace clinical consultation.\n=====================================================================================",
+        "scientific_limitations": [
+            "Graph evidence priority is not equivalent to patient-specific clinical risk.",
+            "Absence of evidence in the current graph is not evidence of medical safety.",
+            "Drug interaction assertions and observational adverse event associations do not independently establish causality.",
+            "This report is generated strictly from the ingested knowledge graph datasets and does not replace professional clinical judgment."
+        ]
+    },
+    {
+        "prescription_id": "RX_004_FOUR_DRUGS",
+        "generated_at": "2026-08-28T23:55:55.842669",
+        "resolution_summary": {
+            "original_inputs": [
+                "cyclosporine",
+                "fluconazole",
+                "phentermine",
+                "trioxsalen"
+            ],
+            "canonical_drug_ids": [
+                "DRUG_000006",
+                "DRUG_000048",
+                "DRUG_000045",
+                "DRUG_001202"
+            ],
+            "unresolved_inputs": [],
+            "ambiguous_inputs": [],
+            "duplicate_inputs": [],
+            "resolved_drugs": [
+                {
+                    "original_input": "cyclosporine",
+                    "resolved_internal_drug_id": "DRUG_000006",
+                    "display_name": "cyclosporine",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "CANONICAL_NAME",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": "3008",
+                    "rxnorm_name": "cyclosporine"
+                },
+                {
+                    "original_input": "fluconazole",
+                    "resolved_internal_drug_id": "DRUG_000048",
+                    "display_name": "Fluconazole",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "CANONICAL_NAME",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": null,
+                    "rxnorm_name": NaN
+                },
+                {
+                    "original_input": "phentermine",
+                    "resolved_internal_drug_id": "DRUG_000045",
+                    "display_name": "Phentermine",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "CANONICAL_NAME",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": null,
+                    "rxnorm_name": NaN
+                },
+                {
+                    "original_input": "trioxsalen",
+                    "resolved_internal_drug_id": "DRUG_001202",
+                    "display_name": "trioxsalen",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "CANONICAL_NAME",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": "10844",
+                    "rxnorm_name": "trioxsalen"
+                }
+            ]
+        },
+        "evidence_summary": {
+            "total_input_items": 4,
+            "unique_canonical_drugs": 4,
+            "unresolved_items_count": 0,
+            "ambiguous_items_count": 0,
+            "duplicates_collapsed_count": 0,
+            "total_expected_pairs": 6,
+            "total_analyzed_pairs": 6,
+            "pairs_with_evidence": 2,
+            "convergent_evidence_pairs": 1,
+            "ddi_only_pairs": 0,
+            "combination_event_only_pairs": 1,
+            "no_direct_evidence_pairs": 4,
+            "prescription_status": "MULTI_SIGNAL_EVIDENCE"
+        },
+        "drug_participation": [
+            {
+                "internal_drug_id": "DRUG_000048",
+                "display_name": "Fluconazole",
+                "total_pairs_involved": 3,
+                "evidence_supported_pairs": 2,
+                "convergent_pairs": 1,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 1,
+                "no_evidence_pairs": 1
+            },
+            {
+                "internal_drug_id": "DRUG_000006",
+                "display_name": "cyclosporine",
+                "total_pairs_involved": 3,
+                "evidence_supported_pairs": 1,
+                "convergent_pairs": 1,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 0,
+                "no_evidence_pairs": 2
+            },
+            {
+                "internal_drug_id": "DRUG_000045",
+                "display_name": "Phentermine",
+                "total_pairs_involved": 3,
+                "evidence_supported_pairs": 1,
+                "convergent_pairs": 0,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 1,
+                "no_evidence_pairs": 2
+            },
+            {
+                "internal_drug_id": "DRUG_001202",
+                "display_name": "trioxsalen",
+                "total_pairs_involved": 3,
+                "evidence_supported_pairs": 0,
+                "convergent_pairs": 0,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 0,
+                "no_evidence_pairs": 3
+            }
+        ],
+        "prioritized_findings": [
+            {
+                "finding_id": "FIND_0001",
+                "pair_index": 1,
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_000048",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "Fluconazole",
+                "evidence_status": "CONVERGENT_SAFETY_EVIDENCE",
+                "evidence_priority": "CRITICAL_EVIDENCE_PRIORITY",
+                "confidence_level": "HIGH_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.93,
+                "ddi_present": true,
+                "ddi_count": 1,
+                "events_present": true,
+                "event_count": 202,
+                "inference_id": "INF_0000005",
+                "rule_fired": "RULE_CONVERGENT_SAFETY_EVIDENCE",
+                "summary_narrative": "cyclosporine (DRUG_000006) + Fluconazole (DRUG_000048): Classified as CONVERGENT_SAFETY_EVIDENCE with HIGH_EVIDENCE_CONFIDENCE (Score: 0.93). DDI evidence: True (fwd: 1, rev: 0), TWOSIDES combination events: True (202 events).",
+                "supporting_edge_ids": [
+                    "E_DDI_166133",
+                    "E_SE_02061836",
+                    "E_SE_02061837",
+                    "E_SE_02061838",
+                    "E_SE_02061839",
+                    "E_SE_02061840"
+                ],
+                "source_record_ids": [
+                    "DDI:DB00091:DB00196",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:342",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:584",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:1127",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:953",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:750"
+                ]
+            },
+            {
+                "finding_id": "FIND_0004",
+                "pair_index": 4,
+                "drug_a_id": "DRUG_000048",
+                "drug_b_id": "DRUG_000045",
+                "drug_a_name": "Fluconazole",
+                "drug_b_name": "Phentermine",
+                "evidence_status": "COMBINATION_EVENT_EVIDENCE_ONLY",
+                "evidence_priority": "MODERATE_EVIDENCE_PRIORITY",
+                "confidence_level": "MODERATE_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.65,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": true,
+                "event_count": 75,
+                "inference_id": "INF_0000008",
+                "rule_fired": "RULE_COMBINATION_EVENT_EVIDENCE_ONLY",
+                "summary_narrative": "Fluconazole (DRUG_000048) + Phentermine (DRUG_000045): Classified as COMBINATION_EVENT_EVIDENCE_ONLY with MODERATE_EVIDENCE_CONFIDENCE (Score: 0.65). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: True (75 events).",
+                "supporting_edge_ids": [
+                    "E_SE_01192345",
+                    "E_SE_01192346",
+                    "E_SE_01192347",
+                    "E_SE_01192348",
+                    "E_SE_01192349"
+                ],
+                "source_record_ids": [
+                    "TWOSIDES_EVENT:CID000003365:CID000004771:1244",
+                    "TWOSIDES_EVENT:CID000003365:CID000004771:253",
+                    "TWOSIDES_EVENT:CID000003365:CID000004771:121",
+                    "TWOSIDES_EVENT:CID000003365:CID000004771:926",
+                    "TWOSIDES_EVENT:CID000003365:CID000004771:85"
+                ]
+            },
+            {
+                "finding_id": "FIND_0003",
+                "pair_index": 3,
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_001202",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "trioxsalen",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "evidence_priority": "NO_EVIDENCE_PRIORITY",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.4,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000007",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE",
+                "summary_narrative": "cyclosporine (DRUG_000006) + trioxsalen (DRUG_001202): Classified as NO_DIRECT_GRAPH_EVIDENCE with LIMITED_EVIDENCE_CONFIDENCE (Score: 0.4). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: False (0 events).",
+                "supporting_edge_ids": [],
+                "source_record_ids": []
+            },
+            {
+                "finding_id": "FIND_0002",
+                "pair_index": 2,
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_000045",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "Phentermine",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "evidence_priority": "NO_EVIDENCE_PRIORITY",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000006",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE",
+                "summary_narrative": "cyclosporine (DRUG_000006) + Phentermine (DRUG_000045): Classified as NO_DIRECT_GRAPH_EVIDENCE with LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: False (0 events).",
+                "supporting_edge_ids": [],
+                "source_record_ids": []
+            },
+            {
+                "finding_id": "FIND_0005",
+                "pair_index": 5,
+                "drug_a_id": "DRUG_000048",
+                "drug_b_id": "DRUG_001202",
+                "drug_a_name": "Fluconazole",
+                "drug_b_name": "trioxsalen",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "evidence_priority": "NO_EVIDENCE_PRIORITY",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000009",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE",
+                "summary_narrative": "Fluconazole (DRUG_000048) + trioxsalen (DRUG_001202): Classified as NO_DIRECT_GRAPH_EVIDENCE with LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: False (0 events).",
+                "supporting_edge_ids": [],
+                "source_record_ids": []
+            },
+            {
+                "finding_id": "FIND_0006",
+                "pair_index": 6,
+                "drug_a_id": "DRUG_000045",
+                "drug_b_id": "DRUG_001202",
+                "drug_a_name": "Phentermine",
+                "drug_b_name": "trioxsalen",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "evidence_priority": "NO_EVIDENCE_PRIORITY",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000010",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE",
+                "summary_narrative": "Phentermine (DRUG_000045) + trioxsalen (DRUG_001202): Classified as NO_DIRECT_GRAPH_EVIDENCE with LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: False (0 events).",
+                "supporting_edge_ids": [],
+                "source_record_ids": []
+            }
+        ],
+        "pair_results": [
+            {
+                "pair_index": 1,
+                "canonical_pair_key": "DRUG_000006__DRUG_000048",
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_000048",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "Fluconazole",
+                "evidence_status": "CONVERGENT_SAFETY_EVIDENCE",
+                "confidence_level": "HIGH_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.93,
+                "ddi_present": true,
+                "ddi_forward_count": 1,
+                "ddi_reverse_count": 0,
+                "events_present": true,
+                "event_count": 202,
+                "inference_id": "INF_0000005",
+                "rule_fired": "RULE_CONVERGENT_SAFETY_EVIDENCE"
+            },
+            {
+                "pair_index": 2,
+                "canonical_pair_key": "DRUG_000006__DRUG_000045",
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_000045",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "Phentermine",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000006",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE"
+            },
+            {
+                "pair_index": 3,
+                "canonical_pair_key": "DRUG_000006__DRUG_001202",
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_001202",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "trioxsalen",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.4,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000007",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE"
+            },
+            {
+                "pair_index": 4,
+                "canonical_pair_key": "DRUG_000045__DRUG_000048",
+                "drug_a_id": "DRUG_000048",
+                "drug_b_id": "DRUG_000045",
+                "drug_a_name": "Fluconazole",
+                "drug_b_name": "Phentermine",
+                "evidence_status": "COMBINATION_EVENT_EVIDENCE_ONLY",
+                "confidence_level": "MODERATE_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.65,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": true,
+                "event_count": 75,
+                "inference_id": "INF_0000008",
+                "rule_fired": "RULE_COMBINATION_EVENT_EVIDENCE_ONLY"
+            },
+            {
+                "pair_index": 5,
+                "canonical_pair_key": "DRUG_000048__DRUG_001202",
+                "drug_a_id": "DRUG_000048",
+                "drug_b_id": "DRUG_001202",
+                "drug_a_name": "Fluconazole",
+                "drug_b_name": "trioxsalen",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000009",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE"
+            },
+            {
+                "pair_index": 6,
+                "canonical_pair_key": "DRUG_000045__DRUG_001202",
+                "drug_a_id": "DRUG_000045",
+                "drug_b_id": "DRUG_001202",
+                "drug_a_name": "Phentermine",
+                "drug_b_name": "trioxsalen",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000010",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE"
+            }
+        ],
+        "clinical_narrative_report": "=====================================================================================\nPRESCRIPTION SAFETY EVIDENCE & REASONING REPORT [RX_004_FOUR_DRUGS]\nGenerated At: 2026-08-28T23:55:55.842669\n=====================================================================================\n\n[1] PRESCRIPTION IDENTITY RESOLUTION SUMMARY\n  * Total Input Items:            4\n  * Unique Canonical Drugs:       4\n  * Duplicate Inputs Collapsed:   0\n  * Ambiguous Mappings Detected:  0\n  * Unresolved Input Items:       0\n  * Resolved Medication List:\n    - 'cyclosporine' -> cyclosporine (DRUG_000006) [RESOLVED, RxCUI: 3008]\n    - 'fluconazole' -> Fluconazole (DRUG_000048) [RESOLVED]\n    - 'phentermine' -> Phentermine (DRUG_000045) [RESOLVED]\n    - 'trioxsalen' -> trioxsalen (DRUG_001202) [RESOLVED, RxCUI: 10844]\n\n[2] PAIRWISE GRAPH SAFETY ANALYSIS SUMMARY\n  * Expected Unique Combinations: 6\n  * Evaluated Pairs:              6\n  * Pairs with Graph Evidence:    2\n  * Overall Prescription Status:  MULTI_SIGNAL_EVIDENCE\n  * Evidence Distribution:\n    - Convergent Safety Evidence:        1\n    - DrugBank DDI Evidence Only:        0\n    - TWOSIDES Combination Events Only:  1\n    - No Direct Evidence in Graph:       4\n\n[3] PRIORITIZED SAFETY FINDINGS (Ranked by Graph Evidence Strength)\n  (1) [CRITICAL_EVIDENCE_PRIORITY] cyclosporine + Fluconazole\n      - Evidence Status:  CONVERGENT_SAFETY_EVIDENCE\n      - Confidence Level: HIGH_EVIDENCE_CONFIDENCE (Score: 0.93)\n      - Evidence Counts:  DDI Assertions: 1, TWOSIDES Adverse Events: 202\n      - Inference ID:     INF_0000005 (RULE_CONVERGENT_SAFETY_EVIDENCE)\n      - Supporting Edges: E_DDI_166133, E_SE_02061836, E_SE_02061837 (+3 more)\n  (2) [MODERATE_EVIDENCE_PRIORITY] Fluconazole + Phentermine\n      - Evidence Status:  COMBINATION_EVENT_EVIDENCE_ONLY\n      - Confidence Level: MODERATE_EVIDENCE_CONFIDENCE (Score: 0.65)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 75\n      - Inference ID:     INF_0000008 (RULE_COMBINATION_EVENT_EVIDENCE_ONLY)\n      - Supporting Edges: E_SE_01192345, E_SE_01192346, E_SE_01192347 (+2 more)\n  (3) [NO_EVIDENCE_PRIORITY] cyclosporine + trioxsalen\n      - Evidence Status:  NO_DIRECT_GRAPH_EVIDENCE\n      - Confidence Level: LIMITED_EVIDENCE_CONFIDENCE (Score: 0.4)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 0\n      - Inference ID:     INF_0000007 (RULE_NO_DIRECT_GRAPH_EVIDENCE)\n  (4) [NO_EVIDENCE_PRIORITY] cyclosporine + Phentermine\n      - Evidence Status:  NO_DIRECT_GRAPH_EVIDENCE\n      - Confidence Level: LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 0\n      - Inference ID:     INF_0000006 (RULE_NO_DIRECT_GRAPH_EVIDENCE)\n  (5) [NO_EVIDENCE_PRIORITY] Fluconazole + trioxsalen\n      - Evidence Status:  NO_DIRECT_GRAPH_EVIDENCE\n      - Confidence Level: LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 0\n      - Inference ID:     INF_0000009 (RULE_NO_DIRECT_GRAPH_EVIDENCE)\n  (6) [NO_EVIDENCE_PRIORITY] Phentermine + trioxsalen\n      - Evidence Status:  NO_DIRECT_GRAPH_EVIDENCE\n      - Confidence Level: LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 0\n      - Inference ID:     INF_0000010 (RULE_NO_DIRECT_GRAPH_EVIDENCE)\n\n[4] DRUG PARTICIPATION & EVIDENCE INVOLVEMENT\n  * Fluconazole (DRUG_000048): Involved in 3 pairs (2 with evidence -> 1 convergent, 0 DDI, 1 events)\n  * cyclosporine (DRUG_000006): Involved in 3 pairs (1 with evidence -> 1 convergent, 0 DDI, 0 events)\n  * Phentermine (DRUG_000045): Involved in 3 pairs (1 with evidence -> 0 convergent, 0 DDI, 1 events)\n  * trioxsalen (DRUG_001202): Involved in 3 pairs (0 with evidence -> 0 convergent, 0 DDI, 0 events)\n\n[5] SCIENTIFIC LIMITATIONS & ETHICAL NOTICE\n  * NOTICE 1: Graph evidence priority reflects evidence density, not calibrated patient-specific clinical severity.\n  * NOTICE 2: Absence of direct evidence in the current knowledge graph is NOT proof of clinical safety.\n  * NOTICE 3: Drug interaction assertions and observational adverse event associations do not independently establish causality.\n  * NOTICE 4: This automated report is generated strictly from integrated biomedical datasets and does not replace clinical consultation.\n=====================================================================================",
+        "scientific_limitations": [
+            "Graph evidence priority is not equivalent to patient-specific clinical risk.",
+            "Absence of evidence in the current graph is not evidence of medical safety.",
+            "Drug interaction assertions and observational adverse event associations do not independently establish causality.",
+            "This report is generated strictly from the ingested knowledge graph datasets and does not replace professional clinical judgment."
+        ]
+    },
+    {
+        "prescription_id": "RX_005_MIXED_AND_DUPLICATES",
+        "generated_at": "2026-08-28T23:55:55.842843",
+        "resolution_summary": {
+            "original_inputs": [
+                "DRUG_000048",
+                "CID000003365",
+                "fluconazole",
+                "DB00091",
+                "cyclosporine"
+            ],
+            "canonical_drug_ids": [
+                "DRUG_000048",
+                "DRUG_000006"
+            ],
+            "unresolved_inputs": [],
+            "ambiguous_inputs": [],
+            "duplicate_inputs": [
+                "CID000003365",
+                "fluconazole",
+                "cyclosporine"
+            ],
+            "resolved_drugs": [
+                {
+                    "original_input": "DRUG_000048",
+                    "resolved_internal_drug_id": "DRUG_000048",
+                    "display_name": "Fluconazole",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "INTERNAL_PROJECT_ID",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": null,
+                    "rxnorm_name": NaN
+                },
+                {
+                    "original_input": "CID000003365",
+                    "resolved_internal_drug_id": "DRUG_000048",
+                    "display_name": "Fluconazole",
+                    "resolution_status": "DUPLICATE",
+                    "identifier_type_matched": "TWOSIDES_CID",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": null,
+                    "rxnorm_name": NaN
+                },
+                {
+                    "original_input": "fluconazole",
+                    "resolved_internal_drug_id": "DRUG_000048",
+                    "display_name": "Fluconazole",
+                    "resolution_status": "DUPLICATE",
+                    "identifier_type_matched": "CANONICAL_NAME",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": null,
+                    "rxnorm_name": NaN
+                },
+                {
+                    "original_input": "DB00091",
+                    "resolved_internal_drug_id": "DRUG_000006",
+                    "display_name": "cyclosporine",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "DRUGBANK_ID",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": "3008",
+                    "rxnorm_name": "cyclosporine"
+                },
+                {
+                    "original_input": "cyclosporine",
+                    "resolved_internal_drug_id": "DRUG_000006",
+                    "display_name": "cyclosporine",
+                    "resolution_status": "DUPLICATE",
+                    "identifier_type_matched": "CANONICAL_NAME",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": "3008",
+                    "rxnorm_name": "cyclosporine"
+                }
+            ]
+        },
+        "evidence_summary": {
+            "total_input_items": 5,
+            "unique_canonical_drugs": 2,
+            "unresolved_items_count": 0,
+            "ambiguous_items_count": 0,
+            "duplicates_collapsed_count": 3,
+            "total_expected_pairs": 1,
+            "total_analyzed_pairs": 1,
+            "pairs_with_evidence": 1,
+            "convergent_evidence_pairs": 1,
+            "ddi_only_pairs": 0,
+            "combination_event_only_pairs": 0,
+            "no_direct_evidence_pairs": 0,
+            "prescription_status": "CONVERGENT_EVIDENCE_PRESENT"
+        },
+        "drug_participation": [
+            {
+                "internal_drug_id": "DRUG_000048",
+                "display_name": "Fluconazole",
+                "total_pairs_involved": 1,
+                "evidence_supported_pairs": 1,
+                "convergent_pairs": 1,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 0,
+                "no_evidence_pairs": 0
+            },
+            {
+                "internal_drug_id": "DRUG_000006",
+                "display_name": "cyclosporine",
+                "total_pairs_involved": 1,
+                "evidence_supported_pairs": 1,
+                "convergent_pairs": 1,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 0,
+                "no_evidence_pairs": 0
+            }
+        ],
+        "prioritized_findings": [
+            {
+                "finding_id": "FIND_0001",
+                "pair_index": 1,
+                "drug_a_id": "DRUG_000048",
+                "drug_b_id": "DRUG_000006",
+                "drug_a_name": "Fluconazole",
+                "drug_b_name": "cyclosporine",
+                "evidence_status": "CONVERGENT_SAFETY_EVIDENCE",
+                "evidence_priority": "CRITICAL_EVIDENCE_PRIORITY",
+                "confidence_level": "HIGH_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.93,
+                "ddi_present": true,
+                "ddi_count": 1,
+                "events_present": true,
+                "event_count": 202,
+                "inference_id": "INF_0000011",
+                "rule_fired": "RULE_CONVERGENT_SAFETY_EVIDENCE",
+                "summary_narrative": "Fluconazole (DRUG_000048) + cyclosporine (DRUG_000006): Classified as CONVERGENT_SAFETY_EVIDENCE with HIGH_EVIDENCE_CONFIDENCE (Score: 0.93). DDI evidence: True (fwd: 0, rev: 1), TWOSIDES combination events: True (202 events).",
+                "supporting_edge_ids": [
+                    "E_DDI_166133",
+                    "E_SE_02061836",
+                    "E_SE_02061837",
+                    "E_SE_02061838",
+                    "E_SE_02061839",
+                    "E_SE_02061840"
+                ],
+                "source_record_ids": [
+                    "DDI:DB00091:DB00196",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:342",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:584",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:1127",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:953",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:750"
+                ]
+            }
+        ],
+        "pair_results": [
+            {
+                "pair_index": 1,
+                "canonical_pair_key": "DRUG_000006__DRUG_000048",
+                "drug_a_id": "DRUG_000048",
+                "drug_b_id": "DRUG_000006",
+                "drug_a_name": "Fluconazole",
+                "drug_b_name": "cyclosporine",
+                "evidence_status": "CONVERGENT_SAFETY_EVIDENCE",
+                "confidence_level": "HIGH_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.93,
+                "ddi_present": true,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 1,
+                "events_present": true,
+                "event_count": 202,
+                "inference_id": "INF_0000011",
+                "rule_fired": "RULE_CONVERGENT_SAFETY_EVIDENCE"
+            }
+        ],
+        "clinical_narrative_report": "=====================================================================================\nPRESCRIPTION SAFETY EVIDENCE & REASONING REPORT [RX_005_MIXED_AND_DUPLICATES]\nGenerated At: 2026-08-28T23:55:55.842843\n=====================================================================================\n\n[1] PRESCRIPTION IDENTITY RESOLUTION SUMMARY\n  * Total Input Items:            5\n  * Unique Canonical Drugs:       2\n  * Duplicate Inputs Collapsed:   3\n  * Ambiguous Mappings Detected:  0\n  * Unresolved Input Items:       0\n  * Resolved Medication List:\n    - 'DRUG_000048' -> Fluconazole (DRUG_000048) [RESOLVED]\n    - 'CID000003365' -> Fluconazole (DRUG_000048) [DUPLICATE]\n    - 'fluconazole' -> Fluconazole (DRUG_000048) [DUPLICATE]\n    - 'DB00091' -> cyclosporine (DRUG_000006) [RESOLVED, RxCUI: 3008]\n    - 'cyclosporine' -> cyclosporine (DRUG_000006) [DUPLICATE, RxCUI: 3008]\n\n[2] PAIRWISE GRAPH SAFETY ANALYSIS SUMMARY\n  * Expected Unique Combinations: 1\n  * Evaluated Pairs:              1\n  * Pairs with Graph Evidence:    1\n  * Overall Prescription Status:  CONVERGENT_EVIDENCE_PRESENT\n  * Evidence Distribution:\n    - Convergent Safety Evidence:        1\n    - DrugBank DDI Evidence Only:        0\n    - TWOSIDES Combination Events Only:  0\n    - No Direct Evidence in Graph:       0\n\n[3] PRIORITIZED SAFETY FINDINGS (Ranked by Graph Evidence Strength)\n  (1) [CRITICAL_EVIDENCE_PRIORITY] Fluconazole + cyclosporine\n      - Evidence Status:  CONVERGENT_SAFETY_EVIDENCE\n      - Confidence Level: HIGH_EVIDENCE_CONFIDENCE (Score: 0.93)\n      - Evidence Counts:  DDI Assertions: 1, TWOSIDES Adverse Events: 202\n      - Inference ID:     INF_0000011 (RULE_CONVERGENT_SAFETY_EVIDENCE)\n      - Supporting Edges: E_DDI_166133, E_SE_02061836, E_SE_02061837 (+3 more)\n\n[4] DRUG PARTICIPATION & EVIDENCE INVOLVEMENT\n  * Fluconazole (DRUG_000048): Involved in 1 pairs (1 with evidence -> 1 convergent, 0 DDI, 0 events)\n  * cyclosporine (DRUG_000006): Involved in 1 pairs (1 with evidence -> 1 convergent, 0 DDI, 0 events)\n\n[5] SCIENTIFIC LIMITATIONS & ETHICAL NOTICE\n  * NOTICE 1: Graph evidence priority reflects evidence density, not calibrated patient-specific clinical severity.\n  * NOTICE 2: Absence of direct evidence in the current knowledge graph is NOT proof of clinical safety.\n  * NOTICE 3: Drug interaction assertions and observational adverse event associations do not independently establish causality.\n  * NOTICE 4: This automated report is generated strictly from integrated biomedical datasets and does not replace clinical consultation.\n=====================================================================================",
+        "scientific_limitations": [
+            "Graph evidence priority is not equivalent to patient-specific clinical risk.",
+            "Absence of evidence in the current graph is not evidence of medical safety.",
+            "Drug interaction assertions and observational adverse event associations do not independently establish causality.",
+            "This report is generated strictly from the ingested knowledge graph datasets and does not replace professional clinical judgment."
+        ]
+    },
+    {
+        "prescription_id": "RX_006_UNRESOLVED_AND_NEGATIVE",
+        "generated_at": "2026-08-28T23:55:55.842916",
+        "resolution_summary": {
+            "original_inputs": [
+                "bivalirudin",
+                "goserelin",
+                "UnknownSyntheticMedXYZ_99"
+            ],
+            "canonical_drug_ids": [
+                "DRUG_000001",
+                "DRUG_000002"
+            ],
+            "unresolved_inputs": [
+                "UnknownSyntheticMedXYZ_99"
+            ],
+            "ambiguous_inputs": [],
+            "duplicate_inputs": [],
+            "resolved_drugs": [
+                {
+                    "original_input": "bivalirudin",
+                    "resolved_internal_drug_id": "DRUG_000001",
+                    "display_name": "bivalirudin",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "CANONICAL_NAME",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": "60819",
+                    "rxnorm_name": "bivalirudin"
+                },
+                {
+                    "original_input": "goserelin",
+                    "resolved_internal_drug_id": "DRUG_000002",
+                    "display_name": "goserelin",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "CANONICAL_NAME",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": "50610",
+                    "rxnorm_name": "goserelin"
+                },
+                {
+                    "original_input": "UnknownSyntheticMedXYZ_99",
+                    "resolved_internal_drug_id": null,
+                    "display_name": null,
+                    "resolution_status": "UNRESOLVED",
+                    "identifier_type_matched": null,
+                    "entity_status": null,
+                    "rxcui": null,
+                    "rxnorm_name": null
+                }
+            ]
+        },
+        "evidence_summary": {
+            "total_input_items": 3,
+            "unique_canonical_drugs": 2,
+            "unresolved_items_count": 1,
+            "ambiguous_items_count": 0,
+            "duplicates_collapsed_count": 0,
+            "total_expected_pairs": 1,
+            "total_analyzed_pairs": 1,
+            "pairs_with_evidence": 0,
+            "convergent_evidence_pairs": 0,
+            "ddi_only_pairs": 0,
+            "combination_event_only_pairs": 0,
+            "no_direct_evidence_pairs": 1,
+            "prescription_status": "LIMITED_GRAPH_EVIDENCE"
+        },
+        "drug_participation": [
+            {
+                "internal_drug_id": "DRUG_000001",
+                "display_name": "bivalirudin",
+                "total_pairs_involved": 1,
+                "evidence_supported_pairs": 0,
+                "convergent_pairs": 0,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 0,
+                "no_evidence_pairs": 1
+            },
+            {
+                "internal_drug_id": "DRUG_000002",
+                "display_name": "goserelin",
+                "total_pairs_involved": 1,
+                "evidence_supported_pairs": 0,
+                "convergent_pairs": 0,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 0,
+                "no_evidence_pairs": 1
+            }
+        ],
+        "prioritized_findings": [
+            {
+                "finding_id": "FIND_0001",
+                "pair_index": 1,
+                "drug_a_id": "DRUG_000001",
+                "drug_b_id": "DRUG_000002",
+                "drug_a_name": "bivalirudin",
+                "drug_b_name": "goserelin",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "evidence_priority": "NO_EVIDENCE_PRIORITY",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.4,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000012",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE",
+                "summary_narrative": "bivalirudin (DRUG_000001) + goserelin (DRUG_000002): Classified as NO_DIRECT_GRAPH_EVIDENCE with LIMITED_EVIDENCE_CONFIDENCE (Score: 0.4). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: False (0 events).",
+                "supporting_edge_ids": [],
+                "source_record_ids": []
+            }
+        ],
+        "pair_results": [
+            {
+                "pair_index": 1,
+                "canonical_pair_key": "DRUG_000001__DRUG_000002",
+                "drug_a_id": "DRUG_000001",
+                "drug_b_id": "DRUG_000002",
+                "drug_a_name": "bivalirudin",
+                "drug_b_name": "goserelin",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.4,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000012",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE"
+            }
+        ],
+        "clinical_narrative_report": "=====================================================================================\nPRESCRIPTION SAFETY EVIDENCE & REASONING REPORT [RX_006_UNRESOLVED_AND_NEGATIVE]\nGenerated At: 2026-08-28T23:55:55.842916\n=====================================================================================\n\n[1] PRESCRIPTION IDENTITY RESOLUTION SUMMARY\n  * Total Input Items:            3\n  * Unique Canonical Drugs:       2\n  * Duplicate Inputs Collapsed:   0\n  * Ambiguous Mappings Detected:  0\n  * Unresolved Input Items:       1\n  * Resolved Medication List:\n    - 'bivalirudin' -> bivalirudin (DRUG_000001) [RESOLVED, RxCUI: 60819]\n    - 'goserelin' -> goserelin (DRUG_000002) [RESOLVED, RxCUI: 50610]\n    - 'UnknownSyntheticMedXYZ_99' -> UNRESOLVED (No graph entity match)\n\n[2] PAIRWISE GRAPH SAFETY ANALYSIS SUMMARY\n  * Expected Unique Combinations: 1\n  * Evaluated Pairs:              1\n  * Pairs with Graph Evidence:    0\n  * Overall Prescription Status:  LIMITED_GRAPH_EVIDENCE\n  * Evidence Distribution:\n    - Convergent Safety Evidence:        0\n    - DrugBank DDI Evidence Only:        0\n    - TWOSIDES Combination Events Only:  0\n    - No Direct Evidence in Graph:       1\n\n[3] PRIORITIZED SAFETY FINDINGS (Ranked by Graph Evidence Strength)\n  (1) [NO_EVIDENCE_PRIORITY] bivalirudin + goserelin\n      - Evidence Status:  NO_DIRECT_GRAPH_EVIDENCE\n      - Confidence Level: LIMITED_EVIDENCE_CONFIDENCE (Score: 0.4)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 0\n      - Inference ID:     INF_0000012 (RULE_NO_DIRECT_GRAPH_EVIDENCE)\n\n[4] DRUG PARTICIPATION & EVIDENCE INVOLVEMENT\n  * bivalirudin (DRUG_000001): Involved in 1 pairs (0 with evidence -> 0 convergent, 0 DDI, 0 events)\n  * goserelin (DRUG_000002): Involved in 1 pairs (0 with evidence -> 0 convergent, 0 DDI, 0 events)\n\n[5] SCIENTIFIC LIMITATIONS & ETHICAL NOTICE\n  * NOTICE 1: Graph evidence priority reflects evidence density, not calibrated patient-specific clinical severity.\n  * NOTICE 2: Absence of direct evidence in the current knowledge graph is NOT proof of clinical safety.\n  * NOTICE 3: Drug interaction assertions and observational adverse event associations do not independently establish causality.\n  * NOTICE 4: This automated report is generated strictly from integrated biomedical datasets and does not replace clinical consultation.\n=====================================================================================",
+        "scientific_limitations": [
+            "Graph evidence priority is not equivalent to patient-specific clinical risk.",
+            "Absence of evidence in the current graph is not evidence of medical safety.",
+            "Drug interaction assertions and observational adverse event associations do not independently establish causality.",
+            "This report is generated strictly from the ingested knowledge graph datasets and does not replace professional clinical judgment."
+        ]
+    },
+    {
+        "prescription_id": "RX_007_FIVE_DRUGS",
+        "generated_at": "2026-08-28T23:55:55.842971",
+        "resolution_summary": {
+            "original_inputs": [
+                "DRUG_000001",
+                "DRUG_000006",
+                "DRUG_000045",
+                "DRUG_000048",
+                "DRUG_001202"
+            ],
+            "canonical_drug_ids": [
+                "DRUG_000001",
+                "DRUG_000006",
+                "DRUG_000045",
+                "DRUG_000048",
+                "DRUG_001202"
+            ],
+            "unresolved_inputs": [],
+            "ambiguous_inputs": [],
+            "duplicate_inputs": [],
+            "resolved_drugs": [
+                {
+                    "original_input": "DRUG_000001",
+                    "resolved_internal_drug_id": "DRUG_000001",
+                    "display_name": "bivalirudin",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "INTERNAL_PROJECT_ID",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": "60819",
+                    "rxnorm_name": "bivalirudin"
+                },
+                {
+                    "original_input": "DRUG_000006",
+                    "resolved_internal_drug_id": "DRUG_000006",
+                    "display_name": "cyclosporine",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "INTERNAL_PROJECT_ID",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": "3008",
+                    "rxnorm_name": "cyclosporine"
+                },
+                {
+                    "original_input": "DRUG_000045",
+                    "resolved_internal_drug_id": "DRUG_000045",
+                    "display_name": "Phentermine",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "INTERNAL_PROJECT_ID",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": null,
+                    "rxnorm_name": NaN
+                },
+                {
+                    "original_input": "DRUG_000048",
+                    "resolved_internal_drug_id": "DRUG_000048",
+                    "display_name": "Fluconazole",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "INTERNAL_PROJECT_ID",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": null,
+                    "rxnorm_name": NaN
+                },
+                {
+                    "original_input": "DRUG_001202",
+                    "resolved_internal_drug_id": "DRUG_001202",
+                    "display_name": "trioxsalen",
+                    "resolution_status": "RESOLVED",
+                    "identifier_type_matched": "INTERNAL_PROJECT_ID",
+                    "entity_status": "CONFIRMED_INTEGRATED_ENTITY",
+                    "rxcui": "10844",
+                    "rxnorm_name": "trioxsalen"
+                }
+            ]
+        },
+        "evidence_summary": {
+            "total_input_items": 5,
+            "unique_canonical_drugs": 5,
+            "unresolved_items_count": 0,
+            "ambiguous_items_count": 0,
+            "duplicates_collapsed_count": 0,
+            "total_expected_pairs": 10,
+            "total_analyzed_pairs": 10,
+            "pairs_with_evidence": 3,
+            "convergent_evidence_pairs": 1,
+            "ddi_only_pairs": 1,
+            "combination_event_only_pairs": 1,
+            "no_direct_evidence_pairs": 7,
+            "prescription_status": "MULTI_SIGNAL_EVIDENCE"
+        },
+        "drug_participation": [
+            {
+                "internal_drug_id": "DRUG_000006",
+                "display_name": "cyclosporine",
+                "total_pairs_involved": 4,
+                "evidence_supported_pairs": 2,
+                "convergent_pairs": 1,
+                "ddi_only_pairs": 1,
+                "combination_event_pairs": 0,
+                "no_evidence_pairs": 2
+            },
+            {
+                "internal_drug_id": "DRUG_000048",
+                "display_name": "Fluconazole",
+                "total_pairs_involved": 4,
+                "evidence_supported_pairs": 2,
+                "convergent_pairs": 1,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 1,
+                "no_evidence_pairs": 2
+            },
+            {
+                "internal_drug_id": "DRUG_000001",
+                "display_name": "bivalirudin",
+                "total_pairs_involved": 4,
+                "evidence_supported_pairs": 1,
+                "convergent_pairs": 0,
+                "ddi_only_pairs": 1,
+                "combination_event_pairs": 0,
+                "no_evidence_pairs": 3
+            },
+            {
+                "internal_drug_id": "DRUG_000045",
+                "display_name": "Phentermine",
+                "total_pairs_involved": 4,
+                "evidence_supported_pairs": 1,
+                "convergent_pairs": 0,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 1,
+                "no_evidence_pairs": 3
+            },
+            {
+                "internal_drug_id": "DRUG_001202",
+                "display_name": "trioxsalen",
+                "total_pairs_involved": 4,
+                "evidence_supported_pairs": 0,
+                "convergent_pairs": 0,
+                "ddi_only_pairs": 0,
+                "combination_event_pairs": 0,
+                "no_evidence_pairs": 4
+            }
+        ],
+        "prioritized_findings": [
+            {
+                "finding_id": "FIND_0006",
+                "pair_index": 6,
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_000048",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "Fluconazole",
+                "evidence_status": "CONVERGENT_SAFETY_EVIDENCE",
+                "evidence_priority": "CRITICAL_EVIDENCE_PRIORITY",
+                "confidence_level": "HIGH_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.93,
+                "ddi_present": true,
+                "ddi_count": 1,
+                "events_present": true,
+                "event_count": 202,
+                "inference_id": "INF_0000018",
+                "rule_fired": "RULE_CONVERGENT_SAFETY_EVIDENCE",
+                "summary_narrative": "cyclosporine (DRUG_000006) + Fluconazole (DRUG_000048): Classified as CONVERGENT_SAFETY_EVIDENCE with HIGH_EVIDENCE_CONFIDENCE (Score: 0.93). DDI evidence: True (fwd: 1, rev: 0), TWOSIDES combination events: True (202 events).",
+                "supporting_edge_ids": [
+                    "E_DDI_166133",
+                    "E_SE_02061836",
+                    "E_SE_02061837",
+                    "E_SE_02061838",
+                    "E_SE_02061839",
+                    "E_SE_02061840"
+                ],
+                "source_record_ids": [
+                    "DDI:DB00091:DB00196",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:342",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:584",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:1127",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:953",
+                    "TWOSIDES_EVENT:CID000002909:CID000003365:750"
+                ]
+            },
+            {
+                "finding_id": "FIND_0001",
+                "pair_index": 1,
+                "drug_a_id": "DRUG_000001",
+                "drug_b_id": "DRUG_000006",
+                "drug_a_name": "bivalirudin",
+                "drug_b_name": "cyclosporine",
+                "evidence_status": "DDI_EVIDENCE_ONLY",
+                "evidence_priority": "HIGH_EVIDENCE_PRIORITY",
+                "confidence_level": "HIGH_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.8,
+                "ddi_present": true,
+                "ddi_count": 1,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000013",
+                "rule_fired": "RULE_DDI_EVIDENCE_ONLY",
+                "summary_narrative": "bivalirudin (DRUG_000001) + cyclosporine (DRUG_000006): Classified as DDI_EVIDENCE_ONLY with HIGH_EVIDENCE_CONFIDENCE (Score: 0.8). DDI evidence: True (fwd: 0, rev: 1), TWOSIDES combination events: False (0 events).",
+                "supporting_edge_ids": [
+                    "E_DDI_172962"
+                ],
+                "source_record_ids": [
+                    "DDI:DB00091:DB00006"
+                ]
+            },
+            {
+                "finding_id": "FIND_0008",
+                "pair_index": 8,
+                "drug_a_id": "DRUG_000045",
+                "drug_b_id": "DRUG_000048",
+                "drug_a_name": "Phentermine",
+                "drug_b_name": "Fluconazole",
+                "evidence_status": "COMBINATION_EVENT_EVIDENCE_ONLY",
+                "evidence_priority": "MODERATE_EVIDENCE_PRIORITY",
+                "confidence_level": "MODERATE_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.65,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": true,
+                "event_count": 75,
+                "inference_id": "INF_0000020",
+                "rule_fired": "RULE_COMBINATION_EVENT_EVIDENCE_ONLY",
+                "summary_narrative": "Phentermine (DRUG_000045) + Fluconazole (DRUG_000048): Classified as COMBINATION_EVENT_EVIDENCE_ONLY with MODERATE_EVIDENCE_CONFIDENCE (Score: 0.65). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: True (75 events).",
+                "supporting_edge_ids": [
+                    "E_SE_01192345",
+                    "E_SE_01192346",
+                    "E_SE_01192347",
+                    "E_SE_01192348",
+                    "E_SE_01192349"
+                ],
+                "source_record_ids": [
+                    "TWOSIDES_EVENT:CID000003365:CID000004771:1244",
+                    "TWOSIDES_EVENT:CID000003365:CID000004771:253",
+                    "TWOSIDES_EVENT:CID000003365:CID000004771:121",
+                    "TWOSIDES_EVENT:CID000003365:CID000004771:926",
+                    "TWOSIDES_EVENT:CID000003365:CID000004771:85"
+                ]
+            },
+            {
+                "finding_id": "FIND_0004",
+                "pair_index": 4,
+                "drug_a_id": "DRUG_000001",
+                "drug_b_id": "DRUG_001202",
+                "drug_a_name": "bivalirudin",
+                "drug_b_name": "trioxsalen",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "evidence_priority": "NO_EVIDENCE_PRIORITY",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.4,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000016",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE",
+                "summary_narrative": "bivalirudin (DRUG_000001) + trioxsalen (DRUG_001202): Classified as NO_DIRECT_GRAPH_EVIDENCE with LIMITED_EVIDENCE_CONFIDENCE (Score: 0.4). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: False (0 events).",
+                "supporting_edge_ids": [],
+                "source_record_ids": []
+            },
+            {
+                "finding_id": "FIND_0007",
+                "pair_index": 7,
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_001202",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "trioxsalen",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "evidence_priority": "NO_EVIDENCE_PRIORITY",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.4,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000019",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE",
+                "summary_narrative": "cyclosporine (DRUG_000006) + trioxsalen (DRUG_001202): Classified as NO_DIRECT_GRAPH_EVIDENCE with LIMITED_EVIDENCE_CONFIDENCE (Score: 0.4). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: False (0 events).",
+                "supporting_edge_ids": [],
+                "source_record_ids": []
+            },
+            {
+                "finding_id": "FIND_0002",
+                "pair_index": 2,
+                "drug_a_id": "DRUG_000001",
+                "drug_b_id": "DRUG_000045",
+                "drug_a_name": "bivalirudin",
+                "drug_b_name": "Phentermine",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "evidence_priority": "NO_EVIDENCE_PRIORITY",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000014",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE",
+                "summary_narrative": "bivalirudin (DRUG_000001) + Phentermine (DRUG_000045): Classified as NO_DIRECT_GRAPH_EVIDENCE with LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: False (0 events).",
+                "supporting_edge_ids": [],
+                "source_record_ids": []
+            },
+            {
+                "finding_id": "FIND_0003",
+                "pair_index": 3,
+                "drug_a_id": "DRUG_000001",
+                "drug_b_id": "DRUG_000048",
+                "drug_a_name": "bivalirudin",
+                "drug_b_name": "Fluconazole",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "evidence_priority": "NO_EVIDENCE_PRIORITY",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000015",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE",
+                "summary_narrative": "bivalirudin (DRUG_000001) + Fluconazole (DRUG_000048): Classified as NO_DIRECT_GRAPH_EVIDENCE with LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: False (0 events).",
+                "supporting_edge_ids": [],
+                "source_record_ids": []
+            },
+            {
+                "finding_id": "FIND_0005",
+                "pair_index": 5,
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_000045",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "Phentermine",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "evidence_priority": "NO_EVIDENCE_PRIORITY",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000017",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE",
+                "summary_narrative": "cyclosporine (DRUG_000006) + Phentermine (DRUG_000045): Classified as NO_DIRECT_GRAPH_EVIDENCE with LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: False (0 events).",
+                "supporting_edge_ids": [],
+                "source_record_ids": []
+            },
+            {
+                "finding_id": "FIND_0009",
+                "pair_index": 9,
+                "drug_a_id": "DRUG_000045",
+                "drug_b_id": "DRUG_001202",
+                "drug_a_name": "Phentermine",
+                "drug_b_name": "trioxsalen",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "evidence_priority": "NO_EVIDENCE_PRIORITY",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000021",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE",
+                "summary_narrative": "Phentermine (DRUG_000045) + trioxsalen (DRUG_001202): Classified as NO_DIRECT_GRAPH_EVIDENCE with LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: False (0 events).",
+                "supporting_edge_ids": [],
+                "source_record_ids": []
+            },
+            {
+                "finding_id": "FIND_0010",
+                "pair_index": 10,
+                "drug_a_id": "DRUG_000048",
+                "drug_b_id": "DRUG_001202",
+                "drug_a_name": "Fluconazole",
+                "drug_b_name": "trioxsalen",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "evidence_priority": "NO_EVIDENCE_PRIORITY",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000022",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE",
+                "summary_narrative": "Fluconazole (DRUG_000048) + trioxsalen (DRUG_001202): Classified as NO_DIRECT_GRAPH_EVIDENCE with LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: False (0 events).",
+                "supporting_edge_ids": [],
+                "source_record_ids": []
+            }
+        ],
+        "pair_results": [
+            {
+                "pair_index": 1,
+                "canonical_pair_key": "DRUG_000001__DRUG_000006",
+                "drug_a_id": "DRUG_000001",
+                "drug_b_id": "DRUG_000006",
+                "drug_a_name": "bivalirudin",
+                "drug_b_name": "cyclosporine",
+                "evidence_status": "DDI_EVIDENCE_ONLY",
+                "confidence_level": "HIGH_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.8,
+                "ddi_present": true,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 1,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000013",
+                "rule_fired": "RULE_DDI_EVIDENCE_ONLY"
+            },
+            {
+                "pair_index": 2,
+                "canonical_pair_key": "DRUG_000001__DRUG_000045",
+                "drug_a_id": "DRUG_000001",
+                "drug_b_id": "DRUG_000045",
+                "drug_a_name": "bivalirudin",
+                "drug_b_name": "Phentermine",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000014",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE"
+            },
+            {
+                "pair_index": 3,
+                "canonical_pair_key": "DRUG_000001__DRUG_000048",
+                "drug_a_id": "DRUG_000001",
+                "drug_b_id": "DRUG_000048",
+                "drug_a_name": "bivalirudin",
+                "drug_b_name": "Fluconazole",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000015",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE"
+            },
+            {
+                "pair_index": 4,
+                "canonical_pair_key": "DRUG_000001__DRUG_001202",
+                "drug_a_id": "DRUG_000001",
+                "drug_b_id": "DRUG_001202",
+                "drug_a_name": "bivalirudin",
+                "drug_b_name": "trioxsalen",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.4,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000016",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE"
+            },
+            {
+                "pair_index": 5,
+                "canonical_pair_key": "DRUG_000006__DRUG_000045",
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_000045",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "Phentermine",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000017",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE"
+            },
+            {
+                "pair_index": 6,
+                "canonical_pair_key": "DRUG_000006__DRUG_000048",
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_000048",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "Fluconazole",
+                "evidence_status": "CONVERGENT_SAFETY_EVIDENCE",
+                "confidence_level": "HIGH_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.93,
+                "ddi_present": true,
+                "ddi_forward_count": 1,
+                "ddi_reverse_count": 0,
+                "events_present": true,
+                "event_count": 202,
+                "inference_id": "INF_0000018",
+                "rule_fired": "RULE_CONVERGENT_SAFETY_EVIDENCE"
+            },
+            {
+                "pair_index": 7,
+                "canonical_pair_key": "DRUG_000006__DRUG_001202",
+                "drug_a_id": "DRUG_000006",
+                "drug_b_id": "DRUG_001202",
+                "drug_a_name": "cyclosporine",
+                "drug_b_name": "trioxsalen",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.4,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000019",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE"
+            },
+            {
+                "pair_index": 8,
+                "canonical_pair_key": "DRUG_000045__DRUG_000048",
+                "drug_a_id": "DRUG_000045",
+                "drug_b_id": "DRUG_000048",
+                "drug_a_name": "Phentermine",
+                "drug_b_name": "Fluconazole",
+                "evidence_status": "COMBINATION_EVENT_EVIDENCE_ONLY",
+                "confidence_level": "MODERATE_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.65,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": true,
+                "event_count": 75,
+                "inference_id": "INF_0000020",
+                "rule_fired": "RULE_COMBINATION_EVENT_EVIDENCE_ONLY"
+            },
+            {
+                "pair_index": 9,
+                "canonical_pair_key": "DRUG_000045__DRUG_001202",
+                "drug_a_id": "DRUG_000045",
+                "drug_b_id": "DRUG_001202",
+                "drug_a_name": "Phentermine",
+                "drug_b_name": "trioxsalen",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000021",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE"
+            },
+            {
+                "pair_index": 10,
+                "canonical_pair_key": "DRUG_000048__DRUG_001202",
+                "drug_a_id": "DRUG_000048",
+                "drug_b_id": "DRUG_001202",
+                "drug_a_name": "Fluconazole",
+                "drug_b_name": "trioxsalen",
+                "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+                "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+                "confidence_score": 0.33,
+                "ddi_present": false,
+                "ddi_forward_count": 0,
+                "ddi_reverse_count": 0,
+                "events_present": false,
+                "event_count": 0,
+                "inference_id": "INF_0000022",
+                "rule_fired": "RULE_NO_DIRECT_GRAPH_EVIDENCE"
+            }
+        ],
+        "clinical_narrative_report": "=====================================================================================\nPRESCRIPTION SAFETY EVIDENCE & REASONING REPORT [RX_007_FIVE_DRUGS]\nGenerated At: 2026-08-28T23:55:55.842971\n=====================================================================================\n\n[1] PRESCRIPTION IDENTITY RESOLUTION SUMMARY\n  * Total Input Items:            5\n  * Unique Canonical Drugs:       5\n  * Duplicate Inputs Collapsed:   0\n  * Ambiguous Mappings Detected:  0\n  * Unresolved Input Items:       0\n  * Resolved Medication List:\n    - 'DRUG_000001' -> bivalirudin (DRUG_000001) [RESOLVED, RxCUI: 60819]\n    - 'DRUG_000006' -> cyclosporine (DRUG_000006) [RESOLVED, RxCUI: 3008]\n    - 'DRUG_000045' -> Phentermine (DRUG_000045) [RESOLVED]\n    - 'DRUG_000048' -> Fluconazole (DRUG_000048) [RESOLVED]\n    - 'DRUG_001202' -> trioxsalen (DRUG_001202) [RESOLVED, RxCUI: 10844]\n\n[2] PAIRWISE GRAPH SAFETY ANALYSIS SUMMARY\n  * Expected Unique Combinations: 10\n  * Evaluated Pairs:              10\n  * Pairs with Graph Evidence:    3\n  * Overall Prescription Status:  MULTI_SIGNAL_EVIDENCE\n  * Evidence Distribution:\n    - Convergent Safety Evidence:        1\n    - DrugBank DDI Evidence Only:        1\n    - TWOSIDES Combination Events Only:  1\n    - No Direct Evidence in Graph:       7\n\n[3] PRIORITIZED SAFETY FINDINGS (Ranked by Graph Evidence Strength)\n  (1) [CRITICAL_EVIDENCE_PRIORITY] cyclosporine + Fluconazole\n      - Evidence Status:  CONVERGENT_SAFETY_EVIDENCE\n      - Confidence Level: HIGH_EVIDENCE_CONFIDENCE (Score: 0.93)\n      - Evidence Counts:  DDI Assertions: 1, TWOSIDES Adverse Events: 202\n      - Inference ID:     INF_0000018 (RULE_CONVERGENT_SAFETY_EVIDENCE)\n      - Supporting Edges: E_DDI_166133, E_SE_02061836, E_SE_02061837 (+3 more)\n  (2) [HIGH_EVIDENCE_PRIORITY] bivalirudin + cyclosporine\n      - Evidence Status:  DDI_EVIDENCE_ONLY\n      - Confidence Level: HIGH_EVIDENCE_CONFIDENCE (Score: 0.8)\n      - Evidence Counts:  DDI Assertions: 1, TWOSIDES Adverse Events: 0\n      - Inference ID:     INF_0000013 (RULE_DDI_EVIDENCE_ONLY)\n      - Supporting Edges: E_DDI_172962\n  (3) [MODERATE_EVIDENCE_PRIORITY] Phentermine + Fluconazole\n      - Evidence Status:  COMBINATION_EVENT_EVIDENCE_ONLY\n      - Confidence Level: MODERATE_EVIDENCE_CONFIDENCE (Score: 0.65)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 75\n      - Inference ID:     INF_0000020 (RULE_COMBINATION_EVENT_EVIDENCE_ONLY)\n      - Supporting Edges: E_SE_01192345, E_SE_01192346, E_SE_01192347 (+2 more)\n  (4) [NO_EVIDENCE_PRIORITY] bivalirudin + trioxsalen\n      - Evidence Status:  NO_DIRECT_GRAPH_EVIDENCE\n      - Confidence Level: LIMITED_EVIDENCE_CONFIDENCE (Score: 0.4)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 0\n      - Inference ID:     INF_0000016 (RULE_NO_DIRECT_GRAPH_EVIDENCE)\n  (5) [NO_EVIDENCE_PRIORITY] cyclosporine + trioxsalen\n      - Evidence Status:  NO_DIRECT_GRAPH_EVIDENCE\n      - Confidence Level: LIMITED_EVIDENCE_CONFIDENCE (Score: 0.4)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 0\n      - Inference ID:     INF_0000019 (RULE_NO_DIRECT_GRAPH_EVIDENCE)\n  (6) [NO_EVIDENCE_PRIORITY] bivalirudin + Phentermine\n      - Evidence Status:  NO_DIRECT_GRAPH_EVIDENCE\n      - Confidence Level: LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 0\n      - Inference ID:     INF_0000014 (RULE_NO_DIRECT_GRAPH_EVIDENCE)\n  (7) [NO_EVIDENCE_PRIORITY] bivalirudin + Fluconazole\n      - Evidence Status:  NO_DIRECT_GRAPH_EVIDENCE\n      - Confidence Level: LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 0\n      - Inference ID:     INF_0000015 (RULE_NO_DIRECT_GRAPH_EVIDENCE)\n  (8) [NO_EVIDENCE_PRIORITY] cyclosporine + Phentermine\n      - Evidence Status:  NO_DIRECT_GRAPH_EVIDENCE\n      - Confidence Level: LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 0\n      - Inference ID:     INF_0000017 (RULE_NO_DIRECT_GRAPH_EVIDENCE)\n  (9) [NO_EVIDENCE_PRIORITY] Phentermine + trioxsalen\n      - Evidence Status:  NO_DIRECT_GRAPH_EVIDENCE\n      - Confidence Level: LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 0\n      - Inference ID:     INF_0000021 (RULE_NO_DIRECT_GRAPH_EVIDENCE)\n  (10) [NO_EVIDENCE_PRIORITY] Fluconazole + trioxsalen\n      - Evidence Status:  NO_DIRECT_GRAPH_EVIDENCE\n      - Confidence Level: LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 0\n      - Inference ID:     INF_0000022 (RULE_NO_DIRECT_GRAPH_EVIDENCE)\n\n[4] DRUG PARTICIPATION & EVIDENCE INVOLVEMENT\n  * cyclosporine (DRUG_000006): Involved in 4 pairs (2 with evidence -> 1 convergent, 1 DDI, 0 events)\n  * Fluconazole (DRUG_000048): Involved in 4 pairs (2 with evidence -> 1 convergent, 0 DDI, 1 events)\n  * bivalirudin (DRUG_000001): Involved in 4 pairs (1 with evidence -> 0 convergent, 1 DDI, 0 events)\n  * Phentermine (DRUG_000045): Involved in 4 pairs (1 with evidence -> 0 convergent, 0 DDI, 1 events)\n  * trioxsalen (DRUG_001202): Involved in 4 pairs (0 with evidence -> 0 convergent, 0 DDI, 0 events)\n\n[5] SCIENTIFIC LIMITATIONS & ETHICAL NOTICE\n  * NOTICE 1: Graph evidence priority reflects evidence density, not calibrated patient-specific clinical severity.\n  * NOTICE 2: Absence of direct evidence in the current knowledge graph is NOT proof of clinical safety.\n  * NOTICE 3: Drug interaction assertions and observational adverse event associations do not independently establish causality.\n  * NOTICE 4: This automated report is generated strictly from integrated biomedical datasets and does not replace clinical consultation.\n=====================================================================================",
+        "scientific_limitations": [
+            "Graph evidence priority is not equivalent to patient-specific clinical risk.",
+            "Absence of evidence in the current graph is not evidence of medical safety.",
+            "Drug interaction assertions and observational adverse event associations do not independently establish causality.",
+            "This report is generated strictly from the ingested knowledge graph datasets and does not replace professional clinical judgment."
+        ]
+    }
+]

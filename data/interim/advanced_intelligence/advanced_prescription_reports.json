@@ -1,0 +1,826 @@
+{
+  "demo_polypharmacy_report": {
+    "prescription_report": {
+      "metadata": {
+        "analysis_id": "RX_REPORT_000003",
+        "api_version": "v1.0.0",
+        "generated_at": "2026-08-29T00:45:39.529400",
+        "graph_version": "phase4_frozen_68k_nodes",
+        "reasoning_engine_version": "phase6_multi_drug_v1"
+      },
+      "input_summary": {
+        "submitted_medication_count": 3,
+        "submitted_medications": [
+          "cyclosporine",
+          "fluconazole",
+          "phentermine"
+        ]
+      },
+      "resolution_summary": {
+        "resolved_count": 3,
+        "unique_canonical_drug_count": 3,
+        "duplicate_count": 0,
+        "unresolved_count": 0,
+        "resolved_drugs": [
+          {
+            "canonical_drug_id": "DRUG_000006",
+            "canonical_name": "cyclosporine",
+            "rxcui": "3008",
+            "input_values": [
+              "cyclosporine"
+            ]
+          },
+          {
+            "canonical_drug_id": "DRUG_000048",
+            "canonical_name": "Fluconazole",
+            "rxcui": null,
+            "input_values": [
+              "fluconazole"
+            ]
+          },
+          {
+            "canonical_drug_id": "DRUG_000045",
+            "canonical_name": "Phentermine",
+            "rxcui": null,
+            "input_values": [
+              "phentermine"
+            ]
+          }
+        ]
+      },
+      "prescription_summary": {
+        "evidence_status": "MULTI_SIGNAL_EVIDENCE",
+        "highest_evidence_priority": "CRITICAL_EVIDENCE_PRIORITY",
+        "total_unique_drugs": 3,
+        "total_pairs_analyzed": 3,
+        "positive_evidence_pairs": 2,
+        "convergent_evidence_pairs": 1,
+        "ddi_only_pairs": 0,
+        "combination_event_only_pairs": 1,
+        "no_direct_evidence_pairs": 1
+      },
+      "prioritized_findings": [
+        {
+          "finding_id": "FIND_0001",
+          "pair_id": "PAIR_DRUG_000006__DRUG_000048",
+          "priority": "CRITICAL_EVIDENCE_PRIORITY",
+          "drug_a": {
+            "drug_id": "DRUG_000006",
+            "name": "cyclosporine"
+          },
+          "drug_b": {
+            "drug_id": "DRUG_000048",
+            "name": "Fluconazole"
+          },
+          "evidence_status": "CONVERGENT_SAFETY_EVIDENCE",
+          "confidence": {
+            "level": "HIGH_EVIDENCE_CONFIDENCE",
+            "score": 0.93
+          },
+          "summary_narrative": "cyclosporine (DRUG_000006) + Fluconazole (DRUG_000048): Classified as CONVERGENT_SAFETY_EVIDENCE with HIGH_EVIDENCE_CONFIDENCE (Score: 0.93). DDI evidence: True (fwd: 1, rev: 0), TWOSIDES combination events: True (202 events).",
+          "evidence_channels": {
+            "drugbank_ddi": true,
+            "twosides_combination_events": true
+          },
+          "ddi_record_count": 1,
+          "adverse_event_count": 202,
+          "inference_id": "INF_0000003",
+          "supporting_edge_ids": [
+            "E_DDI_166133",
+            "E_SE_02061836",
+            "E_SE_02061837",
+            "E_SE_02061838",
+            "E_SE_02061839",
+            "E_SE_02061840"
+          ]
+        },
+        {
+          "finding_id": "FIND_0003",
+          "pair_id": "PAIR_DRUG_000045__DRUG_000048",
+          "priority": "MODERATE_EVIDENCE_PRIORITY",
+          "drug_a": {
+            "drug_id": "DRUG_000048",
+            "name": "Fluconazole"
+          },
+          "drug_b": {
+            "drug_id": "DRUG_000045",
+            "name": "Phentermine"
+          },
+          "evidence_status": "COMBINATION_EVENT_EVIDENCE_ONLY",
+          "confidence": {
+            "level": "MODERATE_EVIDENCE_CONFIDENCE",
+            "score": 0.65
+          },
+          "summary_narrative": "Fluconazole (DRUG_000048) + Phentermine (DRUG_000045): Classified as COMBINATION_EVENT_EVIDENCE_ONLY with MODERATE_EVIDENCE_CONFIDENCE (Score: 0.65). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: True (75 events).",
+          "evidence_channels": {
+            "drugbank_ddi": false,
+            "twosides_combination_events": true
+          },
+          "ddi_record_count": 0,
+          "adverse_event_count": 75,
+          "inference_id": "INF_0000005",
+          "supporting_edge_ids": [
+            "E_SE_01192345",
+            "E_SE_01192346",
+            "E_SE_01192347",
+            "E_SE_01192348",
+            "E_SE_01192349"
+          ]
+        },
+        {
+          "finding_id": "FIND_0002",
+          "pair_id": "PAIR_DRUG_000006__DRUG_000045",
+          "priority": "NO_EVIDENCE_PRIORITY",
+          "drug_a": {
+            "drug_id": "DRUG_000006",
+            "name": "cyclosporine"
+          },
+          "drug_b": {
+            "drug_id": "DRUG_000045",
+            "name": "Phentermine"
+          },
+          "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+          "confidence": {
+            "level": "LIMITED_EVIDENCE_CONFIDENCE",
+            "score": 0.33
+          },
+          "summary_narrative": "cyclosporine (DRUG_000006) + Phentermine (DRUG_000045): Classified as NO_DIRECT_GRAPH_EVIDENCE with LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33). DDI evidence: False (fwd: 0, rev: 0), TWOSIDES combination events: False (0 events).",
+          "evidence_channels": {
+            "drugbank_ddi": false,
+            "twosides_combination_events": false
+          },
+          "ddi_record_count": 0,
+          "adverse_event_count": 0,
+          "inference_id": "INF_0000004",
+          "supporting_edge_ids": []
+        }
+      ],
+      "pair_results": [
+        {
+          "pair_id": "DRUG_000006__DRUG_000048",
+          "drug_a_name": "cyclosporine",
+          "drug_b_name": "Fluconazole",
+          "evidence_status": "CONVERGENT_SAFETY_EVIDENCE",
+          "evidence_priority": "CRITICAL_EVIDENCE_PRIORITY",
+          "confidence_level": "HIGH_EVIDENCE_CONFIDENCE",
+          "confidence_score": 0.93,
+          "ddi_evidence_present": true,
+          "combination_event_evidence_present": true
+        },
+        {
+          "pair_id": "DRUG_000006__DRUG_000045",
+          "drug_a_name": "cyclosporine",
+          "drug_b_name": "Phentermine",
+          "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+          "evidence_priority": "MODERATE_EVIDENCE_PRIORITY",
+          "confidence_level": "LIMITED_EVIDENCE_CONFIDENCE",
+          "confidence_score": 0.33,
+          "ddi_evidence_present": false,
+          "combination_event_evidence_present": false
+        },
+        {
+          "pair_id": "DRUG_000045__DRUG_000048",
+          "drug_a_name": "Fluconazole",
+          "drug_b_name": "Phentermine",
+          "evidence_status": "COMBINATION_EVENT_EVIDENCE_ONLY",
+          "evidence_priority": "MODERATE_EVIDENCE_PRIORITY",
+          "confidence_level": "MODERATE_EVIDENCE_CONFIDENCE",
+          "confidence_score": 0.65,
+          "ddi_evidence_present": false,
+          "combination_event_evidence_present": true
+        }
+      ],
+      "drug_participation": [
+        {
+          "drug_id": "DRUG_000048",
+          "drug_name": "Fluconazole",
+          "total_pairs": 2,
+          "pairs_with_evidence": 2,
+          "convergent_evidence_pairs": 1,
+          "highest_priority": "CRITICAL_EVIDENCE_PRIORITY"
+        },
+        {
+          "drug_id": "DRUG_000006",
+          "drug_name": "cyclosporine",
+          "total_pairs": 2,
+          "pairs_with_evidence": 1,
+          "convergent_evidence_pairs": 1,
+          "highest_priority": "CRITICAL_EVIDENCE_PRIORITY"
+        },
+        {
+          "drug_id": "DRUG_000045",
+          "drug_name": "Phentermine",
+          "total_pairs": 2,
+          "pairs_with_evidence": 1,
+          "convergent_evidence_pairs": 0,
+          "highest_priority": "MODERATE_EVIDENCE_PRIORITY"
+        }
+      ],
+      "unresolved_items": [],
+      "limitations": [
+        "Graph evidence priority is not equivalent to patient-specific clinical risk.",
+        "Absence of evidence in the current graph is not evidence of medical safety.",
+        "Drug interaction assertions and observational adverse event associations do not independently establish causality.",
+        "This report is generated strictly from the ingested knowledge graph datasets and does not replace professional clinical judgment."
+      ],
+      "provenance": {
+        "evidence_sources": [
+          "DrugBank",
+          "TWOSIDES",
+          "RxNorm"
+        ],
+        "supporting_edge_count": 11,
+        "top_supporting_edge_ids": [
+          "E_DDI_166133",
+          "E_SE_02061836",
+          "E_SE_02061837",
+          "E_SE_02061838",
+          "E_SE_02061839"
+        ]
+      },
+      "clinical_narrative_report": "=====================================================================================\nPRESCRIPTION SAFETY EVIDENCE & REASONING REPORT [RX_REPORT_000003]\nGenerated At: 2026-08-29T00:45:39.529400\n=====================================================================================\n\n[1] PRESCRIPTION IDENTITY RESOLUTION SUMMARY\n  * Total Input Items:            3\n  * Unique Canonical Drugs:       3\n  * Duplicate Inputs Collapsed:   0\n  * Ambiguous Mappings Detected:  0\n  * Unresolved Input Items:       0\n  * Resolved Medication List:\n    - 'cyclosporine' -> cyclosporine (DRUG_000006) [RESOLVED, RxCUI: 3008]\n    - 'fluconazole' -> Fluconazole (DRUG_000048) [RESOLVED]\n    - 'phentermine' -> Phentermine (DRUG_000045) [RESOLVED]\n\n[2] PAIRWISE GRAPH SAFETY ANALYSIS SUMMARY\n  * Expected Unique Combinations: 3\n  * Evaluated Pairs:              3\n  * Pairs with Graph Evidence:    2\n  * Overall Prescription Status:  MULTI_SIGNAL_EVIDENCE\n  * Evidence Distribution:\n    - Convergent Safety Evidence:        1\n    - DrugBank DDI Evidence Only:        0\n    - TWOSIDES Combination Events Only:  1\n    - No Direct Evidence in Graph:       1\n\n[3] PRIORITIZED SAFETY FINDINGS (Ranked by Graph Evidence Strength)\n  (1) [CRITICAL_EVIDENCE_PRIORITY] cyclosporine + Fluconazole\n      - Evidence Status:  CONVERGENT_SAFETY_EVIDENCE\n      - Confidence Level: HIGH_EVIDENCE_CONFIDENCE (Score: 0.93)\n      - Evidence Counts:  DDI Assertions: 1, TWOSIDES Adverse Events: 202\n      - Inference ID:     INF_0000003 (RULE_CONVERGENT_SAFETY_EVIDENCE)\n      - Supporting Edges: E_DDI_166133, E_SE_02061836, E_SE_02061837 (+3 more)\n  (2) [MODERATE_EVIDENCE_PRIORITY] Fluconazole + Phentermine\n      - Evidence Status:  COMBINATION_EVENT_EVIDENCE_ONLY\n      - Confidence Level: MODERATE_EVIDENCE_CONFIDENCE (Score: 0.65)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 75\n      - Inference ID:     INF_0000005 (RULE_COMBINATION_EVENT_EVIDENCE_ONLY)\n      - Supporting Edges: E_SE_01192345, E_SE_01192346, E_SE_01192347 (+2 more)\n  (3) [NO_EVIDENCE_PRIORITY] cyclosporine + Phentermine\n      - Evidence Status:  NO_DIRECT_GRAPH_EVIDENCE\n      - Confidence Level: LIMITED_EVIDENCE_CONFIDENCE (Score: 0.33)\n      - Evidence Counts:  DDI Assertions: 0, TWOSIDES Adverse Events: 0\n      - Inference ID:     INF_0000004 (RULE_NO_DIRECT_GRAPH_EVIDENCE)\n\n[4] DRUG PARTICIPATION & EVIDENCE INVOLVEMENT\n  * Fluconazole (DRUG_000048): Involved in 2 pairs (2 with evidence -> 1 convergent, 0 DDI, 1 events)\n  * cyclosporine (DRUG_000006): Involved in 2 pairs (1 with evidence -> 1 convergent, 0 DDI, 0 events)\n  * Phentermine (DRUG_000045): Involved in 2 pairs (1 with evidence -> 0 convergent, 0 DDI, 1 events)\n\n[5] SCIENTIFIC LIMITATIONS & ETHICAL NOTICE\n  * NOTICE 1: Graph evidence priority reflects evidence density, not calibrated patient-specific clinical severity.\n  * NOTICE 2: Absence of direct evidence in the current knowledge graph is NOT proof of clinical safety.\n  * NOTICE 3: Drug interaction assertions and observational adverse event associations do not independently establish causality.\n  * NOTICE 4: This automated report is generated strictly from integrated biomedical datasets and does not replace clinical consultation.\n====================================================================================="
+    },
+    "complexity_profile": {
+      "complexity_category": "HIGH_COMPLEXITY",
+      "unique_drugs_count": 3,
+      "generated_pairs_count": 3,
+      "positive_pairs_count": 2,
+      "convergent_pairs_count": 1,
+      "participating_drugs_count": 3,
+      "max_single_drug_participation_ratio": 1.0,
+      "unresolved_inputs_count": 0,
+      "complexity_score": 6.5,
+      "explanation": "Prescription has 3 resolved drugs (3 pairs), 2 positive evidence pairs (1 convergent), with 3 drugs actively participating in safety signals."
+    },
+    "drug_participation_profiles": [
+      {
+        "internal_drug_id": "DRUG_000048",
+        "display_name": "Fluconazole",
+        "participation_category": "PRIMARY_SIGNAL_PARTICIPANT",
+        "total_evaluated_pairs": 2,
+        "positive_evidence_pairs": 2,
+        "convergent_evidence_pairs": 1,
+        "ddi_participation_count": 1,
+        "event_participation_count": 2,
+        "prescription_findings_ratio": 1.0,
+        "relative_evidence_concentration": 1.0,
+        "explanation": "Fluconazole is central to 2/2 positive prescription findings (1 convergent)."
+      },
+      {
+        "internal_drug_id": "DRUG_000006",
+        "display_name": "cyclosporine",
+        "participation_category": "LIMITED_SIGNAL_PARTICIPANT",
+        "total_evaluated_pairs": 2,
+        "positive_evidence_pairs": 1,
+        "convergent_evidence_pairs": 1,
+        "ddi_participation_count": 1,
+        "event_participation_count": 1,
+        "prescription_findings_ratio": 0.5,
+        "relative_evidence_concentration": 0.5,
+        "explanation": "cyclosporine is involved in 1 single evidence-supported combination."
+      },
+      {
+        "internal_drug_id": "DRUG_000045",
+        "display_name": "Phentermine",
+        "participation_category": "LIMITED_SIGNAL_PARTICIPANT",
+        "total_evaluated_pairs": 2,
+        "positive_evidence_pairs": 1,
+        "convergent_evidence_pairs": 0,
+        "ddi_participation_count": 0,
+        "event_participation_count": 1,
+        "prescription_findings_ratio": 0.5,
+        "relative_evidence_concentration": 0.5,
+        "explanation": "Phentermine is involved in 1 single evidence-supported combination."
+      }
+    ],
+    "event_convergence_items": [
+      {
+        "side_effect_name": "gastric inflammation",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000006+DRUG_000048"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000006"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "cyclosporine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'gastric inflammation' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "myelodysplasia",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000006+DRUG_000048"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000006"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "cyclosporine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'myelodysplasia' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "right heart failure",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000006+DRUG_000048"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000006"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "cyclosporine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'right heart failure' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "micturition urgency",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000006+DRUG_000048"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000006"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "cyclosporine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'micturition urgency' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "proctalgia",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000006+DRUG_000048"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000006"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "cyclosporine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'proctalgia' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "Diplopia",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000006+DRUG_000048"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000006"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "cyclosporine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'Diplopia' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "myocarditis",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000006+DRUG_000048"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000006"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "cyclosporine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'myocarditis' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "Bilirubinaemia",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000006+DRUG_000048"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000006"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "cyclosporine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'Bilirubinaemia' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "body temperature increased",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000006+DRUG_000048"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000006"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "cyclosporine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'body temperature increased' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "Anisocoria",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000006+DRUG_000048"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000006"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "cyclosporine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'Anisocoria' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "abnormal ECG",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000048+DRUG_000045"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000045"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "Phentermine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'abnormal ECG' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "dysarthria",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000048+DRUG_000045"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000045"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "Phentermine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'dysarthria' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "bursitis",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000048+DRUG_000045"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000045"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "Phentermine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'bursitis' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "emesis",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000048+DRUG_000045"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000045"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "Phentermine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'emesis' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "Back Ache",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000048+DRUG_000045"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000045"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "Phentermine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'Back Ache' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "constipated",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000048+DRUG_000045"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000045"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "Phentermine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'constipated' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "iron deficiency anaemia",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000048+DRUG_000045"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000045"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "Phentermine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'iron deficiency anaemia' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "eating disorder",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000048+DRUG_000045"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000045"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "Phentermine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'eating disorder' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "Amnesia",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000048+DRUG_000045"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000045"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "Phentermine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'Amnesia' observed in 1 isolated drug pair combination."
+      },
+      {
+        "side_effect_name": "schizophrenia",
+        "side_effect_id": null,
+        "participating_pairs_count": 1,
+        "participating_pair_keys": [
+          "DRUG_000048+DRUG_000045"
+        ],
+        "participating_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000045"
+        ],
+        "participating_drug_names": [
+          "Fluconazole",
+          "Phentermine"
+        ],
+        "convergence_category": "ISOLATED_EVENT_SIGNAL",
+        "explanation": "Adverse event 'schizophrenia' observed in 1 isolated drug pair combination."
+      }
+    ],
+    "evidence_patterns": [
+      {
+        "pattern_id": "PAT_001",
+        "pattern_type": "CONVERGENT_EVIDENCE_CLUSTER",
+        "title": "Convergent Multi-Channel Evidence Cluster",
+        "supporting_pair_ids": [
+          "PAIR_DRUG_000006__DRUG_000048"
+        ],
+        "supporting_drug_ids": [
+          "DRUG_000048",
+          "DRUG_000006"
+        ],
+        "supporting_drug_names": [
+          "Fluconazole",
+          "cyclosporine"
+        ],
+        "evidence_counts": {
+          "convergent_pairs": 1
+        },
+        "rule_fired": "RULE_PAT_CONVERGENT_CLUSTER",
+        "explanation": "1 pair(s) demonstrate both direct DrugBank DDI assertions and TWOSIDES combination adverse events.",
+        "provenance_edge_ids": [
+          "DDI_DRUG_000006_DRUG_000048"
+        ]
+      },
+      {
+        "pattern_id": "PAT_002",
+        "pattern_type": "CENTRAL_DRUG_SIGNAL_PATTERN",
+        "title": "Central Signal Hub: Fluconazole",
+        "supporting_pair_ids": [
+          "PAIR_DRUG_000006__DRUG_000048",
+          "PAIR_DRUG_000048__DRUG_000045"
+        ],
+        "supporting_drug_ids": [
+          "DRUG_000048"
+        ],
+        "supporting_drug_names": [
+          "Fluconazole"
+        ],
+        "evidence_counts": {
+          "participating_positive_pairs": 2
+        },
+        "rule_fired": "RULE_PAT_CENTRAL_HUB",
+        "explanation": "Fluconazole is the central participant in 2 positive evidence pairs.",
+        "provenance_edge_ids": [
+          "PAIR_DRUG_000006__DRUG_000048",
+          "PAIR_DRUG_000048__DRUG_000045"
+        ]
+      }
+    ],
+    "review_priorities": [
+      {
+        "finding_id": "REV_001",
+        "pair_id": "PAIR_DRUG_000006__DRUG_000048",
+        "drug_a_name": "cyclosporine",
+        "drug_b_name": "Fluconazole",
+        "review_priority": "IMMEDIATE_REVIEW_PRIORITY",
+        "review_score": 6.0,
+        "deterministic_reasons": [
+          "Pair exhibits dual-channel convergence (DrugBank DDI + TWOSIDES adverse events).",
+          "One or both medications participate repeatedly in other prescription findings."
+        ],
+        "evidence_status": "CONVERGENT_SAFETY_EVIDENCE",
+        "confidence_score": 0.93,
+        "inference_id": "INF_DRUG_000006_DRUG_000048",
+        "supporting_edge_ids": [
+          "DDI_DRUG_000006_DRUG_000048"
+        ]
+      },
+      {
+        "finding_id": "REV_003",
+        "pair_id": "PAIR_DRUG_000048__DRUG_000045",
+        "drug_a_name": "Fluconazole",
+        "drug_b_name": "Phentermine",
+        "review_priority": "MODERATE_REVIEW_PRIORITY",
+        "review_score": 3.5,
+        "deterministic_reasons": [
+          "Observed TWOSIDES combination adverse events present.",
+          "One or both medications participate repeatedly in other prescription findings."
+        ],
+        "evidence_status": "COMBINATION_EVENT_EVIDENCE_ONLY",
+        "confidence_score": 0.65,
+        "inference_id": "INF_DRUG_000048_DRUG_000045",
+        "supporting_edge_ids": []
+      },
+      {
+        "finding_id": "REV_002",
+        "pair_id": "PAIR_DRUG_000006__DRUG_000045",
+        "drug_a_name": "cyclosporine",
+        "drug_b_name": "Phentermine",
+        "review_priority": "LIMITED_EVIDENCE_REVIEW",
+        "review_score": 0.0,
+        "deterministic_reasons": [
+          "No direct interaction or combination evidence found in knowledge graph."
+        ],
+        "evidence_status": "NO_DIRECT_GRAPH_EVIDENCE",
+        "confidence_score": 0.33,
+        "inference_id": "INF_DRUG_000006_DRUG_000045",
+        "supporting_edge_ids": []
+      }
+    ],
+    "uncertainty_profile": {
+      "uncertainty_categories": [
+        "SINGLE_CHANNEL_EVIDENCE_LIMITATION",
+        "GRAPH_ABSENCE_LIMITATION",
+        "OBSERVATIONAL_ASSOCIATION_LIMITATION"
+      ],
+      "has_identity_uncertainty": false,
+      "unresolved_input_names": [],
+      "unmapped_rxnorm_drugs": [
+        "fluconazole",
+        "phentermine"
+      ],
+      "single_channel_only_pairs": 1,
+      "unsupported_pairs_count": 1,
+      "uncertainty_level": "MODERATE_UNCERTAINTY",
+      "explanation_narrative": "Evaluated with 3 structured uncertainty factors. Unresolved inputs: 0, Unmapped RxNorm: 2, Single-channel pairs: 1, No-evidence pairs: 1."
+    },
+    "clinical_context_requirements": [
+      {
+        "context_category": "Dosage & Strength",
+        "description": "Specific dose (e.g., 100mg BID) modulates pharmacokinetic exposure and interaction magnitude.",
+        "why_it_matters": "Drug-drug interaction risk is dose-dependent.",
+        "is_available_in_graph": false,
+        "is_evaluated_by_system": false
+      },
+      {
+        "context_category": "Administration Timing",
+        "description": "Sequential vs simultaneous administration intervals.",
+        "why_it_matters": "Staggered dosing can mitigate chelation, absorption interference, or peak concentration overlaps.",
+        "is_available_in_graph": false,
+        "is_evaluated_by_system": false
+      },
+      {
+        "context_category": "Renal & Hepatic Function",
+        "description": "Glomerular filtration rate (eGFR) and liver enzyme function profiles.",
+        "why_it_matters": "Organ clearance impairment amplifies systemic toxicity and interaction severity.",
+        "is_available_in_graph": false,
+        "is_evaluated_by_system": false
+      },
+      {
+        "context_category": "Patient Comorbidities & Demographics",
+        "description": "Patient age, pregnancy status, QT prolongation history, and existing conditions.",
+        "why_it_matters": "Clinical susceptibility varies significantly across patient populations.",
+        "is_available_in_graph": false,
+        "is_evaluated_by_system": false
+      }
+    ],
+    "advanced_explanation": {
+      "executive_summary": "Prescription analyzed with HIGH_COMPLEXITY complexity. Identified 2 evidence patterns across 2 positive pairs. Highest review priority: IMMEDIATE_REVIEW_PRIORITY.",
+      "key_findings_summary": "cyclosporine+Fluconazole (IMMEDIATE_REVIEW_PRIORITY); Fluconazole+Phentermine (MODERATE_REVIEW_PRIORITY); cyclosporine+Phentermine (LIMITED_EVIDENCE_REVIEW)",
+      "prescription_patterns_summary": "Convergent Multi-Channel Evidence Cluster; Central Signal Hub: Fluconazole",
+      "uncertainty_summary": "Evaluated with 3 structured uncertainty factors. Unresolved inputs: 0, Unmapped RxNorm: 2, Single-channel pairs: 1, No-evidence pairs: 1.",
+      "scientific_guardrails": [
+        "This decision-support analysis reflects structured knowledge graph evidence from DrugBank, TWOSIDES, and RxNorm.",
+        "Review priority reflects graph density and evidence convergence, NOT patient-specific risk probability or clinical severity.",
+        "Observational adverse event associations from TWOSIDES do not establish biological causality.",
+        "Absence of direct evidence in the knowledge graph does not establish clinical safety.",
+        "This platform does not replace licensed medical judgement or patient-specific pharmacokinetic evaluation."
+      ]
+    },
+    "scientific_limitations": [
+      "Evidence priority reflects structured knowledge graph density, not clinical severity.",
+      "TWOSIDES combination adverse event counts are observational surveillance reports, not verified pharmacological causality.",
+      "Absence of direct evidence in DrugBank/TWOSIDES does not establish safety.",
+      "Patient-specific parameters (dose, age, renal/hepatic clearance) are required for clinical prescription validation."
+    ]
+  }
+}
