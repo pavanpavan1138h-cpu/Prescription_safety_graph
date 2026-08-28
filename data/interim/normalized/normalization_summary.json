@@ -1,0 +1,37 @@
+{
+    "drugbank": {
+        "input_row_count": 191808,
+        "output_drugs_count": 1706,
+        "output_interactions_count": 191808,
+        "unique_drugs": 1706,
+        "missing_smiles": 0,
+        "invalid_structures": 1,
+        "duplicate_drugs": 0
+    },
+    "twosides": {
+        "input_row_count": 4649441,
+        "output_drugs_count": 645,
+        "output_side_effects_count": 1317,
+        "output_relationships_count": 4649441,
+        "unique_drugs": 645,
+        "unique_side_effects": 1317,
+        "missing_smiles": 0,
+        "invalid_structures": 0,
+        "duplicate_drugs": 0
+    },
+    "integrated": {
+        "total_drug_entities": 1836,
+        "entity_type_distribution": {
+            "CONFIRMED_INTEGRATED_ENTITY": 1778,
+            "AMBIGUOUS_MAPPING_COMPONENT": 58
+        },
+        "source_membership_distribution": {
+            "drugbank_only": 1191,
+            "both": 515,
+            "twosides_only": 130
+        },
+        "mappings_count": 2351,
+        "mapping_edges_count": 554,
+        "uniqueness_check_passed": true
+    }
+}

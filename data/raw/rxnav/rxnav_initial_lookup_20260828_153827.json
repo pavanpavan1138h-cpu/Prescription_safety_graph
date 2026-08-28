@@ -1,0 +1,55 @@
+{
+    "created_at": "2026-08-28T15:38:27.589296",
+    "test_drugs": [
+        "Aspirin",
+        "Ibuprofen",
+        "Paracetamol",
+        "Metformin",
+        "Amoxicillin",
+        "Warfarin"
+    ],
+    "lookup_results": [
+        {
+            "query": "Aspirin",
+            "status": "success",
+            "rxcuis": [
+                "1191"
+            ]
+        },
+        {
+            "query": "Ibuprofen",
+            "status": "success",
+            "rxcuis": [
+                "5640"
+            ]
+        },
+        {
+            "query": "Paracetamol",
+            "status": "success",
+            "rxcuis": [
+                "161"
+            ]
+        },
+        {
+            "query": "Metformin",
+            "status": "success",
+            "rxcuis": [
+                "6809"
+            ]
+        },
+        {
+            "query": "Amoxicillin",
+            "status": "success",
+            "rxcuis": [
+                "723"
+            ]
+        },
+        {
+            "query": "Warfarin",
+            "status": "success",
+            "rxcuis": [
+                "11289"
+            ]
+        }
+    ]
+}

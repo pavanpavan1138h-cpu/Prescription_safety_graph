@@ -1,0 +1,1318 @@
+side_effect_id,side_effect_name,source_dataset
+1024,hypermagnesemia,twosides
+767,retinopathy of prematurity,twosides
+79,atelectasis,twosides
+25,alkalosis,twosides
+85,Back Ache,twosides
+735,lung edema,twosides
+959,agitated,twosides
+255,abnormal movements,twosides
+9,Acidosis,twosides
+740,peliosis,twosides
+815,rupture of spleen,twosides
+56,Apnea,twosides
+247,Drug hypersensitivity,twosides
+328,flatulence,twosides
+1149,pain in throat,twosides
+442,allergies,twosides
+853,thrombocytopenia,twosides
+1226,bradycardia,twosides
+1132,lung infiltration,twosides
+391,Bleeding,twosides
+1072,hypoglycaemia neonatal,twosides
+1136,Gastrointestinal Obstruction,twosides
+433,hyperglycaemia,twosides
+679,peritonitis,twosides
+457,hypoglycaemia,twosides
+0,abdominal distension,twosides
+369,asystole,twosides
+143,cerebral infarct,twosides
+1143,hypoxia,twosides
+258,Difficulty breathing,twosides
+466,decreased body temperature,twosides
+658,adynamic ileus,twosides
+1155,sepsis,twosides
+1025,Hypomagnesaemia,twosides
+757,neonatal respiratory distress syndrome,twosides
+758,Acute Respiratory Distress Syndrome,twosides
+518,lipoma,twosides
+666,pelvic infection,twosides
+57,appendectomy,twosides
+327,flank pain,twosides
+699,pneumothorax,twosides
+58,appendicitis,twosides
+827,Strabismus,twosides
+455,Blood calcium decreased,twosides
+1286,respiratory failure,twosides
+447,pulmonary hypertension,twosides
+429,Hypercapnia,twosides
+479,intestinal perforation,twosides
+512,leucocytosis,twosides
+528,Disorder Lung,twosides
+420,hot flash,twosides
+464,arterial pressure NOS decreased,twosides
+1100,metabolic acidosis,twosides
+207,Bladder inflammation,twosides
+72,ascites,twosides
+249,patent ductus arteriosis,twosides
+841,sinus tachycardia,twosides
+830,stridor,twosides
+1236,arterial pressure NOS increased,twosides
+1221,Hypoventilation,twosides
+267,edema,twosides
+523,disease of liver,twosides
+1033,Aspartate Aminotransferase Increase,twosides
+1194,Cold extremities,twosides
+330,facial flushing,twosides
+36,anaphylactic reaction,twosides
+304,eruption,twosides
+13,acute pancreatitis,twosides
+692,neumonia,twosides
+14,adenocarcinoma,twosides
+184,confusion,twosides
+1082,malnourished,twosides
+392,haemorrhoids,twosides
+1257,still birth,twosides
+37,anaemia,twosides
+248,drug toxicity NOS,twosides
+1273,increased white blood cell count,twosides
+949,encephalopathy,twosides
+47,Anorexia,twosides
+878,tremor,twosides
+364,Hallucination,twosides
+529,chronic obstructive airway disease,twosides
+245,drowsiness,twosides
+367,Head ache,twosides
+84,back injury,twosides
+887,erythema,twosides
+240,Diplopia,twosides
+816,enlarged spleen,twosides
+596,narcolepsy,twosides
+299,esophageal spasm,twosides
+1180,erosive gastritis,twosides
+1207,gastroenteritis viral,twosides
+539,Lymphocytes decreased,twosides
+1260,Breast cancer,twosides
+725,itch,twosides
+39,haemolytic anaemia,twosides
+888,upper gastrointestinal bleeding,twosides
+485,icterus,twosides
+343,gastroenteritis,twosides
+656,optic disc edema,twosides
+1277,sleep disorder,twosides
+796,septic shock,twosides
+941,bladder retention,twosides
+55,Aphonia,twosides
+648,Pain,twosides
+931,idiopathic thrombocytopenic purpura,twosides
+697,pneumonia staphylococcal,twosides
+28,alopecia,twosides
+185,conjunctivitis,twosides
+694,lobar pneumonia,twosides
+352,glomerulonephritis,twosides
+250,duodenal ulcer,twosides
+1008,deep vein thromboses,twosides
+514,leucopenia,twosides
+1290,rhinorrhea,twosides
+121,bursitis,twosides
+1023,bleeding Vaginal,twosides
+305,Excoriation,twosides
+759,Ekbom Syndrome,twosides
+604,nephrocalcinosis,twosides
+1216,blurred vision,twosides
+741,thrombotic microangiopathy,twosides
+243,dizziness,twosides
+689,pleurisy,twosides
+834,sunburn,twosides
+418,Hoarseness,twosides
+1176,Bleeding hemorrhoids,twosides
+315,Fatigue,twosides
+693,aspiration pneumonia,twosides
+1181,perirectal abscess,twosides
+238,diarrhea,twosides
+76,asthma,twosides
+803,skin lesion,twosides
+866,tinnitus,twosides
+810,muscle spasm,twosides
+324,fib,twosides
+124,Candida Infection,twosides
+1255,Abnormal Gait,twosides
+354,glossodynia,twosides
+325,anal fissure,twosides
+916,Infection Viral,twosides
+139,cellulitis,twosides
+223,allergic dermatitis,twosides
+189,constipated,twosides
+100,Clotting,twosides
+661,muscle paresis,twosides
+212,deafness,twosides
+924,vocal cord paralysis,twosides
+1034,dry skin,twosides
+1058,ear discharge,twosides
+1032,eye pain,twosides
+510,Leukaemia,twosides
+591,myopia,twosides
+496,Chronic Kidney Disease,twosides
+495,acute kidney failure,twosides
+872,retrocollis,twosides
+175,cognitive disorder,twosides
+158,Cholangitis,twosides
+467,hypothyroid,twosides
+220,dermatitides,twosides
+1027,Abnormal LFTs,twosides
+222,dermatitis medicamentosa,twosides
+217,acute brain syndrome,twosides
+368,Deafness neurosensory,twosides
+581,fungal disease,twosides
+1044,nasal sinus congestion,twosides
+1267,Near Syncope,twosides
+296,erythema multiforme,twosides
+384,haematoma,twosides
+99,bleb,twosides
+597,nasal congestion,twosides
+31,amenorrhea,twosides
+293,epistaxis,twosides
+395,hepatitis,twosides
+172,coated tongue,twosides
+615,Neutropenia,twosides
+932,wheeze,twosides
+1182,haemorrhage rectum,twosides
+1,abdominal pain,twosides
+153,chest pain,twosides
+881,Mycobacterium tuberculosis infection,twosides
+163,cholelithiasis,twosides
+744,pyoderma,twosides
+505,laryngeal neoplasia,twosides
+383,Blood disorder,twosides
+732,psychoses,twosides
+1116,aching muscles,twosides
+7,abscess,twosides
+884,loss of consciousness,twosides
+833,attempted suicide,twosides
+363,bad breath,twosides
+68,Arthritis infective,twosides
+930,loss of weight,twosides
+599,nasopharyngitis,twosides
+294,belching,twosides
+773,Rhinitis,twosides
+483,Colon Spastic,twosides
+587,heart attack,twosides
+524,hepatic neoplasia,twosides
+1152,azotaemia,twosides
+607,nervous tension,twosides
+1028,muscle weakness,twosides
+971,hypochloraemia,twosides
+979,cataract,twosides
+1118,abdominal pain upper,twosides
+1283,insomnia,twosides
+257,dyspepsia,twosides
+74,asthenia,twosides
+926,emesis,twosides
+736,Embolism pulmonary,twosides
+91,biliary tract disorder,twosides
+1083,colitis ischemic,twosides
+649,Extremity pain,twosides
+199,arteriosclerotic heart disease,twosides
+1126,Small intestinal obstruction,twosides
+662,Paraesthesia,twosides
+602,neoplasia,twosides
+837,Fainting,twosides
+461,blood sodium decreased,twosides
+807,sneezing,twosides
+1115,Feeling unwell,twosides
+459,hypokalaemia,twosides
+525,lower GI bleeding,twosides
+1010,migraine,twosides
+1069,intervertebral disc disorder,twosides
+640,osteoporosis,twosides
+444,High blood pressure,twosides
+1109,road traffic accident,twosides
+1310,diverticulosis,twosides
+70,Arthritis rheumatoid,twosides
+917,Abnormal vision,twosides
+63,arteriosclerosis,twosides
+836,bulging,twosides
+633,Osteoarthritis,twosides
+154,pleural pain,twosides
+344,acid reflux,twosides
+323,fibromyalgia,twosides
+546,breast pain,twosides
+650,palpitation,twosides
+411,herpes zoster,twosides
+110,Breast cyst,twosides
+589,myoglobinuria,twosides
+637,osteomalacia,twosides
+785,ischias,twosides
+65,Aching joints,twosides
+66,arthritis,twosides
+246,abuse,twosides
+180,colonic polyp,twosides
+162,cholecystitis,twosides
+1117,Dyspnea exertional,twosides
+1021,Extrasystoles Ventricular,twosides
+777,acne rosacea,twosides
+893,Incontinence,twosides
+340,gall bladder,twosides
+233,diabetic acidosis,twosides
+236,Diabetic Retinopathy,twosides
+96,blepharitis,twosides
+742,pyelonephritis,twosides
+936,aptyalism,twosides
+98,Blepharospasm,twosides
+41,aneurysm,twosides
+90,benign prostatic hyperplasia,twosides
+1228,wrist fracture,twosides
+241,dislocation,twosides
+1307,Superficial thrombophlebitis,twosides
+213,Decreased Libido,twosides
+214,decubitus ulcer,twosides
+756,kidney failure,twosides
+556,meningitides,twosides
+1096,ild,twosides
+1150,prostatism,twosides
+955,Atrioventricular block first degree,twosides
+201,Cough,twosides
+914,Vestibular disorder,twosides
+981,panic attack,twosides
+619,nightmare,twosides
+1296,wandering atrial pacemaker,twosides
+526,Breast Lump,twosides
+621,nocturia,twosides
+913,spinning sensation,twosides
+230,Diabetes,twosides
+116,bronchitis,twosides
+706,polyp,twosides
+638,osteomyelitis,twosides
+738,lung fibrosis,twosides
+401,enlarged liver,twosides
+935,laceration,twosides
+182,coma,twosides
+576,amyotrophy,twosides
+122,cachectic,twosides
+500,renal cyst,twosides
+678,neuropathy peripheral,twosides
+1164,collagenvascular disease,twosides
+87,Bacterial infection,twosides
+907,angiitis,twosides
+791,convulsion,twosides
+1079,iron deficiency anaemia,twosides
+1280,Cardiomyopathy,twosides
+113,bronchial spasm,twosides
+319,femur fracture,twosides
+1002,fascitis plantar,twosides
+373,Cardiac decompensation,twosides
+825,mucositis oral,twosides
+1046,joint swelling,twosides
+403,hernia,twosides
+349,glaucoma,twosides
+565,mitral valve disease NOS,twosides
+963,edema extremities,twosides
+997,pulmonary mass,twosides
+322,breast dysplasia,twosides
+685,Phlebitis,twosides
+530,lung neoplasms,twosides
+1256,balance disorder,twosides
+653,bone marrow failure,twosides
+215,deglutition disorder,twosides
+17,adrenal insufficiency,twosides
+1043,sensory disturbance,twosides
+1042,polyneuropathy,twosides
+1219,Nephrolithiasis,twosides
+253,dysarthria,twosides
+465,Hypotension Orthostatic,twosides
+788,Scoliosis,twosides
+1161,autonomic instability,twosides
+769,rhabdomyolysis,twosides
+1052,renal colic,twosides
+507,bundle branch block left,twosides
+831,apoplexy,twosides
+542,malabsorption,twosides
+54,aphasia,twosides
+32,Amnesia,twosides
+321,body temperature increased,twosides
+958,burning sensation,twosides
+950,chill,twosides
+683,phaeochromocytoma,twosides
+895,Infection Urinary Tract,twosides
+618,night sweat,twosides
+491,keratitis sicca,twosides
+216,dehydration,twosides
+78,Ataxia,twosides
+144,transient ischaemic attack,twosides
+142,cerebral haemorrhage,twosides
+232,Mod,twosides
+430,elevated cholesterol,twosides
+840,heart rate increased,twosides
+1186,eye swelling,twosides
+731,psychosexual disorder,twosides
+50,Anxiety,twosides
+312,facial palsy,twosides
+269,fat embolism,twosides
+891,ureteral obstruction,twosides
+494,disorder Renal,twosides
+605,nephrosclerosis,twosides
+23,delirium tremens,twosides
+69,psoriatic arthritis,twosides
+829,post traumatic stress disorder,twosides
+506,laryngitis,twosides
+905,angiopathy,twosides
+476,flu,twosides
+138,coeliac disease,twosides
+16,adjustment disorder,twosides
+543,carcinoid syndrome,twosides
+600,nausea,twosides
+1284,dysphasia,twosides
+1049,drug withdrawal,twosides
+688,Pleural Effusion,twosides
+802,Sinusitis,twosides
+426,Bilirubinaemia,twosides
+1237,amentia,twosides
+1133,cerebral atrophy,twosides
+148,cervicalgia,twosides
+436,hyperlipaemia,twosides
+108,metabolic encephalopathy,twosides
+234,Diabetic Nephropathy,twosides
+271,encephalitis,twosides
+1146,Intervertebral Disc Herniation,twosides
+80,Atherosclerosis,twosides
+52,aortic regurgitation,twosides
+608,Neuralgia,twosides
+388,hemiplegia,twosides
+1240,pneumonia Klebsiella,twosides
+737,emphysema,twosides
+81,AFIB,twosides
+711,Postherpetic Neuralgia,twosides
+283,Eosinophil Count Increased,twosides
+609,Neuritis,twosides
+1244,abnormal ECG,twosides
+336,Bone Fracture Spontaneous,twosides
+348,gingivitis,twosides
+1003,soft tissue infection,twosides
+329,floaters,twosides
+856,thyroid neoplasia,twosides
+1239,dental abscess,twosides
+871,dental pain,twosides
+1242,aseptic necrosis bone,twosides
+117,bruxism,twosides
+764,retinal bleeding,twosides
+1140,gingival pain,twosides
+632,bone inflammation,twosides
+126,candidiasis of mouth,twosides
+869,tooth disease,twosides
+1112,mouth pain,twosides
+487,arthropathy,twosides
+672,pericardial effusion,twosides
+1147,lung neoplasm malignant,twosides
+472,infection,twosides
+1231,blindness,twosides
+409,herpes simplex,twosides
+386,blood in urine,twosides
+511,Acute myeloblastic leukemia,twosides
+1018,abnormal EEG,twosides
+342,gastric inflammation,twosides
+1192,Transfusion reaction,twosides
+3,abortion spontaneous,twosides
+1006,urosepsis,twosides
+262,eating disorder,twosides
+784,schizophrenia,twosides
+374,cardiac murmur,twosides
+371,cardiac enlargement,twosides
+724,proteinuria,twosides
+1275,increased platelet count,twosides
+1103,odynophagia,twosides
+573,multiple sclerosis,twosides
+901,intraocular inflammation,twosides
+929,weight gain,twosides
+289,Convulsions Grand Mal,twosides
+282,Enuresis,twosides
+956,bundle branch block right,twosides
+680,Personality disorder,twosides
+798,salivary gland inflammation,twosides
+1210,pregnancy induced hypertension,twosides
+149,cervicitis,twosides
+405,hernia hiatal,twosides
+150,cervical dysplasia,twosides
+533,adenitis,twosides
+263,ecchymoses,twosides
+1262,tardive dyskinesia,twosides
+102,blood pressure abnormal,twosides
+940,muscle strain,twosides
+900,uterine infection,twosides
+717,Ejaculation Premature,twosides
+951,excessive thirst,twosides
+261,ear ache,twosides
+1020,elevated erythrocyte sedimentation rate,twosides
+427,Blood Calcium Increased,twosides
+1077,joint stiffness,twosides
+1218,phobia,twosides
+301,esophagitis,twosides
+606,nephrotic syndrome,twosides
+750,proctalgia,twosides
+1031,bone pain,twosides
+190,contracture,twosides
+720,proctitis,twosides
+817,spondylitis,twosides
+819,spondylosis,twosides
+1302,dyspareunia,twosides
+439,hyperparathyroidism,twosides
+806,sleep apnea,twosides
+748,Raynauds phenomenon,twosides
+1158,wound dehiscence,twosides
+1060,portal vein thrombosis,twosides
+366,head injury,twosides
+60,Arachnoiditis,twosides
+838,synovitis,twosides
+434,hyperhidrosis,twosides
+622,nystagmus,twosides
+345,gastrointestinal bleed,twosides
+59,apraxia,twosides
+1120,Rectal Tenesmus,twosides
+34,amyloidosis,twosides
+1309,Drug addiction,twosides
+723,prostatitis,twosides
+320,femoral neck fracture,twosides
+809,sleep walking,twosides
+1285,monoclonal gammopathy,twosides
+191,bruise,twosides
+168,Scar,twosides
+370,cardiac disease,twosides
+667,pain pelvic,twosides
+413,hip fracture,twosides
+1205,difficulty in walking,twosides
+654,panic disorder,twosides
+375,atrial septal defect,twosides
+845,Tendinitis,twosides
+1092,obstructive uropathy,twosides
+902,Colpitis,twosides
+1106,Rhagades,twosides
+1304,bone spur,twosides
+652,pancreatitis,twosides
+27,allergic rhinitis,twosides
+643,otitis media,twosides
+339,intestinal functional disorder,twosides
+317,faecal incontinence,twosides
+135,carpal tunnel,twosides
+382,haematochezia,twosides
+471,ADH inappropriate,twosides
+1230,neuropathy,twosides
+996,Chest infection,twosides
+1268,radiculopathy,twosides
+1312,dysphonia,twosides
+811,myelopathy,twosides
+553,black stools,twosides
+260,dysuria,twosides
+960,flashing lights,twosides
+1214,Electrolyte disorder,twosides
+1303,Decreased hearing,twosides
+566,mitral valve prolapse,twosides
+316,fatty liver,twosides
+629,mouth bleeding,twosides
+92,bipolar disorder,twosides
+268,embolism,twosides
+251,duodenitis,twosides
+550,malignant melanoma,twosides
+1263,ear infection,twosides
+954,sinus bradycardia,twosides
+716,atrial ectopic beats,twosides
+642,external ear infection,twosides
+592,muscle inflammation,twosides
+1163,cervical vertebral fracture,twosides
+425,hydronephrosis,twosides
+218,dental caries,twosides
+1089,elevated prostate specific antigen,twosides
+1001,mouth ulcer,twosides
+670,gastroduodenal ulcer,twosides
+326,fistula,twosides
+984,acute bronchitis,twosides
+361,gynaecomastia,twosides
+973,Hypophosphataemia,twosides
+435,Excess potassium,twosides
+1036,esophageal ulcer,twosides
+10,renal tubular acidosis,twosides
+910,phlebothrombosis,twosides
+1220,dysaesthesia,twosides
+357,goiter,twosides
+1102,metabolic alkalosis,twosides
+1235,Adenopathy,twosides
+1098,tympanic membrane perforation,twosides
+61,Arrhythmia,twosides
+952,Hepatic failure,twosides
+440,hyperalimentation,twosides
+939,Spinal fracture,twosides
+1148,Parkinson,twosides
+571,movement disorder,twosides
+541,macula lutea degeneration,twosides
+578,musculoskeletal pain,twosides
+730,psychosomatic disease,twosides
+1026,Cardiac ischemia,twosides
+1305,paranoia,twosides
+761,retinal degeneration,twosides
+985,chronic sinusitis,twosides
+883,ulcer,twosides
+775,rib fracture,twosides
+1173,rotator cuff syndrome,twosides
+470,impetigo,twosides
+988,fractured pelvis NOS,twosides
+889,Infection Upper Respiratory,twosides
+44,angioedema,twosides
+800,sick sinus syndrome,twosides
+449,hyperthyroidism,twosides
+372,cardiac failure,twosides
+1175,atrioventricular block second degree,twosides
+682,pharyngeal inflammation,twosides
+15,adenoma,twosides
+288,epilepsy,twosides
+1091,sinus arrest,twosides
+42,angina,twosides
+577,muscle disorder,twosides
+119,bundle branch block,twosides
+912,tachycardia ventricular,twosides
+616,melanocytic naevus,twosides
+575,cramp,twosides
+82,atrial flutter,twosides
+795,cardiovascular collapse,twosides
+437,hypernatraemia,twosides
+897,hive,twosides
+586,MPD,twosides
+908,syncope vasovagal,twosides
+828,streptococcal infection,twosides
+73,aspergillosis,twosides
+961,Light sensitivity,twosides
+279,enteritis,twosides
+103,bone marrow transplant,twosides
+1009,SCLC,twosides
+176,colitis,twosides
+451,elevated triglycerides,twosides
+1190,Glucose intolerance,twosides
+572,Multiple Myeloma,twosides
+1035,duodenal ulcer haemorrhage,twosides
+210,CMV infection,twosides
+387,hemiparesis,twosides
+966,polymyositis,twosides
+86,Bacteraemia,twosides
+864,onychomycosis,twosides
+1264,carcinoma of the colon,twosides
+1048,traumatic arthropathy,twosides
+588,myocarditis,twosides
+377,cardiac valvulopathy,twosides
+273,endocarditis,twosides
+1017,Atrioventricular block complete,twosides
+911,ventricular fibrillation,twosides
+341,gangrene,twosides
+484,ischaemia,twosides
+885,ADVERSE DRUG EFFECT,twosides
+1225,defaecation urgency,twosides
+520,cirrhosis,twosides
+880,trigeminal neuralgia,twosides
+419,hordeolum,twosides
+707,polyuria,twosides
+675,periodontal disease,twosides
+623,obesity,twosides
+356,glucosuria,twosides
+131,basal cell carcinoma,twosides
+1076,pulmonary arrest,twosides
+381,haematemesis,twosides
+360,granuloma,twosides
+555,meningeal irritation,twosides
+780,Salmonella,twosides
+231,insulin dependent diabetes mellitus,twosides
+313,failure to thrive,twosides
+132,Cardiac tamponade,twosides
+1073,ankle fracture,twosides
+399,hepatitis toxic,twosides
+275,endocrine disorder,twosides
+801,Sinus headache,twosides
+1013,renal abscess,twosides
+242,diverticulitis,twosides
+221,dermatitis exfoliative,twosides
+823,gastric dilatation,twosides
+93,distended bladder,twosides
+987,pancreatitis relapsing,twosides
+854,Thrombophlebitis,twosides
+1129,nasal septal perforation,twosides
+797,shoulder pain,twosides
+1229,Abnormal Laboratory Findings,twosides
+700,Polio,twosides
+1271,duodenal ulcer perforation,twosides
+1287,joint effusion,twosides
+376,ventricular septal defect,twosides
+67,gouty arthritis,twosides
+842,Supraventricular tachycardia,twosides
+26,respiratory alkalosis,twosides
+1022,haemorrhage intracranial,twosides
+1294,major depression,twosides
+1282,excessive sleepiness,twosides
+538,lymphoma,twosides
+1272,substance abuse,twosides
+45,animal bite,twosides
+146,cerebral vascular disorder,twosides
+1206,dry eye,twosides
+646,Ovarian Cyst,twosides
+953,micturition urgency,twosides
+894,Stress incontinence,twosides
+1047,hesitancy,twosides
+335,bone fracture,twosides
+620,nodule,twosides
+209,cyst,twosides
+1088,Abdominal hernia,twosides
+787,Scleroderma,twosides
+739,Cor pulmonale,twosides
+799,excessive salivation,twosides
+1127,right heart failure,twosides
+832,subarachnoid haemorrhage,twosides
+123,cancer,twosides
+808,soft tissue injuries,twosides
+1288,colitis pseudomembranous,twosides
+560,heavy menstrual period,twosides
+559,premature menopause,twosides
+407,umbilical hernia,twosides
+728,psoriasis,twosides
+224,contact dermatitis,twosides
+97,blepharoptosis,twosides
+347,Bleeding gums,twosides
+284,epicondylitis,twosides
+595,ingrowing nail,twosides
+790,dermatitis seborrheic,twosides
+127,candidiasis of vagina,twosides
+1165,Spinal Compression Fracture,twosides
+1245,palsies,twosides
+291,petit mal,twosides
+359,gout,twosides
+1281,cerebral ischaemia,twosides
+310,eyelid diseases,twosides
+824,gastric ulcer,twosides
+676,periodontitis,twosides
+285,Lyell,twosides
+493,seborrhoeic keratosis,twosides
+492,actinic keratosis,twosides
+157,choking,twosides
+708,dyshidrosis,twosides
+53,aortic stenosis,twosides
+390,coughing blood,twosides
+1097,radiation pneumonitis,twosides
+355,Glossitis,twosides
+88,bacterial pneumonia,twosides
+22,alcohol consumption,twosides
+1251,squamous cell carcinoma of skin,twosides
+1134,pancreatic cancer,twosides
+847,Tenosynovitis,twosides
+519,liver abscess,twosides
+584,myelodysplasia,twosides
+751,rectal polyp,twosides
+107,brain concussion,twosides
+805,cutaneous ulcer,twosides
+1122,menometrorrhagia,twosides
+311,face pain,twosides
+83,atrioventricular block,twosides
+452,breast enlargement,twosides
+1189,Eustachian tube disorder,twosides
+540,macroglossia,twosides
+1137,flashbacks,twosides
+983,acute sinusitis,twosides
+1142,Pelvic Inflammatory Disease,twosides
+1195,Altered Bowel Function,twosides
+1015,antinuclear antibody positive,twosides
+1128,galactorrhea,twosides
+783,schizoaffective disorder,twosides
+105,borderline personality disorder,twosides
+601,injury of neck,twosides
+792,Pharyngitis Streptococcal,twosides
+1075,Nephrogenic diabetes insipidus,twosides
+1030,hepatic necrosis,twosides
+446,portal hypertension,twosides
+235,Diabetic neuropathy,twosides
+109,brain neoplasm,twosides
+302,reflux esophagitis,twosides
+564,Breakthrough bleeding,twosides
+362,hair disease,twosides
+1171,Seroma,twosides
+1070,trigger finger,twosides
+603,Interstitial nephritis,twosides
+594,Nail disorder,twosides
+1011,allergic vasculitis,twosides
+517,lichen planus,twosides
+490,keratoacanthomas,twosides
+1217,milia,twosides
+134,carotid artery stenosis,twosides
+1135,gastric polyps,twosides
+1279,hyperkeratosis,twosides
+1259,toxic shock,twosides
+228,dermoid cyst,twosides
+947,essential hypertension,twosides
+397,hepatitis B,twosides
+851,tetralogy of Fallot,twosides
+1041,congenital heart disease,twosides
+994,hepatitis B surface antigen positive,twosides
+179,colon neoplasm,twosides
+161,cholecystectomies,twosides
+1258,Carcinoma of Prostate,twosides
+957,orthopnea,twosides
+1170,renal mass,twosides
+111,Breast disorder,twosides
+531,disseminated lupus erythematosus,twosides
+967,Onycholysis,twosides
+1162,breast tenderness,twosides
+567,mixed connective tissue disease,twosides
+1000,breast discharge,twosides
+943,Disorder Peripheral Vascular,twosides
+1099,limb malformation,twosides
+441,Hyperprolactinaemia,twosides
+1292,meningocele,twosides
+1196,acute psychosis,twosides
+1101,ketoacidosis,twosides
+782,sarcoidosis,twosides
+762,Detached retina,twosides
+1314,eosinophilic pneumonia,twosides
+155,Chest wall pain,twosides
+1191,tonsillar hypertrophy,twosides
+8,acanthosis nigricans,twosides
+1086,hyperpigmentation,twosides
+859,costochondritis,twosides
+19,agoraphobia,twosides
+1108,cheilosis,twosides
+1223,Easy bruisability,twosides
+628,OPTIC NEURITIS,twosides
+309,eye injury,twosides
+789,scotoma,twosides
+266,eczema,twosides
+876,tracheostomy,twosides
+998,Muscle Rupture,twosides
+641,bone sarcoma,twosides
+610,neuroblastoma,twosides
+548,mediastinal tumor,twosides
+295,erysipelas,twosides
+1104,paraparesis,twosides
+1144,color blindness,twosides
+402,hepatorenal syndrome,twosides
+400,Hepatitis C,twosides
+308,eye infection,twosides
+990,EBV infection,twosides
+151,Caesarean Section,twosides
+20,agranulocytoses,twosides
+681,petechia,twosides
+385,hematoma subdural,twosides
+351,glioma,twosides
+964,pyoderma gangrenosum,twosides
+727,benign intracranial hypertension,twosides
+141,cerebral artery embolism,twosides
+423,hydrocephalus,twosides
+978,hypogammaglobulinaemia,twosides
+1269,Acne,twosides
+445,malignant hypertension,twosides
+1188,acute otitis media,twosides
+713,Post nasal drip,twosides
+502,labyrinthitis,twosides
+804,Nodule Skin,twosides
+1016,atrophy of skin,twosides
+999,neck mass,twosides
+874,tracheitis,twosides
+1213,adenomyosis,twosides
+772,rheumatic heart disease,twosides
+920,Vitamin D Deficiency,twosides
+1253,kidney pain,twosides
+1270,hyperuricaemia,twosides
+813,splenectomy,twosides
+580,atypical mycobacterial infection,twosides
+664,parotitis,twosides
+948,choreoathetosis,twosides
+763,Disorder Retinal,twosides
+673,pericarditis,twosides
+469,cerumen impaction,twosides
+921,vitiligo,twosides
+663,paronychia,twosides
+181,colostomy,twosides
+870,Tooth Impacted,twosides
+855,thyroid disease,twosides
+51,aortic aneurysm,twosides
+226,dermatomyositis,twosides
+432,hyperaesthesia,twosides
+35,als,twosides
+145,cerebral palsy,twosides
+969,spider angioma,twosides
+114,bronchiectasis,twosides
+1019,encephalopathy hypertensive,twosides
+1187,retinal scar,twosides
+753,aplasia pure red cell,twosides
+40,anaemia hypochromic,twosides
+1145,furuncle,twosides
+677,periostitis,twosides
+2,birth defect,twosides
+140,cerebellar ataxia,twosides
+1156,autonomic neuropathy,twosides
+195,corneal disorder,twosides
+704,polymyalgia rheumatica,twosides
+404,diaphragmatic hernia,twosides
+536,lymphedema,twosides
+200,coronary artery bypass graft,twosides
+1174,pleural fibrosis,twosides
+844,temporal arteritis,twosides
+1080,polyarthritis,twosides
+684,phimosis,twosides
+503,Lacrimal Disorder,twosides
+1179,fecal occult blood,twosides
+986,cholecystitis acute,twosides
+475,inflammatory bowel disease,twosides
+846,tendon injury,twosides
+43,Prinzmetal variant angina,twosides
+412,hiccough,twosides
+793,serum sickness,twosides
+11,acquired immune deficiency syndrome,twosides
+38,Anemia aplastic,twosides
+106,brain abscess,twosides
+962,synovial cyst,twosides
+715,ectopic pregnancies,twosides
+657,Papilloma,twosides
+695,pneumonia primary atypical,twosides
+1050,retinopathy hypertensive,twosides
+645,Ovarian cancer,twosides
+1038,lung adenocarcinoma,twosides
+1265,Gastric Cancer,twosides
+860,tinea,twosides
+904,varicose vein,twosides
+686,pilonidal cyst,twosides
+205,cystic acne,twosides
+826,aphthous stomatitis,twosides
+862,body tinea,twosides
+705,familial adenomatous polyposis,twosides
+1037,intestinal ulcer,twosides
+225,Cutaneous mycosis,twosides
+173,coccidioidomycosis,twosides
+421,humerus fracture,twosides
+925,volvulus,twosides
+613,Neuromuscular Disorder,twosides
+1114,vaginal discharge,twosides
+1278,Pneumocystis carinii infection,twosides
+488,Keloid scar,twosides
+159,primary biliary cirrhosis,twosides
+995,left ventricular hypertrophy,twosides
+991,colon polypectomy,twosides
+48,anosmia,twosides
+850,tetany,twosides
+1234,abnormal cervical smear,twosides
+379,haemangioma,twosides
+1183,incisional hernia,twosides
+1160,abnormal mammogram,twosides
+71,Arthritis bacterial,twosides
+814,Splenic infarction,twosides
+406,Hernia Inguinal,twosides
+554,meningioma,twosides
+696,Pneumocystis carinii pneumonia,twosides
+1274,phlebitis superficial,twosides
+1166,gallbladder polyp,twosides
+1061,peritoneal adhesions,twosides
+1308,hypovitaminosis,twosides
+394,hepatic encephalopathy,twosides
+259,Dyspnoea paroxysmal nocturnal,twosides
+133,carotid bruit,twosides
+918,vitamin B 12 deficiency,twosides
+424,normal pressure hydrocephalus,twosides
+659,paraplegia,twosides
+196,Corneal dystrophy,twosides
+557,Aseptic meningitis,twosides
+24,Alcoholic intoxication,twosides
+137,causalgia,twosides
+1045,Irritation Skin,twosides
+937,Bradyarrhythmia,twosides
+192,conversion disorder,twosides
+1185,epidural abscess,twosides
+974,cholecystitis chronic,twosides
+1201,swollen scrotum,twosides
+365,hay fever,twosides
+579,myasthenia gravis,twosides
+898,fibroids,twosides
+835,superior vena cava syndrome,twosides
+547,mediastinal disorder,twosides
+1266,bladder cancer,twosides
+746,quadriplegia,twosides
+21,albuminuria,twosides
+112,Breast swelling,twosides
+722,neoplasm prostate,twosides
+734,alveolar proteinosis,twosides
+585,Bone marrow fibrosis,twosides
+415,histoplasmosis,twosides
+843,telangiectases,twosides
+771,Rheumatic fever,twosides
+611,neurodermatitis,twosides
+1090,fibroadenoma of breast,twosides
+1289,ganglion,twosides
+333,food allergy,twosides
+892,urethritis,twosides
+1051,ovulation pain,twosides
+945,bacterial vaginitis,twosides
+414,hirsuitism,twosides
+1311,Sjogrens syndrome,twosides
+922,vitreous detachment,twosides
+923,Vitreous haemorrhage,twosides
+909,venous insufficiency,twosides
+1029,nasal septum disorder,twosides
+1204,carcinoma of the cervix,twosides
+1208,Burns Second Degree,twosides
+729,tension headache,twosides
+1168,night cramps,twosides
+1249,pigmentation disorder,twosides
+489,keratitis,twosides
+499,kidney transplant,twosides
+229,diabetes insipidus,twosides
+337,fracture nonunion,twosides
+128,carbuncle,twosides
+332,folliculitis,twosides
+486,jaundice neonatal,twosides
+270,empyema,twosides
+169,cleft lip,twosides
+1212,Gastric ulcer perforated,twosides
+101,platelet disorder,twosides
+1062,gallbladder perforation,twosides
+1297,Rhinitis Seasonal,twosides
+29,allergic alveolitis,twosides
+125,cutaneous candidiasis,twosides
+177,chronic ulcerative colitis,twosides
+558,Meningitis Viral,twosides
+1094,Anal fistula,twosides
+1039,esophageal cancer,twosides
+1250,JRA,twosides
+422,hydrocele,twosides
+482,iritis,twosides
+152,chalazion,twosides
+62,arterial insufficiency,twosides
+95,neurogenic bladder,twosides
+598,nasal polyp,twosides
+899,uterine bleeding,twosides
+1066,Uterine polyp,twosides
+1199,musculoskeletal deformity,twosides
+1071,vascular anomaly,twosides
+868,tonsillitis,twosides
+749,hyperacusia,twosides
+280,enterocolitis,twosides
+1224,motor retardation,twosides
+202,cryptococcosis,twosides
+822,Fatty stools,twosides
+719,priapism,twosides
+933,Whiplash Injury,twosides
+1138,epidural hematoma,twosides
+760,Retinal artery occlusion,twosides
+612,neuroma,twosides
+398,chronic hepatitis,twosides
+992,food intolerance,twosides
+171,cluster headache,twosides
+582,mycosis fungoides,twosides
+188,connective tissue disease,twosides
+968,macrocytosis,twosides
+858,thyroiditis,twosides
+46,Anisocoria,twosides
+1113,rectal discharge,twosides
+410,Herpes ophthalmic,twosides
+890,calculus ureteric,twosides
+1078,thyroid cyst,twosides
+416,HIV disease,twosides
+1209,Endometrial Atrophy,twosides
+463,hypopituitarism,twosides
+561,Menstrual Disorder,twosides
+820,dysphemia,twosides
+647,oophorectomy,twosides
+1068,irregular menstrual cycle,twosides
+473,infectious mononucleosis,twosides
+1222,bladder atony,twosides
+563,methaemoglobinaemia,twosides
+651,pancreatic pseudocyst,twosides
+980,Benign Neoplasm,twosides
+938,Cerebral thrombosis,twosides
+1315,retinal vein thrombosis,twosides
+532,Lyme Disease,twosides
+527,lung abscess,twosides
+497,kidney neoplasm,twosides
+254,diarrhea infectious,twosides
+569,motion sickness,twosides
+454,hypoaldosteronism,twosides
+1141,testicular swelling,twosides
+690,pneumoconiosis,twosides
+1093,coronary angioplasty,twosides
+1054,Skin Striae,twosides
+970,hyperchloremia,twosides
+198,corneal ulcer,twosides
+1124,eye redness,twosides
+972,hyperphosphatemia,twosides
+655,panniculitis,twosides
+821,status epilepticus,twosides
+1254,sacroiliitis,twosides
+1252,chondrocalcinosis pyrophosphate,twosides
+875,Tracheobronchitis,twosides
+745,pyuria,twosides
+18,agnosia,twosides
+977,fibrosing alveolitis,twosides
+1215,hypervitaminosis,twosides
+709,Porphyria,twosides
+480,intussusception,twosides
+1005,amaurosis fugax,twosides
+516,leukoplakia of mouth,twosides
+946,gestational diabetes,twosides
+1203,xanthoma,twosides
+1238,Penile pain,twosides
+627,optic atrophy,twosides
+544,breast inflammation,twosides
+1159,xerosis,twosides
+712,postmenopausal bleeding,twosides
+812,spinal cord injury,twosides
+1197,esophageal rupture,twosides
+334,food poisoning,twosides
+752,rectal prolapse,twosides
+378,heat stroke,twosides
+443,hypersplenism,twosides
+187,conjunctivitis viral,twosides
+976,alcohol abuse,twosides
+513,multifocal leukoencephalopathy,twosides
+982,eustachian tube obstruction,twosides
+574,Mumps,twosides
+669,Peyronies Disease,twosides
+1167,global amnesia,twosides
+498,papillary necrosis,twosides
+211,dacrocystitis,twosides
+1154,encephalitis viral,twosides
+1107,avascular necrosis,twosides
+549,megacolon,twosides
+779,Salivary Gland Calculus,twosides
+160,Cholangitis sclerosing,twosides
+626,ophthalmoplegia,twosides
+380,haemarthrosis,twosides
+634,osteochondrosis,twosides
+287,epiglottitis,twosides
+314,fasciitis,twosides
+1012,Breast abscess,twosides
+614,Neurosis,twosides
+307,foreign body in eye,twosides
+590,myoma,twosides
+297,Erythema nodosum,twosides
+863,tinea pedis,twosides
+450,hypertrichosis,twosides
+710,tuberculin test positive,twosides
+458,hypogonadism,twosides
+1074,brachial plexus injury,twosides
+1243,hydroureter,twosides
+178,Collagen disease,twosides
+562,mental retardation,twosides
+396,Hepatitis A,twosides
+848,testes pain,twosides
+781,Salpingitis,twosides
+1125,colonic obstruction,twosides
+1056,disorders of lipid metabolism,twosides
+300,esophageal stenosis,twosides
+193,febrile convulsion,twosides
+551,melanosis,twosides
+1119,regurgitation,twosides
+1130,gallbladder cancer,twosides
+534,lymphangitis,twosides
+1211,parotid gland enlargement,twosides
+286,epididymitis,twosides
+1313,Morphea,twosides
+156,chicken pox,twosides
+393,hemothorax,twosides
+115,bronchiolitis,twosides
+174,coccydynia,twosides
+256,dysmenorrhea,twosides
+671,periarteritis nodosa,twosides
+274,bacterial endocarditis,twosides
+1295,Penile swelling,twosides
+194,corneal abrasion,twosides
+733,Pterygium,twosides
+766,pigmentary retinopathy,twosides
+714,Post thrombotic syndrome,twosides
+617,night blindness,twosides
+239,Diphtheria,twosides
+1316,glioblastoma multiforme,twosides
+276,Endometrial hyperplasia,twosides
+522,biliary cirrhosis,twosides
+6,premature separation of placenta,twosides
+292,episcleritis,twosides
+120,Bunion,twosides
+77,Astrocytoma,twosides
+244,trisomy 21,twosides
+1293,sarcoma,twosides
+1081,heat rash,twosides
+537,lymphocytosis,twosides
+754,reflex sympathetic dystrophy,twosides
+1298,adrenal carcinoma,twosides
+508,Legionella,twosides
+743,pyloric stenosis,twosides
+306,exophthalmos,twosides
+668,pemphigus,twosides
+1232,Endometrial cancer,twosides
+701,polycystic ovary disease,twosides
+1193,Viral Pharyngitis,twosides
+1202,Cystitis Interstitial,twosides
+879,trichomoniasis,twosides
+768,Retroperitoneal fibrosis,twosides
+665,Lice Infestation,twosides
+94,Bladder Neoplasm,twosides
+865,tinea versicolor,twosides
+170,cleft palate,twosides
+698,viral pneumonia,twosides
+460,hypomenorrhea,twosides
+703,Polymenorrhea,twosides
+75,asthenopia,twosides
+1053,lagophthalmos,twosides
+721,prolactinoma,twosides
+278,Endometritis,twosides
+277,endometriosis,twosides
+583,myelitis,twosides
+726,anal pruritus,twosides
+4,abortion missed,twosides
+636,osteoma,twosides
+1169,peripheral nerve injury,twosides
+718,PMs,twosides
+290,myoclonic epilepsy,twosides
+625,Oligomenorrhea,twosides
+504,lactose intolerance,twosides
+765,retinitis,twosides
+346,giardiasis,twosides
+818,ankylosing spondylitis,twosides
+755,refraction disorder,twosides
+350,angle closure glaucoma,twosides
+1306,breast neoplasm,twosides
+1063,acute glomerulonephritis,twosides
+1055,Viral rash NOS,twosides
+1040,gastric stasis,twosides
+331,folate deficiency,twosides
+481,iridocyclitis,twosides
+942,acute febrile neutrophilic dermatosis,twosides
+639,osteopetrosis,twosides
+1248,thyroid cancer,twosides
+1241,chronic active hepatitis,twosides
+857,thyroidectomy,twosides
+118,bulimia,twosides
+64,arteritis,twosides
+468,ichthyosis,twosides
+438,hypermetropia,twosides
+197,Corneal clouding,twosides
+203,cryptorchidism,twosides
+1087,depigmentation,twosides
+928,vulvovaginitis,twosides
+631,orchitis,twosides
+129,carcinoid tumour,twosides
+509,Leriche syndrome,twosides
+1299,renal cancer,twosides
+624,ocular hypertension,twosides
+535,Lymphatic Disorders,twosides
+1198,hepatitis C antibody positive,twosides
+886,Tympanic membrane disorder,twosides
+867,tonsillectomy,twosides
+852,Essential Thrombocythemia,twosides
+1007,adenoid hypertrophy,twosides
+147,cervical polyp,twosides
+903,varicocele,twosides
+1105,dandruff,twosides
+1172,vulval abscess,twosides
+265,ectropion,twosides
+839,syphilis,twosides
+521,alcoholic cirrhosis,twosides
+1095,Vaginal prolapse,twosides
+89,balanitis,twosides
+1067,vaginal dysplasia,twosides
+104,bone neoplasm,twosides
+989,Bicuspid Aortic Valve,twosides
+130,carcinoma,twosides
+660,parapsoriasis,twosides
+687,pityriasis,twosides
+477,Intertrigo,twosides
+183,anogenital warts,twosides
+453,salivary gland enlargement,twosides
+1233,dyslexia,twosides
+298,esophageal perforation,twosides
+227,dermatophytosis,twosides
+691,pneumonectomy,twosides
+237,Dermatitis diaper,twosides
+428,hypercalcinuria,twosides
+1014,thyroid adenoma,twosides
+264,eclampsia,twosides
+873,toxoplasmosis,twosides
+975,exploratory laparotomy,twosides
+30,amblyopia,twosides
+204,Cryptosporidiosis,twosides
+1300,infestation,twosides
+1111,hyperamylasaemia,twosides
+186,bacterial conjunctivitis,twosides
+1153,high risk pregnancy,twosides
+515,leukoplakia,twosides
+674,constrictive pericarditis,twosides
+568,molluscum contagiosum,twosides
+1139,cavernous sinus thrombosis,twosides
+944,Seasonal Affective Disorder,twosides
+1110,brachial neuritis,twosides
+206,Cystic Fibrosis,twosides
+1301,tinea cruris,twosides
+252,dwarfism,twosides
+164,chondrodystrophy,twosides
+389,hemoglobinuria,twosides
+906,vascular headache,twosides
+462,hypoparathyroidism,twosides
+281,entropion,twosides
+877,transurethral resection of the prostate,twosides
+318,faecal impaction,twosides
+1131,decreased lacrimation,twosides
+993,hematospermia,twosides
+1059,trifascicular block,twosides
+1247,meibomianitis,twosides
+934,Pertussis,twosides
+635,Osteogenesis Imperfecta,twosides
+786,scleritis,twosides
+448,renovascular hypertension,twosides
+1084,acute intermittent porphyria,twosides
+570,oral neoplasm,twosides
+353,IgA nephropathy,twosides
+338,ephelides,twosides
+1065,testicular atrophy,twosides
+919,vitamin B deficiency,twosides
+417,HIV positive,twosides
+927,vulvitis,twosides
+545,mast cell disease,twosides
+965,pyogenic granuloma,twosides
+1261,Haemophilia,twosides
+770,rhabdomyosarcoma,twosides
+165,choriocarcinoma,twosides
+1123,Oily Skin,twosides
+272,encopresis,twosides
+861,Tinea Capitis,twosides
+1276,hypospadias,twosides
+1151,eosinophilic pneumonia acute,twosides
+474,infertility,twosides
+408,genital herpes,twosides
+630,orchiectomy,twosides
+136,cataplexy,twosides
+208,CYSTO,twosides
+431,familial hypercholesterolemia,twosides
+849,tetanus,twosides
+478,parasitic infection intestinal,twosides
+167,hemophilia B,twosides
+1291,allergic bronchitis,twosides
+358,gonorrhea,twosides
+593,Myringitis,twosides
+644,otosclerosis,twosides
+702,erythremia,twosides
+915,Masculinization,twosides
+1121,penile discharge,twosides
+456,hypochondriasis,twosides
+1246,renal agenesis,twosides
+882,Typhoid,twosides
+166,chorioretinitis,twosides
+1177,breast malformation,twosides
+1085,neurofibromatosis,twosides
+776,rickets,twosides
+1178,supernumerary nipple,twosides
+219,skin abrasion,twosides
+1184,cervical stenosis,twosides
+896,urogenital abnormalities,twosides
+33,traumatic amputation,twosides
+794,sexually transmitted diseases,twosides
+1157,Herxheimer reaction,twosides
+774,Vasomotor Rhinitis,twosides
+1057,corneal degeneration,twosides
+1004,corticosteroid therapy,twosides
+12,Acromegaly,twosides
+49,anthrax,twosides
+5,septic abortion,twosides
+1227,anovulatory,twosides
+1064,bladder diverticulum,twosides
+778,Rubella,twosides
+1200,splinter,twosides
+501,hypogonadotropic hypogonadism,twosides
+552,chloasma,twosides
+303,estrogen replacement,twosides
+747,rabies,twosides

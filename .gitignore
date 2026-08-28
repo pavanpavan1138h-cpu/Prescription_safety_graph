@@ -1,0 +1,6 @@
+
+# Large raw datasets
+data/raw/twosides/
+
+# Large generated TWOSIDES relationship files
+data/interim/normalized/twosides_relationships_normalized.csv

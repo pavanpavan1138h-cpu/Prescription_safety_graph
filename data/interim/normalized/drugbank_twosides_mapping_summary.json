@@ -1,0 +1,15 @@
+{
+    "drugbank_total_drugs": 1706,
+    "twosides_total_drugs": 645,
+    "total_unified_mapping_pairs": 554,
+    "high_confidence_mapping_pairs": 293,
+    "mapped_drugbank_drugs_unified": 554,
+    "mapped_twosides_drugs_unified": 534,
+    "mapped_drugbank_drugs_high_confidence": 293,
+    "mapped_twosides_drugs_high_confidence": 293,
+    "confidence_distribution": {
+        "HIGH_EXACT": 287,
+        "MEDIUM_CANONICAL": 261,
+        "HIGH_INCHIKEY": 6
+    }
+}
