@@ -7,9 +7,9 @@ Coordinates SubgraphBuilder and PrescriptionService.
 
 import logging
 from typing import List, Optional
-from api.graph_schemas import SubgraphResponse
-from api.graph_subgraph_builder import SubgraphBuilder
-from api.service import PrescriptionService
+from src.graph.schemas import SubgraphResponse
+from src.graph.subgraph_builder import SubgraphBuilder
+from src.api.service import PrescriptionService
 
 logger = logging.getLogger(__name__)
 
@@ -63,7 +63,7 @@ graph_service_instance: Optional[GraphService] = None
 def get_graph_service() -> GraphService:
     global graph_service_instance
     if graph_service_instance is None:
-        from api.service import get_prescription_service
+        from src.api.service import get_prescription_service
         p_service = get_prescription_service()
         graph_service_instance = GraphService(p_service)
     return graph_service_instance

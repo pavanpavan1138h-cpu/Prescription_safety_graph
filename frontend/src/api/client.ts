@@ -2,7 +2,15 @@ import {
   DrugResolveResponse,
   SystemInfoResponse,
   PrescriptionAnalysisResponse,
-  PairDetailResponse
+  PairDetailResponse,
+  PrescriptionStructuralAnalysis,
+  PrescriptionEvidenceIntelligenceProfile,
+  ContextualStabilityProfile,
+  PrescriptionComparativeIntelligenceProfile,
+  PrescriptionExplainabilityProfile,
+  ExplanationGraph,
+  PrescriptionTrustworthinessProfile,
+  PrescriptionLongitudinalProfile
 } from '../types/api';
 
 export interface GraphNode {
@@ -132,6 +140,77 @@ export const prescriptionApi = {
       throw new Error(err?.error?.message || 'Failed to perform advanced clinical intelligence analysis');
     }
     return res.json();
+  },
+
+  async comparePrescriptions(analysisIdA: string, analysisIdB: string): Promise<PrescriptionComparativeIntelligenceProfile> {
+    const res = await fetch(`${API_BASE}/prescriptions/compare`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ analysis_id_a: analysisIdA, analysis_id_b: analysisIdB })
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err?.error?.message || 'Failed to compare prescription snapshots');
+    }
+    return res.json();
+  },
+
+  async getComparisonProfile(comparisonId: string): Promise<PrescriptionComparativeIntelligenceProfile> {
+    const res = await fetch(`${API_BASE}/comparisons/${comparisonId}`);
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err?.error?.message || 'Failed to load comparison profile');
+    }
+    return res.json();
+  },
+
+  async getExplainabilityProfile(analysisId: string): Promise<PrescriptionExplainabilityProfile> {
+    const res = await fetch(`${API_BASE}/analyses/${analysisId}/explainability`);
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err?.error?.message || 'Failed to load explainability profile');
+    }
+    return res.json();
+  },
+
+  async getExplainabilityGraph(analysisId: string): Promise<ExplanationGraph> {
+    const res = await fetch(`${API_BASE}/analyses/${analysisId}/explainability/graph`);
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err?.error?.message || 'Failed to load explanation graph');
+    }
+    return res.json();
+  },
+
+  async getTrustworthinessProfile(analysisId: string): Promise<PrescriptionTrustworthinessProfile> {
+    const res = await fetch(`${API_BASE}/analyses/${analysisId}/trustworthiness`);
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err?.error?.message || 'Failed to load trustworthiness profile');
+    }
+    return res.json();
+  },
+
+  async triggerLongitudinalAnalysis(analysisIds: string[]): Promise<{ longitudinal_id: string }> {
+    const res = await fetch(`${API_BASE}/analyses/longitudinal`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ analysis_ids: analysisIds })
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err?.error?.message || 'Failed to trigger longitudinal evolution');
+    }
+    return res.json();
+  },
+
+  async getLongitudinalProfile(longitudinalId: string): Promise<PrescriptionLongitudinalProfile> {
+    const res = await fetch(`${API_BASE}/longitudinal/${longitudinalId}`);
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err?.error?.message || 'Failed to load longitudinal evolution profile');
+    }
+    return res.json();
   }
 };
 
@@ -238,4 +317,9 @@ export interface AdvancedPrescriptionAnalysisResponse {
   clinical_context_requirements: ClinicalContextRequirement[];
   advanced_explanation: AdvancedExplanationSummary;
   scientific_limitations: string[];
+  structural_analysis?: PrescriptionStructuralAnalysis;
+  evidence_intelligence?: PrescriptionEvidenceIntelligenceProfile;
+  contextual_stability?: ContextualStabilityProfile;
+  explainability?: PrescriptionExplainabilityProfile;
+  trustworthiness?: PrescriptionTrustworthinessProfile;
 }

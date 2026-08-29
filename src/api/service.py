@@ -10,8 +10,8 @@ from typing import List, Dict, Optional, Tuple, Any
 from datetime import datetime
 from collections import defaultdict
 
-from api.config import settings
-from api.schemas import (
+from src.api.config import settings
+from src.api.schemas import (
     HealthResponse,
     SystemInfoResponse,
     DrugResolveResponse,
@@ -37,9 +37,9 @@ from api.schemas import (
 )
 
 # Import Phase 5 & 6 core modules
-from prescription_reasoning import PrescriptionSafetyReasoner
-from prescription_schema import PrescriptionSafetyReport
-from reasoning_schema import EvidenceStatus
+from src.prescription.reasoning import PrescriptionSafetyReasoner
+from src.prescription.schemas import PrescriptionSafetyReport
+from src.reasoning.schemas import EvidenceStatus
 
 logger = logging.getLogger(__name__)
 
@@ -54,6 +54,8 @@ class PrescriptionService:
         self._analysis_cache: Dict[str, PrescriptionAnalysisResponse] = {}
         # Tier 3 UI Retrieval Cache: analysis_id -> PrescriptionSafetyReport
         self._report_objects: Dict[str, PrescriptionSafetyReport] = {}
+        # Phase 11 Comparison Cache: comparison_id -> PrescriptionComparativeIntelligenceProfile
+        self._comparison_profiles: Dict[str, Any] = {}
         
         self.is_ready = True
         logger.info("PrescriptionService startup initialization completed successfully.")
@@ -378,9 +380,355 @@ class PrescriptionService:
             )
         )
 
+    def get_structural_analysis(self, analysis_id: str):
+        from src.prescription.structural.prescription_structural_analyzer import PrescriptionStructuralAnalyzer
+        from src.api.advanced_schemas import (
+            PrescriptionStructuralAnalysisSchema,
+            NetworkSummarySchema,
+            TopologyClassificationSchema,
+            ClusterMetricsSchema,
+            DrugStructuralProfileSchema,
+            CounterfactualResultSchema,
+            PrescriptionEvidenceNetworkSchema,
+            PrescriptionEvidenceNodeSchema,
+            PrescriptionEvidenceEdgeSchema,
+            StructuralInterpretationSchema
+        )
+
+        report_obj = self._report_objects.get(analysis_id)
+        if not report_obj:
+            return None
+
+        struct_analysis = PrescriptionStructuralAnalyzer.analyze(report_obj)
+
+        return PrescriptionStructuralAnalysisSchema(
+            analysis_id=struct_analysis.analysis_id,
+            generated_at=struct_analysis.generated_at,
+            network_summary=NetworkSummarySchema(
+                total_prescription_drugs=struct_analysis.network_summary.total_prescription_drugs,
+                evidence_connected_drugs=struct_analysis.network_summary.evidence_connected_drugs,
+                structurally_isolated_drugs=struct_analysis.network_summary.structurally_isolated_drugs,
+                total_possible_pairs=struct_analysis.network_summary.total_possible_pairs,
+                evidence_supported_pairs=struct_analysis.network_summary.evidence_supported_pairs,
+                network_density=struct_analysis.network_summary.network_density,
+                connected_cluster_count=struct_analysis.network_summary.connected_cluster_count,
+                largest_cluster_size=struct_analysis.network_summary.largest_cluster_size,
+                convergent_edge_count=struct_analysis.network_summary.convergent_edge_count,
+                ddi_only_edge_count=struct_analysis.network_summary.ddi_only_edge_count,
+                combination_event_edge_count=struct_analysis.network_summary.combination_event_edge_count
+            ),
+            topology=TopologyClassificationSchema(
+                primary_topology=struct_analysis.topology.primary_topology.value,
+                secondary_characteristics=struct_analysis.topology.secondary_characteristics
+            ),
+            clusters=[
+                ClusterMetricsSchema(
+                    cluster_id=c.cluster_id,
+                    drug_ids=c.drug_ids,
+                    edge_count=c.edge_count,
+                    density=c.density,
+                    convergent_edge_count=c.convergent_edge_count,
+                    ddi_only_edge_count=c.ddi_only_edge_count,
+                    combination_event_edge_count=c.combination_event_edge_count,
+                    is_isolated=c.is_isolated
+                ) for c in struct_analysis.clusters
+            ],
+            drug_structural_profiles=[
+                DrugStructuralProfileSchema(
+                    drug_id=dp.drug_id,
+                    display_name=dp.display_name,
+                    evidence_degree=dp.evidence_degree,
+                    weighted_evidence_degree=dp.weighted_evidence_degree,
+                    degree_centrality=dp.degree_centrality,
+                    betweenness_centrality=dp.betweenness_centrality,
+                    evidence_channel_diversity=dp.evidence_channel_diversity,
+                    convergent_relationship_count=dp.convergent_relationship_count,
+                    ddi_only_relationship_count=dp.ddi_only_relationship_count,
+                    combination_only_relationship_count=dp.combination_only_relationship_count,
+                    cluster_id=dp.cluster_id,
+                    cluster_size=dp.cluster_size,
+                    centrality_rank=dp.centrality_rank,
+                    structural_contribution_level=dp.structural_contribution_level,
+                    structural_contribution_score=dp.structural_contribution_score,
+                    explanation=dp.explanation
+                ) for dp in struct_analysis.drug_structural_profiles
+            ],
+            ranked_structural_contributors=[
+                DrugStructuralProfileSchema(
+                    drug_id=dp.drug_id,
+                    display_name=dp.display_name,
+                    evidence_degree=dp.evidence_degree,
+                    weighted_evidence_degree=dp.weighted_evidence_degree,
+                    degree_centrality=dp.degree_centrality,
+                    betweenness_centrality=dp.betweenness_centrality,
+                    evidence_channel_diversity=dp.evidence_channel_diversity,
+                    convergent_relationship_count=dp.convergent_relationship_count,
+                    ddi_only_relationship_count=dp.ddi_only_relationship_count,
+                    combination_only_relationship_count=dp.combination_only_relationship_count,
+                    cluster_id=dp.cluster_id,
+                    cluster_size=dp.cluster_size,
+                    centrality_rank=dp.centrality_rank,
+                    structural_contribution_level=dp.structural_contribution_level,
+                    structural_contribution_score=dp.structural_contribution_score,
+                    explanation=dp.explanation
+                ) for dp in struct_analysis.ranked_structural_contributors
+            ],
+            counterfactual_results=[
+                CounterfactualResultSchema(
+                    drug_id=cf.drug_id,
+                    display_name=cf.display_name,
+                    original_edge_count=cf.original_edge_count,
+                    remaining_edge_count=cf.remaining_edge_count,
+                    structural_delta=cf.structural_delta,
+                    convergent_edges_removed=cf.convergent_edges_removed,
+                    clusters_before=cf.clusters_before,
+                    clusters_after=cf.clusters_after,
+                    largest_cluster_before=cf.largest_cluster_before,
+                    largest_cluster_after=cf.largest_cluster_after,
+                    contribution_level=cf.contribution_level.value,
+                    explanation=cf.explanation
+                ) for cf in struct_analysis.counterfactual_results
+            ],
+            original_network=PrescriptionEvidenceNetworkSchema(
+                nodes={
+                    k: PrescriptionEvidenceNodeSchema(
+                        drug_id=node.drug_id,
+                        display_name=node.display_name
+                    ) for k, node in struct_analysis.original_network.nodes.items()
+                },
+                edges={
+                    k: PrescriptionEvidenceEdgeSchema(
+                        drug_a_id=edge.drug_a_id,
+                        drug_b_id=edge.drug_b_id,
+                        evidence_status=edge.evidence_status,
+                        confidence_score=edge.confidence_score,
+                        priority_tier=edge.priority_tier,
+                        structural_weight=edge.structural_weight,
+                        edge_strength=edge.edge_strength,
+                        canonical_pair_key=edge.canonical_pair_key
+                    ) for k, edge in struct_analysis.original_network.edges.items()
+                },
+                canonical_drug_ids=struct_analysis.original_network.canonical_drug_ids
+            ),
+            structural_interpretation=StructuralInterpretationSchema(
+                highest_participation_drug=struct_analysis.structural_interpretation.highest_participation_drug,
+                highest_participation_degree=struct_analysis.structural_interpretation.highest_participation_degree,
+                network_connectivity_narration=struct_analysis.structural_interpretation.network_connectivity_narration,
+                counterfactual_impact_narration=struct_analysis.structural_interpretation.counterfactual_impact_narration,
+                clinical_warning=struct_analysis.structural_interpretation.clinical_warning
+            ),
+            scientific_guardrails=struct_analysis.scientific_guardrails
+        )
+
+    def get_structural_drugs(self, analysis_id: str):
+        analysis = self.get_structural_analysis(analysis_id)
+        return analysis.ranked_structural_contributors if analysis else None
+
+    def get_structural_clusters(self, analysis_id: str):
+        analysis = self.get_structural_analysis(analysis_id)
+        return analysis.clusters if analysis else None
+
+    def get_structural_counterfactuals(self, analysis_id: str):
+        analysis = self.get_structural_analysis(analysis_id)
+        return analysis.counterfactual_results if analysis else None
+
+    def get_evidence_intelligence(self, analysis_id: str):
+        report_obj = self._report_objects.get(analysis_id)
+        if not report_obj:
+            return None
+        
+        from src.prescription.structural.prescription_structural_analyzer import PrescriptionStructuralAnalyzer
+        struct_analysis = PrescriptionStructuralAnalyzer.analyze(report_obj)
+
+        from src.prescription.intelligence.intelligence_aggregator import PrescriptionEvidenceIntelligenceAnalyzer
+        intel_profile = PrescriptionEvidenceIntelligenceAnalyzer.analyze(report_obj, struct_analysis, self.reasoner)
+
+        from src.api.advanced_schemas import (
+            PrescriptionEvidenceIntelligenceProfileSchema,
+            EvidenceThemeSchema,
+            CrossPairSignalGroupSchema,
+            EvidenceConcentrationProfileSchema,
+            StructuralEvidenceAlignmentSchema,
+            DrugAlignmentProfileSchema,
+            EvidenceIntelligenceSummarySchema
+        )
+
+        return PrescriptionEvidenceIntelligenceProfileSchema(
+            analysis_id=intel_profile.analysis_id,
+            generated_at=intel_profile.generated_at,
+            themes=[
+                EvidenceThemeSchema(
+                    theme_id=t.theme_id,
+                    theme_name=t.theme_name,
+                    description=t.description,
+                    mapped_events=t.mapped_events,
+                    supporting_pairs=t.supporting_pairs,
+                    participating_drugs=t.participating_drugs,
+                    supporting_evidence_count=t.supporting_evidence_count,
+                    convergent_pair_count=t.convergent_pair_count,
+                    source_channels=t.source_channels
+                ) for t in intel_profile.themes
+            ],
+            signal_groups=[
+                CrossPairSignalGroupSchema(
+                    group_id=sg.group_id,
+                    theme_id=sg.theme_id,
+                    supporting_pairs=sg.supporting_pairs,
+                    participating_drugs=sg.participating_drugs,
+                    supporting_events=sg.supporting_events,
+                    channel_distribution=sg.channel_distribution,
+                    convergent_pair_count=sg.convergent_pair_count,
+                    reinforcement_score=sg.reinforcement_score,
+                    reinforcement_level=sg.reinforcement_level.value
+                ) for sg in intel_profile.signal_groups
+            ],
+            concentration_profile=EvidenceConcentrationProfileSchema(
+                concentration_type=intel_profile.concentration_profile.concentration_type.value,
+                edge_coverage_ratio=intel_profile.concentration_profile.edge_coverage_ratio,
+                dominant_drug_id=intel_profile.concentration_profile.dominant_drug_id,
+                dominant_drug_share=intel_profile.concentration_profile.dominant_drug_share,
+                dominant_cluster_id=intel_profile.concentration_profile.dominant_cluster_id,
+                dominant_cluster_edge_share=intel_profile.concentration_profile.dominant_cluster_edge_share
+            ) if intel_profile.concentration_profile else None,
+            structural_evidence_alignment=StructuralEvidenceAlignmentSchema(
+                alignment_level=intel_profile.structural_evidence_alignment.alignment_level.value,
+                explanation=intel_profile.structural_evidence_alignment.explanation,
+                drug_alignment_profiles=[
+                    DrugAlignmentProfileSchema(
+                        drug_id=dap.drug_id,
+                        display_name=dap.display_name,
+                        structural_rank=dap.structural_rank,
+                        evidence_participation_rank=dap.evidence_participation_rank,
+                        theme_participation_rank=dap.theme_participation_rank,
+                        convergent_evidence_rank=dap.convergent_evidence_rank,
+                        alignment_score=dap.alignment_score,
+                        alignment_level=dap.alignment_level.value
+                    ) for dap in intel_profile.structural_evidence_alignment.drug_alignment_profiles
+                ]
+            ) if intel_profile.structural_evidence_alignment else None,
+            summary=EvidenceIntelligenceSummarySchema(
+                major_theme_count=intel_profile.summary.major_theme_count,
+                reinforced_signal_group_count=intel_profile.summary.reinforced_signal_group_count,
+                dominant_theme=intel_profile.summary.dominant_theme,
+                dominant_evidence_concentration=intel_profile.summary.dominant_evidence_concentration.value,
+                strongest_reinforcement_level=intel_profile.summary.strongest_reinforcement_level.value,
+                highest_alignment_level=intel_profile.summary.highest_alignment_level.value,
+                overall_intelligence_pattern=intel_profile.summary.overall_intelligence_pattern
+            ) if intel_profile.summary else None,
+            narrative=intel_profile.narrative,
+            guardrails=intel_profile.guardrails
+        )
+
+    def get_intelligence_themes(self, analysis_id: str):
+        intel = self.get_evidence_intelligence(analysis_id)
+        return intel.themes if intel else None
+
+    def get_intelligence_signals(self, analysis_id: str):
+        intel = self.get_evidence_intelligence(analysis_id)
+        return intel.signal_groups if intel else None
+
+    def get_intelligence_concentration(self, analysis_id: str):
+        intel = self.get_evidence_intelligence(analysis_id)
+        return intel.concentration_profile if intel else None
+
+    def get_intelligence_alignment(self, analysis_id: str):
+        intel = self.get_evidence_intelligence(analysis_id)
+        return intel.structural_evidence_alignment if intel else None
+
+    def get_contextual_stability(self, analysis_id: str):
+        report_obj = self._report_objects.get(analysis_id)
+        if not report_obj:
+            return None
+        
+        from src.prescription.structural.prescription_structural_analyzer import PrescriptionStructuralAnalyzer
+        struct_analysis = PrescriptionStructuralAnalyzer.analyze(report_obj)
+
+        from src.prescription.contextual.contextual_aggregator import ContextualStabilityAggregator
+        stability_profile = ContextualStabilityAggregator.analyze(report_obj, struct_analysis, self.reasoner)
+
+        from src.api.advanced_schemas import (
+            ContextualStabilityProfileSchema,
+            ScenarioProfileSchema,
+            EvidenceStabilityScoreSchema,
+            SignalPersistenceSchema,
+            ContextSensitivitySchema,
+            DrugDependencyImpactSchema
+        )
+
+        return ContextualStabilityProfileSchema(
+            analysis_id=stability_profile.analysis_id,
+            generated_at=stability_profile.generated_at,
+            scenarios=[
+                ScenarioProfileSchema(
+                    scenario_id=s.scenario_id,
+                    scenario_type=s.scenario_type.value,
+                    included_drugs=s.included_drugs,
+                    excluded_drugs=s.excluded_drugs,
+                    surviving_edges_count=s.surviving_edges_count,
+                    surviving_convergent_edges_count=s.surviving_convergent_edges_count,
+                    surviving_themes_count=s.surviving_themes_count,
+                    prescription_status=s.prescription_status,
+                    topology_classification=s.topology_classification,
+                    dominant_theme=s.dominant_theme,
+                    evidence_concentration=s.evidence_concentration,
+                    reinforcement_level_distribution=s.reinforcement_level_distribution
+                ) for s in stability_profile.scenarios
+            ],
+            evidence_stability=EvidenceStabilityScoreSchema(
+                overall_stability_score=stability_profile.evidence_stability.overall_stability_score,
+                pair_preservation_ratio=stability_profile.evidence_stability.pair_preservation_ratio,
+                convergent_preservation_ratio=stability_profile.evidence_stability.convergent_preservation_ratio,
+                theme_preservation_ratio=stability_profile.evidence_stability.theme_preservation_ratio,
+                structural_edge_preservation_ratio=stability_profile.evidence_stability.structural_edge_preservation_ratio
+            ),
+            signal_persistences=[
+                SignalPersistenceSchema(
+                    theme_name=sp.theme_name,
+                    persistence_score=sp.persistence_score,
+                    persistence_level=sp.persistence_level
+                ) for sp in stability_profile.signal_persistences
+            ],
+            context_sensitivity=ContextSensitivitySchema(
+                overall_sensitivity_score=stability_profile.context_sensitivity.overall_sensitivity_score,
+                sensitivity_level=stability_profile.context_sensitivity.sensitivity_level,
+                status_change_rate=stability_profile.context_sensitivity.status_change_rate,
+                topology_change_rate=stability_profile.context_sensitivity.topology_change_rate,
+                theme_change_rate=stability_profile.context_sensitivity.theme_change_rate
+            ),
+            drug_dependencies=[
+                DrugDependencyImpactSchema(
+                    drug_id=dep.drug_id,
+                    display_name=dep.display_name,
+                    dependency_score=dep.dependency_score,
+                    dependency_level=dep.dependency_level,
+                    edge_loss_ratio=dep.edge_loss_ratio,
+                    theme_loss_ratio=dep.theme_loss_ratio,
+                    structural_connectivity_loss_ratio=dep.structural_connectivity_loss_ratio
+                ) for dep in stability_profile.drug_dependencies
+            ],
+            interpretation_stability=stability_profile.interpretation_stability.value,
+            summary_narrative=stability_profile.summary_narrative,
+            guardrails=stability_profile.guardrails
+        )
+
+    def get_contextual_scenarios(self, analysis_id: str):
+        prof = self.get_contextual_stability(analysis_id)
+        return prof.scenarios if prof else None
+
+    def get_contextual_metrics(self, analysis_id: str):
+        prof = self.get_contextual_stability(analysis_id)
+        return prof.evidence_stability if prof else None
+
+    def get_contextual_dependency(self, analysis_id: str):
+        prof = self.get_contextual_stability(analysis_id)
+        return prof.drug_dependencies if prof else None
+
     def analyze_prescription_advanced(self, medications: List[str], prescription_id: Optional[str] = None):
-        from advanced_intelligence_service import AdvancedIntelligenceService
-        from api.advanced_schemas import (
+        from src.prescription.advanced_intelligence_service import AdvancedIntelligenceService
+        from src.prescription.structural.prescription_structural_analyzer import PrescriptionStructuralAnalyzer
+        from src.prescription.intelligence.intelligence_aggregator import PrescriptionEvidenceIntelligenceAnalyzer
+        from src.prescription.contextual.contextual_aggregator import ContextualStabilityAggregator
+        from src.api.advanced_schemas import (
             AdvancedPrescriptionAnalysisResponse,
             ComplexityProfileSchema,
             DrugParticipationProfileSchema,
@@ -389,12 +737,47 @@ class PrescriptionService:
             ReviewPriorityFindingSchema,
             UncertaintyProfileSchema,
             ClinicalContextRequirementSchema,
-            AdvancedExplanationSchema
+            AdvancedExplanationSchema,
+            # Phase 8 structural schemas
+            PrescriptionStructuralAnalysisSchema,
+            NetworkSummarySchema,
+            TopologyClassificationSchema,
+            ClusterMetricsSchema,
+            DrugStructuralProfileSchema,
+            CounterfactualResultSchema,
+            PrescriptionEvidenceNetworkSchema,
+            PrescriptionEvidenceNodeSchema,
+            PrescriptionEvidenceEdgeSchema,
+            StructuralInterpretationSchema,
+            # Phase 9 intelligence schemas
+            PrescriptionEvidenceIntelligenceProfileSchema,
+            EvidenceThemeSchema,
+            CrossPairSignalGroupSchema,
+            EvidenceConcentrationProfileSchema,
+            StructuralEvidenceAlignmentSchema,
+            DrugAlignmentProfileSchema,
+            EvidenceIntelligenceSummarySchema,
+            # Phase 10 contextual schemas
+            ContextualStabilityProfileSchema,
+            ScenarioProfileSchema,
+            EvidenceStabilityScoreSchema,
+            SignalPersistenceSchema,
+            ContextSensitivitySchema,
+            DrugDependencyImpactSchema
         )
 
         base_res = self.analyze_prescription(medications, prescription_id)
         adv_service = AdvancedIntelligenceService(self.reasoner)
         report_obj, adv_report = adv_service.analyze_advanced(medications, base_res.metadata.analysis_id)
+
+        # Execute Phase 8 structural safety analysis
+        struct_analysis = PrescriptionStructuralAnalyzer.analyze(report_obj)
+
+        # Execute Phase 9 evidence intelligence analysis
+        intel_profile = PrescriptionEvidenceIntelligenceAnalyzer.analyze(report_obj, struct_analysis, self.reasoner)
+
+        # Execute Phase 10 contextual stability analysis
+        stability_profile = ContextualStabilityAggregator.analyze(report_obj, struct_analysis, self.reasoner)
 
         return AdvancedPrescriptionAnalysisResponse(
             prescription_report=base_res,
@@ -492,8 +875,935 @@ class PrescriptionService:
                 uncertainty_summary=adv_report.advanced_explanation.uncertainty_summary,
                 scientific_guardrails=adv_report.advanced_explanation.scientific_guardrails
             ),
-            scientific_limitations=adv_report.scientific_limitations
+            scientific_limitations=adv_report.scientific_limitations,
+            # Phase 8 Structural Analysis Integration
+            structural_analysis=PrescriptionStructuralAnalysisSchema(
+                analysis_id=struct_analysis.analysis_id,
+                generated_at=struct_analysis.generated_at,
+                network_summary=NetworkSummarySchema(
+                    total_prescription_drugs=struct_analysis.network_summary.total_prescription_drugs,
+                    evidence_connected_drugs=struct_analysis.network_summary.evidence_connected_drugs,
+                    structurally_isolated_drugs=struct_analysis.network_summary.structurally_isolated_drugs,
+                    total_possible_pairs=struct_analysis.network_summary.total_possible_pairs,
+                    evidence_supported_pairs=struct_analysis.network_summary.evidence_supported_pairs,
+                    network_density=struct_analysis.network_summary.network_density,
+                    connected_cluster_count=struct_analysis.network_summary.connected_cluster_count,
+                    largest_cluster_size=struct_analysis.network_summary.largest_cluster_size,
+                    convergent_edge_count=struct_analysis.network_summary.convergent_edge_count,
+                    ddi_only_edge_count=struct_analysis.network_summary.ddi_only_edge_count,
+                    combination_event_edge_count=struct_analysis.network_summary.combination_event_edge_count
+                ),
+                topology=TopologyClassificationSchema(
+                    primary_topology=struct_analysis.topology.primary_topology.value,
+                    secondary_characteristics=struct_analysis.topology.secondary_characteristics
+                ),
+                clusters=[
+                    ClusterMetricsSchema(
+                        cluster_id=c.cluster_id,
+                        drug_ids=c.drug_ids,
+                        edge_count=c.edge_count,
+                        density=c.density,
+                        convergent_edge_count=c.convergent_edge_count,
+                        ddi_only_edge_count=c.ddi_only_edge_count,
+                        combination_event_edge_count=c.combination_event_edge_count,
+                        is_isolated=c.is_isolated
+                    ) for c in struct_analysis.clusters
+                ],
+                drug_structural_profiles=[
+                    DrugStructuralProfileSchema(
+                        drug_id=dp.drug_id,
+                        display_name=dp.display_name,
+                        evidence_degree=dp.evidence_degree,
+                        weighted_evidence_degree=dp.weighted_evidence_degree,
+                        degree_centrality=dp.degree_centrality,
+                        betweenness_centrality=dp.betweenness_centrality,
+                        evidence_channel_diversity=dp.evidence_channel_diversity,
+                        convergent_relationship_count=dp.convergent_relationship_count,
+                        ddi_only_relationship_count=dp.ddi_only_relationship_count,
+                        combination_only_relationship_count=dp.combination_only_relationship_count,
+                        cluster_id=dp.cluster_id,
+                        cluster_size=dp.cluster_size,
+                        centrality_rank=dp.centrality_rank,
+                        structural_contribution_level=dp.structural_contribution_level,
+                        structural_contribution_score=dp.structural_contribution_score,
+                        explanation=dp.explanation
+                    ) for dp in struct_analysis.drug_structural_profiles
+                ],
+                ranked_structural_contributors=[
+                    DrugStructuralProfileSchema(
+                        drug_id=dp.drug_id,
+                        display_name=dp.display_name,
+                        evidence_degree=dp.evidence_degree,
+                        weighted_evidence_degree=dp.weighted_evidence_degree,
+                        degree_centrality=dp.degree_centrality,
+                        betweenness_centrality=dp.betweenness_centrality,
+                        evidence_channel_diversity=dp.evidence_channel_diversity,
+                        convergent_relationship_count=dp.convergent_relationship_count,
+                        ddi_only_relationship_count=dp.ddi_only_relationship_count,
+                        combination_only_relationship_count=dp.combination_only_relationship_count,
+                        cluster_id=dp.cluster_id,
+                        cluster_size=dp.cluster_size,
+                        centrality_rank=dp.centrality_rank,
+                        structural_contribution_level=dp.structural_contribution_level,
+                        structural_contribution_score=dp.structural_contribution_score,
+                        explanation=dp.explanation
+                    ) for dp in struct_analysis.ranked_structural_contributors
+                ],
+                counterfactual_results=[
+                    CounterfactualResultSchema(
+                        drug_id=cf.drug_id,
+                        display_name=cf.display_name,
+                        original_edge_count=cf.original_edge_count,
+                        remaining_edge_count=cf.remaining_edge_count,
+                        structural_delta=cf.structural_delta,
+                        convergent_edges_removed=cf.convergent_edges_removed,
+                        clusters_before=cf.clusters_before,
+                        clusters_after=cf.clusters_after,
+                        largest_cluster_before=cf.largest_cluster_before,
+                        largest_cluster_after=cf.largest_cluster_after,
+                        contribution_level=cf.contribution_level.value,
+                        explanation=cf.explanation
+                    ) for cf in struct_analysis.counterfactual_results
+                ],
+                original_network=PrescriptionEvidenceNetworkSchema(
+                    nodes={
+                        k: PrescriptionEvidenceNodeSchema(
+                            drug_id=node.drug_id,
+                            display_name=node.display_name
+                        ) for k, node in struct_analysis.original_network.nodes.items()
+                    },
+                    edges={
+                        k: PrescriptionEvidenceEdgeSchema(
+                            drug_a_id=edge.drug_a_id,
+                            drug_b_id=edge.drug_b_id,
+                            evidence_status=edge.evidence_status,
+                            confidence_score=edge.confidence_score,
+                            priority_tier=edge.priority_tier,
+                            structural_weight=edge.structural_weight,
+                            edge_strength=edge.edge_strength,
+                            canonical_pair_key=edge.canonical_pair_key
+                        ) for k, edge in struct_analysis.original_network.edges.items()
+                    },
+                    canonical_drug_ids=struct_analysis.original_network.canonical_drug_ids
+                ),
+                structural_interpretation=StructuralInterpretationSchema(
+                    highest_participation_drug=struct_analysis.structural_interpretation.highest_participation_drug,
+                    highest_participation_degree=struct_analysis.structural_interpretation.highest_participation_degree,
+                    network_connectivity_narration=struct_analysis.structural_interpretation.network_connectivity_narration,
+                    counterfactual_impact_narration=struct_analysis.structural_interpretation.counterfactual_impact_narration,
+                    clinical_warning=struct_analysis.structural_interpretation.clinical_warning
+                ),
+                scientific_guardrails=struct_analysis.scientific_guardrails
+            ),
+            evidence_intelligence=PrescriptionEvidenceIntelligenceProfileSchema(
+                analysis_id=intel_profile.analysis_id,
+                generated_at=intel_profile.generated_at,
+                themes=[
+                    EvidenceThemeSchema(
+                        theme_id=t.theme_id,
+                        theme_name=t.theme_name,
+                        description=t.description,
+                        mapped_events=t.mapped_events,
+                        supporting_pairs=t.supporting_pairs,
+                        participating_drugs=t.participating_drugs,
+                        supporting_evidence_count=t.supporting_evidence_count,
+                        convergent_pair_count=t.convergent_pair_count,
+                        source_channels=t.source_channels
+                    ) for t in intel_profile.themes
+                ],
+                signal_groups=[
+                    CrossPairSignalGroupSchema(
+                        group_id=sg.group_id,
+                        theme_id=sg.theme_id,
+                        supporting_pairs=sg.supporting_pairs,
+                        participating_drugs=sg.participating_drugs,
+                        supporting_events=sg.supporting_events,
+                        channel_distribution=sg.channel_distribution,
+                        convergent_pair_count=sg.convergent_pair_count,
+                        reinforcement_score=sg.reinforcement_score,
+                        reinforcement_level=sg.reinforcement_level.value
+                    ) for sg in intel_profile.signal_groups
+                ],
+                concentration_profile=EvidenceConcentrationProfileSchema(
+                    concentration_type=intel_profile.concentration_profile.concentration_type.value,
+                    edge_coverage_ratio=intel_profile.concentration_profile.edge_coverage_ratio,
+                    dominant_drug_id=intel_profile.concentration_profile.dominant_drug_id,
+                    dominant_drug_share=intel_profile.concentration_profile.dominant_drug_share,
+                    dominant_cluster_id=intel_profile.concentration_profile.dominant_cluster_id,
+                    dominant_cluster_edge_share=intel_profile.concentration_profile.dominant_cluster_edge_share
+                ) if intel_profile.concentration_profile else None,
+                structural_evidence_alignment=StructuralEvidenceAlignmentSchema(
+                    alignment_level=intel_profile.structural_evidence_alignment.alignment_level.value,
+                    explanation=intel_profile.structural_evidence_alignment.explanation,
+                    drug_alignment_profiles=[
+                        DrugAlignmentProfileSchema(
+                            drug_id=dap.drug_id,
+                            display_name=dap.display_name,
+                            structural_rank=dap.structural_rank,
+                            evidence_participation_rank=dap.evidence_participation_rank,
+                            theme_participation_rank=dap.theme_participation_rank,
+                            convergent_evidence_rank=dap.convergent_evidence_rank,
+                            alignment_score=dap.alignment_score,
+                            alignment_level=dap.alignment_level.value
+                        ) for dap in intel_profile.structural_evidence_alignment.drug_alignment_profiles
+                    ]
+                ) if intel_profile.structural_evidence_alignment else None,
+                summary=EvidenceIntelligenceSummarySchema(
+                    major_theme_count=intel_profile.summary.major_theme_count,
+                    reinforced_signal_group_count=intel_profile.summary.reinforced_signal_group_count,
+                    dominant_theme=intel_profile.summary.dominant_theme,
+                    dominant_evidence_concentration=intel_profile.summary.dominant_evidence_concentration.value,
+                    strongest_reinforcement_level=intel_profile.summary.strongest_reinforcement_level.value,
+                    highest_alignment_level=intel_profile.summary.highest_alignment_level.value,
+                    overall_intelligence_pattern=intel_profile.summary.overall_intelligence_pattern
+                ) if intel_profile.summary else None,
+                narrative=intel_profile.narrative,
+                guardrails=intel_profile.guardrails
+            ),
+            contextual_stability=ContextualStabilityProfileSchema(
+                analysis_id=stability_profile.analysis_id,
+                generated_at=stability_profile.generated_at,
+                scenarios=[
+                    ScenarioProfileSchema(
+                        scenario_id=s.scenario_id,
+                        scenario_type=s.scenario_type.value,
+                        included_drugs=s.included_drugs,
+                        excluded_drugs=s.excluded_drugs,
+                        surviving_edges_count=s.surviving_edges_count,
+                        surviving_convergent_edges_count=s.surviving_convergent_edges_count,
+                        surviving_themes_count=s.surviving_themes_count,
+                        prescription_status=s.prescription_status,
+                        topology_classification=s.topology_classification,
+                        dominant_theme=s.dominant_theme,
+                        evidence_concentration=s.evidence_concentration,
+                        reinforcement_level_distribution=s.reinforcement_level_distribution
+                    ) for s in stability_profile.scenarios
+                ],
+                evidence_stability=EvidenceStabilityScoreSchema(
+                    overall_stability_score=stability_profile.evidence_stability.overall_stability_score,
+                    pair_preservation_ratio=stability_profile.evidence_stability.pair_preservation_ratio,
+                    convergent_preservation_ratio=stability_profile.evidence_stability.convergent_preservation_ratio,
+                    theme_preservation_ratio=stability_profile.evidence_stability.theme_preservation_ratio,
+                    structural_edge_preservation_ratio=stability_profile.evidence_stability.structural_edge_preservation_ratio
+                ),
+                signal_persistences=[
+                    SignalPersistenceSchema(
+                        theme_name=sp.theme_name,
+                        persistence_score=sp.persistence_score,
+                        persistence_level=sp.persistence_level
+                    ) for sp in stability_profile.signal_persistences
+                ],
+                context_sensitivity=ContextSensitivitySchema(
+                    overall_sensitivity_score=stability_profile.context_sensitivity.overall_sensitivity_score,
+                    sensitivity_level=stability_profile.context_sensitivity.sensitivity_level,
+                    status_change_rate=stability_profile.context_sensitivity.status_change_rate,
+                    topology_change_rate=stability_profile.context_sensitivity.topology_change_rate,
+                    theme_change_rate=stability_profile.context_sensitivity.theme_change_rate
+                ),
+                drug_dependencies=[
+                    DrugDependencyImpactSchema(
+                        drug_id=dep.drug_id,
+                        display_name=dep.display_name,
+                        dependency_score=dep.dependency_score,
+                        dependency_level=dep.dependency_level,
+                        edge_loss_ratio=dep.edge_loss_ratio,
+                        theme_loss_ratio=dep.theme_loss_ratio,
+                        structural_connectivity_loss_ratio=dep.structural_connectivity_loss_ratio
+                    ) for dep in stability_profile.drug_dependencies
+                ],
+                interpretation_stability=stability_profile.interpretation_stability.value,
+                summary_narrative=stability_profile.summary_narrative,
+                guardrails=stability_profile.guardrails
+            ),
+            explainability=self.get_explainability_profile(base_res.metadata.analysis_id),
+            trustworthiness=self.get_trustworthiness_profile(base_res.metadata.analysis_id)
         )
+
+    def get_trustworthiness_profile(self, analysis_id: str):
+        report_obj = self._report_objects.get(analysis_id)
+        if not report_obj:
+            return None
+
+        # Re-resolve all layers deterministically
+        from src.prescription.structural.prescription_structural_analyzer import PrescriptionStructuralAnalyzer
+        struct_analysis = PrescriptionStructuralAnalyzer.analyze(report_obj)
+
+        from src.prescription.intelligence.intelligence_aggregator import PrescriptionEvidenceIntelligenceAnalyzer
+        intel_profile = PrescriptionEvidenceIntelligenceAnalyzer.analyze(report_obj, struct_analysis, self.reasoner)
+
+        from src.prescription.contextual.contextual_aggregator import ContextualStabilityAggregator
+        stability_profile = ContextualStabilityAggregator.analyze(report_obj, struct_analysis, self.reasoner)
+
+        explainability_profile = self.get_explainability_profile(analysis_id)
+
+        # Baseline medications extracted from resolved drugs list
+        meds = []
+        if report_obj.resolution_summary:
+            for d in report_obj.resolution_summary.resolved_drugs:
+                meds.append(getattr(d, "original_input", ""))
+
+        # Define wrapper call for the perturbation runner
+        def run_analysis_wrapper(inputs: List[str]):
+            # Runs advanced analysis in memory using ADV service
+            from src.prescription.advanced_intelligence_service import AdvancedIntelligenceService
+            adv_service = AdvancedIntelligenceService(self.reasoner)
+            # Use mock ID for perturbation run
+            r_obj, _ = adv_service.analyze_advanced(inputs, f"PERT_{analysis_id}")
+            return r_obj
+
+        from src.prescription.trustworthiness.trustworthiness_aggregator import TrustworthinessAggregator
+        trust_profile = TrustworthinessAggregator.analyze_trustworthiness(
+            baseline_meds=meds,
+            baseline_report=report_obj,
+            structural_analysis=struct_analysis,
+            evidence_intelligence=intel_profile,
+            contextual_stability=stability_profile,
+            explainability_profile=explainability_profile,
+            analyze_func=run_analysis_wrapper
+        )
+
+        from src.api.advanced_schemas import (
+            PrescriptionTrustworthinessProfileSchema,
+            ReproducibilityProfileSchema,
+            InputPerturbationResultSchema,
+            StructuralRobustnessProfileSchema,
+            SignalRobustnessProfileSchema,
+            CrossLayerConsistencyProfileSchema,
+            ProvenanceCompletenessProfileSchema,
+            ExplanationConsistencyProfileSchema,
+            TrustworthinessMetricSchema
+        )
+
+        return PrescriptionTrustworthinessProfileSchema(
+            prescription_id=trust_profile.prescription_id,
+            analysis_id=trust_profile.analysis_id,
+            generated_at=trust_profile.generated_at,
+            reproducibility_profile=ReproducibilityProfileSchema(
+                baseline_signature=trust_profile.reproducibility_profile.baseline_signature,
+                repeat_run_signatures=trust_profile.reproducibility_profile.repeat_run_signatures,
+                deterministic_match_ratio=trust_profile.reproducibility_profile.deterministic_match_ratio,
+                classification=trust_profile.reproducibility_profile.classification.value,
+                mismatched_components=trust_profile.reproducibility_profile.mismatched_components
+            ),
+            input_perturbation_results=[
+                InputPerturbationResultSchema(
+                    perturbation_id=p.perturbation_id,
+                    perturbation_type=p.perturbation_type.value,
+                    baseline_signature=p.baseline_signature,
+                    perturbed_signature=p.perturbed_signature,
+                    invariant_components=p.invariant_components,
+                    changed_components=p.changed_components,
+                    classification=p.classification.value
+                ) for p in trust_profile.input_perturbation_results
+            ],
+            structural_robustness=StructuralRobustnessProfileSchema(
+                baseline_topology=trust_profile.structural_robustness.baseline_topology,
+                scenario_topology_distribution=trust_profile.structural_robustness.scenario_topology_distribution,
+                topology_persistence_ratio=trust_profile.structural_robustness.topology_persistence_ratio,
+                cluster_persistence_ratio=trust_profile.structural_robustness.cluster_persistence_ratio,
+                central_participant_persistence=trust_profile.structural_robustness.central_participant_persistence,
+                robustness_level=trust_profile.structural_robustness.robustness_level.value
+            ),
+            signal_robustness_profiles=[
+                SignalRobustnessProfileSchema(
+                    theme_id=sr.theme_id,
+                    baseline_present=sr.baseline_present,
+                    scenario_presence_ratio=sr.scenario_presence_ratio,
+                    reinforcement_stability=sr.reinforcement_stability,
+                    classification=sr.classification.value
+                ) for sr in trust_profile.signal_robustness_profiles
+            ],
+            cross_layer_consistency=CrossLayerConsistencyProfileSchema(
+                structural_dominant_participants=trust_profile.cross_layer_consistency.structural_dominant_participants,
+                evidence_dominant_participants=trust_profile.cross_layer_consistency.evidence_dominant_participants,
+                dependency_dominant_participants=trust_profile.cross_layer_consistency.dependency_dominant_participants,
+                primary_contributors=trust_profile.cross_layer_consistency.primary_contributors,
+                shared_participants=trust_profile.cross_layer_consistency.shared_participants,
+                consistency_level=trust_profile.cross_layer_consistency.consistency_level.value,
+                explanation=trust_profile.cross_layer_consistency.explanation
+            ),
+            provenance_completeness=ProvenanceCompletenessProfileSchema(
+                traceability_coverage=trust_profile.provenance_completeness.traceability_coverage,
+                average_provenance_depth=trust_profile.provenance_completeness.average_provenance_depth,
+                orphaned_component_count=trust_profile.provenance_completeness.orphaned_component_count,
+                cross_layer_traceability=trust_profile.provenance_completeness.cross_layer_traceability,
+                completeness_level=trust_profile.provenance_completeness.completeness_level
+            ),
+            explanation_consistency=ExplanationConsistencyProfileSchema(
+                claims_checked=trust_profile.explanation_consistency.claims_checked,
+                claims_supported=trust_profile.explanation_consistency.claims_supported,
+                unsupported_claims=trust_profile.explanation_consistency.unsupported_claims,
+                consistency_ratio=trust_profile.explanation_consistency.consistency_ratio,
+                classification=trust_profile.explanation_consistency.classification
+            ),
+            trustworthiness_metrics=[
+                TrustworthinessMetricSchema(
+                    metric_id=tm.metric_id,
+                    metric_name=tm.metric_name,
+                    value=tm.value,
+                    normalized_value=tm.normalized_value,
+                    classification=tm.classification,
+                    description=tm.description
+                ) for tm in trust_profile.trustworthiness_metrics
+            ],
+            overall_trustworthiness_level=trust_profile.overall_trustworthiness_level.value,
+            executive_summary=trust_profile.executive_summary,
+            guardrails=trust_profile.guardrails
+        )
+
+    def get_trustworthiness_reproducibility(self, analysis_id: str):
+        prof = self.get_trustworthiness_profile(analysis_id)
+        return prof.reproducibility_profile if prof else None
+
+    def get_trustworthiness_perturbations(self, analysis_id: str):
+        prof = self.get_trustworthiness_profile(analysis_id)
+        return prof.input_perturbation_results if prof else None
+
+    def get_trustworthiness_structure(self, analysis_id: str):
+        prof = self.get_trustworthiness_profile(analysis_id)
+        return prof.structural_robustness if prof else None
+
+    def get_trustworthiness_signals(self, analysis_id: str):
+        prof = self.get_trustworthiness_profile(analysis_id)
+        return prof.signal_robustness_profiles if prof else None
+
+    def get_trustworthiness_cross_layer(self, analysis_id: str):
+        prof = self.get_trustworthiness_profile(analysis_id)
+        return prof.cross_layer_consistency if prof else None
+
+    def get_trustworthiness_provenance(self, analysis_id: str):
+        prof = self.get_trustworthiness_profile(analysis_id)
+        return prof.provenance_completeness if prof else None
+
+    def get_trustworthiness_explanation_consistency(self, analysis_id: str):
+        prof = self.get_trustworthiness_profile(analysis_id)
+        return prof.explanation_consistency if prof else None
+
+    def get_explainability_profile(self, analysis_id: str):
+        report_obj = self._report_objects.get(analysis_id)
+        if not report_obj:
+            return None
+
+        from src.prescription.structural.prescription_structural_analyzer import PrescriptionStructuralAnalyzer
+        struct_analysis = PrescriptionStructuralAnalyzer.analyze(report_obj)
+
+        from src.prescription.intelligence.intelligence_aggregator import PrescriptionEvidenceIntelligenceAnalyzer
+        intel_profile = PrescriptionEvidenceIntelligenceAnalyzer.analyze(report_obj, struct_analysis, self.reasoner)
+
+        from src.prescription.contextual.contextual_aggregator import ContextualStabilityAggregator
+        stability_profile = ContextualStabilityAggregator.analyze(report_obj, struct_analysis, self.reasoner)
+
+        from src.prescription.explainability.explainability_aggregator import ExplainabilityAggregator
+        explainability_aggregator = ExplainabilityAggregator()
+        exp_profile = explainability_aggregator.generate_explainability_profile(
+            analysis_result=report_obj,
+            structural_analysis=struct_analysis,
+            evidence_intelligence=intel_profile,
+            contextual_stability=stability_profile
+        )
+
+        from src.api.advanced_schemas import (
+            PrescriptionExplainabilityProfileSchema,
+            ExplanationGraphSchema,
+            ExplanationNodeSchema,
+            ExplanationEdgeSchema,
+            ContributionProfileSchema,
+            DecisionDependencyMapSchema,
+            DependencyNodeSchema,
+            TraceabilityProfileSchema,
+            SourceProvenanceRecordSchema,
+            StructuredExplanationClaimSchema
+        )
+
+        return PrescriptionExplainabilityProfileSchema(
+            prescription_id=exp_profile.prescription_id,
+            analysis_id=exp_profile.analysis_id,
+            generated_at=exp_profile.generated_at,
+            explanation_graph=ExplanationGraphSchema(
+                nodes=[
+                    ExplanationNodeSchema(
+                        node_id=n.node_id,
+                        node_type=n.node_type.value,
+                        label=n.label,
+                        description=n.description,
+                        phase_origin=n.phase_origin,
+                        source_reference=n.source_reference,
+                        metadata=n.metadata
+                    ) for n in exp_profile.explanation_graph.nodes
+                ],
+                edges=[
+                    ExplanationEdgeSchema(
+                        edge_id=e.edge_id,
+                        source_node_id=e.source_node_id,
+                        target_node_id=e.target_node_id,
+                        relationship_type=e.relationship_type.value,
+                        contribution_weight=e.contribution_weight,
+                        description=e.description
+                    ) for e in exp_profile.explanation_graph.edges
+                ],
+                root_node_ids=exp_profile.explanation_graph.root_node_ids,
+                leaf_node_ids=exp_profile.explanation_graph.leaf_node_ids
+            ),
+            contribution_profiles=[
+                ContributionProfileSchema(
+                    entity_id=cp.entity_id,
+                    entity_label=cp.entity_label,
+                    entity_type=cp.entity_type,
+                    direct_decision_contribution=cp.direct_decision_contribution,
+                    evidence_coverage=cp.evidence_coverage,
+                    cross_layer_participation=cp.cross_layer_participation,
+                    dependency_impact=cp.dependency_impact,
+                    overall_contribution_score=cp.overall_contribution_score,
+                    contribution_level=cp.contribution_level.value,
+                    participating_phases=cp.participating_phases,
+                    explanation=cp.explanation
+                ) for cp in exp_profile.contribution_profiles
+            ],
+            dependency_map=DecisionDependencyMapSchema(
+                target_interpretation_id=exp_profile.dependency_map.target_interpretation_id,
+                dependencies=[
+                    DependencyNodeSchema(
+                        entity_id=d.entity_id,
+                        entity_label=d.entity_label,
+                        entity_type=d.entity_type,
+                        depends_on_ids=d.depends_on_ids,
+                        dependency_weight=d.dependency_weight,
+                        critical_dependency=d.critical_dependency
+                    ) for d in exp_profile.dependency_map.dependencies
+                ],
+                critical_path_entities=exp_profile.dependency_map.critical_path_entities,
+                acyclic_verified=exp_profile.dependency_map.acyclic_verified
+            ),
+            traceability_profile=TraceabilityProfileSchema(
+                total_components_evaluated=exp_profile.traceability_profile.total_components_evaluated,
+                traceable_components_count=exp_profile.traceability_profile.traceable_components_count,
+                traceability_coverage_score=exp_profile.traceability_profile.traceability_coverage_score,
+                average_provenance_depth=exp_profile.traceability_profile.average_provenance_depth,
+                max_provenance_depth=exp_profile.traceability_profile.max_provenance_depth,
+                orphaned_components_count=exp_profile.traceability_profile.orphaned_components_count,
+                orphaned_component_ids=exp_profile.traceability_profile.orphaned_component_ids,
+                cross_layer_traceability=exp_profile.traceability_profile.cross_layer_traceability.value
+            ),
+            provenance_records=[
+                SourceProvenanceRecordSchema(
+                    source_id=pr.source_id,
+                    dataset_name=pr.dataset_name,
+                    record_type=pr.record_type,
+                    external_identifier=pr.external_identifier,
+                    description=pr.description,
+                    is_available=pr.is_available
+                ) for pr in exp_profile.provenance_records
+            ],
+            structured_claims=[
+                StructuredExplanationClaimSchema(
+                    claim_id=sc.claim_id,
+                    claim_type=sc.claim_type,
+                    claim_text=sc.claim_text,
+                    referenced_entity_ids=sc.referenced_entity_ids,
+                    is_supported=sc.is_supported,
+                    supporting_evidence_ids=sc.supporting_evidence_ids
+                ) for sc in exp_profile.structured_claims
+            ],
+            narrative=exp_profile.narrative,
+            guardrails=exp_profile.guardrails
+        )
+
+    def get_explainability_graph(self, analysis_id: str):
+        prof = self.get_explainability_profile(analysis_id)
+        return prof.explanation_graph if prof else None
+
+    def get_explainability_provenance(self, analysis_id: str):
+        prof = self.get_explainability_profile(analysis_id)
+        return prof.provenance_records if prof else None
+
+    def get_explainability_contributors(self, analysis_id: str):
+        prof = self.get_explainability_profile(analysis_id)
+        return prof.contribution_profiles if prof else None
+
+    def get_explainability_dependencies(self, analysis_id: str):
+        prof = self.get_explainability_profile(analysis_id)
+        return prof.dependency_map if prof else None
+
+    def get_explainability_traceability(self, analysis_id: str):
+        prof = self.get_explainability_profile(analysis_id)
+        return prof.traceability_profile if prof else None
+
+    def compare_prescriptions(self, analysis_id_a: str, analysis_id_b: str):
+        from src.prescription.comparison.comparison_aggregator import PrescriptionComparativeIntelligenceEngine
+        profile = PrescriptionComparativeIntelligenceEngine.compare(analysis_id_a, analysis_id_b, self)
+        self._comparison_profiles[profile.comparison_id] = profile
+        return self.get_comparison_profile(profile.comparison_id)
+
+    def get_comparison_profile(self, comparison_id: str):
+        profile = self._comparison_profiles.get(comparison_id)
+        if not profile:
+            return None
+        
+        from src.api.advanced_schemas import (
+            PrescriptionComparativeIntelligenceProfileSchema,
+            MedicationSetComparisonSchema,
+            EvidenceDeltaSchema,
+            PairComparisonSchema,
+            StructuralDeltaSchema,
+            DrugRankComparisonSchema,
+            SignalDeltaSchema,
+            ThemeComparisonSchema,
+            StabilityDeltaSchema,
+            ComparisonMetricSchema,
+            MajorChangeSchema,
+            ComparisonSummarySchema
+        )
+
+        return PrescriptionComparativeIntelligenceProfileSchema(
+            comparison_id=profile.comparison_id,
+            analysis_id_a=profile.analysis_id_a,
+            analysis_id_b=profile.analysis_id_b,
+            medication_set_comparison=MedicationSetComparisonSchema(
+                shared_drugs=profile.medication_set_comparison.shared_drugs,
+                a_only_drugs=profile.medication_set_comparison.a_only_drugs,
+                b_only_drugs=profile.medication_set_comparison.b_only_drugs
+            ),
+            evidence_delta=EvidenceDeltaSchema(
+                pair_comparisons=[
+                    PairComparisonSchema(
+                        canonical_pair_key=p.canonical_pair_key,
+                        drug_a_id=p.drug_a_id,
+                        drug_b_id=p.drug_b_id,
+                        drug_a_name=p.drug_a_name,
+                        drug_b_name=p.drug_b_name,
+                        evidence_status_a=p.evidence_status_a,
+                        evidence_status_b=p.evidence_status_b,
+                        change_type=p.change_type.value
+                    ) for p in profile.evidence_delta.pair_comparisons
+                ],
+                added_pairs_count=profile.evidence_delta.added_pairs_count,
+                removed_pairs_count=profile.evidence_delta.removed_pairs_count,
+                reclassified_pairs_count=profile.evidence_delta.reclassified_pairs_count,
+                preserved_pairs_count=profile.evidence_delta.preserved_pairs_count
+            ),
+            structural_delta=StructuralDeltaSchema(
+                node_count_a=profile.structural_delta.node_count_a,
+                node_count_b=profile.structural_delta.node_count_b,
+                node_count_delta=profile.structural_delta.node_count_delta,
+                edge_count_a=profile.structural_delta.edge_count_a,
+                edge_count_b=profile.structural_delta.edge_count_b,
+                edge_count_delta=profile.structural_delta.edge_count_delta,
+                density_a=profile.structural_delta.density_a,
+                density_b=profile.structural_delta.density_b,
+                density_delta=profile.structural_delta.density_delta,
+                cluster_count_a=profile.structural_delta.cluster_count_a,
+                cluster_count_b=profile.structural_delta.cluster_count_b,
+                cluster_count_delta=profile.structural_delta.cluster_count_delta,
+                topology_a=profile.structural_delta.topology_a,
+                topology_b=profile.structural_delta.topology_b,
+                topology_changed=profile.structural_delta.topology_changed,
+                dominant_drug_a=profile.structural_delta.dominant_drug_a,
+                dominant_drug_b=profile.structural_delta.dominant_drug_b,
+                dominant_drug_changed=profile.structural_delta.dominant_drug_changed,
+                rank_comparisons=[
+                    DrugRankComparisonSchema(
+                        drug_id=rc.drug_id,
+                        display_name=rc.display_name,
+                        rank_a=rc.rank_a,
+                        rank_b=rc.rank_b,
+                        rank_delta=rc.rank_delta,
+                        normalized_position_a=rc.normalized_position_a,
+                        normalized_position_b=rc.normalized_position_b,
+                        normalized_position_delta=rc.normalized_position_delta
+                    ) for rc in profile.structural_delta.rank_comparisons
+                ],
+                structural_delta_magnitude=profile.structural_delta.structural_delta_magnitude
+            ),
+            signal_delta=SignalDeltaSchema(
+                theme_comparisons=[
+                    ThemeComparisonSchema(
+                        theme_name=tc.theme_name,
+                        reinforcement_score_a=tc.reinforcement_score_a,
+                        reinforcement_score_b=tc.reinforcement_score_b,
+                        reinforcement_level_a=tc.reinforcement_level_a,
+                        reinforcement_level_b=tc.reinforcement_level_b,
+                        supporting_pairs_a=tc.supporting_pairs_a,
+                        supporting_pairs_b=tc.supporting_pairs_b,
+                        participating_drugs_a=tc.participating_drugs_a,
+                        participating_drugs_b=tc.participating_drugs_b,
+                        change_type=tc.change_type.value
+                    ) for tc in profile.signal_delta.theme_comparisons
+                ],
+                concentration_type_a=profile.signal_delta.concentration_type_a,
+                concentration_type_b=profile.signal_delta.concentration_type_b,
+                concentration_changed=profile.signal_delta.concentration_changed,
+                alignment_level_a=profile.signal_delta.alignment_level_a,
+                alignment_level_b=profile.signal_delta.alignment_level_b,
+                alignment_changed=profile.signal_delta.alignment_changed
+            ),
+            stability_delta=StabilityDeltaSchema(
+                stability_score_a=profile.stability_delta.stability_score_a,
+                stability_score_b=profile.stability_delta.stability_score_b,
+                stability_score_delta=profile.stability_delta.stability_score_delta,
+                sensitivity_score_a=profile.stability_delta.sensitivity_score_a,
+                sensitivity_score_b=profile.stability_delta.sensitivity_score_b,
+                sensitivity_score_delta=profile.stability_delta.sensitivity_score_delta,
+                interpretation_stability_a=profile.stability_delta.interpretation_stability_a,
+                interpretation_stability_b=profile.stability_delta.interpretation_stability_b,
+                stability_change_type=profile.stability_delta.stability_change_type.value
+            ),
+            comparison_metrics=[
+                ComparisonMetricSchema(
+                    metric_name=cm.metric_name,
+                    value_a=cm.value_a,
+                    value_b=cm.value_b,
+                    raw_difference=cm.raw_difference,
+                    normalized_difference=cm.normalized_difference
+                ) for cm in profile.comparison_metrics
+            ],
+            major_changes=[
+                MajorChangeSchema(
+                    category=mc.category,
+                    change_type=mc.change_type,
+                    affected_entities=mc.affected_entities,
+                    magnitude=mc.magnitude,
+                    description=mc.description
+                ) for mc in profile.major_changes
+            ],
+            preserved_characteristics=profile.preserved_characteristics,
+            summary=ComparisonSummarySchema(
+                total_evidence_changes=profile.summary.total_evidence_changes,
+                total_structural_changes=profile.summary.total_structural_changes,
+                total_signal_changes=profile.summary.total_signal_changes,
+                stability_shift=profile.summary.stability_shift,
+                global_delta_interpretation=profile.summary.global_delta_interpretation
+            ),
+            narrative=profile.narrative,
+            guardrails=profile.guardrails
+        )
+
+    def get_comparison_evidence(self, comparison_id: str):
+        prof = self.get_comparison_profile(comparison_id)
+        return prof.evidence_delta if prof else None
+
+    def get_comparison_structure(self, comparison_id: str):
+        prof = self.get_comparison_profile(comparison_id)
+        return prof.structural_delta if prof else None
+
+    def get_comparison_signals(self, comparison_id: str):
+        prof = self.get_comparison_profile(comparison_id)
+        return prof.signal_delta if prof else None
+
+    def get_comparison_stability(self, comparison_id: str):
+        prof = self.get_comparison_profile(comparison_id)
+        return prof.stability_delta if prof else None
+
+    # --- Phase 13 Longitudinal Evolution Service Methods ---
+    def create_longitudinal_profile(self, analysis_ids: List[str]):
+        if not hasattr(self, "_longitudinal_profiles"):
+            self._longitudinal_profiles = {}
+
+        # Resolve all matching cached snapshot report objects
+        snapshots = []
+        for aid in analysis_ids:
+            snap = self._report_objects.get(aid)
+            if snap:
+                # We need to enrich it with explainability and trustworthiness so aggregator gets them
+                if not hasattr(snap, "explainability") or snap.explainability is None:
+                    snap.explainability = self.get_explainability_profile(aid)
+                if not hasattr(snap, "trustworthiness") or snap.trustworthiness is None:
+                    snap.trustworthiness = self.get_trustworthiness_profile(aid)
+                snapshots.append(snap)
+
+        if not snapshots:
+            return None
+
+        from src.prescription.longitudinal.longitudinal_aggregator import LongitudinalAggregator
+        profile = LongitudinalAggregator.aggregate_longitudinal_profile(snapshots)
+
+        longitudinal_id = "LONG_" + "_".join(sorted(analysis_ids))
+        self._longitudinal_profiles[longitudinal_id] = profile
+        return longitudinal_id
+
+    def get_longitudinal_profile(self, longitudinal_id: str):
+        if not hasattr(self, "_longitudinal_profiles"):
+            return None
+        prof = self._longitudinal_profiles.get(longitudinal_id)
+        if not prof:
+            return None
+
+        from src.api.advanced_schemas import (
+            PrescriptionLongitudinalProfileSchema,
+            PrescriptionSnapshotReferenceSchema,
+            PersistenceProfileSchema,
+            EmergenceEventSchema,
+            DisappearanceEventSchema,
+            LongitudinalChangePointSchema,
+            StructuralEvolutionProfileSchema,
+            SignalEvolutionProfileSchema,
+            StabilityEvolutionProfileSchema,
+            TrustworthinessEvolutionProfileSchema,
+            CrossLayerEvolutionProfileSchema
+        )
+
+        return PrescriptionLongitudinalProfileSchema(
+            timeline=[
+                PrescriptionSnapshotReferenceSchema(
+                    analysis_id=t.analysis_id,
+                    prescription_id=t.prescription_id,
+                    snapshot_timestamp=t.snapshot_timestamp,
+                    sequence_index=t.sequence_index,
+                    position_type=t.position_type.value,
+                    medications=t.medications
+                ) for t in prof.timeline
+            ],
+            persistence_profiles=[
+                PersistenceProfileSchema(
+                    entity_id=p.entity_id,
+                    entity_type=p.entity_type,
+                    presence_ratio=p.presence_ratio,
+                    longest_consecutive_run=p.longest_consecutive_run,
+                    first_seen_index=p.first_seen_index,
+                    last_seen_index=p.last_seen_index,
+                    persistence_level=p.persistence_level.value
+                ) for p in prof.persistence_profiles
+            ],
+            emergence_events=[
+                EmergenceEventSchema(
+                    entity_id=e.entity_id,
+                    entity_type=e.entity_type,
+                    emergence_index=e.emergence_index,
+                    previously_absent_count=e.previously_absent_count,
+                    post_emergence_persistence=e.post_emergence_persistence,
+                    classification=e.classification.value
+                ) for e in prof.emergence_events
+            ],
+            disappearance_events=[
+                DisappearanceEventSchema(
+                    entity_id=d.entity_id,
+                    entity_type=d.entity_type,
+                    disappearance_index=d.disappearance_index,
+                    previously_present_count=d.previously_present_count,
+                    post_disappearance_absence_ratio=d.post_disappearance_absence_ratio,
+                    classification=d.classification.value
+                ) for d in prof.disappearance_events
+            ],
+            change_points=[
+                LongitudinalChangePointSchema(
+                    from_snapshot_index=cp.from_snapshot_index,
+                    to_snapshot_index=cp.to_snapshot_index,
+                    structural_change=cp.structural_change,
+                    signal_change=cp.signal_change,
+                    stability_change=cp.stability_change,
+                    trustworthiness_change=cp.trustworthiness_change,
+                    medication_set_change=cp.medication_set_change,
+                    aggregate_change_score=cp.aggregate_change_score,
+                    change_level=cp.change_level.value,
+                    contributing_dimensions=cp.contributing_dimensions
+                ) for cp in prof.change_points
+            ],
+            structural_evolution=StructuralEvolutionProfileSchema(
+                topology_sequence=prof.structural_evolution.topology_sequence,
+                density_sequence=prof.structural_evolution.density_sequence,
+                central_participant_sequence=prof.structural_evolution.central_participant_sequence,
+                cluster_count_sequence=prof.structural_evolution.cluster_count_sequence,
+                topology_transition_count=prof.structural_evolution.topology_transition_count,
+                structural_change_points=prof.structural_evolution.structural_change_points,
+                classification=prof.structural_evolution.classification.value
+            ),
+            signal_evolution=[
+                SignalEvolutionProfileSchema(
+                    theme_id=s.theme_id,
+                    presence_sequence=s.presence_sequence,
+                    reinforcement_sequence=s.reinforcement_sequence,
+                    rank_sequence=s.rank_sequence,
+                    persistence_ratio=s.persistence_ratio,
+                    emergence_events=[
+                        EmergenceEventSchema(
+                            entity_id=e.entity_id,
+                            entity_type=e.entity_type,
+                            emergence_index=e.emergence_index,
+                            previously_absent_count=e.previously_absent_count,
+                            post_emergence_persistence=e.post_emergence_persistence,
+                            classification=e.classification.value
+                        ) for e in s.emergence_events
+                    ],
+                    disappearance_events=[
+                        DisappearanceEventSchema(
+                            entity_id=d.entity_id,
+                            entity_type=d.entity_type,
+                            disappearance_index=d.disappearance_index,
+                            previously_present_count=d.previously_present_count,
+                            post_disappearance_absence_ratio=d.post_disappearance_absence_ratio,
+                            classification=d.classification.value
+                        ) for d in s.disappearance_events
+                    ],
+                    classification=s.classification.value
+                ) for s in prof.signal_evolution
+            ],
+            stability_evolution=StabilityEvolutionProfileSchema(
+                stability_sequence=prof.stability_evolution.stability_sequence,
+                sensitivity_sequence=prof.stability_evolution.sensitivity_sequence,
+                transition_count=prof.stability_evolution.transition_count,
+                classification=prof.stability_evolution.classification.value
+            ),
+            trustworthiness_evolution=TrustworthinessEvolutionProfileSchema(
+                score_sequence=prof.trustworthiness_evolution.score_sequence,
+                level_sequence=prof.trustworthiness_evolution.level_sequence,
+                score_delta_sequence=prof.trustworthiness_evolution.score_delta_sequence,
+                mean_score=prof.trustworthiness_evolution.mean_score,
+                score_volatility=prof.trustworthiness_evolution.score_volatility,
+                classification=prof.trustworthiness_evolution.classification.value
+            ),
+            cross_layer_evolution=CrossLayerEvolutionProfileSchema(
+                structural_persistence=prof.cross_layer_evolution.structural_persistence,
+                signal_persistence=prof.cross_layer_evolution.signal_persistence,
+                stability_persistence=prof.cross_layer_evolution.stability_persistence,
+                provenance_persistence=prof.cross_layer_evolution.provenance_persistence,
+                trustworthiness_persistence=prof.cross_layer_evolution.trustworthiness_persistence,
+                cross_layer_transition_alignment=prof.cross_layer_evolution.cross_layer_transition_alignment,
+                classification=prof.cross_layer_evolution.classification,
+                explanation=prof.cross_layer_evolution.explanation
+            ),
+            overall_evolution_level=prof.overall_evolution_level.value,
+            longitudinal_summary=prof.longitudinal_summary,
+            guardrails=prof.guardrails
+        )
+
+    def get_longitudinal_timeline(self, longitudinal_id: str):
+        prof = self.get_longitudinal_profile(longitudinal_id)
+        return prof.timeline if prof else None
+
+    def get_longitudinal_persistence(self, longitudinal_id: str):
+        prof = self.get_longitudinal_profile(longitudinal_id)
+        return prof.persistence_profiles if prof else None
+
+    def get_longitudinal_emergence(self, longitudinal_id: str):
+        prof = self.get_longitudinal_profile(longitudinal_id)
+        return prof.emergence_events if prof else None
+
+    def get_longitudinal_disappearance(self, longitudinal_id: str):
+        prof = self.get_longitudinal_profile(longitudinal_id)
+        return prof.disappearance_events if prof else None
+
+    def get_longitudinal_change_points(self, longitudinal_id: str):
+        prof = self.get_longitudinal_profile(longitudinal_id)
+        return prof.change_points if prof else None
+
+    def get_structural_evolution(self, longitudinal_id: str):
+        prof = self.get_longitudinal_profile(longitudinal_id)
+        return prof.structural_evolution if prof else None
+
+    def get_signal_evolution(self, longitudinal_id: str):
+        prof = self.get_longitudinal_profile(longitudinal_id)
+        return prof.signal_evolution if prof else None
+
+    def get_stability_evolution(self, longitudinal_id: str):
+        prof = self.get_longitudinal_profile(longitudinal_id)
+        return prof.stability_evolution if prof else None
+
+    def get_trustworthiness_evolution(self, longitudinal_id: str):
+        prof = self.get_longitudinal_profile(longitudinal_id)
+        return prof.trustworthiness_evolution if prof else None
+
+    def get_cross_layer_evolution(self, longitudinal_id: str):
+        prof = self.get_longitudinal_profile(longitudinal_id)
+        return prof.cross_layer_evolution if prof else None
 
 # Global singleton service instance
 service_instance: Optional[PrescriptionService] = None

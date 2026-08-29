@@ -22,6 +22,12 @@ frontend/node_modules/
 frontend/dist/
 dist/
 
+# Python virtual environments
+.venv/
+env/
+venv/
+ENV/
+
 # Python cache, pytest & logs
 __pycache__/
 frontend/__pycache__/
@@ -33,5 +39,6 @@ api/__pycache__/
 .DS_Store
 .pytest_cache/
 .coverage
+coverage/
 htmlcov/
 
