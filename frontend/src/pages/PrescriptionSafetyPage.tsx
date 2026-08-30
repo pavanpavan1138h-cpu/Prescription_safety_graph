@@ -264,12 +264,12 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                   }}
                 >
                   <option value="intelligence">Intelligence Overview</option>
-                  <option value="explainability">Traceability & Explainability (Phase 11)</option>
-                  <option value="trustworthiness">Computational Trustworthiness (Phase 12)</option>
-                  <option value="longitudinal">Prescription Evolution (Phase 13)</option>
-                  <option value="structure">Structural Safety (Phase 8)</option>
-                  <option value="synthesis">Evidence Synthesis (Phase 9)</option>
-                  <option value="contextual">Contextual Stability (Phase 10)</option>
+                  <option value="explainability">Traceability & Explainability</option>
+                  <option value="trustworthiness">Computational Trustworthiness</option>
+                  <option value="longitudinal">Prescription Evolution</option>
+                  <option value="structure">Structural Safety</option>
+                  <option value="synthesis">Evidence Synthesis</option>
+                  <option value="contextual">Contextual Stability</option>
                   <option value="comparison">Comparative Intelligence</option>
                   <option value="findings">Pairwise Findings</option>
                   <option value="graph">Interactive Graph</option>

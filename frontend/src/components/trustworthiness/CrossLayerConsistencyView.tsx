@@ -63,28 +63,28 @@ export const CrossLayerConsistencyView: React.FC<CrossLayerConsistencyViewProps>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem', marginTop: '0.25rem' }}>
           
           <div style={{ padding: '0.75rem', borderRadius: '6px', backgroundColor: '#0c1020', border: '1px solid #1e293b' }}>
-            <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.25rem' }}>Phase 8 Structural hubs</span>
+            <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.25rem' }}>Structural hubs</span>
             <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#fff' }}>
               {consistency.structural_dominant_participants.join(', ') || 'None'}
             </span>
           </div>
 
           <div style={{ padding: '0.75rem', borderRadius: '6px', backgroundColor: '#0c1020', border: '1px solid #1e293b' }}>
-            <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.25rem' }}>Phase 9 Evidence hubs</span>
+            <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.25rem' }}>Evidence hubs</span>
             <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#fff' }}>
               {consistency.evidence_dominant_participants.join(', ') || 'None'}
             </span>
           </div>
 
           <div style={{ padding: '0.75rem', borderRadius: '6px', backgroundColor: '#0c1020', border: '1px solid #1e293b' }}>
-            <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.25rem' }}>Phase 10 Dependency hubs</span>
+            <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.25rem' }}>Dependency hubs</span>
             <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#fff' }}>
               {consistency.dependency_dominant_participants.join(', ') || 'None'}
             </span>
           </div>
 
           <div style={{ padding: '0.75rem', borderRadius: '6px', backgroundColor: '#0c1020', border: '1px solid #1e293b' }}>
-            <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.25rem' }}>Phase 11 Primary contributors</span>
+            <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.25rem' }}>Primary contributors</span>
             <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#fff' }}>
               {consistency.primary_contributors.join(', ') || 'None'}
             </span>

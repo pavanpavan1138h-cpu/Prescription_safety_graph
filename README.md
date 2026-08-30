@@ -45,29 +45,29 @@ We construct a unified **Biomedical Identity Crosswalk & Resolution Layer** to c
                                  IDENTITY RESOLUTION CROSSWALK
                                               │
                                               ▼
-                                 PHASE 4 FROZEN KNOWLEDGE GRAPH
+                                 UNIFIED FROZEN KNOWLEDGE GRAPH
                         (68,223 Nodes | 4,969,811 Directed & Reified Edges)
                                               │
                                               ▼
-                              PHASE 5-6 PAIRWISE EVIDENCE INFERENCE
+                             PAIRWISE EVIDENCE & RULES INFERENCE
                                               │
                                               ▼
-                            PHASE 8 MULTI-DRUG PRESCRIPTION REASONER
+                            MULTI-DRUG PRESCRIPTION GRAPH REASONER
                                               │
                              ┌────────────────┴────────────────┐
                              ▼                                 ▼
-                     PHASE 9 EVIDENCE                  PHASE 10 CONTEXTUAL
-                        SYNTHESIS                          STABILITY
+                     EVIDENCE SYNTHESIS                CONTEXTUAL STABILITY
+                       & THEMES ENGINE                   & PERTURBATION
                              │                                 │
                              └────────────────┬────────────────┘
                                               ▼
-                                 PHASE 11 PROVENANCE EXPLAINER
+                                 PROVENANCE TRACING EXPLAINER
                                               │
                                               ▼
-                                 PHASE 12 COMPUTATIONAL TRUST
+                                COMPUTATIONAL TRUSTWORTHINESS
                                               │
                                               ▼
-                                PHASE 13 LONGITUDINAL TIMELINE
+                                 LONGITUDINAL TIMELINE ENGINE
                                               │
                        ┌──────────────────────┴──────────────────────┐
                        ▼                                             ▼
@@ -90,18 +90,18 @@ The system operates as an immutable pipeline. Raw drug listings are resolved, ma
 
 ---
 
-## 7. Phase-by-Phase Capabilities
-* **Phases 1–3: Extraction & Crosswalk**: Extracted structured records; resolved synonym aliases to unique canonical drugs.
-* **Phase 4: Unified Knowledge Graph**: Assembled 68,223 nodes and 4,969,811 edges into binary storage formats for high-speed sub-millisecond retrieval.
-* **Phase 5: Pairwise Safety Inference**: Applied deterministic rules mapping pairs to four categories of graph evidence.
-* **Phase 6: Multi-Drug Prescription Aggregator**: Evaluates network structures, computing drug participation levels and clinical narratives.
-* **Phase 7: REST API & Cytoscape visualizer**: Served async endpoints and rendered query-driven interactive subgraphs.
-* **Phase 8: Advanced Structural & Signal Intelligence**: Integrated Complexity category levels, convergence detection, and review priority tiers.
-* **Phase 9: Signal Synthesis & Theme Detection**: Identifies toxicological themes reinforcing across multiple pairs.
-* **Phase 10: Contextual Stability & Perturbation**: Simulates dose/comorbidity variations to flag context-sensitive edges.
-* **Phase 11: Traceability & Explainability**: Exposes structured JSON lineage trees matching conclusions to input nodes.
-* **Phase 12: Robustness & Computational Trustworthiness**: Computes reproducibility and consistency indexes (0.0 to 1.0).
-* **Phase 13: Longitudinal Evolution & Change Intelligence**: Tracks persistence ratios, emergences, disappearances, and change points over multiple chronological snapshots.
+## 7. Functional Capabilities
+* **Ingestion, Extraction & Crosswalk**: Extracts structured records and resolves synonym aliases to unique canonical drugs.
+* **Unified Knowledge Graph**: Integrates 68,223 nodes and 4,969,811 edges into binary storage formats for high-speed sub-millisecond retrieval.
+* **Pairwise Safety Inference**: Applies deterministic rules mapping pairs to four categories of graph evidence.
+* **Multi-Drug Prescription Aggregator**: Evaluates network structures, computing drug participation levels and clinical narratives.
+* **REST API & Cytoscape Visualizer**: Serves async endpoints and renders query-driven interactive subgraphs.
+* **Advanced Structural & Signal Intelligence**: Integrates Complexity category levels, convergence detection, and review priority tiers.
+* **Signal Synthesis & Theme Detection**: Identifies toxicological themes reinforcing across multiple pairs.
+* **Contextual Stability & Perturbation**: Simulates dose/comorbidity variations to flag context-sensitive edges.
+* **Traceability & Explainability**: Exposes structured JSON lineage trees matching conclusions to input nodes.
+* **Robustness & Computational Trustworthiness**: Computes reproducibility and consistency indexes (0.0 to 1.0).
+* **Longitudinal Evolution & Change Intelligence**: Tracks persistence ratios, emergences, disappearances, and change points over multiple chronological snapshots.
 
 ---
 
@@ -122,10 +122,10 @@ Prescription_safety_graph/
 │   ├── data/                   # Data loader, dictionary & database interfaces
 │   ├── graph/                  # Graph builders & network construction
 │   ├── prescription/           # Polypharmacy aggregators, resolvers, and intelligence modules
-│   │   ├── advanced/           # Complexity, event convergence & priority engines (Phases 8-10)
-│   │   ├── explainability/     # Traceability, explainability, & JSON lineages (Phase 11)
-│   │   ├── trustworthiness/    # Robustness, perturbation, & scoring engines (Phase 12)
-│   │   └── longitudinal/       # Persistence, change-points, & timelines (Phase 13)
+│   │   ├── advanced/           # Complexity, event convergence & priority engines
+│   │   ├── explainability/     # Traceability, explainability, & JSON lineages
+│   │   ├── trustworthiness/    # Robustness, perturbation, & scoring engines
+│   │   └── longitudinal/       # Persistence, change-points, & timelines
 │   ├── reasoning/              # Pairwise rule engines
 │   └── runners/                # Command-line validation and validation runners
 │
@@ -143,11 +143,11 @@ Prescription_safety_graph/
 │   ├── architecture/
 │   ├── evaluation/
 │   ├── methodology/
-│   ├── phases/
+│   ├── stages/
 │   └── safety/
 │
 ├── outputs/                    # Output logs, reports and screenshots
-│   ├── validation/             # Validation runner outputs for phases 11-13
+│   ├── validation/             # Validation runner outputs
 │   ├── examples/               # Output JSON report examples
 │   └── screenshots/
 │
@@ -244,7 +244,7 @@ We enforce comprehensive test coverage (33 unit/integration tests).
 # Run pytest test suite
 PYTHONPATH=. pytest tests/ -v
 
-# Run Phase 13 Longitudinal Validation runner
+# Run Longitudinal Validation runner
 PYTHONPATH=. python src/runners/prescription/run_longitudinal_validation.py
 ```
 
@@ -267,7 +267,7 @@ PYTHONPATH=. python src/runners/prescription/run_longitudinal_validation.py
 ---
 
 ## 18. Current Status
-* **Core Engines (Phases 1-13)**: 100% complete and fully verified.
+* **Core Engines**: 100% complete and fully verified.
 * **API Endpoints**: 100% integrated.
 * **Web UI Panels**: Fully mounted and validated under static build compilation.
 * **Test Coverage**: All 33 tests passing with 0 errors.

@@ -10,7 +10,7 @@ export const ProvenanceCompletenessView: React.FC<ProvenanceCompletenessViewProp
   const covPercent = Math.round(provenance.traceability_coverage * 100);
 
   return (
-    <Card title="Evidentiary Provenance Completeness & Depth" subtitle="Re-evaluates Phase 11 coverage statistics to verify auditability">
+    <Card title="Evidentiary Provenance Completeness & Depth" subtitle="Re-evaluates metadata coverage statistics to verify auditability">
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
         
         {/* Coverage Header */}

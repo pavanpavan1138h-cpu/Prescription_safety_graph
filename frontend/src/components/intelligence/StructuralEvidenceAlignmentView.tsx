@@ -11,7 +11,7 @@ export const StructuralEvidenceAlignmentView: React.FC<StructuralEvidenceAlignme
   alignment
 }) => {
   return (
-    <Card title="Structural Hub & Evidence Alignment" subtitle="Cross-references network centrality rankings (Phase 8) against direct evidence participation ranks (Phase 9)">
+    <Card title="Structural Hub & Evidence Alignment" subtitle="Cross-references network centrality rankings against direct evidence participation ranks">
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
         {/* Global Alignment Row */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>

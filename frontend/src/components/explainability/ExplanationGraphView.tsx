@@ -8,6 +8,19 @@ interface ExplanationGraphViewProps {
 }
 
 export const ExplanationGraphView: React.FC<ExplanationGraphViewProps> = ({ graph }) => {
+  const mapPhaseName = (phase: string) => {
+    if (!phase) return "";
+    const p = phase.toLowerCase();
+    if (p.includes("phase 8")) return "Structural Safety";
+    if (p.includes("phase 9")) return "Evidence Synthesis";
+    if (p.includes("phase 10")) return "Contextual Stability";
+    if (p.includes("phase 11")) return "Explainability";
+    if (p.includes("phase 12")) return "Trustworthiness";
+    if (p.includes("phase 13")) return "Prescription Evolution";
+    if (p.includes("phase 5") || p.includes("phase 6")) return "Safety Inference";
+    return phase.replace(/Phase /gi, "Stage ");
+  };
+
   const getNodeColor = (type: string) => {
     switch (type) {
       case 'FINAL_INTERPRETATION':
@@ -81,7 +94,7 @@ export const ExplanationGraphView: React.FC<ExplanationGraphViewProps> = ({ grap
                     color,
                     fontWeight: 600
                   }}>
-                    {n.phase_origin}
+                    {mapPhaseName(n.phase_origin)}
                   </span>
                 </div>
 
