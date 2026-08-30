@@ -1,15 +1,15 @@
-# 💊 Prescription Safety Knowledge Graph Platform & Clinical Intelligence Engine
+# Prescription Safety Knowledge Graph Platform & Clinical Intelligence Engine
 
 A deterministic, provenance-preserving Biomedical Knowledge Graph and Advanced Clinical Intelligence Platform. Operates over an integrated multi-source graph containing **68,223 nodes** and **4,969,811 edges** (built from DrugBank, TWOSIDES, and RxNorm) to provide structured polypharmacy safety reasoning, cross-pair adverse event convergence, evidence pattern detection, interactive subgraph visualization, reverse explainability lineage tracing, computational robustness scoring, and longitudinal evolution tracking.
 
 ---
 
-## 🌟 1. Project Identity
+## 1. Project Identity
 The **Prescription Safety Graph** is a flagship biomedical informatics platform designed to trace, evaluate, and visualize safety signals across polypharmacy prescriptions. Unlike stochastic black-box AI models, this platform employs a multi-layered deterministic reasoning engine grounded in a large-scale frozen knowledge graph compiled from curated pharmaceutical, chemical, and pharmacovigilance databases.
 
 ---
 
-## ⚠️ 2. The Problem
+## 2. The Problem
 Polypharmacy—the simultaneous administration of multiple medications—is a leading cause of Adverse Drug Events (ADEs) and preventable hospitalization. Detecting drug-drug interactions (DDIs) is exceptionally challenging because:
 * **Heterogeneous Biomedical Identifiers**: Clinicians, pharmacies, and databases use disparate terminologies (e.g., brand names, generic names, RxCUIs, DrugBank IDs, PubChem/TWOSIDES CIDs), causing fragmented tracking.
 * **Complex Polypharmacy Networks**: A prescription with $N$ medications contains $N(N-1)/2$ potential pairwise interactions. The safety profile is not just the sum of its parts; it is a complex structural network.
@@ -17,7 +17,7 @@ Polypharmacy—the simultaneous administration of multiple medications—is a le
 
 ---
 
-## 🔍 3. Why Existing Approaches Are Limited
+## 3. Why Existing Approaches Are Limited
 1. **Siloed Databases**: Most DDI lookup tools check a single source, missing the synergy between structured regulatory labels and real-world post-market surveillance.
 2. **Lack of Explainability**: Modern deep learning models can predict DDIs but fail to provide a machine-readable, audit-ready computational trail explaining *why* a conclusion was reached.
 3. **No Robustness Benchmarking**: Predictions are rarely evaluated for computational stability under minor input perturbations, duplicate identity claims, or contextual shifts.
@@ -25,7 +25,7 @@ Polypharmacy—the simultaneous administration of multiple medications—is a le
 
 ---
 
-## 💡 4. Our Core Idea
+## 4. Our Core Idea
 We construct a unified **Biomedical Identity Crosswalk & Resolution Layer** to collapse duplicate representations into canonical Drug entities (`DRUG_xxxxxx`). On top of this clean graph foundation, we layer:
 1. **Evidence Channel Convergence**: Checking regulatory assertions alongside real-world spontaneous reports.
 2. **Context-Aware Structural Intelligence**: Evaluating network centrality and topological properties of the drug interaction graph.
@@ -35,7 +35,7 @@ We construct a unified **Biomedical Identity Crosswalk & Resolution Layer** to c
 
 ---
 
-## 📐 5. Complete System Architecture
+## 5. Complete System Architecture
 
 ```text
                                 CANONICAL BIOMEDICAL SOURCES
@@ -77,7 +77,7 @@ We construct a unified **Biomedical Identity Crosswalk & Resolution Layer** to c
 
 ---
 
-## 🧬 6. Intelligence Pipeline
+## 6. Intelligence Pipeline
 The system operates as an immutable pipeline. Raw drug listings are resolved, mapped to the knowledge graph, and evaluated across consecutive layers:
 1. **Resolution & Crosswalk**: collates duplicate inputs, resolving them to canonical DrugBank IDs.
 2. **Retrieval**: Pulls reified relationship subgraphs from Zarr/Pandas indexes.
@@ -90,7 +90,7 @@ The system operates as an immutable pipeline. Raw drug listings are resolved, ma
 
 ---
 
-## 🗓️ 7. Phase-by-Phase Capabilities
+## 7. Phase-by-Phase Capabilities
 * **Phases 1–3: Extraction & Crosswalk**: Extracted structured records; resolved synonym aliases to unique canonical drugs.
 * **Phase 4: Unified Knowledge Graph**: Assembled 68,223 nodes and 4,969,811 edges into binary storage formats for high-speed sub-millisecond retrieval.
 * **Phase 5: Pairwise Safety Inference**: Applied deterministic rules mapping pairs to four categories of graph evidence.
@@ -105,14 +105,14 @@ The system operates as an immutable pipeline. Raw drug listings are resolved, ma
 
 ---
 
-## 💻 8. Technology Stack
+## 8. Technology Stack
 * **Backend**: Python 3.12, FastAPI, Pydantic, Pytest, Uvicorn, Pandas, NetworkX.
 * **Frontend**: React 18, TypeScript, Vite, Cytoscape.js, Lucide React.
 * **Styling**: Vanilla CSS (TailwindCSS avoided for absolute control), CSS Variables, Glassmorphism design system.
 
 ---
 
-## 📂 9. Repository Directory Structure
+## 9. Repository Directory Structure
 ```text
 Prescription_safety_graph/
 │
@@ -162,7 +162,7 @@ Prescription_safety_graph/
 
 ---
 
-## ⚙️ 10. Installation
+## 10. Installation
 ### 1. Configure Python Environment
 ```bash
 # Verify Python version (3.12 recommended)
@@ -185,7 +185,7 @@ cd ..
 
 ---
 
-## 🏃 11. Running the Backend
+## 11. Running the Backend
 ```bash
 # Start backend FastAPI app on port 8000
 PYTHONPATH=. python -m uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
@@ -194,7 +194,7 @@ Swagger UI docs are automatically available at: [http://localhost:8000/docs](htt
 
 ---
 
-## 🌐 12. Running the Frontend
+## 12. Running the Frontend
 ```bash
 # Start Dev server
 cd frontend
@@ -212,7 +212,7 @@ PYTHONPATH=. python -m uvicorn src.api.main:app --host 0.0.0.0 --port 8000
 
 ---
 
-## 📡 13. API Overview
+## 13. API Overview
 Key advanced intelligence endpoints:
 * `POST /api/v1/prescriptions/analyze-advanced`: Triggers detailed multi-drug analysis including structural patterns, contextual requirements, and prior reviews.
 * `GET /api/v1/analyses/{analysis_id}/explainability`: Fetches explanation lineage nodes and rules fired.
@@ -222,7 +222,7 @@ Key advanced intelligence endpoints:
 
 ---
 
-## 📑 14. Example Workflow
+## 14. Example Workflow
 To simulate the complete pipeline:
 1. POST an analysis of baseline medication list (`cyclosporine`, `fluconazole`):
    ```json
@@ -238,7 +238,7 @@ To simulate the complete pipeline:
 
 ---
 
-## 🧪 15. Validation & Testing
+## 15. Validation & Testing
 We enforce comprehensive test coverage (33 unit/integration tests).
 ```bash
 # Run pytest test suite
@@ -250,7 +250,7 @@ PYTHONPATH=. python src/runners/prescription/run_longitudinal_validation.py
 
 ---
 
-## 🛡️ 16. Safety & Clinical Guardrails
+## 16. Safety & Clinical Guardrails
 1. **No Diagnostic Outcomes**: This platform does not predict patient diagnostic outcomes, medical deterioration, efficacy, or therapeutic superiority.
 2. **Computational Scale**: review priority scores and trustworthiness markers indicate graph evidence density, not clinical severity.
 3. **Context Sensitivity**: Unresolved items (missing Renal clearance, eGFR, dose concentration) are systematically flagged to prevent over-reliance on raw interaction links.
@@ -259,14 +259,14 @@ PYTHONPATH=. python src/runners/prescription/run_longitudinal_validation.py
 
 ---
 
-## 📚 17. Data / Knowledge Sources
+## 17. Data / Knowledge Sources
 * **DrugBank**: FDA-approved regulatory drug-drug interaction linkages.
 * **TWOSIDES**: Spontaneous adverse event reports tracking synergistic combination signals.
 * **RxNorm**: Standardized clinical drug names, concept mapping, and semantic relation graphs.
 
 ---
 
-## 📈 18. Current Status
+## 18. Current Status
 * **Core Engines (Phases 1-13)**: 100% complete and fully verified.
 * **API Endpoints**: 100% integrated.
 * **Web UI Panels**: Fully mounted and validated under static build compilation.
@@ -274,18 +274,18 @@ PYTHONPATH=. python src/runners/prescription/run_longitudinal_validation.py
 
 ---
 
-## ⚠️ 19. Limitations
+## 19. Limitations
 * **Local In-Memory Cache**: Snapshot timeline resolutions depend on active FastAPI cache records. In production environments, this requires mounting a Redis persistent state layer.
 * **Observational Density Bias**: Spontaneously reported side effects are prone to reporting bias, requiring cross-referencing with clinical trials.
 
 ---
 
-## 🔮 20. Future Work
+## 20. Future Work
 1. **Entity-Relation Resolution Expansion**: Adding mappings for ATC codes and SNOMED-CT clinical terms.
 2. **Active Patient Records Integration**: Consuming HL7 FHIR electronic health record (EHR) prescription streams to automate timeline snapshot generation.
 3. **Graph Neural Network (GNN) Embeddings**: Incorporating latent vector representations to predict potential unlogged linkages alongside our strict deterministic rules.
 
 ---
 
-## 📜 License
+## License
 Distributed under the MIT License. See `LICENSE` for details.
