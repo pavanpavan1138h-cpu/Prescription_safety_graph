@@ -232,59 +232,50 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
           ) : (
             /* Results Panel */
             <div style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0 }}>
-              {/* Tab Header Controls */}
+              {/* Dropdown mode selector */}
               <div style={{
                 display: 'flex',
-                gap: '1.5rem',
-                borderBottom: '1px solid var(--border-color)',
-                marginBottom: '1.5rem',
-                overflowX: 'auto',
-                paddingBottom: '0.25rem'
+                alignItems: 'center',
+                gap: '1rem',
+                backgroundColor: 'var(--bg-secondary)',
+                padding: '0.75rem 1.25rem',
+                borderRadius: '8px',
+                border: '1px solid var(--border-color)',
+                marginBottom: '1.5rem'
               }}>
-                {(
-                  [
-                    { id: 'intelligence', label: 'Intelligence Overview', icon: Brain },
-                    { id: 'explainability', label: 'Traceability & Explainability (Phase 11)', icon: FileCheck },
-                    { id: 'trustworthiness', label: 'Computational Trustworthiness (Phase 12)', icon: ShieldCheck },
-                    { id: 'longitudinal', label: 'Prescription Evolution (Phase 13)', icon: RefreshCw },
-                    { id: 'structure', label: 'Structural Safety (Phase 8)', icon: Network },
-                    { id: 'synthesis', label: 'Evidence Synthesis (Phase 9)', icon: Sparkles },
-                    { id: 'contextual', label: 'Contextual Stability (Phase 10)', icon: RefreshCw },
-                    { id: 'comparison', label: 'Comparative Intelligence', icon: ArrowRightLeft },
-                    { id: 'findings', label: 'Pairwise Findings', icon: Shield },
-                    { id: 'graph', label: 'Interactive Graph', icon: Share2 },
-                    { id: 'convergence', label: 'Event Convergence', icon: LineChart },
-                    { id: 'narrative', label: 'Clinical Report', icon: FileText }
-                  ] as const
-                ).map((tab) => {
-                  const Icon = tab.icon;
-                  const isActive = activeTab === tab.id;
-                  return (
-                    <button
-                      key={tab.id}
-                      onClick={() => setActiveTab(tab.id)}
-                      style={{
-                        padding: '0.5rem 0.25rem',
-                        fontSize: '0.85rem',
-                        fontWeight: 600,
-                        backgroundColor: 'transparent',
-                        border: 'none',
-                        borderBottom: isActive ? '2px solid #8b5cf6' : '2px solid transparent',
-                        color: isActive ? '#fff' : 'var(--text-muted)',
-                        cursor: 'pointer',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.5rem',
-                        whiteSpace: 'nowrap',
-                        outline: 'none',
-                        transition: 'all 0.15s ease'
-                      }}
-                    >
-                      <Icon size={16} />
-                      <span>{tab.label}</span>
-                    </button>
-                  );
-                })}
+                <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', whiteSpace: 'nowrap' }}>
+                  Analysis Dimension:
+                </span>
+                
+                <select
+                  value={activeTab}
+                  onChange={(e) => setActiveTab(e.target.value as any)}
+                  style={{
+                    flex: 1,
+                    padding: '0.5rem 1rem',
+                    borderRadius: '6px',
+                    backgroundColor: 'var(--bg-primary)',
+                    border: '1px solid var(--border-color)',
+                    color: 'var(--text-main)',
+                    fontSize: '0.85rem',
+                    fontWeight: 700,
+                    outline: 'none',
+                    cursor: 'pointer'
+                  }}
+                >
+                  <option value="intelligence">🧠 Intelligence Overview</option>
+                  <option value="explainability">📝 Traceability & Explainability (Phase 11)</option>
+                  <option value="trustworthiness">🛡️ Computational Trustworthiness (Phase 12)</option>
+                  <option value="longitudinal">🔄 Prescription Evolution (Phase 13)</option>
+                  <option value="structure">🕸️ Structural Safety (Phase 8)</option>
+                  <option value="synthesis">✨ Evidence Synthesis (Phase 9)</option>
+                  <option value="contextual">🔄 Contextual Stability (Phase 10)</option>
+                  <option value="comparison">↕️ Comparative Intelligence</option>
+                  <option value="findings">🛡️ Pairwise Findings</option>
+                  <option value="graph">🎨 Interactive Graph</option>
+                  <option value="convergence">📈 Event Convergence</option>
+                  <option value="narrative">📄 Clinical Report</option>
+                </select>
               </div>
 
               {/* Tab Panels */}
