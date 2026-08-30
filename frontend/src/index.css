@@ -128,10 +128,10 @@ body {
 
 /* Light Theme Variables */
 :root.light-theme {
-  --bg-primary: #f1f5f9;
+  --bg-primary: #f0f4f8;
   --bg-secondary: #ffffff;
   --bg-card: rgba(255, 255, 255, 0.85);
-  --bg-card-hover: rgba(241, 245, 249, 0.95);
+  --bg-card-hover: rgba(240, 244, 248, 0.95);
   --border-color: rgba(15, 23, 42, 0.1);
   --border-highlight: rgba(59, 130, 246, 0.3);
   
@@ -157,7 +157,7 @@ body {
 }
 
 :root.light-theme body {
-  background-color: #f1f5f9;
+  background-color: #f0f4f8;
   color: #0f172a;
 }
 

@@ -73,35 +73,35 @@ export const TopologyOverview: React.FC<TopologyOverviewProps> = ({
 
       {/* Grid of statistics */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
-        <div style={{ backgroundColor: '#0c0f1d', border: '1px solid var(--border-color)', borderRadius: '6px', padding: '1rem', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: '6px', padding: '1rem', display: 'flex', flexDirection: 'column' }}>
           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Drugs Count</span>
-          <span style={{ fontSize: '1.5rem', fontWeight: 700, color: '#fff', margin: '0.25rem 0' }}>{summary.total_prescription_drugs}</span>
+          <span style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text-main)', margin: '0.25rem 0' }}>{summary.total_prescription_drugs}</span>
           <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>
-            Connected: <b style={{ color: '#fff' }}>{summary.evidence_connected_drugs}</b> | Isolated: <b style={{ color: '#fff' }}>{summary.structurally_isolated_drugs}</b>
+            Connected: <b style={{ color: 'var(--text-main)' }}>{summary.evidence_connected_drugs}</b> | Isolated: <b style={{ color: 'var(--text-main)' }}>{summary.structurally_isolated_drugs}</b>
           </span>
         </div>
 
-        <div style={{ backgroundColor: '#0c0f1d', border: '1px solid var(--border-color)', borderRadius: '6px', padding: '1rem', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: '6px', padding: '1rem', display: 'flex', flexDirection: 'column' }}>
           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Evidence Density</span>
-          <span style={{ fontSize: '1.5rem', fontWeight: 700, color: '#fff', margin: '0.25rem 0' }}>{summary.network_density}</span>
+          <span style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text-main)', margin: '0.25rem 0' }}>{summary.network_density}</span>
           <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>
-            Pairs with evidence: <b style={{ color: '#fff' }}>{summary.evidence_supported_pairs}</b> / {summary.total_possible_pairs}
+            Pairs with evidence: <b style={{ color: 'var(--text-main)' }}>{summary.evidence_supported_pairs}</b> / {summary.total_possible_pairs}
           </span>
         </div>
 
-        <div style={{ backgroundColor: '#0c0f1d', border: '1px solid var(--border-color)', borderRadius: '6px', padding: '1rem', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: '6px', padding: '1rem', display: 'flex', flexDirection: 'column' }}>
           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Connected Clusters</span>
-          <span style={{ fontSize: '1.5rem', fontWeight: 700, color: '#fff', margin: '0.25rem 0' }}>{summary.connected_cluster_count}</span>
+          <span style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text-main)', margin: '0.25rem 0' }}>{summary.connected_cluster_count}</span>
           <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>
-            Largest Cluster size: <b style={{ color: '#fff' }}>{summary.largest_cluster_size}</b> drugs
+            Largest Cluster size: <b style={{ color: 'var(--text-main)' }}>{summary.largest_cluster_size}</b> drugs
           </span>
         </div>
 
-        <div style={{ backgroundColor: '#0c0f1d', border: '1px solid var(--border-color)', borderRadius: '6px', padding: '1rem', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: '6px', padding: '1rem', display: 'flex', flexDirection: 'column' }}>
           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Evidence Channels</span>
-          <span style={{ fontSize: '1.5rem', fontWeight: 700, color: '#fff', margin: '0.25rem 0' }}>{summary.evidence_supported_pairs}</span>
+          <span style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--text-main)', margin: '0.25rem 0' }}>{summary.evidence_supported_pairs}</span>
           <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>
-            Conv: <b style={{ color: '#fff' }}>{summary.convergent_edge_count}</b> | DDI: <b style={{ color: '#fff' }}>{summary.ddi_only_edge_count}</b> | Event: <b style={{ color: '#fff' }}>{summary.combination_event_edge_count}</b>
+            Conv: <b style={{ color: 'var(--text-main)' }}>{summary.convergent_edge_count}</b> | DDI: <b style={{ color: 'var(--text-main)' }}>{summary.ddi_only_edge_count}</b> | Event: <b style={{ color: 'var(--text-main)' }}>{summary.combination_event_edge_count}</b>
           </span>
         </div>
       </div>

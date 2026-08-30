@@ -181,7 +181,7 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
       <div style={{ display: 'grid', gridTemplateColumns: '320px 1fr', gap: '2rem', flex: 1, minHeight: 0 }}>
         {/* Left Column: Side Input Control Panel */}
         <div style={{
-          backgroundColor: '#0c0f1d',
+          backgroundColor: 'var(--bg-secondary)',
           border: '1px solid var(--border-color)',
           borderRadius: '8px',
           padding: '1.5rem',
@@ -222,7 +222,7 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
               textAlign: 'center'
             }}>
               <Brain size={48} style={{ color: '#4b5563', marginBottom: '1rem' }} />
-              <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#fff', margin: '0 0 0.5rem 0' }}>
+              <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--text-main)', margin: '0 0 0.5rem 0' }}>
                 No Active Prescription Analysis
               </h2>
               <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', maxWidth: '480px', margin: 0, lineHeight: '1.5' }}>
@@ -285,32 +285,32 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                 {activeTab === 'intelligence' && (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                     {/* Executive Summary Card */}
-                    <div style={{ backgroundColor: '#0c0f1d', border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.5rem' }}>
-                      <h3 style={{ margin: '0 0 1rem 0', fontSize: '0.95rem', color: '#fff', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <div style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.5rem' }}>
+                      <h3 style={{ margin: '0 0 1rem 0', fontSize: '0.95rem', color: 'var(--text-main)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                         <Brain size={16} style={{ color: '#8b5cf6' }} /> Executive Summary
                       </h3>
-                      <p style={{ color: '#fff', fontSize: '0.875rem', lineHeight: '1.6', margin: 0 }}>
+                      <p style={{ color: 'var(--text-main)', fontSize: '0.875rem', lineHeight: '1.6', margin: 0 }}>
                         {analysisData.advanced_explanation.executive_summary}
                       </p>
                     </div>
 
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                       {/* Left: Complexity profile */}
-                      <div style={{ backgroundColor: '#0c0f1d', border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.5rem' }}>
-                        <h3 style={{ margin: '0 0 1rem 0', fontSize: '0.95rem', color: '#fff' }}>Complexity Profile</h3>
+                      <div style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.5rem' }}>
+                        <h3 style={{ margin: '0 0 1rem 0', fontSize: '0.95rem', color: 'var(--text-main)' }}>Complexity Profile</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.85rem' }}>
-                          <div>Complexity Category: <b style={{ color: '#fff' }}>{analysisData.complexity_profile.complexity_category}</b></div>
-                          <div>Complexity Score: <b style={{ color: '#fff' }}>{analysisData.complexity_profile.complexity_score} / 10</b></div>
+                          <div>Complexity Category: <b style={{ color: 'var(--text-main)' }}>{analysisData.complexity_profile.complexity_category}</b></div>
+                          <div>Complexity Score: <b style={{ color: 'var(--text-main)' }}>{analysisData.complexity_profile.complexity_score} / 10</b></div>
                           <div style={{ color: 'var(--text-muted)', lineHeight: '1.4' }}>{analysisData.complexity_profile.explanation}</div>
                         </div>
                       </div>
 
                       {/* Right: Key Findings */}
-                      <div style={{ backgroundColor: '#0c0f1d', border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.5rem' }}>
-                        <h3 style={{ margin: '0 0 1rem 0', fontSize: '0.95rem', color: '#fff' }}>Key Prioritizations</h3>
+                      <div style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.5rem' }}>
+                        <h3 style={{ margin: '0 0 1rem 0', fontSize: '0.95rem', color: 'var(--text-main)' }}>Key Prioritizations</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.85rem' }}>
-                          <div>Review Findings: <b style={{ color: '#fff' }}>{analysisData.advanced_explanation.key_findings_summary}</b></div>
-                          <div>Uncertainty Status: <b style={{ color: '#fff' }}>{analysisData.uncertainty_profile.uncertainty_level}</b></div>
+                          <div>Review Findings: <b style={{ color: 'var(--text-main)' }}>{analysisData.advanced_explanation.key_findings_summary}</b></div>
+                          <div>Uncertainty Status: <b style={{ color: 'var(--text-main)' }}>{analysisData.uncertainty_profile.uncertainty_level}</b></div>
                           <div style={{ color: 'var(--text-muted)', lineHeight: '1.4' }}>{analysisData.uncertainty_profile.explanation_narrative}</div>
                         </div>
                       </div>
@@ -557,7 +557,7 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                             onClick={() => selectPair(pair.pair_id)}
                             style={{
                               padding: '1.25rem',
-                              backgroundColor: '#0c0f1d',
+                              backgroundColor: 'var(--bg-secondary)',
                               border: '1px solid var(--border-color)',
                               borderRadius: '6px',
                               cursor: 'pointer',
@@ -569,7 +569,7 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                           >
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                                <span style={{ fontWeight: 600, color: '#fff', fontSize: '0.95rem' }}>
+                                <span style={{ fontWeight: 600, color: 'var(--text-main)', fontSize: '0.95rem' }}>
                                   {pair.drug_a_name} &harr; {pair.drug_b_name}
                                 </span>
                               </div>
@@ -708,7 +708,7 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                           key={idx}
                           style={{
                             padding: '1.25rem',
-                            backgroundColor: '#0c0f1d',
+                            backgroundColor: 'var(--bg-secondary)',
                             border: '1px solid var(--border-color)',
                             borderRadius: '6px',
                             display: 'flex',
@@ -717,7 +717,7 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                           }}
                         >
                           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                            <span style={{ fontSize: '0.95rem', fontWeight: 600, color: '#fff' }}>
+                            <span style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-main)' }}>
                               Event: {item.side_effect_name}
                             </span>
                             <span style={{

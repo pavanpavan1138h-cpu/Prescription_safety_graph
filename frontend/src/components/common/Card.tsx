@@ -19,7 +19,7 @@ export const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div style={{
-      backgroundColor: '#0c0f1d',
+      backgroundColor: 'var(--bg-secondary)',
       border: '1px solid var(--border-color)',
       borderRadius: '8px',
       display: 'flex',
@@ -38,7 +38,7 @@ export const Card: React.FC<CardProps> = ({
           gap: '1rem'
         }}>
           <div>
-            {title && <h3 style={{ margin: 0, fontSize: '0.95rem', fontWeight: 600, color: '#fff' }}>{title}</h3>}
+            {title && <h3 style={{ margin: 0, fontSize: '0.95rem', fontWeight: 600, color: 'var(--text-main)' }}>{title}</h3>}
             {subtitle && <p style={{ margin: '0.25rem 0 0 0', fontSize: '0.75rem', color: 'var(--text-muted)' }}>{subtitle}</p>}
           </div>
           {headerAction && <div>{headerAction}</div>}
