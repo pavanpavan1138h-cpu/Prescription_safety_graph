@@ -23,7 +23,7 @@ export const AppShell: React.FC<AppShellProps> = ({ systemInfo, children }) => {
           <Shield style={{ color: '#8b5cf6', width: 28, height: 28 }} />
           <div>
             <h1 style={{ margin: 0, fontSize: '1.25rem', fontWeight: 700, letterSpacing: '-0.025em', color: '#fff' }}>
-              Antigravity Prescription Safety Engine
+              Prescription Safety Graph Engine
             </h1>
             <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
               Entity-Resolved Multi-Drug Pairwise & Network Reasoning
