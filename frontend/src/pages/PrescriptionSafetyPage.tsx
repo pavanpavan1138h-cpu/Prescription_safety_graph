@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { AppShell } from '../components/layout/AppShell';
 import { MedicationInput } from '../components/prescription/MedicationInput';
 import { usePrescriptionAnalysis } from '../hooks/usePrescriptionAnalysis';
 import { useGraphData } from '../hooks/useGraphData';
@@ -78,8 +77,11 @@ import {
   formatDate
 } from '../utils/formatters';
 
-export const PrescriptionSafetyPage: React.FC = () => {
-  const [systemInfo, setSystemInfo] = useState<SystemInfoResponse | null>(null);
+interface PrescriptionSafetyPageProps {
+  systemInfo: SystemInfoResponse | null;
+}
+
+export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ systemInfo }) => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('intelligence');
 
   const {
@@ -114,9 +116,7 @@ export const PrescriptionSafetyPage: React.FC = () => {
   const [comparisonError, setComparisonError] = useState<string | null>(null);
   const [activeComparisonTab, setActiveComparisonTab] = useState<'overview' | 'evidence' | 'structure' | 'signals' | 'stability'>('overview');
 
-  useEffect(() => {
-    prescriptionApi.getSystemInfo().then(setSystemInfo).catch(console.error);
-  }, []);
+  // History log tracker
 
   useEffect(() => {
     if (analysisData) {
@@ -176,7 +176,7 @@ export const PrescriptionSafetyPage: React.FC = () => {
   }, [analysisData]);
 
   return (
-    <AppShell systemInfo={systemInfo}>
+    <>
       {/* 2 Column Dashboard Grid */}
       <div style={{ display: 'grid', gridTemplateColumns: '320px 1fr', gap: '2rem', flex: 1, minHeight: 0 }}>
         {/* Left Column: Side Input Control Panel */}
@@ -936,7 +936,7 @@ export const PrescriptionSafetyPage: React.FC = () => {
           </div>
         </div>
       )}
-    </AppShell>
+    </>
   );
 };
 export default PrescriptionSafetyPage;

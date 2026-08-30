@@ -43,6 +43,7 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s ease;
 }
 
 /* Scrollbar */
@@ -123,4 +124,44 @@ body {
 
 .animate-fade-in {
   animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Light Theme Variables */
+:root.light-theme {
+  --bg-primary: #f1f5f9;
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-hover: rgba(241, 245, 249, 0.95);
+  --border-color: rgba(15, 23, 42, 0.1);
+  --border-highlight: rgba(59, 130, 246, 0.3);
+  
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+  
+  --primary: #2563eb;
+  --primary-glow: rgba(37, 99, 235, 0.15);
+  --accent-cyan: #0891b2;
+  --accent-purple: #7c3aed;
+  
+  --status-critical: #dc2626;
+  --status-critical-bg: rgba(220, 38, 38, 0.1);
+  --status-moderate: #d97706;
+  --status-moderate-bg: rgba(217, 119, 6, 0.1);
+  --status-limited: #2563eb;
+  --status-limited-bg: rgba(37, 99, 235, 0.1);
+  --status-neutral: #059669;
+  --status-neutral-bg: rgba(5, 150, 105, 0.1);
+  --status-none: #4b5563;
+  --status-none-bg: rgba(75, 85, 99, 0.1);
+}
+
+:root.light-theme body {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+/* Global Transition overrides for smooth switching */
+.glass-panel, card, header, input, select, button, textarea, .card {
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease !important;
 }
