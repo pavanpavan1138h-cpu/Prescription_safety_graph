@@ -264,16 +264,8 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                   }}
                 >
                   <option value="intelligence">Intelligence Overview</option>
-                  <option value="explainability">Traceability & Explainability</option>
-                  <option value="trustworthiness">Computational Trustworthiness</option>
-                  <option value="longitudinal">Prescription Evolution</option>
-                  <option value="structure">Structural Safety</option>
-                  <option value="synthesis">Evidence Synthesis</option>
-                  <option value="contextual">Contextual Stability</option>
-                  <option value="comparison">Comparative Intelligence</option>
                   <option value="findings">Pairwise Findings</option>
                   <option value="graph">Interactive Graph</option>
-                  <option value="convergence">Event Convergence</option>
                   <option value="narrative">Clinical Report</option>
                 </select>
               </div>
@@ -294,7 +286,8 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                       </p>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                    {/* Complexity and Prioritization metrics hidden for presentation simplify */}
+                    <div style={{ display: 'none', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                       {/* Left: Complexity profile */}
                       <div style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.5rem' }}>
                         <h3 style={{ margin: '0 0 1rem 0', fontSize: '0.95rem', color: 'var(--text-main)' }}>Complexity Profile</h3>
