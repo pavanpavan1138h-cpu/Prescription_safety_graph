@@ -263,9 +263,9 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                     cursor: 'pointer'
                   }}
                 >
-                  <option value="intelligence">Intelligence Overview</option>
-                  <option value="findings">Pairwise Findings</option>
-                  <option value="graph">Interactive Graph</option>
+                  <option value="intelligence">Prescription Overview</option>
+                  <option value="findings">Medication Pair Findings</option>
+                  <option value="graph">Relationship Graph</option>
                   <option value="narrative">Clinical Report</option>
                 </select>
               </div>
