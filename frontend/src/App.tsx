@@ -37,15 +37,17 @@ function App() {
       isLightTheme={isLightTheme}
       onThemeToggle={handleThemeToggle}
     >
-      {currentPage === 'home' && (
+      <div style={{ display: currentPage === 'home' ? 'block' : 'none' }}>
         <HomePage onStartAnalysis={() => setCurrentPage('dashboard')} systemInfo={systemInfo} />
-      )}
-      {currentPage === 'dashboard' && (
+      </div>
+      
+      <div style={{ display: currentPage === 'dashboard' ? 'flex' : 'none', flexDirection: 'column', flex: 1, minHeight: 0 }}>
         <PrescriptionSafetyPage systemInfo={systemInfo} />
-      )}
-      {currentPage === 'about' && (
+      </div>
+      
+      <div style={{ display: currentPage === 'about' ? 'block' : 'none' }}>
         <AboutPage />
-      )}
+      </div>
     </AppShell>
   );
 }
