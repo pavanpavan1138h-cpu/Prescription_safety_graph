@@ -157,3 +157,16 @@ class EvidenceThemeMapper:
     @classmethod
     def get_description_for_theme(cls, theme: EvidenceThemeType) -> str:
         return THEME_DESCRIPTIONS.get(theme.value, "No description available.")
+
+    @classmethod
+    def map_events_to_theme_names(cls, event_names: List[str]) -> List[str]:
+        """
+        Maps a collection of raw adverse event strings to sorted unique organ-system theme names.
+        Preserves UNKNOWN_OR_UNMAPPED_THEME behavior.
+        """
+        themes = set()
+        for evt in event_names:
+            t = cls.map_event_to_theme(evt)
+            themes.add(t.value)
+        return sorted(list(themes))
+

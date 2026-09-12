@@ -98,6 +98,47 @@ export const AboutPage: React.FC = () => {
         </div>
       </Card>
 
+      {/* 3.5. Scoring Methodology and Formulas */}
+      <Card title="Scoring Methodology & Formulas" subtitle="Mathematical modeling of prescription safety indices and trustworthiness metrics">
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          
+          <div style={{ padding: '1.25rem', backgroundColor: 'var(--bg-primary)', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+            <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '0.9rem', fontWeight: 700, color: 'var(--text-main)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <ShieldCheck size={16} style={{ color: '#3b82f6' }} /> Computational Trustworthiness Index
+            </h4>
+            <div style={{ fontSize: '0.9rem', fontFamily: 'var(--font-mono)', color: 'var(--primary)', padding: '0.5rem 0', fontWeight: 'bold', lineHeight: '1.5', wordBreak: 'break-all' }}>
+              Trustworthiness = (Rep + Pert + Struct + Prov) / 4
+            </div>
+            <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: '1.5', margin: '0.5rem 0 0 0' }}>
+              The **Trustworthiness Score** is calculated as the arithmetic mean of four key robustness metrics:
+            </p>
+            <ul style={{ paddingLeft: '1.25rem', fontSize: '0.8rem', color: 'var(--text-muted)', display: 'flex', flexDirection: 'column', gap: '0.35rem', marginTop: '0.5rem' }}>
+              <li><strong>Deterministic Repeatability (Rep):</strong> Ensures that identical inputs yield identical reasoning structures.</li>
+              <li><strong>Input Invariance Robustness (Pert):</strong> Validates that capitalization, spacing, and duplicate inputs do not distort output.</li>
+              <li><strong>Topological Stability (Struct):</strong> Monitors node/edge connectivity consistency to ensure structural robustness.</li>
+              <li><strong>Explanation Provenance (Prov):</strong> Validates that the reasoning path traces back correctly to integrated source database evidence.</li>
+            </ul>
+          </div>
+
+          <div style={{ padding: '1.25rem', backgroundColor: 'var(--bg-primary)', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+            <h4 style={{ margin: '0 0 0.5rem 0', fontSize: '0.9rem', fontWeight: 700, color: 'var(--text-main)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <GitBranch size={16} style={{ color: '#06b6d4' }} /> Pairwise Evaluation Scale
+            </h4>
+            <div style={{ fontSize: '1.1rem', fontFamily: 'var(--font-mono)', color: 'var(--accent-cyan)', padding: '0.5rem 0', fontWeight: 'bold' }}>
+              Total Pairs = [n * (n - 1)] / 2
+            </div>
+            <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: '1.5', margin: '0.5rem 0 0 0' }}>
+              Given a prescription with <strong>n</strong> resolved medication entities, the system systematically generates and evaluates all unique pairings. For example:
+            </p>
+            <ul style={{ paddingLeft: '1.25rem', fontSize: '0.8rem', color: 'var(--text-muted)', display: 'flex', flexDirection: 'column', gap: '0.25rem', marginTop: '0.5rem' }}>
+              <li>A prescription of <strong>3 drugs</strong> generates <strong>3 pairs</strong> to analyze.</li>
+              <li>A prescription of <strong>5 drugs</strong> generates <strong>10 pairs</strong> to analyze.</li>
+            </ul>
+          </div>
+
+        </div>
+      </Card>
+
       {/* 4. Safety Guardrails Disclaimer Box */}
       <div style={{
         display: 'flex',

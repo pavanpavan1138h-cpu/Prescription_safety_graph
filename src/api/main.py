@@ -182,7 +182,13 @@ def analyze_prescription(req: PrescriptionAnalyzeRequest, service: PrescriptionS
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=f"Medication list exceeds maximum allowed size of {settings.max_medications} items."
         )
-    return service.analyze_prescription(clean_meds, req.prescription_id)
+    return service.analyze_prescription(
+        medications=clean_meds,
+        prescription_id=req.prescription_id,
+        age_band=req.age_band,
+        kidney_function=req.kidney_function,
+        liver_function=req.liver_function
+    )
 
 @app.post("/api/v1/prescriptions/analyze-advanced", response_model=AdvancedPrescriptionAnalysisResponse, tags=["Advanced Clinical Intelligence"])
 def analyze_prescription_advanced(req: PrescriptionAnalyzeRequest, service: PrescriptionService = Depends(get_prescription_service)):
@@ -202,7 +208,13 @@ def analyze_prescription_advanced(req: PrescriptionAnalyzeRequest, service: Pres
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=f"Medication list exceeds maximum allowed size of {settings.max_medications} items."
         )
-    return service.analyze_prescription_advanced(clean_meds, req.prescription_id)
+    return service.analyze_prescription_advanced(
+        medications=clean_meds,
+        prescription_id=req.prescription_id,
+        age_band=req.age_band,
+        kidney_function=req.kidney_function,
+        liver_function=req.liver_function
+    )
 
 @app.get("/api/v1/analyses/{analysis_id}/pairs/{pair_id}", response_model=PairDetailResponse, tags=["Prescriptions"])
 def get_pair_detail(analysis_id: str, pair_id: str, service: PrescriptionService = Depends(get_prescription_service)):

@@ -33,12 +33,15 @@ from src.api.schemas import (
     DirectDDIItem,
     AdverseEventItem,
     CombinationAdverseEventsDetail,
-    ProvenanceTraceDetail
+    ProvenanceTraceDetail,
+    PatientContextSchema,
+    DrugRiskAssessmentSchema
 )
 
 # Import Phase 5 & 6 core modules
 from src.prescription.reasoning import PrescriptionSafetyReasoner
 from src.prescription.schemas import PrescriptionSafetyReport
+from src.prescription.intelligence.evidence_theme_mapper import EvidenceThemeMapper
 from src.reasoning.schemas import EvidenceStatus
 
 logger = logging.getLogger(__name__)
@@ -157,14 +160,39 @@ class PrescriptionService:
             clinical_interpretation=res.clinical_interpretation
         )
 
-    def analyze_prescription(self, medications: List[str], prescription_id: Optional[str] = None) -> PrescriptionAnalysisResponse:
-        # Check Tier 2 cache by canonical key
+    def analyze_prescription(
+        self,
+        medications: List[str],
+        prescription_id: Optional[str] = None,
+        age_band: Optional[str] = "Adult",
+        kidney_function: Optional[str] = "Normal",
+        liver_function: Optional[str] = "Normal"
+    ) -> PrescriptionAnalysisResponse:
+        # Determine context parameters
+        effective_age = age_band or "Adult"
+        effective_kidney = kidney_function or "Normal"
+        effective_liver = liver_function or "Normal"
+
+        # Check Tier 2 cache by canonical key + context
         res_preview = self.reasoner.resolver.resolve_prescription(medications)
-        canonical_key = "|".join(sorted(res_preview.canonical_drug_ids))
+        canonical_key = f"{'|'.join(sorted(res_preview.canonical_drug_ids))}_{effective_age}_{effective_kidney}_{effective_liver}"
         
         # Execute Phase 6 analysis
         report = self.reasoner.analyze_prescription(medications, prescription_id)
         self._report_objects[report.prescription_id] = report
+
+        # Box 9: Classify drug risks for resolved drugs
+        from src.prescription.risk.risk_classifier import DrugRiskClassifier
+        classifier = DrugRiskClassifier()
+        risk_assessments = []
+        for d in report.resolution_summary.resolved_drugs:
+            if d.resolved_internal_drug_id:
+                dra = classifier.classify_drug(
+                    internal_drug_id=d.resolved_internal_drug_id,
+                    rxcui=d.rxcui,
+                    drug_name=d.display_name or d.original_input
+                )
+                risk_assessments.append(dra)
 
         # Transform internal report to public Pydantic schema
         metadata = AnalysisMetadata(
@@ -235,6 +263,7 @@ class PrescriptionService:
                     "score": f.confidence_score
                 },
                 summary_narrative=f.summary_narrative,
+                organ_systems=f.organ_systems,
                 evidence_channels={
                     "drugbank_ddi": f.ddi_present,
                     "twosides_combination_events": f.events_present
@@ -256,7 +285,8 @@ class PrescriptionService:
                 confidence_level=pr["confidence_level"],
                 confidence_score=pr["confidence_score"],
                 ddi_evidence_present=pr["ddi_present"],
-                combination_event_evidence_present=pr["events_present"]
+                combination_event_evidence_present=pr["events_present"],
+                organ_systems=pr.get("organ_systems", [])
             ))
 
         drug_participation_rows = []
@@ -290,6 +320,30 @@ class PrescriptionService:
             top_supporting_edge_ids=all_edges[:5]
         )
 
+        # Box 9 schemas conversion
+        patient_context_schema = PatientContextSchema(
+            age_band=effective_age,
+            kidney_function=effective_kidney,
+            liver_function=effective_liver
+        )
+
+        drug_risk_schemas = [
+            DrugRiskAssessmentSchema(
+                drug_id=dra.drug_id,
+                drug_name=dra.drug_name,
+                rxcui=dra.rxcui,
+                risk_tier=dra.risk_tier.value,
+                is_ismp_high_alert=dra.is_ismp_high_alert,
+                ismp_category=dra.ismp_category,
+                has_boxed_warning=dra.has_boxed_warning,
+                boxed_warning_text=dra.boxed_warning_text,
+                contraindications_text=dra.contraindications_text,
+                warnings_cautions_text=dra.warnings_cautions_text,
+                evidence_source=dra.evidence_source
+            )
+            for dra in risk_assessments
+        ]
+
         response_obj = PrescriptionAnalysisResponse(
             metadata=metadata,
             input_summary=input_summary,
@@ -301,7 +355,9 @@ class PrescriptionService:
             unresolved_items=unresolved_rows,
             limitations=report.scientific_limitations,
             provenance=provenance_summary,
-            clinical_narrative_report=report.clinical_narrative_report
+            clinical_narrative_report=report.clinical_narrative_report,
+            patient_context=patient_context_schema,
+            drug_risk_assessments=drug_risk_schemas
         )
 
         self._analysis_cache[canonical_key] = response_obj
@@ -347,6 +403,10 @@ class PrescriptionService:
         paths = inference.reasoning_trace.graph_paths if inference.reasoning_trace else []
         reasons = inference.reasoning_trace.confidence_reasons if inference.reasoning_trace else []
 
+        # Map observed adverse events to canonical organ-system themes
+        event_names = [se.side_effect_name for se in bundle.side_effect_records]
+        pair_organ_systems = EvidenceThemeMapper.map_events_to_theme_names(event_names)
+
         return PairDetailResponse(
             pair_id=pair_id,
             drug_a={
@@ -369,6 +429,7 @@ class PrescriptionService:
                 "confidence_score": inference.confidence_score,
                 "rule_fired": inference.inference_rule
             },
+            organ_systems=pair_organ_systems,
             direct_ddi_evidence=ddi_items,
             combination_adverse_events=CombinationAdverseEventsDetail(
                 total_event_count=bundle.total_side_effects_count,
@@ -723,11 +784,23 @@ class PrescriptionService:
         prof = self.get_contextual_stability(analysis_id)
         return prof.drug_dependencies if prof else None
 
-    def analyze_prescription_advanced(self, medications: List[str], prescription_id: Optional[str] = None):
+    def analyze_prescription_advanced(
+        self,
+        medications: List[str],
+        prescription_id: Optional[str] = None,
+        age_band: Optional[str] = "Adult",
+        kidney_function: Optional[str] = "Normal",
+        liver_function: Optional[str] = "Normal"
+    ):
         from src.prescription.advanced_intelligence_service import AdvancedIntelligenceService
         from src.prescription.structural.prescription_structural_analyzer import PrescriptionStructuralAnalyzer
         from src.prescription.intelligence.intelligence_aggregator import PrescriptionEvidenceIntelligenceAnalyzer
         from src.prescription.contextual.contextual_aggregator import ContextualStabilityAggregator
+        from src.prescription.advanced_intelligence_schema import (
+            PatientContext,
+            AgeBand,
+            OrganFunctionStatus,
+        )
         from src.api.advanced_schemas import (
             AdvancedPrescriptionAnalysisResponse,
             ComplexityProfileSchema,
@@ -766,9 +839,29 @@ class PrescriptionService:
             DrugDependencyImpactSchema
         )
 
-        base_res = self.analyze_prescription(medications, prescription_id)
+        effective_age = age_band or "Adult"
+        effective_kidney = kidney_function or "Normal"
+        effective_liver = liver_function or "Normal"
+
+        patient_ctx = PatientContext(
+            age_band=AgeBand(effective_age) if effective_age in [e.value for e in AgeBand] else AgeBand.ADULT,
+            kidney_function=OrganFunctionStatus(effective_kidney) if effective_kidney in [e.value for e in OrganFunctionStatus] else OrganFunctionStatus.NORMAL,
+            liver_function=OrganFunctionStatus(effective_liver) if effective_liver in [e.value for e in OrganFunctionStatus] else OrganFunctionStatus.NORMAL,
+        )
+
+        base_res = self.analyze_prescription(
+            medications=medications,
+            prescription_id=prescription_id,
+            age_band=effective_age,
+            kidney_function=effective_kidney,
+            liver_function=effective_liver
+        )
         adv_service = AdvancedIntelligenceService(self.reasoner)
-        report_obj, adv_report = adv_service.analyze_advanced(medications, base_res.metadata.analysis_id)
+        report_obj, adv_report = adv_service.analyze_advanced(
+            medications,
+            base_res.metadata.analysis_id,
+            patient_context=patient_ctx
+        )
 
         # Execute Phase 8 structural safety analysis
         struct_analysis = PrescriptionStructuralAnalyzer.analyze(report_obj)

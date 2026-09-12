@@ -256,8 +256,8 @@ export const InteractiveGraph: React.FC<InteractiveGraphProps> = ({
                   padding: '4px 10px',
                   borderRadius: '4px',
                   border: '1px solid var(--border-color)',
-                  background: filterType === t ? '#3b82f6' : 'rgba(255,255,255,0.03)',
-                  color: '#fff',
+                  background: filterType === t ? '#3b82f6' : 'var(--bg-secondary)',
+                  color: filterType === t ? '#fff' : 'var(--text-main)',
                   fontSize: '0.7rem',
                   fontWeight: 600,
                   cursor: 'pointer'
@@ -273,9 +273,9 @@ export const InteractiveGraph: React.FC<InteractiveGraphProps> = ({
               value={layoutMode}
               onChange={(e: any) => setLayoutMode(e.target.value)}
               style={{
-                background: '#1e293b',
+                background: 'var(--bg-secondary)',
                 border: '1px solid var(--border-color)',
-                color: '#fff',
+                color: 'var(--text-main)',
                 borderRadius: '4px',
                 padding: '4px 8px',
                 fontSize: '0.75rem'
@@ -287,15 +287,15 @@ export const InteractiveGraph: React.FC<InteractiveGraphProps> = ({
               <option value="concentric">Concentric</option>
             </select>
 
-            <button onClick={handleZoomIn} title="Zoom In" style={{ background: '#1e293b', border: '1px solid var(--border-color)', color: '#fff', borderRadius: '4px', padding: '4px 8px', cursor: 'pointer' }}><ZoomIn size={14} /></button>
-            <button onClick={handleZoomOut} title="Zoom Out" style={{ background: '#1e293b', border: '1px solid var(--border-color)', color: '#fff', borderRadius: '4px', padding: '4px 8px', cursor: 'pointer' }}><ZoomOut size={14} /></button>
-            <button onClick={handleFit} title="Fit to Screen" style={{ background: '#1e293b', border: '1px solid var(--border-color)', color: '#fff', borderRadius: '4px', padding: '4px 8px', cursor: 'pointer' }}><Maximize2 size={14} /></button>
-            <button onClick={handleReset} title="Reset" style={{ background: '#1e293b', border: '1px solid var(--border-color)', color: '#fff', borderRadius: '4px', padding: '4px 8px', cursor: 'pointer' }}><RotateCcw size={14} /></button>
+            <button onClick={handleZoomIn} title="Zoom In" style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', color: 'var(--text-main)', borderRadius: '4px', padding: '4px 8px', cursor: 'pointer' }}><ZoomIn size={14} /></button>
+            <button onClick={handleZoomOut} title="Zoom Out" style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', color: 'var(--text-main)', borderRadius: '4px', padding: '4px 8px', cursor: 'pointer' }}><ZoomOut size={14} /></button>
+            <button onClick={handleFit} title="Fit to Screen" style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', color: 'var(--text-main)', borderRadius: '4px', padding: '4px 8px', cursor: 'pointer' }}><Maximize2 size={14} /></button>
+            <button onClick={handleReset} title="Reset" style={{ background: 'var(--bg-secondary)', border: '1px solid var(--border-color)', color: 'var(--text-main)', borderRadius: '4px', padding: '4px 8px', cursor: 'pointer' }}><RotateCcw size={14} /></button>
           </div>
         </div>
 
         {/* Graph Canvas */}
-        <div ref={containerRef} style={{ flex: 1, width: '100%', borderRadius: '8px', background: 'rgba(0,0,0,0.3)' }} />
+        <div ref={containerRef} style={{ flex: 1, width: '100%', borderRadius: '8px', background: 'transparent' }} />
 
         {/* Truncation & Graph Stats Footer */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '10px', fontSize: '0.75rem', color: 'var(--text-dim)' }}>

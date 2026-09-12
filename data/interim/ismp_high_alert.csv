@@ -1,0 +1,85 @@
+drug_name,normalized_drug_name,ismp_high_alert,ismp_category,entry_type,matched_canonical_id,matched_display_name,matched_rxcui,is_matched_in_graph,source,source_document
+"adrenergic agonists, IV (e.g., EPINEPHrine, phenylephrine, norepinephrine)",adrenergic agonists,True,"adrenergic agonists, IV",medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+epinephrine,epinephrine,True,"adrenergic agonists, IV",specific_medication,DRUG_000483,epinephrine,3992,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+phenylephrine,phenylephrine,True,"adrenergic agonists, IV",specific_medication,DRUG_000228,phenylephrine,8163,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+norepinephrine,norepinephrine,True,"adrenergic agonists, IV",specific_medication,DRUG_000213,norepinephrine,7512,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"adrenergic antagonists, IV (e.g., propranolol, metoprolol, labetalol)",adrenergic antagonists,True,"adrenergic antagonists, IV",medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+propranolol,propranolol,True,"adrenergic antagonists, IV",specific_medication,DRUG_000399,propranolol,8787,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+metoprolol,metoprolol,True,"adrenergic antagonists, IV",specific_medication,DRUG_000114,metoprolol,6918,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+labetalol,labetalol,True,"adrenergic antagonists, IV",specific_medication,DRUG_000420,labetalol,6185,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"anesthetic agents, general, inhaled and IV (e.g., propofol, ketamine)","anesthetic agents, general, inhaled and iv",True,"anesthetic agents, general, inhaled and IV",medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+propofol,propofol,True,"anesthetic agents, general, inhaled and IV",specific_medication,DRUG_000620,propofol,8782,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+ketamine,ketamine,True,"anesthetic agents, general, inhaled and IV",specific_medication,DRUG_000981,ketamine,6130,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"antiarrhythmics, IV (e.g., lidocaine, amiodarone)",antiarrhythmics,True,"antiarrhythmics, IV",medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+lidocaine,lidocaine,True,"antiarrhythmics, IV",specific_medication,DRUG_000128,lidocaine,6387,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+amiodarone,amiodarone,True,"antiarrhythmics, IV",specific_medication,DRUG_000888,amiodarone,703,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"antithrombotic agents: anticoagulants (e.g., warfarin, low molecular weight heparin, unfractionated heparin)",antithrombotic agents: anticoagulants,True,antithrombotic agents,medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+warfarin,warfarin,True,antithrombotic agents,specific_medication,DRUG_000496,warfarin,11289,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+heparin,heparin,True,antithrombotic agents,specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"antithrombotic agents: direct oral anticoagulants and factor Xa inhibitors (e.g., rivaroxaban, fondaparinux)",antithrombotic agents: direct oral anticoagulants and factor xa inhibitors,True,antithrombotic agents,medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+rivaroxaban,rivaroxaban,True,antithrombotic agents,specific_medication,DRUG_001290,rivaroxaban,1114195,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+fondaparinux,fondaparinux,True,antithrombotic agents,specific_medication,DRUG_000397,fondaparinux,321208,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"antithrombotic agents: direct thrombin inhibitors (e.g., argatroban, bivalirudin, dabigatran)",antithrombotic agents: direct thrombin inhibitors,True,antithrombotic agents,medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+argatroban,argatroban,True,antithrombotic agents,specific_medication,DRUG_000125,argatroban,15202,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+bivalirudin,bivalirudin,True,antithrombotic agents,specific_medication,DRUG_000001,bivalirudin,60819,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+dabigatran,dabigatran,True,antithrombotic agents,specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"antithrombotic agents: glycoprotein IIb/IIIa inhibitors (e.g., eptifibatide)",antithrombotic agents: glycoprotein iib/iiia inhibitors,True,antithrombotic agents,medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+eptifibatide,eptifibatide,True,antithrombotic agents,specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"antithrombotic agents: thrombolytics (e.g., alteplase, reteplase, tenecteplase)",antithrombotic agents: thrombolytics,True,antithrombotic agents,medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+alteplase,alteplase,True,antithrombotic agents,specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+reteplase,reteplase,True,antithrombotic agents,specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+tenecteplase,tenecteplase,True,antithrombotic agents,specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+cardioplegic solutions,cardioplegic solutions,True,cardioplegic solutions,medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"chemotherapeutic agents, parenteral and oral",chemotherapeutic agents,True,"chemotherapeutic agents, parenteral and oral",medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"dextrose, hypertonic, 20% or greater","dextrose, hypertonic, 20% or greater",True,"dextrose, hypertonic, 20% or greater",medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"dialysis solutions, peritoneal and hemodialysis","dialysis solutions, peritoneal and hemodialysis",True,"dialysis solutions, peritoneal and hemodialysis",medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+epidural and intrathecal medications,epidural and intrathecal medications,True,epidural and intrathecal medications,medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"inotropic medications, IV (e.g., digoxin, milrinone)",inotropic medications,True,"inotropic medications, IV",medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+digoxin,digoxin,True,"inotropic medications, IV",specific_medication,DRUG_000230,digoxin,3407,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+milrinone,milrinone,True,"inotropic medications, IV",specific_medication,DRUG_000086,milrinone,52769,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"insulin, subcutaneous and IV",insulin,True,"insulin, subcutaneous and IV",medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"liposomal forms of drugs (e.g., liposomal amphotericin B) and conventional counterparts",liposomal forms of drugs  and conventional counterparts,True,liposomal forms of drugs and conventional counterparts,medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+amphotericin b,amphotericin b,True,liposomal forms of drugs and conventional counterparts,specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"moderate and minimal sedation agents, oral, for children (e.g., chloral hydrate, midazolam, ketamine)",moderate and minimal sedation agents,True,"moderate and minimal sedation agents, oral, for children",medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+chloral hydrate,chloral hydrate,True,"moderate and minimal sedation agents, oral, for children",specific_medication,DRUG_001125,chloral hydrate,2344,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+midazolam,midazolam,True,"moderate and minimal sedation agents, oral, for children",specific_medication,DRUG_000497,midazolam,6960,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+ketamine,ketamine,True,"moderate and minimal sedation agents, oral, for children",specific_medication,DRUG_000981,ketamine,6130,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"moderate sedation agents, IV (e.g., dexmedeTOMIDine, midazolam, LORazepam)",moderate sedation agents,True,"moderate sedation agents, IV",medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+dexmedetomidine,dexmedetomidine,True,"moderate sedation agents, IV",specific_medication,DRUG_000452,dexmedetomidine,48937,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+midazolam,midazolam,True,"moderate sedation agents, IV",specific_medication,DRUG_000497,midazolam,6960,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+lorazepam,lorazepam,True,"moderate sedation agents, IV",specific_medication,DRUG_000040,lorazepam,6470,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"neuromuscular blocking agents (e.g., succinylcholine, rocuronium, vecuronium)",neuromuscular blocking agents,True,neuromuscular blocking agents,medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+succinylcholine,succinylcholine,True,neuromuscular blocking agents,specific_medication,DRUG_000052,succinylcholine,10154,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+rocuronium,rocuronium,True,neuromuscular blocking agents,specific_medication,DRUG_000537,rocuronium,68139,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+vecuronium,vecuronium,True,neuromuscular blocking agents,specific_medication,DRUG_001053,Vecuronium,,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"opioids, all routes of administration (e.g., oral, sublingual, parenteral, transdermal)","opioids, all routes of administration",True,"opioids, all routes of administration",medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+fentanyl,fentanyl,True,"opioids, all routes of administration",specific_medication,DRUG_000616,fentanyl,4337,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+morphine,morphine,True,"opioids, all routes of administration",specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+oxycodone,oxycodone,True,"opioids, all routes of administration",specific_medication,DRUG_000336,oxycodone,7804,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+hydromorphone,hydromorphone,True,"opioids, all routes of administration",specific_medication,DRUG_000172,hydromorphone,3423,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+methadone,methadone,True,"opioids, all routes of administration",specific_medication,DRUG_000177,methadone,6813,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+buprenorphine,buprenorphine,True,"opioids, all routes of administration",specific_medication,DRUG_000708,buprenorphine,1819,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+parenteral nutrition preparations,parenteral nutrition preparations,True,parenteral nutrition preparations,medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"sodium chloride for injection, hypertonic, greater than 0.9% concentration","sodium chloride for injection, hypertonic, greater than 0.9% concentration",True,"sodium chloride for injection, hypertonic, greater than 0.9% concentration",medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"sterile water for injection, inhalation and irrigation in containers of 100 mL or more","sterile water for injection, inhalation and irrigation in containers of 100 ml or more",True,"sterile water for injection, inhalation and irrigation",medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"sulfonylurea hypoglycemics, oral (e.g., glimepiride, glipiZIDE, glyBURIDE, TOLBUTamide)",sulfonylurea hypoglycemics,True,"sulfonylurea hypoglycemics, oral",medication_class,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+glimepiride,glimepiride,True,"sulfonylurea hypoglycemics, oral",specific_medication,DRUG_000074,glimepiride,25789,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+glipizide,glipizide,True,"sulfonylurea hypoglycemics, oral",specific_medication,DRUG_000839,glipizide,4821,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+glyburide,glyburide,True,"sulfonylurea hypoglycemics, oral",specific_medication,DRUG_000797,glyburide,4815,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+tolbutamide,tolbutamide,True,"sulfonylurea hypoglycemics, oral",specific_medication,DRUG_000893,tolbutamide,10635,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"EPINEPHrine, IM, and subcutaneous",epinephrine,True,"Specific Medications: EPINEPHrine, IM, and subcutaneous",specific_medication,DRUG_000483,epinephrine,3992,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"epoprostenol (e.g., Flolan), IV",epoprostenol,True,"Specific Medications: epoprostenol (e.g., Flolan), IV",specific_medication,DRUG_000995,epoprostenol,8814,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+insulin U-500 (special emphasis),insulin u-500,True,Specific Medications: insulin U-500,specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+insulin,insulin,True,Specific Medications: insulin U-500,specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+magnesium sulfate injection,magnesium sulfate,True,Specific Medications: magnesium sulfate injection,specific_medication,DRUG_000470,magnesium sulfate anhydrous,1311625,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"methotrexate, oral, nononcologic use",methotrexate,True,"Specific Medications: methotrexate, oral, nononcologic use",specific_medication,DRUG_000392,methotrexate,6851,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+nitroprusside sodium for injection,nitroprusside sodium,True,Specific Medications: nitroprusside sodium for injection,specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+nitroprusside,nitroprusside,True,Specific Medications: nitroprusside sodium for injection,specific_medication,DRUG_000170,nitroprusside,7476,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+opium tincture,opium,True,Specific Medications: opium tincture,specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"oxytocin, IV",oxytocin,True,"Specific Medications: oxytocin, IV",specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+potassium chloride for injection concentrate,potassium chloride,True,Specific Medications: potassium chloride for injection concentrate,specific_medication,DRUG_000569,potassium chloride,8591,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+potassium phosphates injection,potassium phosphates,True,Specific Medications: potassium phosphates injection,specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+potassium phosphate,potassium phosphate,True,Specific Medications: potassium phosphates injection,specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+promethazine injection,promethazine,True,Specific Medications: promethazine injection,specific_medication,DRUG_000841,promethazine,8745,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+tranexamic acid injection,tranexamic acid,True,Specific Medications: tranexamic acid injection,specific_medication,DRUG_000149,tranexamic acid,10691,True,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf
+"vasopressin, IV and intraosseous",vasopressin,True,"Specific Medications: vasopressin, IV and intraosseous",specific_medication,,,,False,ISMP,ISMP_HighAlert_AcuteCare_List_010924_MS5760.pdf

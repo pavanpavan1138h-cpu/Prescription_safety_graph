@@ -33,6 +33,7 @@ export interface PrioritizedFinding {
   evidence_status: string;
   confidence: { level: string; score: number };
   summary_narrative: string;
+  organ_systems?: string[];
   evidence_channels: {
     drugbank_ddi: boolean;
     twosides_combination_events: boolean;
@@ -53,6 +54,7 @@ export interface PairResultRow {
   confidence_score: number;
   ddi_evidence_present: boolean;
   combination_event_evidence_present: boolean;
+  organ_systems?: string[];
 }
 
 export interface DrugParticipationRow {
@@ -140,6 +142,7 @@ export interface PairDetailResponse {
     confidence_score: number;
     rule_fired: string;
   };
+  organ_systems?: string[];
   direct_ddi_evidence: Array<{
     edge_id: string;
     direction: string;

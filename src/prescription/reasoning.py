@@ -22,6 +22,7 @@ from src.prescription.pair_generator import PrescriptionPairGenerator
 from src.prescription.prioritization import SignalPrioritizer
 from src.prescription.aggregation import PrescriptionAggregator
 from src.prescription.report_generator import ClinicalReportGenerator
+from src.prescription.intelligence.evidence_theme_mapper import EvidenceThemeMapper
 from src.reasoning.queries import SafetyQueryEngine
 
 logger = logging.getLogger(__name__)
@@ -66,6 +67,19 @@ class PrescriptionSafetyReasoner:
         for p in pairs:
             res = self.safety_engine.evaluate_pair(p.drug_a_id, p.drug_b_id)
             if res:
+                # Derive pair-level organ systems using the canonical EvidenceThemeMapper
+                pair_organ_systems: List[str] = []
+                if res.combination_event_present:
+                    try:
+                        bundle = self.safety_engine.retriever.retrieve_pair_evidence(p.drug_a_id, p.drug_b_id)
+                        event_names = [se.side_effect_name for se in bundle.side_effect_records]
+                        pair_organ_systems = EvidenceThemeMapper.map_events_to_theme_names(event_names)
+                    except Exception as e:
+                        logger.warning(f"Failed to map pair organ systems for {p.drug_a_id}-{p.drug_b_id}: {e}")
+                
+                # Attach to inference result for prioritizer consumption
+                res.organ_systems = pair_organ_systems
+
                 pair_inferences.append((p.pair_index, res, p.drug_a_name, p.drug_b_name))
                 raw_pair_results.append({
                     "pair_index": p.pair_index,
@@ -82,6 +96,7 @@ class PrescriptionSafetyReasoner:
                     "ddi_reverse_count": res.ddi_reverse_count,
                     "events_present": res.combination_event_present,
                     "event_count": res.combination_event_count,
+                    "organ_systems": pair_organ_systems,
                     "inference_id": res.inference_id,
                     "rule_fired": res.inference_rule
                 })

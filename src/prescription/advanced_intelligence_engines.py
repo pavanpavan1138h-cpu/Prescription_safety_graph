@@ -35,7 +35,12 @@ from src.prescription.advanced_intelligence_schema import (
     UncertaintyProfile,
     ClinicalContextRequirement,
     AdvancedExplanationSummary,
-    AdvancedPrescriptionIntelligenceReport
+    AdvancedPrescriptionIntelligenceReport,
+    RiskTier,
+    AgeBand,
+    OrganFunctionStatus,
+    PatientContext,
+    DrugRiskAssessment,
 )
 
 logger = logging.getLogger(__name__)
@@ -311,11 +316,25 @@ class ReviewPrioritizationEngine:
     def analyze(
         report: PrescriptionSafetyReport,
         part_profiles: List[DrugParticipationProfile],
-        event_conv_items: List[AdverseEventConvergenceItem]
+        event_conv_items: List[AdverseEventConvergenceItem],
+        patient_context: Optional[PatientContext] = None,
+        drug_risk_assessments: Optional[List[DrugRiskAssessment]] = None
     ) -> List[ReviewPriorityFinding]:
         findings = []
         drug_pos_map = {dp.internal_drug_id: dp.positive_evidence_pairs for dp in part_profiles}
         drug_names = {d.resolved_internal_drug_id: d.display_name for d in report.resolution_summary.resolved_drugs if d.resolved_internal_drug_id}
+
+        # Build lookup map for drug risk assessments by internal_drug_id and display_name
+        risk_map = {}
+        if drug_risk_assessments:
+            for dra in drug_risk_assessments:
+                if dra.drug_id:
+                    risk_map[dra.drug_id] = dra
+                if dra.drug_name:
+                    risk_map[dra.drug_name.lower().strip()] = dra
+
+        # Resolve patient context defaults
+        effective_context = patient_context or PatientContext()
 
         for idx, p in enumerate(report.pair_results, 1):
             pair_id = f"PAIR_{p['drug_a_id']}__{p['drug_b_id']}"
@@ -325,7 +344,7 @@ class ReviewPrioritizationEngine:
             reasons = []
             score = 0.0
 
-            # 1. Channel Convergence
+            # 1. Channel Convergence (Pairwise Base Scoring)
             if p.get("evidence_status") == "CONVERGENT_SAFETY_EVIDENCE":
                 score += 4.0
                 reasons.append("Pair exhibits dual-channel convergence (DrugBank DDI + TWOSIDES adverse events).")
@@ -350,7 +369,43 @@ class ReviewPrioritizationEngine:
                 score += 1.5
                 reasons.append(f"Pair shares {len(recurring_events)} recurring adverse event concepts with other pairs.")
 
-            # 4. Score to Tier Mapping
+            # 4. Box 9: Regulatory & High-Alert Risk Modifiers (Pair-specific drug risk evaluation)
+            dra_a = risk_map.get(p['drug_a_id']) or risk_map.get(da_name.lower().strip())
+            dra_b = risk_map.get(p['drug_b_id']) or risk_map.get(db_name.lower().strip())
+            pair_risk_assessments = [d for d in [dra_a, dra_b] if d is not None]
+
+            # Boxed warning check (+1.5)
+            has_boxed = any(d.has_boxed_warning or d.risk_tier == RiskTier.BOXED_WARNING for d in pair_risk_assessments)
+            if has_boxed:
+                score += 1.5
+                reasons.append("Drug has an FDA boxed warning: +1.5")
+            else:
+                # ISMP high-alert check (+1.0) if no boxed warning on pair
+                has_high_alert = any(d.is_ismp_high_alert or d.risk_tier == RiskTier.HIGH_ALERT for d in pair_risk_assessments)
+                if has_high_alert:
+                    score += 1.0
+                    reasons.append("Drug is classified as ISMP High-Alert: +1.0")
+
+            # 5. Box 9: Patient Context Modifiers
+            # Age modifier: Pediatric or Elderly (+1.0)
+            if effective_context.age_band == AgeBand.PEDIATRIC:
+                score += 1.0
+                reasons.append("Patient is in Pediatric age band: +1.0")
+            elif effective_context.age_band == AgeBand.ELDERLY:
+                score += 1.0
+                reasons.append("Patient is in Elderly age band: +1.0")
+
+            # Kidney function modifier: Reduced (+1.0)
+            if effective_context.kidney_function == OrganFunctionStatus.REDUCED:
+                score += 1.0
+                reasons.append("Patient has Reduced kidney function: +1.0")
+
+            # Liver function modifier: Reduced (+1.0)
+            if effective_context.liver_function == OrganFunctionStatus.REDUCED:
+                score += 1.0
+                reasons.append("Patient has Reduced liver function: +1.0")
+
+            # 6. Score to Tier Mapping
             if score >= 6.0:
                 tier = ReviewPriorityTier.IMMEDIATE_REVIEW_PRIORITY
             elif score >= 4.0:

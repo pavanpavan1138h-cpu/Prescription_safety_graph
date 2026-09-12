@@ -143,6 +143,48 @@ class AdvancedExplanationSummary:
     uncertainty_summary: str
     scientific_guardrails: List[str]
 
+
+# --- Box 9: Risk & Patient-Context Analysis Schemas ---
+
+class RiskTier(str, Enum):
+    BOXED_WARNING = "Boxed Warning"
+    HIGH_ALERT = "High-Alert"
+    STANDARD = "Standard"
+
+
+class AgeBand(str, Enum):
+    PEDIATRIC = "Pediatric"
+    ADULT = "Adult"
+    ELDERLY = "Elderly"
+
+
+class OrganFunctionStatus(str, Enum):
+    NORMAL = "Normal"
+    REDUCED = "Reduced"
+
+
+@dataclass
+class PatientContext:
+    age_band: AgeBand = AgeBand.ADULT
+    kidney_function: OrganFunctionStatus = OrganFunctionStatus.NORMAL
+    liver_function: OrganFunctionStatus = OrganFunctionStatus.NORMAL
+
+
+@dataclass
+class DrugRiskAssessment:
+    drug_id: str
+    drug_name: str
+    rxcui: Optional[str]
+    risk_tier: RiskTier
+    is_ismp_high_alert: bool
+    ismp_category: Optional[str]
+    has_boxed_warning: bool
+    boxed_warning_text: Optional[str]
+    contraindications_text: Optional[str]
+    warnings_cautions_text: Optional[str]
+    evidence_source: str  # "openFDA", "ISMP", "openFDA+ISMP", "Standard"
+
+
 @dataclass
 class AdvancedPrescriptionIntelligenceReport:
     analysis_id: str
@@ -156,3 +198,5 @@ class AdvancedPrescriptionIntelligenceReport:
     clinical_context_requirements: List[ClinicalContextRequirement]
     advanced_explanation: AdvancedExplanationSummary
     scientific_limitations: List[str]
+    patient_context: Optional[PatientContext] = None
+    drug_risk_assessments: List[DrugRiskAssessment] = field(default_factory=list)

@@ -44,6 +44,8 @@ class SignalPrioritizer:
                 supp_edges = res.reasoning_trace.supporting_edge_ids
                 source_recs = res.reasoning_trace.source_record_ids
 
+            organ_systems = getattr(res, "organ_systems", [])
+
             finding = PrioritizedFinding(
                 finding_id=f"FIND_{finding_counter:04d}",
                 pair_index=pair_idx,
@@ -62,6 +64,7 @@ class SignalPrioritizer:
                 inference_id=res.inference_id,
                 rule_fired=res.inference_rule,
                 summary_narrative=summary_narrative,
+                organ_systems=organ_systems,
                 supporting_edge_ids=supp_edges,
                 source_record_ids=source_recs
             )

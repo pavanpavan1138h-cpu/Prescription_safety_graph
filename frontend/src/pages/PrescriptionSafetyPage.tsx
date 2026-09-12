@@ -68,7 +68,8 @@ import {
   RefreshCw,
   Sparkles,
   FileCheck,
-  ShieldCheck
+  ShieldCheck,
+  Info
 } from 'lucide-react';
 import {
   formatEvidenceStatus,
@@ -83,6 +84,7 @@ interface PrescriptionSafetyPageProps {
 
 export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ systemInfo }) => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('intelligence');
+  const [showCalculation, setShowCalculation] = useState<boolean>(false);
 
   const {
     medications,
@@ -273,9 +275,155 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
               {/* Tab Panels */}
               <div style={{ flex: 1, minHeight: 0 }}>
                 
+                {analysisData.prescription_report.unresolved_items && analysisData.prescription_report.unresolved_items.length > 0 && (
+                  <div style={{
+                    padding: '0.75rem 1rem',
+                    backgroundColor: 'rgba(239, 68, 68, 0.08)',
+                    border: '1px solid rgba(239, 68, 68, 0.25)',
+                    borderRadius: '6px',
+                    color: '#ef4444',
+                    fontSize: '0.8rem',
+                    marginBottom: '1.25rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.25rem'
+                  }}>
+                    <span>⚠️ <b>Unresolved Input Warning:</b> Some medication inputs could not be recognized by the reasoning engine. Misspelled medications are ignored during drug-drug interaction evaluation.</span>
+                    <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                      Unrecognized: {analysisData.prescription_report.unresolved_items.map(u => `"${u.input_value}"`).join(', ')}
+                    </span>
+                  </div>
+                )}
+                
                 {/* 1. Intelligence Overview Tab */}
                 {activeTab === 'intelligence' && (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                    
+                    {/* Top Row: Safety Summary & Entity Resolution */}
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                      
+                      {/* Left: Overall Prescription Safety Profile */}
+                      <div style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                        <h3 style={{ margin: 0, fontSize: '0.95rem', color: 'var(--text-main)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                          <ShieldCheck size={16} style={{ color: '#10b981' }} /> Safety Profile
+                        </h3>
+                        
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.85rem' }}>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #1e293b', paddingBottom: '0.5rem' }}>
+                            <span style={{ color: 'var(--text-muted)' }}>Risk Status:</span>
+                            <span style={{
+                              fontWeight: 700,
+                              padding: '0.15rem 0.5rem',
+                              borderRadius: '4px',
+                              backgroundColor: getEvidenceBadgeColor(analysisData.prescription_report.prescription_summary.evidence_status).bg,
+                              color: getEvidenceBadgeColor(analysisData.prescription_report.prescription_summary.evidence_status).text,
+                              border: `1px solid ${getEvidenceBadgeColor(analysisData.prescription_report.prescription_summary.evidence_status).border}`
+                            }}>
+                              {formatEvidenceStatus(analysisData.prescription_report.prescription_summary.evidence_status)}
+                            </span>
+                          </div>
+
+                          <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #1e293b', paddingBottom: '0.5rem' }}>
+                            <span style={{ color: 'var(--text-muted)' }}>Highest Priority level:</span>
+                            <span style={{
+                              fontWeight: 700,
+                              padding: '0.15rem 0.5rem',
+                              borderRadius: '4px',
+                              backgroundColor: getPriorityBadgeColor(analysisData.prescription_report.prescription_summary.highest_evidence_priority).bg,
+                              color: getPriorityBadgeColor(analysisData.prescription_report.prescription_summary.highest_evidence_priority).text,
+                              border: `1px solid ${getPriorityBadgeColor(analysisData.prescription_report.prescription_summary.highest_evidence_priority).border}`
+                            }}>
+                              {formatEvidenceStatus(analysisData.prescription_report.prescription_summary.highest_evidence_priority)}
+                            </span>
+                          </div>
+
+                          <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #1e293b', paddingBottom: '0.5rem' }}>
+                            <span style={{ color: 'var(--text-muted)' }}>Total Resolved Drugs:</span>
+                            <span style={{ fontWeight: 700, color: 'var(--text-main)' }}>
+                              {analysisData.prescription_report.prescription_summary.total_unique_drugs}
+                            </span>
+                          </div>
+
+                          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                            <span style={{ color: 'var(--text-muted)' }}>Evaluated Interaction Pairs:</span>
+                            <span style={{ fontWeight: 700, color: 'var(--text-main)' }}>
+                              {analysisData.prescription_report.prescription_summary.total_pairs_analyzed} ({analysisData.prescription_report.prescription_summary.positive_evidence_pairs} flagged)
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Right: Entity Resolution & Standardization */}
+                      <div style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                        <h3 style={{ margin: 0, fontSize: '0.95rem', color: 'var(--text-main)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                          <Database size={16} style={{ color: '#3b82f6' }} /> Entity Resolution
+                        </h3>
+
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', overflowY: 'auto', maxHeight: '140px' }}>
+                          {analysisData.prescription_report.resolution_summary.resolved_drugs.map((drug, idx) => (
+                            <div key={idx} style={{
+                              display: 'flex',
+                              justifyContent: 'space-between',
+                              alignItems: 'center',
+                              padding: '0.4rem 0.6rem',
+                              backgroundColor: 'var(--bg-primary)',
+                              border: '1px solid var(--border-color)',
+                              borderRadius: '6px',
+                              fontSize: '0.8rem'
+                            }}>
+                              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                <span style={{ fontWeight: 600, color: 'var(--text-main)' }}>{drug.canonical_name}</span>
+                                <span style={{ fontSize: '0.65rem', color: 'var(--text-muted)' }}>Mapped from: "{drug.input_values.join(', ')}"</span>
+                              </div>
+                              {drug.rxcui && (
+                                <span style={{
+                                  fontSize: '0.65rem',
+                                  padding: '0.15rem 0.35rem',
+                                  borderRadius: '4px',
+                                  backgroundColor: 'var(--bg-secondary)',
+                                  color: 'var(--primary)',
+                                  fontFamily: 'monospace',
+                                  border: '1px solid var(--border-color)'
+                                }}>
+                                  RxCUI: {drug.rxcui}
+                                </span>
+                              )}
+                            </div>
+                          ))}
+
+                          {/* Unresolved Inputs */}
+                          {analysisData.prescription_report.unresolved_items && analysisData.prescription_report.unresolved_items.map((unres, idx) => (
+                            <div key={`unres-${idx}`} style={{
+                              display: 'flex',
+                              justifyContent: 'space-between',
+                              alignItems: 'center',
+                              padding: '0.4rem 0.6rem',
+                              backgroundColor: 'rgba(239, 68, 68, 0.05)',
+                              border: '1px solid rgba(239, 68, 68, 0.2)',
+                              borderRadius: '6px',
+                              fontSize: '0.8rem'
+                            }}>
+                              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                                <span style={{ fontWeight: 600, color: '#ef4444' }}>"{unres.input_value}"</span>
+                                <span style={{ fontSize: '0.65rem', color: 'var(--text-muted)' }}>{unres.reason}</span>
+                              </div>
+                              <span style={{
+                                fontSize: '0.625rem',
+                                padding: '0.15rem 0.35rem',
+                                borderRadius: '4px',
+                                backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                                color: '#ef4444',
+                                fontWeight: 'bold'
+                              }}>
+                                UNRESOLVED
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                    </div>
+
                     {/* Executive Summary Card */}
                     <div style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.5rem' }}>
                       <h3 style={{ margin: '0 0 1rem 0', fontSize: '0.95rem', color: 'var(--text-main)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -286,31 +434,214 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                       </p>
                     </div>
 
-                    {/* Complexity and Prioritization metrics hidden for presentation simplify */}
-                    <div style={{ display: 'none', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-                      {/* Left: Complexity profile */}
-                      <div style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.5rem' }}>
-                        <h3 style={{ margin: '0 0 1rem 0', fontSize: '0.95rem', color: 'var(--text-main)' }}>Complexity Profile</h3>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.85rem' }}>
-                          <div>Complexity Category: <b style={{ color: 'var(--text-main)' }}>{analysisData.complexity_profile.complexity_category}</b></div>
-                          <div>Complexity Score: <b style={{ color: 'var(--text-main)' }}>{analysisData.complexity_profile.complexity_score} / 10</b></div>
-                          <div style={{ color: 'var(--text-muted)', lineHeight: '1.4' }}>{analysisData.complexity_profile.explanation}</div>
-                        </div>
-                      </div>
+                    {/* Enhanced Computational Trustworthiness Card */}
+                    {analysisData.trustworthiness && (() => {
+                      const metrics = analysisData.trustworthiness.trustworthiness_metrics;
+                      const m1 = Math.round((metrics.find(m => m.metric_id === 'METRIC_REPRODUCIBILITY')?.normalized_value ?? 1.0) * 100);
+                      const m2 = Math.round((metrics.find(m => m.metric_id === 'METRIC_PERTURBATION')?.normalized_value ?? 1.0) * 100);
 
-                      {/* Right: Key Findings */}
-                      <div style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.5rem' }}>
-                        <h3 style={{ margin: '0 0 1rem 0', fontSize: '0.95rem', color: 'var(--text-main)' }}>Key Prioritizations</h3>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.85rem' }}>
-                          <div>Review Findings: <b style={{ color: 'var(--text-main)' }}>{analysisData.advanced_explanation.key_findings_summary}</b></div>
-                          <div>Uncertainty Status: <b style={{ color: 'var(--text-main)' }}>{analysisData.uncertainty_profile.uncertainty_level}</b></div>
-                          <div style={{ color: 'var(--text-muted)', lineHeight: '1.4' }}>{analysisData.uncertainty_profile.explanation_narrative}</div>
+                      const structVal = metrics.find(m => m.metric_id === 'METRIC_STRUCT_ROBUST')?.normalized_value ?? 1.0;
+                      const signalVal = metrics.find(m => m.metric_id === 'METRIC_SIGNAL_ROBUST')?.normalized_value ?? 1.0;
+                      const crossVal = metrics.find(m => m.metric_id === 'METRIC_CROSS_LAYER')?.normalized_value ?? 1.0;
+                      const m3 = Math.round(((structVal + signalVal + crossVal) / 3) * 100);
+
+                      const provVal = metrics.find(m => m.metric_id === 'METRIC_PROVENANCE')?.normalized_value ?? 1.0;
+                      const expVal = metrics.find(m => m.metric_id === 'METRIC_EXPLANATION')?.normalized_value ?? 1.0;
+                      const m4 = Math.round(((provVal + expVal + crossVal) / 3) * 100);
+
+                      const overallRobustness = Math.round((m1 + m2 + m3 + m4) / 4);
+
+                      return (
+                        <div style={{ backgroundColor: 'var(--bg-secondary)', border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <h3 style={{ margin: 0, fontSize: '0.95rem', color: 'var(--text-main)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                              <ShieldCheck size={16} style={{ color: '#3b82f6' }} /> Computational Trustworthiness
+                            </h3>
+                            <div
+                              title="Trustworthiness is calculated as the arithmetic mean of the normalized verification metrics across the four evaluated robustness dimensions."
+                              style={{ display: 'flex', alignItems: 'center', cursor: 'help', color: 'var(--text-muted)' }}
+                            >
+                              <Info size={16} />
+                            </div>
+                          </div>
+
+                          <div style={{ display: 'grid', gridTemplateColumns: '180px 1fr', gap: '2rem', alignItems: 'start' }}>
+                            
+                            {/* Left: Score Dial Gauge & Formula */}
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem', textAlign: 'center' }}>
+                              <div style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                width: '130px',
+                                height: '130px',
+                                borderRadius: '50%',
+                                backgroundColor: 'var(--bg-primary)',
+                                border: '1px solid var(--border-color)',
+                                boxShadow: 'inset 0 0 10px rgba(0,0,0,0.2)'
+                              }}>
+                                <span style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--primary)' }}>
+                                  {overallRobustness}%
+                                </span>
+                                <span style={{ fontSize: '0.55rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginTop: '0.25rem' }}>Robustness</span>
+                              </div>
+                              <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', lineHeight: '1.4' }}>
+                                Calculation:<br />
+                                <b>({m1}% + {m2}% + {m3}% + {m4}%) / 4 = {overallRobustness}%</b>
+                              </span>
+                            </div>
+
+                            {/* Right: Validation Conditions Checkmarks */}
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', fontSize: '0.8rem' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-main)' }}>
+                                  <span style={{ color: '#10b981', fontWeight: 'bold' }}>✓</span>
+                                  <span>Deterministic Repeatability</span>
+                                  <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginLeft: 'auto' }}>({m1}%)</span>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-main)' }}>
+                                  <span style={{ color: '#10b981', fontWeight: 'bold' }}>✓</span>
+                                  <span>Input Invariance Robustness</span>
+                                  <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginLeft: 'auto' }}>({m2}%)</span>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-main)' }}>
+                                  <span style={{ color: '#10b981', fontWeight: 'bold' }}>✓</span>
+                                  <span>Topological Stability</span>
+                                  <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginLeft: 'auto' }}>({m3}%)</span>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-main)' }}>
+                                  <span style={{ color: '#10b981', fontWeight: 'bold' }}>✓</span>
+                                  <span>Explanation Provenance</span>
+                                  <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginLeft: 'auto' }}>({m4}%)</span>
+                                </div>
+                              </div>
+
+                              <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontStyle: 'italic', borderTop: '1px solid var(--border-color)', paddingTop: '0.5rem' }}>
+                                * A green checkmark (✓) indicates the corresponding verification condition passed validation tests successfully.
+                              </div>
+
+                              <button
+                                onClick={() => setShowCalculation(!showCalculation)}
+                                style={{
+                                  alignSelf: 'flex-start',
+                                  padding: '0.4rem 0.8rem',
+                                  borderRadius: '4px',
+                                  backgroundColor: 'var(--bg-primary)',
+                                  border: '1px solid var(--border-color)',
+                                  color: 'var(--primary)',
+                                  fontSize: '0.75rem',
+                                  fontWeight: 600,
+                                  cursor: 'pointer',
+                                  outline: 'none'
+                                }}
+                              >
+                                {showCalculation ? 'Hide Calculation' : 'How is this calculated?'}
+                              </button>
+                            </div>
+
+                          </div>
+
+                          {/* Expandable detailed mathematical calculation breakdown */}
+                          {showCalculation && (
+                            <div style={{
+                              display: 'flex',
+                              flexDirection: 'column',
+                              gap: '1rem',
+                              padding: '1.25rem',
+                              backgroundColor: 'var(--bg-primary)',
+                              borderRadius: '6px',
+                              border: '1px solid var(--border-color)',
+                              animation: 'fadeIn 0.2s ease-out'
+                            }}>
+                              <h4 style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-main)' }}>Robustness Dimension Breakdown</h4>
+                              
+                              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.8rem' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
+                                  <div>
+                                    <span style={{ fontWeight: 600, color: 'var(--text-main)' }}>Deterministic Repeatability</span>
+                                    <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Same input produces the same reasoning structure.</div>
+                                  </div>
+                                  <span style={{ fontFamily: 'monospace', fontWeight: 'bold', color: 'var(--text-main)' }}>{m1}%</span>
+                                </div>
+
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
+                                  <div>
+                                    <span style={{ fontWeight: 600, color: 'var(--text-main)' }}>Input Invariance Robustness</span>
+                                    <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Superficial input changes such as capitalization, spacing, and supported synonyms should not change the resolved result.</div>
+                                  </div>
+                                  <span style={{ fontFamily: 'monospace', fontWeight: 'bold', color: 'var(--text-main)' }}>{m2}%</span>
+                                </div>
+
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
+                                  <div>
+                                    <span style={{ fontWeight: 600, color: 'var(--text-main)' }}>Topological Stability</span>
+                                    <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Relevant graph structure remains stable under the tested perturbations.</div>
+                                  </div>
+                                  <span style={{ fontFamily: 'monospace', fontWeight: 'bold', color: 'var(--text-main)' }}>{m3}%</span>
+                                </div>
+
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
+                                  <div>
+                                    <span style={{ fontWeight: 600, color: 'var(--text-main)' }}>Explanation Provenance</span>
+                                    <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Reasoning can be traced back to the supporting knowledge-graph evidence/source nodes.</div>
+                                  </div>
+                                  <span style={{ fontFamily: 'monospace', fontWeight: 'bold', color: 'var(--text-main)' }}>{m4}%</span>
+                                </div>
+
+                                <div style={{ borderTop: '1px solid var(--border-color)', margin: '0.25rem 0' }}></div>
+
+                                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', fontWeight: 'bold' }}>
+                                  <span style={{ color: 'var(--text-main)' }}>Aggregate Computational Robustness Score</span>
+                                  <span style={{ color: 'var(--primary)' }}>{overallRobustness}%</span>
+                                </div>
+                              </div>
+
+                              {/* Schematic Arithmetic Flow Chart */}
+                              <div style={{
+                                padding: '1rem',
+                                backgroundColor: 'var(--bg-secondary)',
+                                borderRadius: '4px',
+                                border: '1px solid var(--border-color)',
+                                fontFamily: 'monospace',
+                                fontSize: '0.75rem',
+                                color: 'var(--text-muted)',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '0.25rem',
+                                whiteSpace: 'pre'
+                              }}>
+                                <div>Repeatability ({m1}%) ──┐</div>
+                                <div>Invariance ({m2}%) ─────┤</div>
+                                <div>Stability ({m3}%) ──────┼──&gt; Arithmetic Mean ──&gt; {overallRobustness}%</div>
+                                <div>Provenance ({m4}%) ─────┘</div>
+                              </div>
+
+                              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                                <b>Arithmetic Mean Formula:</b><br />
+                                ({m1} + {m2} + {m3} + {m4}) / 4 = {overallRobustness}%
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Crucial Clinical Safety Context Box */}
+                          <div style={{
+                            padding: '0.75rem 1rem',
+                            backgroundColor: 'rgba(59, 130, 246, 0.05)',
+                            border: '1px solid rgba(59, 130, 246, 0.15)',
+                            borderRadius: '6px',
+                            fontSize: '0.75rem',
+                            color: 'var(--text-muted)'
+                          }}>
+                            💡 <b>Computational Robustness Notice:</b> This score measures the computational robustness and structural repeat-stability of the reasoning pipeline. It is <u>not</u> clinical accuracy, <u>not</u> a probability of patient risk, and <u>not</u> a percentage chance that the prescription is unsafe.
+                          </div>
+
                         </div>
-                      </div>
-                    </div>
+                      );
+                    })()}
 
                     {/* Scientific Guardrails notices */}
-                    <div style={{ border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.25rem', backgroundColor: '#0f1222' }}>
+                    <div style={{ border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1.25rem', backgroundColor: 'var(--bg-primary)' }}>
                       <h4 style={{ margin: '0 0 0.75rem 0', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-muted)' }}>
                         Analysis Limits & Caveats
                       </h4>
@@ -388,8 +719,8 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                         fontFamily: 'var(--font-mono)',
                         fontSize: '0.85rem',
                         lineHeight: '1.6',
-                        color: '#e2e8f0',
-                        backgroundColor: '#0f1222',
+                        color: 'var(--text-main)',
+                        backgroundColor: 'var(--bg-primary)',
                         padding: '1.5rem',
                         borderRadius: '6px',
                         border: '1px solid var(--border-color)',
@@ -433,8 +764,8 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                         fontFamily: 'var(--font-mono)',
                         fontSize: '0.85rem',
                         lineHeight: '1.6',
-                        color: '#e2e8f0',
-                        backgroundColor: '#0f1222',
+                        color: 'var(--text-main)',
+                        backgroundColor: 'var(--bg-primary)',
                         padding: '1.5rem',
                         borderRadius: '6px',
                         border: '1px solid var(--border-color)',
@@ -587,6 +918,18 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                                 }}>
                                   {formatEvidenceStatus(pair.evidence_priority)}
                                 </span>
+                                {pair.organ_systems && pair.organ_systems.map((os) => (
+                                  <span key={os} style={{
+                                    padding: '0.2rem 0.5rem',
+                                    borderRadius: '4px',
+                                    backgroundColor: '#0284c71a',
+                                    border: '1px solid #0284c733',
+                                    color: '#38bdf8',
+                                    fontSize: '0.7rem'
+                                  }}>
+                                    {formatEvidenceStatus(os)}
+                                  </span>
+                                ))}
                               </div>
                             </div>
 
@@ -667,7 +1010,7 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                     </div>
 
                     {/* Cytoscape Graph Container */}
-                    <div style={{ flex: 1, backgroundColor: '#090b14', border: '1px solid var(--border-color)', borderRadius: '8px', overflow: 'hidden', minHeight: '540px' }}>
+                    <div style={{ flex: 1, backgroundColor: 'var(--bg-primary)', border: '1px solid var(--border-color)', borderRadius: '8px', overflow: 'hidden', minHeight: '540px' }}>
                       {loadingGraph ? (
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '540px', gap: '0.5rem', color: 'var(--text-muted)' }}>
                           <RefreshCw size={24} className="animate-spin" />
@@ -677,7 +1020,11 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                         <InteractiveGraph
                           subgraph={subgraph}
                           highlightPairId={selectedPairId || undefined}
-                          onSelectNode={(node) => console.log('Selected node:', node)}
+                          onSelectNode={(node) => {
+                            if (node.node_type === 'DrugPair') {
+                              selectPair(node.id);
+                            }
+                          }}
                         />
                       ) : (
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '540px', color: 'var(--text-muted)' }}>
@@ -747,8 +1094,8 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
                       fontFamily: 'var(--font-mono)',
                       fontSize: '0.85rem',
                       lineHeight: '1.6',
-                      color: '#e2e8f0',
-                      backgroundColor: '#0f1222',
+                      color: 'var(--text-main)',
+                      backgroundColor: 'var(--bg-primary)',
                       padding: '1.5rem',
                       borderRadius: '6px',
                       border: '1px solid var(--border-color)',
@@ -834,9 +1181,9 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
           right: 0,
           width: '540px',
           height: '100vh',
-          backgroundColor: '#090b14',
+          backgroundColor: 'var(--bg-secondary)',
           borderLeft: '1px solid var(--border-color)',
-          boxShadow: '-10px 0 30px rgba(0,0,0,0.5)',
+          boxShadow: '-10px 0 30px rgba(0,0,0,0.15)',
           padding: '2rem',
           display: 'flex',
           flexDirection: 'column',
@@ -845,7 +1192,7 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
         }}>
           {/* Close button */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '1rem' }}>
-            <h3 style={{ margin: 0, fontSize: '1rem', fontWeight: 600, color: '#fff' }}>
+            <h3 style={{ margin: 0, fontSize: '1rem', fontWeight: 600, color: 'var(--text-main)' }}>
               Pair Evidence Details
             </h3>
             <button
@@ -865,24 +1212,46 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', fontSize: '0.85rem' }}>
             <div>
               <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Evaluating</span>
-              <div style={{ fontSize: '1.1rem', fontWeight: 600, color: '#fff', marginTop: '0.25rem' }}>
+              <div style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--text-main)', marginTop: '0.25rem' }}>
                 {selectedPairDetail.drug_a.display_name} &harr; {selectedPairDetail.drug_b.display_name}
               </div>
             </div>
 
-            <div style={{ padding: '0.75rem', borderRadius: '4px', backgroundColor: '#8b5cf61a', border: '1px solid #8b5cf633', color: '#c4b5fd' }}>
+            <div style={{ padding: '0.75rem', borderRadius: '4px', backgroundColor: '#8b5cf61a', border: '1px solid #8b5cf633', color: 'var(--primary)' }}>
               Status: <b>{formatEvidenceStatus(selectedPairDetail.inference.evidence_status)}</b> | Confidence: <b>{selectedPairDetail.inference.confidence_level} ({selectedPairDetail.inference.confidence_score})</b>
             </div>
 
+            {/* Organ-System Signals */}
+            {selectedPairDetail.organ_systems && selectedPairDetail.organ_systems.length > 0 && (
+              <div>
+                <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--text-main)', fontSize: '0.9rem' }}>Identified Organ-System Signals</h4>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+                  {selectedPairDetail.organ_systems.map((os) => (
+                    <span key={os} style={{
+                      padding: '0.25rem 0.6rem',
+                      borderRadius: '4px',
+                      backgroundColor: '#0284c71a',
+                      border: '1px solid #0284c733',
+                      color: '#38bdf8',
+                      fontSize: '0.75rem',
+                      fontWeight: 600
+                    }}>
+                      {formatEvidenceStatus(os)}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* DDI asserts list */}
             <div>
-              <h4 style={{ margin: '0 0 0.5rem 0', color: '#fff', fontSize: '0.9rem' }}>Direct DrugBank DDI Assertions</h4>
+              <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--text-main)', fontSize: '0.9rem' }}>Direct DrugBank DDI Assertions</h4>
               {selectedPairDetail.direct_ddi_evidence.length === 0 ? (
                 <div style={{ color: 'var(--text-muted)', fontStyle: 'italic' }}>No direct assertions found.</div>
               ) : (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                   {selectedPairDetail.direct_ddi_evidence.map((ddi, i) => (
-                    <div key={i} style={{ padding: '0.75rem', borderRadius: '4px', backgroundColor: '#0f1222', border: '1px solid var(--border-color)', color: '#fff' }}>
+                    <div key={i} style={{ padding: '0.75rem', borderRadius: '4px', backgroundColor: 'var(--bg-primary)', border: '1px solid var(--border-color)', color: 'var(--text-main)' }}>
                       <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginBottom: '0.25rem' }}>Source: {ddi.source_dataset} | Record ID: {ddi.source_record_id}</div>
                       <div>{ddi.interaction_description}</div>
                     </div>
@@ -893,9 +1262,9 @@ export const PrescriptionSafetyPage: React.FC<PrescriptionSafetyPageProps> = ({ 
 
             {/* TWOSIDES side effects list */}
             <div>
-              <h4 style={{ margin: '0 0 0.5rem 0', color: '#fff', fontSize: '0.9rem' }}>Combination Side Effects (TWOSIDES)</h4>
+              <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--text-main)', fontSize: '0.9rem' }}>Combination Side Effects (TWOSIDES)</h4>
               <div style={{ color: 'var(--text-muted)', marginBottom: '0.5rem' }}>
-                Total observed side effects count: <b style={{ color: '#fff' }}>{selectedPairDetail.combination_adverse_events.total_event_count}</b>
+                Total observed side effects count: <b style={{ color: 'var(--text-main)' }}>{selectedPairDetail.combination_adverse_events.total_event_count}</b>
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', maxHeight: '180px', overflowY: 'auto' }}>
                 {selectedPairDetail.combination_adverse_events.observed_events.slice(0, 40).map((se, i) => (

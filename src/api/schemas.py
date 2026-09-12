@@ -66,10 +66,30 @@ class PairSafetyResponse(BaseModel):
     evidence_summary: Dict[str, Any]
     clinical_interpretation: str
 
-# 4. Master Prescription Analysis Schemas
+class PatientContextSchema(BaseModel):
+    age_band: str = Field(default="Adult", description="Age band: Pediatric, Adult, Elderly")
+    kidney_function: str = Field(default="Normal", description="Kidney function: Normal, Reduced")
+    liver_function: str = Field(default="Normal", description="Liver function: Normal, Reduced")
+
+class DrugRiskAssessmentSchema(BaseModel):
+    drug_id: str
+    drug_name: str
+    rxcui: Optional[str] = None
+    risk_tier: str
+    is_ismp_high_alert: bool
+    ismp_category: Optional[str] = None
+    has_boxed_warning: bool
+    boxed_warning_text: Optional[str] = None
+    contraindications_text: Optional[str] = None
+    warnings_cautions_text: Optional[str] = None
+    evidence_source: str
+
 class PrescriptionAnalyzeRequest(BaseModel):
     medications: List[str] = Field(default_factory=list, description="List of medications to analyze")
     prescription_id: Optional[str] = None
+    age_band: Optional[str] = Field(default="Adult", description="Patient age band: Pediatric, Adult, Elderly")
+    kidney_function: Optional[str] = Field(default="Normal", description="Renal function: Normal, Reduced")
+    liver_function: Optional[str] = Field(default="Normal", description="Hepatic function: Normal, Reduced")
 
 class AnalysisMetadata(BaseModel):
     analysis_id: str
@@ -115,6 +135,7 @@ class PrioritizedFindingCard(BaseModel):
     evidence_status: str
     confidence: Dict[str, Any]
     summary_narrative: str
+    organ_systems: List[str] = Field(default_factory=list, description="Organ-system signal categories associated with this pair")
     evidence_channels: Dict[str, bool]
     ddi_record_count: int
     adverse_event_count: int
@@ -131,6 +152,7 @@ class PairResultRow(BaseModel):
     confidence_score: float
     ddi_evidence_present: bool
     combination_event_evidence_present: bool
+    organ_systems: List[str] = Field(default_factory=list, description="Organ-system signal categories associated with this pair")
 
 class DrugParticipationRow(BaseModel):
     drug_id: str
@@ -162,6 +184,8 @@ class PrescriptionAnalysisResponse(BaseModel):
     limitations: List[str]
     provenance: ProvenanceSummary
     clinical_narrative_report: str
+    patient_context: Optional[PatientContextSchema] = None
+    drug_risk_assessments: List[DrugRiskAssessmentSchema] = Field(default_factory=list)
 
 # 5. Granular Pair Detail Drilldown
 class DirectDDIItem(BaseModel):
@@ -190,6 +214,7 @@ class PairDetailResponse(BaseModel):
     drug_a: Dict[str, Any]
     drug_b: Dict[str, Any]
     inference: Dict[str, Any]
+    organ_systems: List[str] = Field(default_factory=list, description="Organ-system signal categories identified for this pair")
     direct_ddi_evidence: List[DirectDDIItem]
     combination_adverse_events: CombinationAdverseEventsDetail
     provenance_trace: ProvenanceTraceDetail

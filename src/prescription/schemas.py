@@ -77,6 +77,7 @@ class PrioritizedFinding:
     inference_id: str
     rule_fired: str
     summary_narrative: str
+    organ_systems: List[str] = field(default_factory=list)
     supporting_edge_ids: List[str] = field(default_factory=list)
     source_record_ids: List[str] = field(default_factory=list)
 

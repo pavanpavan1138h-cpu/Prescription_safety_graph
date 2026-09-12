@@ -115,9 +115,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onStartAnalysis, systemInfo 
             </div>
             <div>
               <span style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--text-main)', display: 'block' }}>
-                100% Resolved
+                1,836 Canonical Drugs
               </span>
-              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Collapsing RxCUI/TWOSIDES synonym conflicts</span>
+              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Successfully integrated across biomedical sources</span>
             </div>
           </div>
         </Card>
@@ -158,16 +158,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onStartAnalysis, systemInfo 
               <h3 style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-main)', margin: '0 0 0.5rem 0' }}>Traceable Provenance Lineages</h3>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: '1.5', margin: 0 }}>
                 Maps clinical conclusions directly back to execution proof-nodes. Audit-ready explainability for healthcare administrators.
-              </p>
-            </div>
-          </div>
-
-          <div style={{ padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--border-color)', backgroundColor: 'var(--bg-secondary)', display: 'flex', gap: '1rem' }}>
-            <div style={{ color: '#f59e0b', marginTop: '0.2rem' }}><RefreshCw size={20} /></div>
-            <div>
-              <h3 style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-main)', margin: '0 0 0.5rem 0' }}>Longitudinal Snapshot Comparisons</h3>
-              <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: '1.5', margin: 0 }}>
-                Determines medication presence ratios, emergent signals, and transitional change points across patient prescription timelines.
               </p>
             </div>
           </div>
